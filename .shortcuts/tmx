@@ -5,7 +5,7 @@ common_setup() {
   tmux -u2 new-session -d -s $session_name -n vi    # start in detached mode and attach later # -s specifies name of new-session
   tmux new-window -t $session_name:8 -n notes
 
-  tmux send-keys -t $session_name:8 "vim -p2 ~/gitbasket/WorkFlow.notes ~/gitbasket/ruby.notes" C-m
+  tmux send-keys -t $session_name:8 "cd ~/gitbasket; git pull origin master; vim -p2 ~/gitbasket/WorkFlow.notes ~/gitbasket/ruby.notes" C-m
   tmux send-keys -t $session_name:1 "vim" C-m
 }
 
@@ -30,6 +30,8 @@ develop_setup() {
 
 minimal_setup() {
   tmux new-window -t $session_name:0
+
+  tmux send-keys -t $session_name:0 "git pull origin master" C-m
 }
 
 session_attach() {
