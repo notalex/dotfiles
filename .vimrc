@@ -28,6 +28,7 @@ nmap ;v :Rview<Space>
 nmap <c-y> :wa<CR>
 nmap < <l
 nmap > >l
+nmap ;p o<Esc>p
 
 " #---------------- imaps --------------------------
 imap <c-y> <esc>:wa<CR>
