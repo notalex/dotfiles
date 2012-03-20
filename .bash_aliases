@@ -8,5 +8,6 @@ alias staging_push="git push staging release:master"
 alias h='heroku run'
 
 alias gdf="git diff --name-status"
-alias gl="git log --oneline"
+alias gl="git log --oneline -5"
+alias glog="git log --oneline"
 alias grl="git reflog"
