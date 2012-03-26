@@ -90,6 +90,7 @@ alias l='ls -CF'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+. ~/.bash_profile
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -100,7 +101,5 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 [ -s "/home/test/.scm_breeze/scm_breeze.sh" ] && . "/home/test/.scm_breeze/scm_breeze.sh"
-
-export PS1="\[$(tput setaf 2)\]\W\[$(tput setaf 6)\]:▶ \[$(tput sgr0)\]"
 
 export  PATH=${PATH}:${HOME}/.shortcuts/

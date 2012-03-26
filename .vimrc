@@ -38,13 +38,12 @@ set nowritebackup
 set noswapfile
 nmap <C-d> :bdelete
 highlight Pmenu ctermfg=22 ctermbg=black
-map t :set hlsearch!<cr>
+map <c-a> :set syntax=
 let g:lasttab = 1
-nmap <c-a> :exe "tabn" .g:lasttab <CR>
+nmap <c-o> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
 map r /_<cr>l
 map R ?_<cr>l
 nmap T :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 nmap u :set cursorline!<cr>
 nmap U .
-map <c-t> :set number!<cr>
