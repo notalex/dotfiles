@@ -90,7 +90,7 @@ alias l='ls -CF'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
-. ~/.bash_profile
+export PS1="\[$(tput setaf 2)\]\W\[$(tput setaf 6)\]:▶ \[$(tput sgr0)\]"
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile

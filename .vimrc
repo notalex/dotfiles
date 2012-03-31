@@ -38,9 +38,9 @@ set nowritebackup
 set noswapfile
 nmap <C-d> :bdelete
 highlight Pmenu ctermfg=22 ctermbg=black
-map <c-a> :set syntax=
+map <c-t> :set syntax=
 let g:lasttab = 1
-nmap <c-o> :exe "tabn" .g:lasttab <CR>
+nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
 map r /_<cr>l
 map R ?_<cr>l
