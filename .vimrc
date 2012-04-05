@@ -15,7 +15,9 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'stjernstrom/vim-ruby-run'
+Bundle 'vim-scripts/Specky'
+Bundle 'vim-scripts/Auto-Pairs'
+Bundle 'vim-scripts/BufOnly.vim'
 
 call pathogen#infect()
 filetype plugin on
@@ -25,7 +27,7 @@ map <c-o> o<Esc>
 map <C-b> i<CR><Esc>
 map <C-z> :u<CR>
 imap <C-z> <Esc>:u<CR>
-map <c-l> :wa<CR>
+noremap <c-e> :wa<CR>
 inoremap <c-e> <esc>:wa<CR>
 vmap <C-c> "+y
 vmap <C-x> "+x
