@@ -18,8 +18,8 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-scripts/Specky'
 Bundle 'vim-scripts/Auto-Pairs'
 Bundle 'vim-scripts/BufOnly.vim'
+Bundle 'stjernstrom/vim-ruby-run'
 
-call pathogen#infect()
 filetype plugin on
 colorscheme dark-ruby 
 map <CR> O<Esc>
