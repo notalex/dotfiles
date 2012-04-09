@@ -100,6 +100,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-[ -s "/home/test/.scm_breeze/scm_breeze.sh" ] && . "/home/test/.scm_breeze/scm_breeze.sh"
-
 export  PATH=${PATH}:${HOME}/.shortcuts/
+
+[ -s "/home/alex/.scm_breeze/scm_breeze.sh" ] && source "/home/alex/.scm_breeze/scm_breeze.sh"
