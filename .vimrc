@@ -69,3 +69,4 @@ nmap u :set cursorline!<cr>
 nmap U .
 imap <c-w> <Esc>A
 vmap s c
+set smartindent

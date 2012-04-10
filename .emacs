@@ -33,8 +33,8 @@
       (winner-mode 1))
 
 ;;Scrollbar only when window mode and toolbar.
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
+;;(scroll-bar-mode -1)
+;;(tool-bar-mode -1)
 
 ;;Set Cursor Color
 (setq default-frame-alist
