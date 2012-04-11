@@ -67,6 +67,6 @@ map R ?_<cr>l
 nmap T :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 nmap u :set cursorline!<cr>
 nmap U .
-imap <c-w> <Esc>A
+imap <c-w> <Esc>la
 vmap s c
 set smartindent
