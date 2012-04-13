@@ -70,3 +70,4 @@ nmap U .
 imap <c-w> <Esc>la
 vmap s c
 set smartindent
+
