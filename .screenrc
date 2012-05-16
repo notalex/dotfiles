@@ -1,3 +1,5 @@
+startup_message off
+
 # copy mode mappings can only be done with bindkey
 bindkey ^d eval copy "stuff ?"  
 
@@ -9,11 +11,12 @@ bind d  # unbind detach
 bind k  
 bind Q kill
 
-# meta invokes command (^a)
-bind r eval meta colon "stuff 'source ~/.screenrc'"
+# meta invokes command (^a)  # \015 = ^M = Enter key
+bind r eval meta colon "stuff 'source ~/.screenrc'" "stuff ^M"; eval meta colon "stuff 'echo screen_reloaded'" 'stuff \015'
 bind . eval meta colon "stuff 'number '"
 bind ; eval meta colon "stuff 'resize '"
 
 # rebind rename tab
 bind A
 bind < title
+
