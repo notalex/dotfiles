@@ -1,0 +1,21 @@
+source ~/.screenrc
+
+#rails server
+screen -t 'server'
+stuff 'rails server' 
+stuff ^M
+
+# editors
+screen -t 'vi' vi
+screen -t 'vi' vi
+
+# bash
+screen
+
+# rails console
+screen -t 'console'
+eval meta colon "stuff 'number 9'" "stuff ^M"
+stuff 'rails console' 
+stuff ^M
+
+eval meta select "stuff '0'" "stuff ^M"
