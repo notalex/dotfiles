@@ -1,4 +1,4 @@
-source /home/test/.screenrc
+source ~/.screenrc
 
 #rails server
 screen -t 'server'
@@ -14,7 +14,7 @@ screen
 screen
 
 # notes # when vi exits, the terminal is killed
-screen -t 'notes' sh -c "vi /home/test/Ubuntu\ One/to_do_work.coffee"
+screen -t 'notes' sh -c "vi ~/Ubuntu\ One/to_do_work.coffee"
 eval meta colon "stuff 'number 8'" "stuff ^M"
 
 # rails console
@@ -22,3 +22,6 @@ screen -t 'console'
 eval meta colon "stuff 'number 9'" "stuff ^M"
 stuff 'rails console' 
 stuff ^M
+
+# switch to the vi screen
+eval meta select "stuff '1'" "stuff ^M"

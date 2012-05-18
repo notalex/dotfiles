@@ -17,3 +17,4 @@ alias glog="git log --oneline"
 alias grl="git reflog"
 
 alias screem='screen -c ~/.screen/screem'
+alias screemini='screen -c ~/.screen/screemini'
