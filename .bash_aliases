@@ -15,3 +15,5 @@ alias gdf="git diff --name-status"
 alias gl="git log --oneline -5"
 alias glog="git log --oneline"
 alias grl="git reflog"
+
+alias screem='screen -c ~/.screen/screem'
