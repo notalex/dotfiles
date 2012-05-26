@@ -1,0 +1,4 @@
+# dpms is Display Power Management Service
+# xset command is used for user display preferences
+# sleep adds a delay of 1 sec before xset execution. Otherwise the screen would come on immediately
+sleep 1; xset dpms force off
