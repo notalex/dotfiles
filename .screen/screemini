@@ -5,18 +5,12 @@ screen -t 'server'
 stuff 'rails server' 
 stuff ^M
 
-# editors
-screen -t 'vi' vi
+# editor
 screen -t 'vi' vi
 
 # bash
 screen
-
-# rails console
-screen -t 'console'
-eval meta colon "stuff 'number 9'" "stuff ^M"
-stuff 'rails console' 
-stuff ^M
+eval meta colon "stuff 'number 3'" "stuff ^M"
 
 # switch to the vi screen
 eval meta select "stuff '1'" "stuff ^M"
