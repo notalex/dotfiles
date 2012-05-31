@@ -4,6 +4,7 @@ alias gcma="git commit --amend"
 alias gcam="git commit -a -m"
 alias gap="ge git add -p"
 alias gdb="git diff --name-only"
+alias delayed_emails='echo rake jobs:clear and rake jobs:work ; rake jobs:clear ; rake jobs:work'
 
 alias production_push="git push production master"
 alias staging_push="git push staging release:master"
