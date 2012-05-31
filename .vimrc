@@ -43,6 +43,7 @@ map <c-u> :cw<cr>:resize +20<cr>:noautocmd vimgrep // app/** <Left><Left><Left><
 nmap <C-y> :FuzzyFinderBuffer<CR>
 "map <C-a> :FuzzyFinderFile<CR>
 map <F2> :NERDTreeToggle<CR>
+map <F4> :NERDTreeFind<CR>:only<CR>
 set tabstop=2
 set shiftwidth=2
 set expandtab

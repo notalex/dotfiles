@@ -2,6 +2,7 @@ alias gar="git add -A"
 alias gcm="git commit -m"
 alias gcma="git commit --amend"
 alias gcam="git commit -a -m"
+alias gap="ge git add -p"
 
 alias production_push="git push production master"
 alias staging_push="git push staging release:master"
