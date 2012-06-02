@@ -1,0 +1,36 @@
+source ~/.screenrc
+
+#spork
+screen -t 'spork-rspec'
+stuff 'spork'
+stuff ^M
+eval meta colon "stuff 'number 11'" "stuff ^M"
+
+#rails server
+screen -t 'watchr'
+stuff 'watchr .watchr' 
+stuff ^M
+
+# editors
+screen -t 'vi spec/' vi
+screen -t 'vi' vi
+
+# bash
+screen
+screen
+
+# test console
+screen -t 'test_console'
+eval meta colon "stuff 'number 9'" "stuff ^M"
+stuff 'rails console test' 
+stuff ^M
+
+# dev console
+screen -t 'dev_console'
+eval meta colon "stuff 'number 8'" "stuff ^M"
+stuff 'rails console' 
+stuff ^M
+
+# switch to the vi screen
+eval meta select "stuff '1'" "stuff ^M"
+
