@@ -18,7 +18,7 @@ stuff 'watchr .watchr'
 stuff ^M
 
 # editors
-screen -t 'vi spec/' vi
+screen -t 'vi' vi spec/
 screen -t 'vi' vi
 
 # bash

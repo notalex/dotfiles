@@ -1,0 +1,6 @@
+#! /usr/bin/ruby
+pattern =  ARGV.pop
+command = ARGV.join(' ')
+full_command = "#{command} | grep --color #{pattern}"
+puts full_command
+system full_command
