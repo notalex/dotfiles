@@ -39,7 +39,7 @@ map <Space> a<Space><Esc>
 map <tab> >l
 map <s-tab> <l
 map <c-f> :R
-map <c-u> :cw<cr>:resize +20<cr>:noautocmd vimgrep // app/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
+map <c-u> :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap <C-y> :FuzzyFinderBuffer<CR>
 "map <C-a> :FuzzyFinderFile<CR>
 map <F2> :NERDTreeToggle<CR>
@@ -70,3 +70,5 @@ nmap u :set cursorline!<cr>
 nmap U .
 imap <c-w> <Esc>la
 set smartindent
+"Overwrite caps K press "highlight trailing white spaces
+match Todo /\s\+$/

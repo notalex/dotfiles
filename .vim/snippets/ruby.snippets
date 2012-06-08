@@ -500,3 +500,29 @@ snippet keep
 	keep_if{|${1}| ${2} }${3}
 snippet sel
 	select{|${1}| ${2} }${3}
+
+# cucumber step definitions
+snippet G
+	Given /^${1}$/ do
+		${2}
+	end
+snippet Gb
+	Given /^${1}$/ do |${2}|
+		${3}
+	end
+snippet W
+	When /^${1}$/ do
+		${2}
+	end
+snippet Wb
+	When /^${1}$/ do |${2}|
+		${3}
+	end
+snippet T
+	Then /^${1}$/ do
+		${2}
+	end
+snippet Tb
+	Then /^${1}$/ do |${2}|
+		${3}
+	end

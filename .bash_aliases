@@ -22,3 +22,5 @@ alias grl="git reflog"
 alias screem='screen -c ~/.screen/screem'
 alias screemini='screen -c ~/.screen/screemini'
 alias screemtest='screen -c ~/.screen/screemtest'
+
+alias src='source ~/.bashrc'

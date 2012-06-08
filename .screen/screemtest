@@ -1,16 +1,9 @@
 source ~/.screenrc
 
-#rails server
+#rails server # do not press enter as rake db:test:prepare has to run
 screen -t 'server'
 eval meta colon "stuff 'number 7'" "stuff ^M"
-stuff 'rake db:test:prepare && rails server -e test' 
-stuff ^M
-
-#spork
-screen -t 'spork-rspec'
-stuff 'spork'
-stuff ^M
-eval meta colon "stuff 'number 11'" "stuff ^M"
+stuff 'rails server -e test' 
 
 #watchr
 screen -t 'watchr'
@@ -24,6 +17,18 @@ screen -t 'vi' vi
 # bash
 screen
 screen
+
+#spork
+#screen -t 'spork-rspec'
+#eval meta colon "stuff 'number 11'" "stuff ^M"
+#stuff 'rake db:test:prepare && spork'
+#stuff ^M
+
+#spork cucumber
+screen -t 'spork-cuke'
+stuff 'rake db:test:prepare && spork cucumber'
+eval meta colon "stuff 'number 11'" "stuff ^M"
+stuff ^M
 
 # test console # do not press enter as rake db:test:prepare has to run
 screen -t 'test_console'
