@@ -21,7 +21,7 @@ Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'stjernstrom/vim-ruby-run'
 
 filetype plugin on
-colorscheme dark-ruby 
+colorscheme dark-ruby
 map <CR> O<Esc>
 map <c-o> o<Esc>
 map <C-b> i<CR><Esc>
@@ -32,8 +32,8 @@ inoremap <c-e> <esc>:wa<CR>
 vmap <C-c> "+y
 vmap <C-x> "+x
 map <C-v> "+gP
-nnoremap <insert> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p 
-vnoremap <c-y> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR> 
+nnoremap <insert> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
+vnoremap <c-y> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 map <c-h> <Leader>c<space>
 map <Space> a<Space><Esc>
 map <tab> >l
@@ -43,7 +43,7 @@ map <c-u> :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><
 nmap <C-y> :FuzzyFinderBuffer<CR>
 "map <C-a> :FuzzyFinderFile<CR>
 map <F2> :NERDTreeToggle<CR>
-map <F4> :NERDTreeFind<CR>:only<CR>
+map <F4> :NERDTreeFind<CR>
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -59,7 +59,7 @@ set nowritebackup
 set noswapfile
 nmap <C-d> :bdelete
 highlight Pmenu ctermfg=22 ctermbg=black
-map <c-t> :filetype detect<cr>
+map K :filetype detect<cr>
 let g:lasttab = 1
 nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
@@ -70,5 +70,5 @@ nmap u :set cursorline!<cr>
 nmap U .
 imap <c-w> <Esc>la
 set smartindent
-"Overwrite caps K press "highlight trailing white spaces
+"highlight trailing white spaces
 match Todo /\s\+$/
