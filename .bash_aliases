@@ -24,3 +24,6 @@ alias screemini='screen -c ~/.screen/screemini'
 alias screemtest='screen -c ~/.screen/screemtest'
 
 alias src='source ~/.bashrc'
+alias apti='sudo apt-get install'
+alias aptr='sudo apt-get remove'
+alias apts='sudo apt-cache search'

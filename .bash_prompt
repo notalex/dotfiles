@@ -1,0 +1,32 @@
+#ǂɎΞϠж٭»
+# for git branch names in prompt
+symbol=Ϡ
+c_reset=`tput sgr0`
+c_git_clean=`tput setaf 7`
+c_white=`tput setaf 7`
+c_git_dirty=`tput setaf 3`
+c_dir=`tput setaf 2`
+c_arrow=`tput setaf 6`
+
+git_prompt ()
+{
+    if ! git rev-parse --git-dir > /dev/null 2>&1; then
+        return 0
+    fi
+ 
+    git_branch=$(git branch 2>/dev/null| sed -n '/^\*/s/^\* //p')
+ 
+    echo "$git_branch"
+}
+
+git_color ()
+{
+    if git diff --quiet 2>/dev/null >&2; then
+        git_color="${c_git_clean}"
+    else
+        git_color=${c_git_dirty}
+    fi
+    echo "$git_color"
+}
+
+export PS1='\[$(git_color)\]$(git_prompt)\[$c_white\]$symbol \[$c_dir\]\W\[$c_arrow\]:▶\[$c_reset\] '
