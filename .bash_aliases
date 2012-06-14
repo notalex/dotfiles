@@ -18,6 +18,7 @@ alias gdf="git diff --name-status"
 alias gl="git log --oneline -5"
 alias glog="git log --oneline"
 alias grl="git reflog"
+alias gcf="git config --list"
 
 alias screem='screen -c ~/.screen/screem'
 alias screemini='screen -c ~/.screen/screemini'
@@ -27,3 +28,4 @@ alias src='source ~/.bashrc'
 alias apti='sudo apt-get install'
 alias aptr='sudo apt-get remove'
 alias apts='sudo apt-cache search'
+alias rgu='rvm gemset use'
