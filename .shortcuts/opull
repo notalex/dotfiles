@@ -1,0 +1,14 @@
+#! /usr/bin/ruby
+branch = ARGV[0]
+command = case branch
+          when 'd'
+            "git pull origin develop"
+          when 'r'
+            "git pull origin release"
+          when 'm'
+            "git pull origin master"
+          else
+            "git pull origin #{branch}"
+          end
+puts command
+system command
