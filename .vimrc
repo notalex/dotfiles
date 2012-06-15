@@ -29,8 +29,8 @@ map <c-o> o<Esc>
 map <C-b> i<CR><Esc>
 map <C-z> :u<CR>
 imap <C-z> <Esc>:u<CR>
-noremap <c-e> :wa<CR>
-inoremap <c-e> <esc>:wa<CR>
+noremap <c-e> :%s/\s\+$//e<CR>:wa<CR>
+inoremap <c-e> <esc>:%s/\s\+$//e<CR>:wa<CR>
 vmap <C-c> "+y
 vmap <C-x> "+x
 map <C-v> "+gP
@@ -72,8 +72,6 @@ nmap u :set cursorline!<cr>
 nmap U .
 imap <c-w> <Esc>la
 set smartindent
-"highlight trailing white spaces
-match Todo /\s\+$/
 
 " sytax  highlighting overrides
 """"""""""""""""""""""""""""""""
