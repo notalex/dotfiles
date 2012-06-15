@@ -18,7 +18,9 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'vim-scripts/Specky'
 Bundle 'vim-scripts/Auto-Pairs'
 Bundle 'vim-scripts/BufOnly.vim'
-Bundle 'stjernstrom/vim-ruby-run'
+Bundle 'vim-scripts/dark-ruby'
+Bundle 'msanders/snipmate.vim'
+Bundle 'notalex/vim-ruby-run'
 
 filetype plugin on
 colorscheme dark-ruby
@@ -72,3 +74,19 @@ imap <c-w> <Esc>la
 set smartindent
 "highlight trailing white spaces
 match Todo /\s\+$/
+
+" sytax  highlighting overrides
+""""""""""""""""""""""""""""""""
+hi VertSPlit cterm=none ctermfg=green guifg=lightgray
+hi StatusLine ctermfg=green guifg=lightgray
+
+hi rubyModule			ctermfg=5
+hi rubyClass			ctermfg=5
+hi rubySymbol			ctermfg=3
+hi rubyBlock			ctermfg=darkgray       " map-each statements
+hi rubyControl			ctermfg=40                 " do end blocks
+hi rubyConditional		ctermfg=52               " if-case conditions
+hi railsUserClass  ctermfg=4                     " Rails class variable names
+
+" haml/html tag
+hi htmlTagName	ctermfg=blue
