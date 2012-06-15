@@ -3,12 +3,12 @@ source ~/.screenrc
 #rails server # do not press enter as rake db:test:prepare has to run
 screen -t 'server'
 eval meta colon "stuff 'number 7'" "stuff ^M"
-stuff 'rails server -e test' 
+stuff 'rails server'
 
 #watchr
 screen -t 'watchr'
-stuff 'watchr .watchr' 
-stuff ^M
+#stuff 'watchr .watchr'
+#stuff ^M
 
 # editors
 screen -t 'vi' vi spec/
@@ -33,12 +33,12 @@ stuff ^M
 # test console # do not press enter as rake db:test:prepare has to run
 screen -t 'test_console'
 eval meta colon "stuff 'number 9'" "stuff ^M"
-stuff 'rails console test' 
+stuff 'rails console test'
 
 # dev console
 screen -t 'dev_console'
 eval meta colon "stuff 'number 8'" "stuff ^M"
-stuff 'rails console' 
+stuff 'rails console'
 stuff ^M
 
 # switch to the vi screen
