@@ -27,16 +27,16 @@ colorscheme dark-ruby
 map <CR> O<Esc>
 map <c-o> o<Esc>
 map <C-b> i<CR><Esc>
-map <C-z> :u<CR>
+map <C-z> :undo<CR>
 imap <C-z> <Esc>:u<CR>
-noremap <c-e> :%s/\s\+$//e<CR>:wa<CR>
-inoremap <c-e> <esc>:%s/\s\+$//e<CR>:wa<CR>
+noremap <c-e> :wa<CR>
+inoremap <c-e> <esc>:wa<CR>
 vmap <C-c> "+y
 vmap <C-x> "+x
 map <C-v> "+gP
 nnoremap <insert> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 vnoremap <c-y> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
-map <c-h> <Leader>c<space>
+nmap <c-h> <Leader>c<space>
 map <Space> a<Space><Esc>
 map <tab> >l
 map <s-tab> <l
@@ -81,10 +81,10 @@ hi StatusLine ctermfg=green guifg=lightgray
 hi rubyModule			ctermfg=5
 hi rubyClass			ctermfg=5
 hi rubySymbol			ctermfg=3
-hi rubyBlock			ctermfg=darkgray       " map-each statements
+hi rubyBlock			ctermfg=darkgray             " map-each statements
 hi rubyControl			ctermfg=40                 " do end blocks
 hi rubyConditional		ctermfg=52               " if-case conditions
-hi railsUserClass  ctermfg=4                     " Rails class variable names
+hi railsUserClass  ctermfg=4                   " Rails class variable names
 
 " haml/html tag
 hi htmlTagName	ctermfg=blue
