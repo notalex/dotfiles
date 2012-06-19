@@ -19,7 +19,7 @@ Bundle 'vim-scripts/Specky'
 Bundle 'vim-scripts/Auto-Pairs'
 Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'vim-scripts/dark-ruby'
-Bundle 'msanders/snipmate.vim'
+Bundle 'notalex/snipmate.vim'
 Bundle 'notalex/vim-ruby-run'
 Bundle 'notalex/vim-strip-trailers'
 
