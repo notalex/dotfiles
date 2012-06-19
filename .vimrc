@@ -21,6 +21,7 @@ Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'vim-scripts/dark-ruby'
 Bundle 'msanders/snipmate.vim'
 Bundle 'notalex/vim-ruby-run'
+Bundle 'notalex/vim-strip-trailers'
 
 filetype plugin on
 colorscheme dark-ruby
@@ -37,6 +38,7 @@ map <C-v> "+gP
 nnoremap <insert> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 vnoremap <c-y> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 nmap <c-h> <Leader>c<space>
+vmap <c-h> <Leader>c<space>
 map <Space> a<Space><Esc>
 map <tab> >l
 map <s-tab> <l
