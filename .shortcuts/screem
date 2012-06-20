@@ -1,0 +1,10 @@
+#! /usr/bin/ruby
+case ARGV[0]
+when 'dev'
+  command = "screen -c ~/.screen/screem"
+when 'test'
+  command = "screen -c ~/.screen/screemtest"
+when 'mini'
+  command = "screen -c ~/.screen/screemini"
+end
+system command

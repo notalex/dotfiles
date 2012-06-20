@@ -21,10 +21,6 @@ alias grl="git reflog"
 alias g_config="git config --list"
 alias gra="git remote add"
 
-alias screem='screen -c ~/.screen/screem'
-alias screemini='screen -c ~/.screen/screemini'
-alias screemtest='screen -c ~/.screen/screemtest'
-
 alias src='source ~/.bashrc'
 alias apti='sudo apt-get install'
 alias aptr='sudo apt-get remove'
