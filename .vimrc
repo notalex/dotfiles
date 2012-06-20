@@ -29,7 +29,7 @@ map <CR> O<Esc>
 map <c-o> o<Esc>
 map <C-b> i<CR><Esc>
 map <C-z> :undo<CR>
-imap <C-z> <Esc>:u<CR>
+imap <C-z> <Esc>:undo<CR>
 noremap <c-e> :wa<CR>
 inoremap <c-e> <esc>:wa<CR>
 vmap <C-c> "+y
@@ -43,7 +43,8 @@ map <Space> a<Space><Esc>
 map <tab> >l
 map <s-tab> <l
 map <c-f> :R
-map <c-u> :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
+nmap ;a :cw<cr>:resize +20<cr>:noautocmd vimgrep // app/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
+nmap ;f :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap <C-y> :FuzzyFinderBuffer<CR>
 "map <C-a> :FuzzyFinderFile<CR>
 map <F2> :NERDTreeToggle<CR>

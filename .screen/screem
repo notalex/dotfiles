@@ -23,5 +23,11 @@ eval meta colon "stuff 'number 9'" "stuff ^M"
 stuff 'rails console' 
 stuff ^M
 
+#spork cucumber
+screen -t 'spork-cuke'
+stuff 'rake db:test:prepare && spork cucumber'
+eval meta colon "stuff 'number 11'" "stuff ^M"
+stuff ^M
+
 # switch to the vi screen
 eval meta select "stuff '1'" "stuff ^M"
