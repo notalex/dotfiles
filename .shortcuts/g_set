@@ -1,0 +1,6 @@
+#! /usr/bin/ruby
+holder = ARGV[0]
+repo_name = ARGV[1]
+command = "git remote set-url #{holder} git@github.com:#{repo_name}.git"
+puts command
+system command

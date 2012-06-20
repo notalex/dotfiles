@@ -19,7 +19,6 @@ alias gl="git log --oneline -5"
 alias glog="git log --oneline"
 alias grl="git reflog"
 alias g_config="git config --list"
-alias g_set="git remote set-url"
 alias gra="git remote add"
 
 alias screem='screen -c ~/.screen/screem'
