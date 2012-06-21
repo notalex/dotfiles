@@ -26,7 +26,7 @@ screen
 
 #spork cucumber
 screen -t 'spork-cuke'
-stuff 'rake db:test:prepare && spork cucumber'
+stuff 'spork cucumber'
 eval meta colon "stuff 'number 11'" "stuff ^M"
 stuff ^M
 

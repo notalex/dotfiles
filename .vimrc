@@ -66,13 +66,12 @@ map K :filetype detect<cr>
 let g:lasttab = 1
 nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
-map r /
-map R ?
+map r :echo 'stubbed'<cr>
+map R :echo 'stubbed'<cr>
 nmap T :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 nmap U .
-map u :echo "stubbed"<cr>
 nmap <C-d> :echo "stubbed"<cr>
-map <c-z> :set cursorline!<cr>
+map <c-z> :echo "stubbed"<cr>
 imap <c-z> _
 imap <c-w> <Esc>la
 set smartindent
