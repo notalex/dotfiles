@@ -28,8 +28,8 @@ colorscheme dark-ruby
 map <CR> O<Esc>
 map <c-o> o<Esc>
 map <C-b> i<CR><Esc>
-map <C-z> :undo<CR>
-imap <C-z> <Esc>:undo<CR>
+map <C-u> :undo<CR>
+imap <C-u> <Esc>:undo<CR>
 noremap <c-e> :wa<CR>
 inoremap <c-e> <esc>:wa<CR>
 vmap <C-c> "+y
@@ -62,8 +62,6 @@ nnoremap <C-F8> :vertical resize +5<cr>
 set nobackup
 set nowritebackup
 set noswapfile
-nmap <C-d> :bdelete
-highlight Pmenu ctermfg=22 ctermbg=black
 map K :filetype detect<cr>
 let g:lasttab = 1
 nmap <c-a> :exe "tabn" .g:lasttab <CR>
@@ -71,15 +69,19 @@ au TabLeave * let g:lasttab = tabpagenr()
 map r /
 map R ?
 nmap T :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
-nmap u :set cursorline!<cr>
 nmap U .
+map u :echo "stubbed"<cr>
+nmap <C-d> :echo "stubbed"<cr>
+map <c-z> :set cursorline!<cr>
+imap <c-z> _
 imap <c-w> <Esc>la
 set smartindent
 
-" sytax  highlighting overrides
+" syntax  highlighting overrides
 """"""""""""""""""""""""""""""""
 hi VertSPlit cterm=none ctermfg=green guifg=lightgray
 hi StatusLine ctermfg=green guifg=lightgray
+hi Pmenu ctermfg=22 ctermbg=black
 
 hi rubyModule			ctermfg=5
 hi rubyClass			ctermfg=5
