@@ -7,4 +7,4 @@ when 'test'
 when 'mini'
   command = "screen -c ~/.screen/screemini"
 end
-system command
+system command rescue puts "acceptable parameters: dev mini test"
