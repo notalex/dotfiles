@@ -5,8 +5,19 @@ screen -t 'server'
 stuff 'rails server' 
 stuff ^M
 
-# editor
+# editors
 screen -t 'vi' vi
+screen -t 'vi' vi
+
+# notes # when vi exits, the terminal is killed
+screen -t 'notes' sh -c "vi .project_notes*"
+eval meta colon "stuff 'number 8'" "stuff ^M"
+
+# rails console
+screen -t 'console'
+eval meta colon "stuff 'number 9'" "stuff ^M"
+stuff 'rails console' 
+stuff ^M
 
 # bash
 screen
