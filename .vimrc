@@ -66,15 +66,27 @@ map K :filetype detect<cr>
 let g:lasttab = 1
 nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
-map r :echo 'stubbed'<cr>
+map r :redo<cr>
 imap <C-t> _
+imap <c-r> -
 map R :echo 'stubbed'<cr>
 nmap T :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 nmap U .
 nmap <C-d> :echo "stubbed"<cr>
 map <c-z> :echo "stubbed"<cr>
 imap <c-w> <Esc>la
+nmap <c-j> <cr>
 set smartindent
+cmap <c-u> <Up>
+cmap <c-y> <Down>
+cmap <c-x> <delete>
+cmap <c-a> <home>
+cmap <c-b> <S-left>
+cmap <c-t> _
+imap ;a _
+imap ;s -
+imap ;f =
+imap ;; ; 
 
 " syntax  highlighting overrides
 """"""""""""""""""""""""""""""""
