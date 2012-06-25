@@ -82,10 +82,11 @@ cmap <c-y> <Down>
 cmap <c-x> <delete>
 cmap <c-a> <home>
 cmap <c-b> <S-left>
-cmap <c-t> _
+cmap ;a _
 imap ;a _
 imap ;s -
-imap ;f =
+imap ;d =
+imap ;f (
 imap ;; ; 
 
 " syntax  highlighting overrides
