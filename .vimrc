@@ -82,12 +82,7 @@ cmap <c-y> <Down>
 cmap <c-x> <delete>
 cmap <c-a> <home>
 cmap <c-b> <S-left>
-cmap ;a _
-imap ;a _
-imap ;s -
-imap ;d =
-imap ;f (
-imap ;; ;
+imap <c-j> <c-n>
 
 " syntax  highlighting overrides
 """"""""""""""""""""""""""""""""
@@ -111,14 +106,12 @@ hi htmlTagName	ctermfg=blue
 """"""""""""""""""""""""""""""""""""""""""
 au BufNewFile,BufRead *.notes setf notes
 
-syntax region notesApostrophe start=/"/ end=/\n/
-syntax region notesHyphen start=/-/ end=/\n/
-syntax region notesUnderscore start=/_/ end=/\n/
-syntax region notesAsterisk start=/*/ end=/\n/
+syntax region notesHyphen start=/^-/ end=/\n/
+syntax region notesUnderscore start=/^_/ end=/\n/
+syntax region notesAsterisk start=/^*/ end=/\n/
 syntax region notesHash start=/#/ end=/\n/
 
-hi link notesUnderscore Underlined
-hi notesApostrophe ctermfg=darkcyan
-hi notesHyphen ctermfg=darkgreen
+hi notesUnderscore ctermfg=magenta
+hi notesHyphen ctermfg=lightgreen
 hi notesAsterisk ctermfg=lightblue
 hi notesHash ctermfg=brown
