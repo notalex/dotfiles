@@ -87,13 +87,14 @@ imap ;a _
 imap ;s -
 imap ;d =
 imap ;f (
-imap ;; ; 
+imap ;; ;
 
 " syntax  highlighting overrides
 """"""""""""""""""""""""""""""""
 hi VertSPlit cterm=none ctermfg=green guifg=lightgray
 hi StatusLine ctermfg=green guifg=lightgray
 hi Pmenu ctermfg=22 ctermbg=black
+hi Underlined		ctermfg=grey	guifg=red	
 
 hi rubyModule			ctermfg=5
 hi rubyClass			ctermfg=5
@@ -105,3 +106,19 @@ hi railsUserClass  ctermfg=4                   " Rails class variable names
 
 " haml/html tag
 hi htmlTagName	ctermfg=blue
+
+" custom filetype & highlighting for notes
+""""""""""""""""""""""""""""""""""""""""""
+au BufNewFile,BufRead *.notes setf notes
+
+syntax region notesApostrophe start=/"/ end=/\n/
+syntax region notesHyphen start=/-/ end=/\n/
+syntax region notesUnderscore start=/_/ end=/\n/
+syntax region notesAsterisk start=/*/ end=/\n/
+syntax region notesHash start=/#/ end=/\n/
+
+hi link notesUnderscore Underlined
+hi notesApostrophe ctermfg=darkcyan
+hi notesHyphen ctermfg=darkgreen
+hi notesAsterisk ctermfg=lightblue
+hi notesHash ctermfg=brown
