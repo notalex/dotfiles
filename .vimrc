@@ -74,7 +74,8 @@ nmap T :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 nmap U .
 nmap <C-d> :echo "stubbed"<cr>
 map <c-z> :echo "stubbed"<cr>
-imap <c-f> <C-o><right>
+imap <c-f> <Esc>la
+imap <c-w> <Esc>:echo "stubbed"<cr>
 imap <c-b> <C-o><left>
 imap <c-j> <c-n>
 nmap <c-j> i<CR><Esc>
