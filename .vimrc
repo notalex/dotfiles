@@ -6,6 +6,8 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'L9'
+Bundle 'FuzzyFinder'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
@@ -27,7 +29,6 @@ filetype plugin on
 colorscheme dark-ruby
 map <CR> O<Esc>
 map <c-o> o<Esc>
-map <C-b> i<CR><Esc>
 map <C-u> :undo<CR>
 imap <C-u> <Esc>:undo<CR>
 noremap <c-e> :wa<CR>
@@ -42,11 +43,10 @@ vmap <c-h> <Leader>c<space>
 map <Space> a<Space><Esc>
 map <tab> >l
 map <s-tab> <l
-map <c-f> :R
 nmap ;a :cw<cr>:resize +20<cr>:noautocmd vimgrep // app/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap ;f :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
-nmap <C-y> :FuzzyFinderBuffer<CR>
-"map <C-a> :FuzzyFinderFile<CR>
+nmap <C-y> :FufBuffer<CR>
+nmap F :FufFile<CR>
 map <F2> :NERDTreeToggle<CR>
 map <F4> :NERDTreeFind<CR>
 set tabstop=2
@@ -69,20 +69,21 @@ au TabLeave * let g:lasttab = tabpagenr()
 map r :redo<cr>
 imap <C-t> _
 imap <c-r> -
-map R :echo 'stubbed'<cr>
+map R :R
 nmap T :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 nmap U .
 nmap <C-d> :echo "stubbed"<cr>
 map <c-z> :echo "stubbed"<cr>
-imap <c-w> <Esc>la
-nmap <c-j> <cr>
+imap <c-f> <C-o><right>
+imap <c-b> <C-o><left>
+imap <c-j> <c-n>
+nmap <c-j> i<CR><Esc>
 set smartindent
 cmap <c-u> <Up>
 cmap <c-y> <Down>
 cmap <c-x> <delete>
 cmap <c-a> <home>
 cmap <c-b> <S-left>
-imap <c-j> <c-n>
 
 " syntax  highlighting overrides
 """"""""""""""""""""""""""""""""
