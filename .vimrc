@@ -33,11 +33,9 @@ map <C-u> :undo<CR>
 imap <C-u> <Esc>:undo<CR>
 noremap <c-e> :wa<CR>
 inoremap <c-e> <esc>:wa<CR>
-vmap <C-c> "+y
 vmap <C-x> "+x
-map <C-v> "+gP
-nnoremap <insert> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
-vnoremap <c-y> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
+map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
+map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 nmap <c-h> <Leader>c<space>
 vmap <c-h> <Leader>c<space>
 map <Space> a<Space><Esc>
@@ -45,7 +43,7 @@ map <tab> >l
 map <s-tab> <l
 nmap ;a :cw<cr>:resize +20<cr>:noautocmd vimgrep // app/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap ;f :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
-nmap <C-y> :FufBuffer<CR>
+nmap <C-y> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 nmap F :FufFile<CR>
 map <F2> :NERDTreeToggle<CR>
 map <F4> :NERDTreeFind<CR>
@@ -67,10 +65,8 @@ let g:lasttab = 1
 nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
 map r :redo<cr>
-imap <C-t> _
-imap <c-r> -
 map R :R
-nmap T :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
+nmap T :FufBuffer<CR>
 nmap U .
 nmap <C-d> :echo "stubbed"<cr>
 map <c-z> :echo "stubbed"<cr>
