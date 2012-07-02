@@ -10,7 +10,7 @@ screen -t 'vi' vi
 screen -t 'vi' vi
 
 # notes # when vi exits, the terminal is killed
-screen -t 'notes' sh -c "vi .project_notes*"
+screen -t 'notes' sh -c "vi .project.notes"
 eval meta colon "stuff 'number 8'" "stuff ^M"
 
 # rails console
