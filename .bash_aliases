@@ -29,3 +29,5 @@ alias rgu='rvm gemset use'
 alias rgn='rvm gemset name'
 alias ru='rvm use'
 alias dpks='dpkg --get-selections'
+
+alias cuke_spork='rake db:test:prepare && spork cucumber'

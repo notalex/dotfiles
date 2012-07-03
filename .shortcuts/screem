@@ -2,9 +2,9 @@
 case ARGV[0]
 when 'd'
   command = "screen -c ~/.screen/screem"
-when 'test'
+when 't'
   command = "screen -c ~/.screen/screemtest"
-when 'mini'
+when 'm'
   command = "screen -c ~/.screen/screemini"
 end
-system command rescue puts "acceptable parameters: dev mini test"
+system command rescue puts "acceptable parameters: d m t"
