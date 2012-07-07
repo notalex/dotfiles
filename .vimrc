@@ -65,8 +65,8 @@ let g:lasttab = 1
 nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
 map r :redo<cr>
-map R :R
-nmap T :FufBuffer<CR>
+map <C-f> :R
+nmap R :FufBuffer<CR>
 nmap U .
 nmap <C-d> :echo "stubbed"<cr>
 map <c-z> :echo "stubbed"<cr>
