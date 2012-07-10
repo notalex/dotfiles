@@ -1,3 +1,4 @@
 .project_notes*
 .project.notes
 driver_hook.rb
+.rvmrc
