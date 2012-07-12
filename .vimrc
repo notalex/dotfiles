@@ -36,8 +36,10 @@ inoremap <c-e> <esc>:wa<CR>
 vmap <C-x> "+x
 map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
-nmap <c-h> <Leader>c<space>
-vmap <c-h> <Leader>c<space>
+nmap <C-h> <Leader>c<space>
+vmap <C-h> <Leader>c<space>
+" the default behaviour of C-h does not remove both braces() when the 1st is removed
+imap <C-h> <Backspace>
 map <Space> a<Space><Esc>
 map <tab> >l
 map <s-tab> <l
