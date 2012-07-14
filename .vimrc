@@ -33,11 +33,13 @@ map <C-u> :undo<CR>
 imap <C-u> <Esc>:undo<CR>
 noremap <c-e> :wa<CR>
 inoremap <c-e> <esc>:wa<CR>
-vmap <C-x> "+x
 map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
-nmap <c-h> <Leader>c<space>
-vmap <c-h> <Leader>c<space>
+vmap <C-x> d:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
+nmap <C-h> <Leader>c<space>
+vmap <C-h> <Leader>c<space>
+" the default behaviour of C-h does not remove both braces() when the 1st is removed
+imap <C-h> <Backspace>
 map <Space> a<Space><Esc>
 map <tab> >l
 map <s-tab> <l
@@ -65,7 +67,6 @@ let g:lasttab = 1
 nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
 map r :redo<cr>
-map <C-f> :R
 nmap R :FufBuffer<CR>
 nmap U .
 nmap <C-d> :echo "stubbed"<cr>
@@ -81,6 +82,8 @@ cmap <c-y> <Down>
 cmap <c-x> <delete>
 cmap <c-a> <home>
 cmap <c-b> <S-left>
+cabbrev hv vertical topleft help
+nmap <C-f> :R
 
 " syntax  highlighting overrides
 """"""""""""""""""""""""""""""""
