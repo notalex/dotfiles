@@ -21,6 +21,7 @@ Bundle 'vim-scripts/Specky'
 Bundle 'vim-scripts/Auto-Pairs'
 Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'vim-scripts/dark-ruby'
+Bundle 'xolox/vim-notes'
 Bundle 'notalex/snipmate.vim'
 Bundle 'notalex/vim-ruby-run'
 Bundle 'notalex/vim-strip-trailers'
@@ -46,9 +47,12 @@ map <s-tab> <l
 nmap ;a :cw<cr>:resize +20<cr>:noautocmd vimgrep // app/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap ;f :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap <C-y> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
-nmap F :FufFile<CR>
+nmap <C-F> :FufFile<CR>
+nmap <C-B> :FufBuffer<CR>
 map <F2> :NERDTreeToggle<CR>
 map <F4> :NERDTreeFind<CR>
+nmap F :Note 
+nmap R :SearchNotes 
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -67,7 +71,6 @@ let g:lasttab = 1
 nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
 map r :redo<cr>
-nmap R :FufBuffer<CR>
 nmap U .
 nmap <C-d> :echo "stubbed"<cr>
 map <c-z> :echo "stubbed"<cr>
@@ -83,7 +86,6 @@ cmap <c-x> <delete>
 cmap <c-a> <home>
 cmap <c-b> <S-left>
 cabbrev hv vertical topleft help
-nmap <C-f> :R
 
 " syntax  highlighting overrides
 """"""""""""""""""""""""""""""""
@@ -116,3 +118,9 @@ hi notesUnderscore ctermfg=magenta
 hi notesHyphen ctermfg=lightgreen
 hi notesAsterisk ctermfg=lightblue
 hi notesHash ctermfg=brown
+
+" notes config
+let g:notes_suffix = '.notes'
+let g:notes_directory = '~/gitbasket'
+hi notesTagName ctermfg=4
+hi notesBold ctermfg=4
