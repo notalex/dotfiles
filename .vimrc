@@ -120,7 +120,9 @@ hi notesAsterisk ctermfg=lightblue
 hi notesHash ctermfg=brown
 
 " notes config
-let g:notes_suffix = '.notes'
-let g:notes_directory = '~/gitbasket'
-hi notesTagName ctermfg=4
-hi notesBold ctermfg=4
+  let g:notes_suffix = '.notes'
+  let g:notes_directory = '~/gitbasket'
+  hi notesTagName ctermfg=4
+  hi notesBold ctermfg=4
+  " notes maps <cr> in insert mode to remove empty list items
+  imap <C-m> <cr>
