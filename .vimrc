@@ -87,6 +87,8 @@ cmap <c-a> <home>
 cmap <c-b> <S-left>
 cabbrev hv vertical topleft help
 
+au BufNewFile,BufRead *.god setf ruby     " highlight god files
+
 " syntax  highlighting overrides
 """"""""""""""""""""""""""""""""
 hi VertSPlit cterm=none ctermfg=green guifg=lightgray
