@@ -23,6 +23,8 @@ alias apti='sudo apt-get install'
 alias aptr='sudo apt-get remove'
 alias apts='sudo apt-cache search'
 dpks() { echo dpkg --get-selections $1; dpkg --get-selections $1;}
+pag() { echo 'ps aux | grep '$1; ps aux | grep $1; }
+les() { $@ | less; }
 
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'

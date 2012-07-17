@@ -1,5 +1,0 @@
-#! /usr/bin/ruby
-command = ARGV.join(' ')
-full_command = "#{command} | less"
-puts full_command
-system full_command
