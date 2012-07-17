@@ -125,5 +125,6 @@ hi notesAsterisk ctermfg=lightblue
   let g:notes_directory = '~/gitbasket'
   hi notesTagName ctermfg=4
   hi notesBold ctermfg=4
+  hi notesItalic ctermfg=magenta
   " notes maps <cr> in insert mode to remove empty list items
   imap <C-m> <cr>
