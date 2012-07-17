@@ -5,8 +5,8 @@ type = ARGV[1]
 case type
 when 'i'
   methods = 'instance_methods'
-when 'c'
-  methods = 'class_methods'
+when 's'
+  methods = 'singleton_methods'
 else
   methods = 'methods'
 end
