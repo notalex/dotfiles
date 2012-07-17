@@ -1,0 +1,16 @@
+#! /usr/bin/ruby
+klass = ARGV[0].capitalize
+type = ARGV[1]
+
+case type
+when 'i'
+  methods = 'instance_methods'
+when 'c'
+  methods = 'class_methods'
+else
+  methods = 'methods'
+end
+
+command = "ruby -e 'puts #{klass}.#{methods}' | less"
+system command
+puts command
