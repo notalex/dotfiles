@@ -88,6 +88,7 @@ cmap <c-b> <S-left>
 cabbrev hv vertical topleft help
 
 au BufNewFile,BufRead *.god setf ruby     " highlight god files
+au BufNewFile,BufRead *.bash_aliases setf sh     " highlight aliases files
 
 " syntax  highlighting overrides
 """"""""""""""""""""""""""""""""
