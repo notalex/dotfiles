@@ -9,10 +9,10 @@ alias gap="ge git add -p"
 alias gcm="git commit -m"
 alias gcma="git commit --amend"
 alias gcam="git commit -a -m"
-alias gdb="git diff --name-only"
-alias gdf="git diff --name-status"
+gdb() { echo git diff --name-only $1; git diff --name-only $1; }
+gdf() { echo git diff --name-status $1; git diff --name-status $1; }
 alias gl="git log --oneline -5"
-alias glog="git log --oneline"
+glog() { git log --oneline -$1; }
 alias grl="git reflog"
 alias g_config="git config --list"
 alias gra="git remote add"
@@ -22,11 +22,11 @@ alias src='source ~/.bashrc'
 alias apti='sudo apt-get install'
 alias aptr='sudo apt-get remove'
 alias apts='sudo apt-cache search'
-alias dpks='dpkg --get-selections'
+dpks() { echo dpkg --get-selections $1; dpkg --get-selections $1;}
 
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'
-alias delayed_emails='echo rake jobs:clear and rake jobs:work ; rake jobs:clear ; rake jobs:work'
+delayed_emails() { echo 'rake jobs:clear && rake jobs:work'; rake jobs:clear; rake jobs:work; }
 
 # rvm
 alias rgu='rvm gemset use'
