@@ -21,6 +21,8 @@ Bundle 'vim-scripts/Specky'
 Bundle 'vim-scripts/Auto-Pairs'
 Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'vim-scripts/dark-ruby'
+"Bundle 'vim-scripts/YankRing'
+"Bundle 'vim-scripts/Txfmt-The-Vim-Highlighter'
 Bundle 'xolox/vim-notes'
 Bundle 'notalex/snipmate.vim'
 Bundle 'notalex/vim-ruby-run'
@@ -88,7 +90,7 @@ cmap <c-b> <S-left>
 cabbrev hv vertical topleft help
 
 au BufNewFile,BufRead *.god setf ruby     " highlight god files
-au BufNewFile,BufRead *.bash_aliases setf sh     " highlight aliases files
+au BufNewFile,BufRead .bash_aliases setf sh     " highlight aliases files
 
 " syntax  highlighting overrides
 """"""""""""""""""""""""""""""""
@@ -124,7 +126,9 @@ hi notesAsterisk ctermfg=lightblue
   let g:notes_suffix = '.notes'
   let g:notes_directory = '~/gitbasket'
   hi notesTagName ctermfg=4
-  hi notesBold ctermfg=4
-  hi notesItalic ctermfg=magenta
+  hi notesBold ctermfg=14
+  hi notesItalic ctermfg=12
+  hi notesDoubleQuoted ctermfg=3
+  hi notesSingleQuoted ctermfg=7
   " notes maps <cr> in insert mode to remove empty list items
   imap <C-m> <cr>
