@@ -9,8 +9,8 @@ alias gap="ge git add -p"
 alias gcm="git commit -m"
 alias gcma="git commit --amend"
 alias gcam="git commit -a -m"
-gdb() { echo git diff --name-only $1; git diff --name-only $1; }
-gdf() { echo git diff --name-status $1; git diff --name-status $1; }
+gdb() { echo git diff --name-only $@; git diff --name-only $@; }
+gdf() { echo git diff --name-status $@; git diff --name-status $@; }
 alias gl="git log --oneline -5"
 glog() { git log --oneline -$1; }
 alias grl="git reflog"
