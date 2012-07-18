@@ -21,8 +21,8 @@ Bundle 'vim-scripts/Specky'
 Bundle 'vim-scripts/Auto-Pairs'
 Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'vim-scripts/dark-ruby'
-"Bundle 'vim-scripts/YankRing'
-"Bundle 'vim-scripts/Txfmt-The-Vim-Highlighter'
+"Bundle 'vim-scripts/YankRing.vim'
+"Bundle 'vim-scripts/Txtfmt-The-Vim-Highlighter'
 Bundle 'xolox/vim-notes'
 Bundle 'notalex/snipmate.vim'
 Bundle 'notalex/vim-ruby-run'
@@ -130,5 +130,6 @@ hi notesAsterisk ctermfg=lightblue
   hi notesItalic ctermfg=12
   hi notesDoubleQuoted ctermfg=3
   hi notesSingleQuoted ctermfg=7
+  hi notesXXX ctermfg=red
   " notes maps <cr> in insert mode to remove empty list items
   imap <C-m> <cr>
