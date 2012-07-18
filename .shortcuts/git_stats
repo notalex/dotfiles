@@ -1,0 +1,10 @@
+#! /usr/bin/ruby
+
+case ARGV[0]
+when 'branch_name'
+  branch_string = `git branch`
+  branch_name = branch_string.slice(/\* (\w+)/, 1)
+  puts branch_name
+when 'branch_color_code'
+  3
+end
