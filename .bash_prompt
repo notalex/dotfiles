@@ -1,26 +1,14 @@
 #ǂɎΞϠж٭»
 # for git branch names in prompt
 symbol=Ϡ
-c_reset=`tput sgr0`
-c_git_clean=`tput setaf 7`
-c_white=`tput setaf 7`
-c_git_dirty=`tput setaf 3`
-c_dir=`tput setaf 2`
-c_arrow=`tput setaf 6`
+c_reset=$( tput sgr0 )
+c_dir=$( tput setaf 3 )
+c_arrow=$( tput setaf 6 )
 
-git_prompt() { ~/.shortcuts/git_stats branch_name; }
-
-git_color() { 
-  #prefix = "c_git_"
-  #status =  ~/.shortcuts/git_stats branch_color_code
-  #eval prefix
-  if git diff --quiet 2>/dev/null >&2; then
-      git_color=${c_git_clean}
-  else
-      git_color=${c_git_dirty}
-  fi
-  echo $git_color
-} 
+# using methods ensures that these are executed everytime the file is read
+branch_name() { ~/.shortcuts/git_stats branch_name; }
+branch_color() { eval $( ~/.shortcuts/git_stats branch_color_code );} # value will be a string which needs eval
+symbol_color() { eval $( ~/.shortcuts/git_stats symbol_color ); }
 
 
-export PS1='\[$(git_color)\]$(git_prompt)\[$c_white\]$symbol \[$c_dir\]\W\[$c_arrow\]:▶\[$c_reset\] '
+export PS1='\[$(branch_color)\]$(branch_name)\[$(symbol_color)\]$symbol \[$c_dir\]\W\[$c_arrow\]:▶\[$c_reset\] '
