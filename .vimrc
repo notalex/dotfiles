@@ -44,8 +44,8 @@ vmap <C-h> <Leader>c<space>
 " the default behaviour of C-h does not remove both braces() when the 1st is removed
 imap <C-h> <Backspace>
 map <Space> a<Space><Esc>
-map <tab> >l
-map <s-tab> <l
+nmap <tab> >l
+nmap <s-tab> <l
 nmap ;a :cw<cr>:resize +20<cr>:noautocmd vimgrep // app/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap ;f :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap <C-y> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
@@ -131,5 +131,6 @@ hi notesAsterisk ctermfg=lightblue
   hi notesDoubleQuoted ctermfg=3
   hi notesSingleQuoted ctermfg=7
   hi notesXXX ctermfg=red
+  hi notesBlockQuote ctermfg=lightgreen
   " notes maps <cr> in insert mode to remove empty list items
   imap <C-m> <cr>
