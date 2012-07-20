@@ -1,14 +1,20 @@
 #! /usr/bin/ruby
-branch = ARGV[0]
-command = case branch
-          when 'd'
-            "git pull origin develop"
-          when 'r'
-            "git pull origin release"
-          when 'm'
-            "git pull origin master"
-          else
-            "git pull origin #{branch}"
-          end
+if ARGV[1]
+  command = "git pull #{ARGV[0]} #{ARGV[1]}"
+else
+  branch_string = %x[ git branch ]
+  branch_name = branch_string.slice(/\* (\w+)/, 1)
+  branch = ARGV[0] || branch_name
+  command = case branch
+    when 'd'
+      "git pull origin develop"
+    when 'r'
+      "git pull origin release"
+    when 'm'
+      "git pull origin master"
+    else
+      "git pull origin #{branch}"
+    end
+end
 puts command
 system command
