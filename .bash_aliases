@@ -15,6 +15,7 @@ glog() { git log --oneline -$1; }
 alias grl="git reflog"
 alias g_config="git config --list"
 alias gra="git remote add"
+alias gb="git branch -v"
 
 # bash
 alias src='source ~/.bashrc'

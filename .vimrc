@@ -132,5 +132,7 @@ hi notesAsterisk ctermfg=lightblue
   hi notesSingleQuoted ctermfg=7
   hi notesXXX ctermfg=red
   hi notesBlockQuote ctermfg=lightgreen
+  hi notesUnixPath ctermfg=yellow
+  hi notesShortHeading ctermfg=red
   " notes maps <cr> in insert mode to remove empty list items
   imap <C-m> <cr>
