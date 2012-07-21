@@ -3,6 +3,7 @@
 dirty = 2
 untracked = 6
 clean = 7
+status = %x[ git status ]
 
 case ARGV[0]
 when 'branch_name'
@@ -10,7 +11,6 @@ when 'branch_name'
   branch_name = branch_string.slice(/\* (\w+)/, 1)
   puts branch_name
 when 'branch_color_code'
-  status = %x[ git status ]
   if status.slice(/Changes not staged for commit/m, 0)
     puts "tput setaf #{dirty}"
   elsif status.slice(/Untracked files/m, 0)
@@ -19,5 +19,9 @@ when 'branch_color_code'
     puts "tput setaf #{clean}"
   end
 when 'symbol_color'
-  puts "tput setaf #{clean}"
+  if status.slice(/Changes to be committed/m, 0)
+    puts "tput setaf #{dirty}"
+  else
+    puts "tput setaf #{clean}"
+  end
 end
