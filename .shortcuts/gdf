@@ -1,0 +1,19 @@
+#! /usr/bin/ruby
+# default is HEAD~0
+param = ARGV[0]
+if param == 'c'
+  command = "git diff --cached --name-status"
+elsif param && param.match(/\d+/)
+  if ARGV[1]
+    starting = param.slice(/\d+/)
+    ending = ARGV[1].slice(/\d+/)
+  else
+    starting = 1
+    ending = param.slice(/\d+/)
+  end
+  command = "git diff --name-status HEAD~#{starting.to_i - 1} HEAD~#{ending.to_i - 1}"
+else
+  command = "git diff --name-status"
+end
+puts command
+system command
