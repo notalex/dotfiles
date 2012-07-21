@@ -5,16 +5,17 @@ else
   branch_string = %x[ git branch ]
   branch_name = branch_string.slice(/\* (\w+)/, 1)
   branch = ARGV[0] || branch_name
-  command = case branch
-    when 'd'
-      "git pull origin develop"
-    when 'r'
-      "git pull origin release"
-    when 'm'
-      "git pull origin master"
-    else
-      "git pull origin #{branch}"
-    end
+  remote_name = case branch
+                when 'd'
+                  "develop"
+                when 'r'
+                  "release"
+                when 'm'
+                  "master"
+                else
+                  branch
+                end
+  command = "git pull origin #{remote_name}"
 end
 puts command
 system command

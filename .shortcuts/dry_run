@@ -1,0 +1,27 @@
+#! /usr/bin/ruby
+
+branch_string = %x[ git branch ]
+branch_name = branch_string.slice(/\* (\w+)/, 1)
+branch = ARGV[0] || branch_name
+remote_name = case branch
+              when 'd'
+                "develop"
+              when 'r'
+                "release"
+              when 'm'
+                "master"
+              else
+                branch
+              end
+ahead_result = %x[ git push origin #{branch_name}:#{remote_name} --dry-run ]
+behind_result = %x[ git pull origin #{remote_name} --dry-run ]
+if ahead_result.match(/Everything up-to-date/m)
+  message = "origin:#{remote_name} and #{branch_name} have the same commits"
+elsif not ahead_result.match(/Already up-to-date/m)
+  message = "#{branch_name} is ahead of origin:#{remote_name}"
+elsif not behind_result.match(/Already up-to-date/m)
+  message = "origin:#{remote_name} is ahead of #{branch_name}"
+end
+puts "----------------------------------------------------"
+puts message
+puts "----------------------------------------------------"
