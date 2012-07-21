@@ -21,6 +21,7 @@ Bundle 'vim-scripts/Specky'
 Bundle 'vim-scripts/Auto-Pairs'
 Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'vim-scripts/dark-ruby'
+Bundle 'vim-scripts/utl.vim'
 "Bundle 'vim-scripts/YankRing.vim'
 "Bundle 'vim-scripts/Txtfmt-The-Vim-Highlighter'
 Bundle 'xolox/vim-notes'
@@ -44,8 +45,8 @@ vmap <C-h> <Leader>c<space>
 " the default behaviour of C-h does not remove both braces() when the 1st is removed
 imap <C-h> <Backspace>
 map <Space> a<Space><Esc>
-nmap <tab> >l
-nmap <s-tab> <l
+map <tab> >l
+map <s-tab> <l
 nmap ;a :cw<cr>:resize +20<cr>:noautocmd vimgrep // app/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap ;f :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap <C-y> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
@@ -82,12 +83,18 @@ imap <c-b> <C-o><left>
 imap <c-j> <c-n>
 nmap <c-j> i<CR><Esc>
 set smartindent
+nmap <c-r> :R
+
+" #----------------- c maps --------------------------------
+
 cmap <c-u> <Up>
 cmap <c-y> <Down>
 cmap <c-x> <delete>
 cmap <c-a> <home>
 cmap <c-b> <S-left>
 cabbrev hv vertical topleft help
+
+" #----------------- highlighting -----------------------------------------------
 
 au BufNewFile,BufRead *.god setf ruby     " highlight god files
 au BufNewFile,BufRead .bash_* setf sh     " highlight bash files
@@ -122,7 +129,7 @@ hi notesUnderscore ctermfg=magenta
 hi notesHyphen ctermfg=lightgreen
 hi notesAsterisk ctermfg=lightblue
 
-" notes config
+" #--------------------notes config------------------------------------------
   let g:notes_suffix = '.notes'
   let g:notes_directory = '~/gitbasket'
   hi notesTagName ctermfg=4
