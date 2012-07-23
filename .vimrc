@@ -83,7 +83,6 @@ imap <c-b> <C-o><left>
 imap <c-j> <c-n>
 nmap <c-j> i<CR><Esc>
 set smartindent
-nmap <c-r> :R
 
 " #----------------- c maps --------------------------------
 
