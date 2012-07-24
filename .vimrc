@@ -1,6 +1,5 @@
 set nocompatible
-filetype off
-
+filetype off 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -77,12 +76,14 @@ map r :redo<cr>
 nmap U .
 nmap <C-d> :echo "stubbed"<cr>
 map <c-z> :echo "stubbed"<cr>
+nmap <c-j> i<CR><Esc>
+set smartindent
+
+" #---------------- i maps --------------------------
 imap <c-f> <Esc>la
 imap <c-w> <Esc>:echo "stubbed"<cr>
 imap <c-b> <C-o><left>
 imap <c-j> <c-n>
-nmap <c-j> i<CR><Esc>
-set smartindent
 
 " #----------------- c maps --------------------------------
 
