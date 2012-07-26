@@ -1,7 +1,8 @@
 startup_message off
 
-# copy mode mappings can only be done with bindkey
-bindkey ^d eval copy "stuff ?"  
+# ctrl key mappings can only be done with bindkey
+bindkey ^s eval copy "stuff ?"  
+bindkey ^d eval meta colon "stuff 'echo stubbed'" 'stuff \015'
 
 vbell off                       # Turns visual bell off
 bind z  # unbind suspend
