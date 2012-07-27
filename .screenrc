@@ -2,11 +2,12 @@ startup_message off
 
 # ctrl key mappings can only be done with bindkey
 bindkey ^s eval copy "stuff ?"  
-bindkey ^d eval meta colon "stuff 'echo stubbed'" 'stuff \015'
 
 vbell off                       # Turns visual bell off
-bind z  # unbind suspend
-bind d  # unbind detach
+bindkey ^d eval meta colon "stuff 'echo stubbed'" 'stuff \015'
+bind z eval meta colon "stuff 'echo stubbed'" 'stuff \015'   # unbind suspend
+bind d eval meta colon "stuff 'echo stubbed'" 'stuff \015'   # unbind detach
+bind ^Z eval meta colon "stuff 'echo stubbed'" 'stuff \015'
 
 # rebind kill
 bind k  
