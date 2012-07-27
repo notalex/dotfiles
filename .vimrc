@@ -84,6 +84,8 @@ imap <c-f> <Esc>la
 imap <c-w> <Esc>:echo "stubbed"<cr>
 imap <c-b> <C-o><left>
 imap <c-j> <c-n>
+" remap ctrl space to just space
+imap <Nul> <Space>
 
 " #----------------- c maps --------------------------------
 
@@ -93,6 +95,7 @@ cmap <c-x> <delete>
 cmap <c-a> <home>
 cmap <c-b> <S-left>
 cabbrev hv vertical topleft help
+cmap <Nul> <Space>
 
 " #----------------- highlighting -----------------------------------------------
 
