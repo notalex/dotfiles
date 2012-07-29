@@ -4,7 +4,6 @@ startup_message off
 bindkey ^s eval copy "stuff ?"  
 
 vbell off                       # Turns visual bell off
-bindkey ^d eval meta colon "stuff 'echo stubbed'" 'stuff \015'
 bind z eval meta colon "stuff 'echo stubbed'" 'stuff \015'   # unbind suspend
 bind d eval meta colon "stuff 'echo stubbed'" 'stuff \015'   # unbind detach
 bind ^Z eval meta colon "stuff 'echo stubbed'" 'stuff \015'

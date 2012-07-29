@@ -32,8 +32,6 @@ filetype plugin on
 colorscheme dark-ruby
 map <CR> O<Esc>
 map <c-o> o<Esc>
-map <C-u> :undo<CR>
-imap <C-u> <Esc>:undo<CR>
 noremap <c-e> :wa<CR>
 inoremap <c-e> <esc>:wa<CR>
 map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
@@ -74,7 +72,6 @@ nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
 map r :redo<cr>
 nmap U .
-nmap <C-d> :echo "stubbed"<cr>
 map <c-z> :echo "stubbed"<cr>
 nmap <c-j> i<CR><Esc>
 set smartindent
