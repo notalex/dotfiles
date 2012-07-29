@@ -30,59 +30,43 @@ Bundle 'notalex/vim-strip-trailers'
 
 filetype plugin on
 colorscheme dark-ruby
+
+" #-----------------maps------------------
+
 map <CR> O<Esc>
 map <c-o> o<Esc>
-noremap <c-e> :wa<CR>
-inoremap <c-e> <esc>:wa<CR>
-map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
-map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
-vmap <C-x> d:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
-nmap <C-h> <Leader>c<space>
-vmap <C-h> <Leader>c<space>
-" the default behaviour of C-h does not remove both braces() when the 1st is removed
-imap <C-h> <Backspace>
+map <c-e> :wa<CR>
 map <Space> a<Space><Esc>
 map <tab> >l
 map <s-tab> <l
-nmap ;a :cw<cr>:resize +20<cr>:noautocmd vimgrep // app/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
-nmap ;f :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
-nmap <C-y> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
-nmap <C-F> :FufFile<CR>
-nmap <C-B> :FufBuffer<CR>
-map <F2> :NERDTreeToggle<CR>
-map <F4> :NERDTreeFind<CR>
-nmap F :Note 
-nmap R :SearchNotes 
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set hidden
-set ignorecase
-set smartcase
+" nerdcommenter binding
+map <C-h> <Leader>c<space>
+
+" #----------------nmaps---------------
+
 nnoremap <C-F7> :vertical resize -5<cr>
 nnoremap <C-F6> :resize +5<cr>
 nnoremap <C-F5> :resize -5<cr>
 nnoremap <C-F8> :vertical resize +5<cr>
-set nobackup
-set nowritebackup
-set noswapfile
-map K :filetype detect<cr>
-let g:lasttab = 1
-nmap <c-a> :exe "tabn" .g:lasttab <CR>
-au TabLeave * let g:lasttab = tabpagenr()
-map r :redo<cr>
-nmap U .
-map <c-z> :echo "stubbed"<cr>
-nmap <c-j> i<CR><Esc>
-set smartindent
+nmap <C-F> :FufFile<CR>
+nmap <C-B> :FufBuffer<CR>
+nmap <F2> :NERDTreeToggle<CR>
+nmap <F4> :NERDTreeFind<CR>
+nmap F :Note 
+nmap R :SearchNotes 
+nmap K :filetype detect<cr>
+nmap r :redo<cr>
 
 " #---------------- i maps --------------------------
+imap <c-e> <esc>:wa<CR>
 imap <c-f> <Esc>la
 imap <c-w> <Esc>:echo "stubbed"<cr>
 imap <c-b> <C-o><left>
 imap <c-j> <c-n>
 " remap ctrl space to just space
 imap <Nul> <Space>
+" the default behaviour of C-h does not remove both braces() when the 1st is removed
+imap <C-h> <Backspace>
 
 " #----------------- c maps --------------------------------
 
@@ -91,8 +75,32 @@ cmap <c-y> <Down>
 cmap <c-x> <delete>
 cmap <c-a> <home>
 cmap <c-b> <S-left>
-cabbrev hv vertical topleft help
 cmap <Nul> <Space>
+cabbrev hv vertical topleft help
+
+" ------------------set------------------------------
+set smartindent
+set nobackup
+set ignorecase
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set hidden
+set smartcase
+set nowritebackup
+set noswapfile
+
+" -----------------scripts------------------
+let g:lasttab = 1
+nmap <c-a> :exe "tabn" .g:lasttab <CR>
+au TabLeave * let g:lasttab = tabpagenr()
+
+nmap ;a :cw<cr>:resize +20<cr>:noautocmd vimgrep // app/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
+nmap ;f :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
+nmap <C-y> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
+map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
+map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
+vmap <C-x> d:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 
 " #----------------- highlighting -----------------------------------------------
 
@@ -141,5 +149,3 @@ hi notesAsterisk ctermfg=lightblue
   hi notesBlockQuote ctermfg=lightgreen
   hi notesUnixPath ctermfg=yellow
   hi notesShortHeading ctermfg=red
-  " notes maps <cr> in insert mode to remove empty list items
-  imap <C-m> <cr>
