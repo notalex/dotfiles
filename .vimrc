@@ -35,7 +35,7 @@ colorscheme dark-ruby
 
 map <CR> O<Esc>
 map <c-o> o<Esc>
-map <c-e> :wa<CR>
+map <c-s> :wa<CR>
 map <Space> a<Space><Esc>
 map <tab> >l
 map <s-tab> <l
@@ -56,9 +56,11 @@ nmap F :Note
 nmap R :SearchNotes 
 nmap K :filetype detect<cr>
 nmap r :redo<cr>
+nmap <c-j> i<CR><Esc>
+nmap ;v :Rview 
 
 " #---------------- i maps --------------------------
-imap <c-e> <esc>:wa<CR>
+imap <c-s> <esc>:wa<CR>
 imap <c-f> <Esc>la
 imap <c-w> <Esc>:echo "stubbed"<cr>
 imap <c-b> <C-o><left>
@@ -67,6 +69,8 @@ imap <c-j> <c-n>
 imap <Nul> <Space>
 " the default behaviour of C-h does not remove both braces() when the 1st is removed
 imap <C-h> <Backspace>
+imap <c-a> <Home>
+imap <C-e> <End>
 
 " #----------------- c maps --------------------------------
 
@@ -74,6 +78,7 @@ cmap <c-u> <Up>
 cmap <c-y> <Down>
 cmap <c-x> <delete>
 cmap <c-a> <home>
+" <C-e> cmapped to <End> by default
 cmap <c-b> <S-left>
 cmap <Nul> <Space>
 cabbrev hv vertical topleft help
