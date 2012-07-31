@@ -33,8 +33,7 @@ colorscheme dark-ruby
 
 " #-----------------maps------------------
 
-map <CR> O<Esc>
-map <c-o> o<Esc>
+map <c-o> :echo "stubbed"<cr>
 map <c-s> :wa<CR>
 map <Space> a<Space><Esc>
 map <tab> >l
@@ -48,6 +47,8 @@ nnoremap <C-F7> :vertical resize -5<cr>
 nnoremap <C-F6> :resize +5<cr>
 nnoremap <C-F5> :resize -5<cr>
 nnoremap <C-F8> :vertical resize +5<cr>
+nmap <CR> O<Esc>
+nmap <c-j> i<CR><Esc>b
 nmap <C-F> :FufFile<CR>
 nmap <C-B> :FufBuffer<CR>
 nmap <F2> :NERDTreeToggle<CR>
@@ -56,7 +57,6 @@ nmap F :Note
 nmap R :SearchNotes 
 nmap K :filetype detect<cr>
 nmap r :redo<cr>
-nmap <c-j> i<CR><Esc>
 nmap ;v :Rview 
 
 " #---------------- i maps --------------------------
@@ -99,6 +99,8 @@ set noswapfile
 let g:lasttab = 1
 nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
+
+let NERDTreeShowHidden = 1
 
 nmap ;a :cw<cr>:resize +20<cr>:noautocmd vimgrep // app/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap ;f :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
