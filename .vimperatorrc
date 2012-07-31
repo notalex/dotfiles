@@ -1,6 +1,6 @@
-"3.4 (created: 2012/04/02 20:07:29)
 " vim: set ft=vimperator:
-source! /home/alex/.vimperatorrc.local
+
+colorscheme custom
 
 cmap <C-c> <Esc>
 cmap <C-p> <Up>
@@ -8,5 +8,10 @@ cmap <C-n> <Down>
 cmap <C-h> <BS>
 cmap <C-a> <Home>
 cmap <C-i> <Tab>
+cmap <C-b> <C-left>
+cmap <C-f> <C-right>
+
 nmap H gT
 nmap L gt
+nmap <C-y> :source ~/.vimperatorrc<cr>:echomsg 'reloaded!'<cr>  
+nmap <C-e> :colorscheme custom<cr>:echomsg 'colorscheme updated!'<cr>

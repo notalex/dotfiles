@@ -4,9 +4,8 @@ hi clear
 hi CompDesc					color: #999; width: 50%;
 hi CompItem[selected]		background: #666;
 
-" Used in Command Line
-" Entire bottom line
-"hi CmdLine                  color: #aaa; background: #333; font-family: Inconsolata; font-size: 12px; padding: 0px; vertical-align: middle; border: none;
+hi CmdLine                  color: yellow; background: #333; font-family: verdana; padding: 0px; vertical-align: middle; border: none;
+hi StatusLine				color: #ddc; background: #333; font-family: verdana; font-size: 13px;
 
 " Used in the URL column of `bmarks`
 hi CompResult				color: #aaa; width: 45%; overflow: hidden;
@@ -48,8 +47,6 @@ hi Question					color: #080; background: #222; font-weight: bold; -moz-border-ra
 
 hi Search					color: #333; background-color: #cc0; font-size: inherit; padding: 0; padding: 0;
 
-"hi StatusLine				color: #ddc; background: #333; font-family: Inconsolata; font-size: 14px; margin-top: 1px;
-
 " Firefox's tabs
 hi TabNumber				color: #ddc; font-weight: bold; margin: 0; padding-right: .3ex; text-shadow: #000 -1px 0 0, #000 0 1px 0, #000 1px 0 0, #000 0 -1px 0;
 
@@ -65,3 +62,6 @@ hi URL:hover				color: #880; background-color: #222; -moz-border-radius: 5px; cu
 hi ContentSeparator			border:none;
 
 " vim:set filetype=vim:
+
+" The matching text in a completion list
+hi Filter color: yellow
