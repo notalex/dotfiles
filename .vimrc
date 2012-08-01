@@ -33,13 +33,14 @@ colorscheme dark-ruby
 
 " #-----------------maps------------------
 
-map <c-o> :echo "stubbed"<cr>
-map <c-s> :wa<CR>
 map <Space> a<Space><Esc>
-map <tab> >l
-map <s-tab> <l
 " nerdcommenter binding
 map <C-h> <Leader>c<space>
+
+" #-----------------vmaps------------------
+
+vmap <tab> >l
+vmap <s-tab> <l
 
 " #----------------nmaps---------------
 
@@ -58,13 +59,14 @@ nmap R :SearchNotes
 nmap K :filetype detect<cr>
 nmap r :redo<cr>
 nmap ;v :Rview 
+nmap <c-y> :wa<CR>
 
-" #---------------- i maps --------------------------
-imap <c-s> <esc>:wa<CR>
+" #---------------- imaps --------------------------
+imap <c-y> <esc>:wa<CR>
 imap <c-f> <Esc>la
-imap <c-w> <Esc>:echo "stubbed"<cr>
+imap <c-w> <C-o>:echo "stubbed"<cr>
 imap <c-b> <C-o><left>
-imap <c-j> <c-n>
+imap <c-j> <Esc>:echo "stubbed"<cr>
 " remap ctrl space to just space
 imap <Nul> <Space>
 " the default behaviour of C-h does not remove both braces() when the 1st is removed
@@ -72,7 +74,7 @@ imap <C-h> <Backspace>
 imap <c-a> <Home>
 imap <C-e> <End>
 
-" #----------------- c maps --------------------------------
+" #----------------- cmaps --------------------------------
 
 cmap <c-u> <Up>
 cmap <c-y> <Down>
@@ -84,6 +86,7 @@ cmap <Nul> <Space>
 cabbrev hv vertical topleft help
 
 " ------------------set------------------------------
+
 set smartindent
 set nobackup
 set ignorecase
@@ -104,7 +107,7 @@ let NERDTreeShowHidden = 1
 
 nmap ;a :cw<cr>:resize +20<cr>:noautocmd vimgrep // app/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap ;f :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
-nmap <C-y> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
+nmap <C-e> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 vmap <C-x> d:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
