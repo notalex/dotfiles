@@ -1,3 +1,5 @@
+# vim: set ft=sh:
+
 # git push
 alias staging_push="git push staging release:master"
 alias m_staging_push="git push staging release:master && h_migrate s && h_assets_precompile s"

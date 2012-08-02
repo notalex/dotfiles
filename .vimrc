@@ -49,7 +49,7 @@ nnoremap <C-F6> :resize +5<cr>
 nnoremap <C-F5> :resize -5<cr>
 nnoremap <C-F8> :vertical resize +5<cr>
 nmap <CR> O<Esc>
-nmap <c-j> i<CR><Esc>b
+nmap <c-j> i<CR><Esc>
 nmap <C-F> :FufFile<CR>
 nmap <C-B> :FufBuffer<CR>
 nmap <F2> :NERDTreeToggle<CR>
@@ -111,11 +111,6 @@ nmap <C-e> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 vmap <C-x> d:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
-
-" #----------------- highlighting -----------------------------------------------
-
-au BufNewFile,BufRead *.god setf ruby     " highlight god files
-au BufNewFile,BufRead .bash_* setf sh     " highlight bash files
 
 " syntax  highlighting overrides
 """"""""""""""""""""""""""""""""

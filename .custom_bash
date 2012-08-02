@@ -1,3 +1,5 @@
+# vim: set ft=sh:
+
 . ~/.bash_prompt
 
 stty stop undef

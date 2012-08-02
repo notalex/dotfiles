@@ -20,4 +20,3 @@ bind ; eval meta colon "stuff 'resize '"
 # rebind rename tab
 bind A
 bind < title
-
