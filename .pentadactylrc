@@ -1,0 +1,20 @@
+" vim: set ft=vim:
+"loadplugins '\.(js|penta)$'
+
+colorscheme custom
+bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title "Google feeling lucky search " -keyword lucky
+cabbreviate py pentadactyl
+
+set guioptions=Cs
+
+cmap <C-c> <Esc>
+cmap <C-p> <Up>
+cmap <C-n> <Down>
+cmap <C-i> <Tab>
+cmap <C-o> <S-Tab>
+cmap <C-b> <C-Left>
+cmap <C-f> <C-Right>
+
+nmap <C-c> <Esc>  " use for escaping message prompts; default is :stop
+nmap <C-e> :source ~/.pentadactylrc<cr>:echomsg 'reloaded!'<cr>  
+nmap <C-y> :colorscheme custom<cr>:echomsg 'colorscheme updated!'<cr>
