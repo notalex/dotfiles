@@ -2,10 +2,15 @@
 "loadplugins '\.(js|penta)$'
 
 colorscheme custom
-bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title "Google feeling lucky search " -keyword lucky
-cabbreviate py pentadactyl
+bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title "Google feeling lucky search " -keyword google_lucky
 
+cabbreviate py pentadactyl
+cabbreviate lu google_lucky
+
+" hide all scrollbars
 set guioptions=Cs
+
+imap <C-m> <CR>
 
 cmap <C-c> <Esc>
 cmap <C-p> <Up>

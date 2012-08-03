@@ -8,8 +8,10 @@ hi Normal					color: #ddc; background: #333;
 
 hi CmdLine                  color: yellow; background: #333; font-family: verdana; font-size: 13px;
 hi StatusLine				color: wheat; background: #333; font-family: sans-serif; font-size: 12px;
-" the right part of status line for web links
+" the right part of status line for secure web links
 hi StatusLineSecure				color: yellow; background: black; font-family: sans-serif; font-size: 12px;
+" the right part of status line while in pages like mozilla addons
+hi StatusLineExtended				color: yellow; background: black; font-family: sans-serif; font-size: 12px;
 
 " The matching text in a completion list
 hi Filter color: yellow
