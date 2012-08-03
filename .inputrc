@@ -1,0 +1,10 @@
+set editing-mode vi
+
+$if mode=vi
+  "\C-l": clear-screen
+  "\C-e":end-of-line
+  "\C-a":beginning-of-line
+  "\C-p":history-search-backward
+  "\C-n":history-search-forward
+  "\C-c":vi-movement-mode
+$endif
