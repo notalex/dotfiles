@@ -73,6 +73,7 @@ imap <Nul> <Space>
 imap <C-h> <Backspace>
 imap <c-a> <Home>
 imap <C-e> <End>
+imap <C-u> <C-o>:echo "stubbed"<cr>
 
 " #----------------- cmaps --------------------------------
 
