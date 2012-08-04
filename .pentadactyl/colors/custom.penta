@@ -26,6 +26,11 @@ hi MoreMsg					color: #080; background: #222; font-weight: bold; -moz-border-rad
 " Used when error on syntax error in vimperatorrc, etc.
 hi LineNr					color: orange; background-color: #333;
 
+hi Hint               text-transform: uppercase; font-family : "Helvetica Neue", "Helvetica", "Arial", "Sans"; font-weight: bold; font-size: 11px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); color: #302505; padding: 1px 3px 0px 3px; background: -moz-linear-gradient(top, #FFF785, #FFC542); border: 1px #C38A22 solid; -moz-border-radius: 3px; -moz-box-shadow: 0 3px 7px 0px rgba(0,0,0,0.3);
+hi HintElem           background-color: none
+hi HintActive	      background-color: none
+hi HintImage          opacity: .5 !important;
+
 hi CompResult				color: LimeGreen; font-family: sans-serif; font-size: 12.5px;
 hi CompDesc				font-family: sans-serif; font-size: 12.5px;
 hi CompTitle>*				color: black; font-weight: bold; font-family: sans-serif; font-size: 12px;
@@ -36,19 +41,5 @@ hi Question					color: lightgrey; background: black; font-family: sans-serif;
 
 " ~ characters
 hi NonText color: black;
-
-"hi Search					color: #333; background-color: red;
-
-"" Firefox's tabs
-"hi TabNumber				color: #ddc; font-weight: bold; margin: 0; padding-right: .3ex; text-shadow: #000 -1px 0 0, #000 0 1px 0, #000 1px 0 0, #000 0 -1px 0;
-
-"" Used in `pageinfo` or `jumps`
-"hi Title					color: #ddc; background: #333; font-weight: bold;
-
-"" Used in items of Info field of `bmarks`
-"hi Keyword					color: #CC0;
-"hi Tag						color: #0CC;
-"hi URL						color: #080; text-decoration: none; padding: 0 2px;
-"hi URL:hover				color: #880; background-color: #222; -moz-border-radius: 5px; cursor: pointer;
 
 "hi ContentSeparator			border:none;
