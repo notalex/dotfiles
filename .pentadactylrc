@@ -2,13 +2,15 @@
 "loadplugins '\.(js|penta)$'
 
 colorscheme custom
-bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title "Google feeling lucky search " -keyword google_lucky
 
 cabbreviate py pentadactyl
 cabbreviate lu google_lucky
 
+"bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title 'Google feeling lucky search ' -keyword google_lucky
+
 " hide all scrollbars
-set guioptions=Cs
+"set guioptions=Cs
+"set browser.tabs.closeWindowWithLastTab=false
 
 imap <C-m> <CR>
 
@@ -20,6 +22,7 @@ cmap <C-o> <S-Tab>
 cmap <C-b> <C-Left>
 cmap <C-f> <C-Right>
 
-nmap <C-c> <Esc>  " use for escaping message prompts; default is :stop
+" use for escaping message prompts; default is :stop
+nmap <C-c> <Esc>
 nmap <C-e> :source ~/.pentadactylrc<cr>:echomsg 'reloaded!'<cr>  
 nmap <C-y> :colorscheme custom<cr>:echomsg 'colorscheme updated!'<cr>

@@ -3,5 +3,5 @@
 . ~/.bash_prompt
 
 stty stop undef
-stty eof '?'
+stty eof ^o
 stty intr ^z
