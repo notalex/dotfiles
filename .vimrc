@@ -12,6 +12,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-repeat'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
@@ -36,11 +37,6 @@ colorscheme dark-ruby
 map <Space> a<Space><Esc>
 " nerdcommenter binding
 map <C-h> <Leader>c<space>
-
-" #-----------------vmaps------------------
-
-vmap <tab> >l
-vmap <s-tab> <l
 
 " #----------------nmaps---------------
 
