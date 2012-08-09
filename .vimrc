@@ -132,12 +132,8 @@ hi htmlTagName	ctermfg=blue
 au BufNewFile,BufRead *.notes setf notes
 
 syntax region notesHyphen start=/^-/ end=/\n/
-syntax region notesUnderscore start=/^_/ end=/\n/
-syntax region notesAsterisk start=/^*/ end=/\n/
 
-hi notesUnderscore ctermfg=magenta
 hi notesHyphen ctermfg=lightgreen
-hi notesAsterisk ctermfg=lightblue
 
 " #--------------------notes config------------------------------------------
   let g:notes_suffix = '.notes'
