@@ -56,6 +56,8 @@ nmap K :filetype detect<cr>
 nmap r :redo<cr>
 nmap ;v :Rview 
 nmap <c-y> :wa<CR>
+nmap < <l
+nmap > >l
 
 " #---------------- imaps --------------------------
 imap <c-y> <esc>:wa<CR>
