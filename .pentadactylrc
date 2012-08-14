@@ -23,3 +23,5 @@ cmap <C-f> <C-Right>
 
 nmap <C-e> :source ~/.pentadactylrc<cr>:echomsg 'reloaded!'<cr>  
 nmap <C-y> :colorscheme custom<cr>:echomsg 'colorscheme updated!'<cr>
+nmap <C-a>t :!date +%D---%H:%M<cr>
+nmap <C-a>a <C-^>

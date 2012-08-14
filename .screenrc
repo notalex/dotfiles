@@ -15,4 +15,3 @@ bind Q kill
 # meta invokes command (^a)  # \015 = ^M = Enter key
 bind r eval meta colon "stuff 'source ~/.screenrc'" "stuff ^M"; eval meta colon "stuff 'echo screen_reloaded'" 'stuff \015'
 bind . eval meta colon "stuff 'number '"
-bind ; eval meta colon "stuff 'resize '"
