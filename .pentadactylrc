@@ -18,10 +18,18 @@ cmap <C-p> <Up>
 cmap <C-n> <Down>
 cmap <C-i> <Tab>
 cmap <C-o> <S-Tab>
-cmap <C-b> <C-Left>
-cmap <C-f> <C-Right>
 
 nmap <C-e> :source ~/.pentadactylrc<cr>:echomsg 'reloaded!'<cr>  
 nmap <C-y> :colorscheme custom<cr>:echomsg 'colorscheme updated!'<cr>
 nmap <C-a>t :!date +%D---%H:%M<cr>
 nmap <C-a>a <C-^>
+
+" #-----------emacs mode
+imap <c-a> <Home>
+imap <C-e> <End>
+imap <c-f> <C-o><Right>
+imap <c-b> <C-o><Left>
+
+cmap <c-a> <home>
+cmap <c-f> <Right>
+cmap <c-b> <Left>

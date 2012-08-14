@@ -61,16 +61,12 @@ nmap > >l
 
 " #---------------- imaps --------------------------
 imap <c-y> <esc>:wa<CR>
-imap <c-f> <Esc>la
 imap <c-w> <C-o>:echo "stubbed"<cr>
-imap <c-b> <C-o><left>
 imap <c-j> <Esc>:echo "stubbed"<cr>
 " remap ctrl space to just space
 imap <Nul> <Space>
 " the default behaviour of C-h does not remove both braces() when the 1st is removed
 imap <C-h> <Backspace>
-imap <c-a> <Home>
-imap <C-e> <End>
 imap <C-u> <C-o>:echo "stubbed"<cr>
 imap <C-c> <Space>
 
@@ -79,9 +75,6 @@ imap <C-c> <Space>
 cmap <c-u> <Up>
 cmap <c-y> <Down>
 cmap <c-x> <delete>
-cmap <c-a> <home>
-" <C-e> cmapped to <End> by default
-cmap <c-b> <S-left>
 cmap <Nul> <Space>
 cabbrev hv vertical topleft help
 
@@ -97,6 +90,17 @@ set hidden
 set smartcase
 set nowritebackup
 set noswapfile
+
+" #-----------emacs mode
+imap <c-a> <Home>
+imap <C-e> <End>
+imap <c-f> <C-o><Right>
+imap <c-b> <C-o><Left>
+
+cmap <c-a> <home>
+" <C-e> cmapped to <End> by default
+cmap <c-f> <Right>
+cmap <c-b> <Left>
 
 " -----------------scripts------------------
 let g:lasttab = 1

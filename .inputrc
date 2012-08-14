@@ -2,8 +2,10 @@ set editing-mode vi
 
 $if mode=vi
   "\C-l": clear-screen
-  "\C-e":end-of-line
-  "\C-a":beginning-of-line
   "\C-p":history-search-backward
   "\C-n":history-search-forward
+  "\C-a":beginning-of-line
+  "\C-e":end-of-line
+  "\C-f":forward-char
+  "\C-b":backward-char
 $endif
