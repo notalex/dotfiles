@@ -14,7 +14,6 @@ set browser.tabs.closeWindowWithLastTab=false
 
 imap <C-m> <CR>
 
-cmap <C-c> <Esc>
 cmap <C-p> <Up>
 cmap <C-n> <Down>
 cmap <C-i> <Tab>
@@ -22,7 +21,5 @@ cmap <C-o> <S-Tab>
 cmap <C-b> <C-Left>
 cmap <C-f> <C-Right>
 
-" use for escaping message prompts; default is :stop
-nmap <C-c> <Esc>
 nmap <C-e> :source ~/.pentadactylrc<cr>:echomsg 'reloaded!'<cr>  
 nmap <C-y> :colorscheme custom<cr>:echomsg 'colorscheme updated!'<cr>

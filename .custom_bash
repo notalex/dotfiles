@@ -4,4 +4,3 @@
 
 stty stop undef
 stty eof ^o
-stty intr ^z
