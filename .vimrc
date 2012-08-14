@@ -68,7 +68,7 @@ imap <Nul> <Space>
 " the default behaviour of C-h does not remove both braces() when the 1st is removed
 imap <C-h> <Backspace>
 imap <C-u> <C-o>:echo "stubbed"<cr>
-imap <C-c> <Space>
+imap <C-c> <Right>
 
 " #----------------- cmaps --------------------------------
 
