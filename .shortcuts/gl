@@ -1,0 +1,9 @@
+#! /bin/sh
+case $1 in
+  [0-9]*)
+    git log --oneline -$1
+  ;;
+  *)
+    git log --oneline -5
+  ;;
+esac

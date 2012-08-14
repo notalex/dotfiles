@@ -11,8 +11,6 @@ alias gap="ge git add -p"
 alias gcm="git commit -m"
 alias gcma="git commit --amend"
 alias gcam="git commit -a -m"
-alias gl="git log --oneline -5"
-glog() { git log --oneline -$1; }
 alias grl="git reflog"
 alias g_config="git config --list"
 alias gra="git remote add"
