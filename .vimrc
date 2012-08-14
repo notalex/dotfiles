@@ -1,5 +1,5 @@
 set nocompatible
-filetype off 
+filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -50,11 +50,11 @@ nmap <C-F> :FufFile<CR>
 nmap <C-B> :FufBuffer<CR>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F4> :NERDTreeFind<CR>
-nmap F :Note 
-nmap R :SearchNotes 
+nmap F :Note<Space>
+nmap R :SearchNotes<Space>
 nmap K :filetype detect<cr>
 nmap r :redo<cr>
-nmap ;v :Rview 
+nmap ;v :Rview<Space>
 nmap <c-y> :wa<CR>
 nmap < <l
 nmap > >l
@@ -117,7 +117,7 @@ vmap <C-x> d:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call
 hi VertSPlit cterm=none ctermfg=green guifg=lightgray
 hi StatusLine ctermfg=green guifg=lightgray
 hi Pmenu ctermfg=22 ctermbg=black
-hi Underlined		ctermfg=grey	guifg=red	
+hi Underlined		ctermfg=grey	guifg=red
 
 hi rubyModule			ctermfg=5
 hi rubyClass			ctermfg=5
