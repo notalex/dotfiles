@@ -1,17 +1,17 @@
 startup_message off
+vbell off                       # Turns visual bell off
 
 # ctrl key mappings can only be done with bindkey
 bindkey ^q eval copy "stuff ?"  
 
-vbell off                       # Turns visual bell off
-bind z eval meta colon "stuff 'echo stubbed'" 'stuff \015'   # unbind suspend
-bind d eval meta colon "stuff 'echo stubbed'" 'stuff \015'   # unbind detach
-bind ^Z eval meta colon "stuff 'echo stubbed'" 'stuff \015'
-
-# rebind kill
-bind k  
-bind Q kill
-
 # meta invokes command (^a)  # \015 = ^M = Enter key
 bind r eval meta colon "stuff 'source ~/.screenrc'" "stuff ^M"; eval meta colon "stuff 'echo screen_reloaded'" 'stuff \015'
 bind . eval meta colon "stuff 'number '"
+
+# unbind keys
+bind h  # hardcopy
+bind k  # kill
+bind z eval meta colon "stuff 'echo stubbed'" 'stuff \015'   # suspend
+bind d eval meta colon "stuff 'echo stubbed'" 'stuff \015'   # detach
+bind ^Z eval meta colon "stuff 'echo stubbed'" 'stuff \015'
+
