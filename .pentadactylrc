@@ -5,14 +5,14 @@ colorscheme custom
 
 cabbreviate py pentadactyl
 cabbreviate lu google_lucky
-cabbreviate ikon ikonverse.com
-cabbreviate pikon pinnacle.ikonverse.com
 
 "bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title 'Google feeling lucky search ' -keyword google_lucky
 
 " hide all scrollbars
 set guioptions=Cs
-set browser.tabs.closeWindowWithLastTab=false
+
+" will not work without ! and spaces around =
+"set! browser.tabs.closeWindowWithLastTab = false
 
 imap <C-m> <CR>
 
