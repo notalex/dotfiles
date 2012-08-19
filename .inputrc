@@ -6,6 +6,7 @@ $if mode=vi
   "\C-n":history-search-forward
   "\C-a":beginning-of-line
   "\C-e":end-of-line
+  Control-u: backward-word
   "\C-f":forward-char
   "\C-b":backward-char
 $endif

@@ -22,6 +22,7 @@ Bundle 'vim-scripts/Auto-Pairs'
 Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'vim-scripts/dark-ruby'
 Bundle 'vim-scripts/utl.vim'
+"Bundle 'vim-scripts/Conque-Shell'
 "Bundle 'vim-scripts/YankRing.vim'
 "Bundle 'vim-scripts/Txtfmt-The-Vim-Highlighter'
 Bundle 'xolox/vim-notes'
@@ -76,6 +77,7 @@ cmap <c-u> <Up>
 cmap <c-y> <Down>
 cmap <c-x> <delete>
 cmap <Nul> <Space>
+cmap <C-o> <S-Tab>
 cabbrev hv vertical topleft help
 
 " ------------------set------------------------------

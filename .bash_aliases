@@ -22,7 +22,7 @@ alias src='source ~/.bashrc'
 alias apti='sudo apt-get install'
 alias aptr='sudo apt-get remove'
 alias apts='sudo apt-cache search'
-dpks() { echo dpkg --get-selections $1; dpkg --get-selections $1;}
+dpks() { echo "dpkg --get-selections | grep $1"; dpkg --get-selections | grep $1;}
 pag() { echo 'ps aux | grep '$1; ps aux | grep $1; }
 les() { $@ | less; }
 hel() { $@ --help; }
