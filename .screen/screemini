@@ -14,7 +14,7 @@ screen
 screen
 
 # notes # when vi exits, the terminal is killed
-screen -t 'notes' sh -c "vi ~/gitbasket/"
+screen -t 'notes' sh -c "vim -p2 ~/gitbasket/WorkFlow.notes ~/gitbasket/ruby.notes ~/gitbasket/ikonverse.notes"
 eval meta colon "stuff 'number 8'" "stuff ^M"
 
 # rails console

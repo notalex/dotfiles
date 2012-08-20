@@ -22,7 +22,6 @@ Bundle 'vim-scripts/Auto-Pairs'
 Bundle 'vim-scripts/BufOnly.vim'
 Bundle 'vim-scripts/dark-ruby'
 Bundle 'vim-scripts/utl.vim'
-"Bundle 'vim-scripts/Conque-Shell'
 "Bundle 'vim-scripts/YankRing.vim'
 "Bundle 'vim-scripts/Txtfmt-The-Vim-Highlighter'
 Bundle 'xolox/vim-notes'
@@ -92,6 +91,7 @@ set hidden
 set smartcase
 set nowritebackup
 set noswapfile
+set ttimeoutlen=50
 
 " #-----------emacs mode
 imap <c-a> <Home>
