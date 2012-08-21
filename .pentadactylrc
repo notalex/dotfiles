@@ -16,6 +16,9 @@ set guioptions=Cs
 
 imap <C-m> <CR>
 
+" Convert tabopen to open
+cmap <C-0> <Home><Right><Right><Right><C-u><End>
+
 cmap <C-p> <Up>
 cmap <C-n> <Down>
 cmap <C-i> <Tab>
@@ -24,6 +27,8 @@ cmap <C-o> <S-Tab>
 nmap <C-e> :source ~/.pentadactylrc<cr>:echomsg 'reloaded!'<cr>  
 nmap <C-y> :colorscheme custom<cr>:echomsg 'colorscheme updated!'<cr>
 nmap <C-a>t :!date "+%B %d - %H:%M"<cr>
+" stub increment shortcut
+nmap <C-a> <Right>
 nmap <C-a>a <C-^>
 
 " #-----------emacs mode
