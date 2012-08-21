@@ -1,8 +1,8 @@
 startup_message off
 vbell off                       # Turns visual bell off
 
-# ctrl key mappings can only be done with bindkey
-bindkey ^q eval copy "stuff ?"  
+# use ctrl key mappings use bindkey
+bind [ eval copy "stuff ?"
 
 # meta invokes command (^a)  # \015 = ^M = Enter key
 bind r eval meta colon "stuff 'source ~/.screenrc'" "stuff ^M"; eval meta colon "stuff 'echo screen_reloaded'" 'stuff \015'

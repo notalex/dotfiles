@@ -23,5 +23,5 @@ eval meta colon "stuff 'number 9'" "stuff ^M"
 stuff 'rails console' 
 stuff ^M
 
-# switch to the vi screen
-eval meta select "stuff '1'" "stuff ^M"
+# switch to the notes screen
+eval meta select "stuff '8'" "stuff ^M"

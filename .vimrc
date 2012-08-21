@@ -78,6 +78,7 @@ cmap <c-x> <delete>
 cmap <Nul> <Space>
 cmap <C-o> <S-Tab>
 cabbrev hv vertical topleft help
+cmap <C-c> <Right>
 
 " ------------------set------------------------------
 
