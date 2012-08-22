@@ -6,7 +6,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'mileszs/ack.vim'
-Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
@@ -48,8 +48,7 @@ nnoremap <C-F5> :resize -5<cr>
 nnoremap <C-F8> :vertical resize +5<cr>
 nmap <CR> O<Esc>
 nmap <c-j> i<CR><Esc>
-nmap <C-F> :CommandT<CR>
-nmap <C-B> :CommandTBuffer<CR>
+nmap <C-f> :CtrlP<CR>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F4> :NERDTreeFind<CR>
 nmap F :Note<Space>
@@ -107,12 +106,15 @@ cmap <c-a> <home>
 " <C-e> cmapped to <End> by default
 cmap <c-b> <Left>
 
-" -------------- commandt overrides------------
-let g:CommandTCursorLeftMap = '<C-b>'
-let g:CommandTCursorRightMap = '<C-f>'
-let g:CommandTBackspaceMap = '<C-h>'
-let g:CommandTRefreshMap = '<C-r>'
-let g:CommandTCancelMap = '<C-[>'
+" -------------- ctrlp mappings
+
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtSelectMove("j")':   ['<c-i>', '<down>'],
+  \ 'PrtSelectMove("k")':   ['<c-o>', '<up>'],
+  \ 'PrtExpandDir()':       ['<c-j>'],
+\ }
+let g:ctrlp_match_window_reversed = 0
+
 
 " -----------------scripts------------------
 let g:lasttab = 1
