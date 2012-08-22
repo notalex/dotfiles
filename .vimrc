@@ -5,8 +5,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Bundle 'wincent/Command-T'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
@@ -46,8 +45,8 @@ nnoremap <C-F5> :resize -5<cr>
 nnoremap <C-F8> :vertical resize +5<cr>
 nmap <CR> O<Esc>
 nmap <c-j> i<CR><Esc>
-nmap <C-F> :FufFile<CR>
-nmap <C-B> :FufBuffer<CR>
+nmap <C-F> :CommandT<CR>
+nmap <C-B> :CommandTBuffer<CR>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F4> :NERDTreeFind<CR>
 nmap F :Note<Space>
@@ -93,6 +92,7 @@ set smartcase
 set nowritebackup
 set noswapfile
 set ttimeoutlen=50
+set wildignore+=app/assets/images/**,log/**,public/system/**
 
 " #-----------emacs mode
 imap <c-a> <Home>
@@ -104,6 +104,13 @@ cmap <c-a> <home>
 " <C-e> cmapped to <End> by default
 cmap <c-f> <Right>
 cmap <c-b> <Left>
+
+" -------------- commandt overrides------------
+let g:CommandTCursorLeftMap = '<C-b>'
+let g:CommandTCursorRightMap = '<C-f>'
+let g:CommandTBackspaceMap = '<C-h>'
+let g:CommandTRefreshMap = '<C-r>'
+let g:CommandTCancelMap = '<C-[>'
 
 " -----------------scripts------------------
 let g:lasttab = 1
