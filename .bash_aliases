@@ -26,7 +26,7 @@ dpks() { echo "dpkg --get-selections | grep $1"; dpkg --get-selections | grep $1
 pag() { echo 'ps aux | grep '$1; ps aux | grep $1; }
 les() { $@ | less; }
 hel() { $@ --help; }
-alias cd='pushd > /dev/null'
+alias ccd='pushd > /dev/null'
 alias pcd='popd > /dev/null'
 
 # gems

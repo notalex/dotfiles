@@ -1,5 +1,7 @@
 " vim: set ft=vim:
 
+set gui=nomail,nomenu,nostatus
+
 imap <C-m> <CR>
 
 cmap <C-p> <Up>

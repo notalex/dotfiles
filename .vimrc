@@ -5,6 +5,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'mileszs/ack.vim'
 Bundle 'wincent/Command-T'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
@@ -30,6 +31,8 @@ Bundle 'notalex/vim-strip-trailers'
 
 filetype plugin on
 colorscheme dark-ruby
+" ack.vim requires this setting
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " #-----------------maps------------------
 
@@ -102,7 +105,6 @@ imap <c-b> <C-o><Left>
 
 cmap <c-a> <home>
 " <C-e> cmapped to <End> by default
-cmap <c-f> <Right>
 cmap <c-b> <Left>
 
 " -------------- commandt overrides------------
@@ -119,8 +121,9 @@ au TabLeave * let g:lasttab = tabpagenr()
 
 let NERDTreeShowHidden = 1
 
-nmap ;a :cw<cr>:resize +20<cr>:noautocmd vimgrep // app/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
-nmap ;f :cw<cr>:resize +20<cr>:noautocmd vimgrep // fe*/** <Left><Left><Left><Left><Left><Left><Left><Left><Left>
+nmap ;a :Ack -i "" app <Left><Left><Left><Left><Left><Left>
+nmap ;f :Ack -i "" features <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+nmap ;s :Ack -i "" <Left><Left>
 nmap <C-e> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
