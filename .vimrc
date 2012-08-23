@@ -31,8 +31,8 @@ Bundle 'notalex/vim-strip-trailers'
 
 filetype plugin on
 colorscheme dark-ruby
-" ack.vim requires this setting
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+" :Ack translates to the following command
+let g:ackprg="ack-grep -H --nocolor --nogroup --column -i"
 
 " #-----------------maps------------------
 
@@ -48,7 +48,6 @@ nnoremap <C-F5> :resize -5<cr>
 nnoremap <C-F8> :vertical resize +5<cr>
 nmap <CR> O<Esc>
 nmap <c-j> i<CR><Esc>
-nmap <C-f> :CtrlP<CR>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F4> :NERDTreeFind<CR>
 nmap F :Note<Space>
@@ -62,20 +61,18 @@ nmap > >l
 
 " #---------------- imaps --------------------------
 imap <c-y> <esc>:wa<CR>
-imap <c-w> <C-o>:echo "stubbed"<cr>
-imap <c-j> <Esc>:echo "stubbed"<cr>
 " remap ctrl space to just space
 imap <Nul> <Space>
 " the default behaviour of C-h does not remove both braces() when the 1st is removed
 imap <C-h> <Backspace>
-imap <C-u> <C-o>:echo "stubbed"<cr>
+imap <c-w> <Right>
+imap <c-j> <Right>
 imap <C-c> <Right>
 
 " #----------------- cmaps --------------------------------
 
-cmap <c-u> <Up>
-cmap <c-y> <Down>
-cmap <c-x> <delete>
+cmap <c-k> <Up>
+cmap <c-j> <Down>
 cmap <Nul> <Space>
 cmap <C-o> <S-Tab>
 cabbrev hv vertical topleft help
@@ -99,8 +96,8 @@ set wildignore+=app/assets/images/**,log/**,public/system/**
 " #-----------emacs mode
 imap <c-a> <Home>
 imap <C-e> <End>
-imap <c-f> <C-o><Right>
-imap <c-b> <C-o><Left>
+imap <c-f> <Right>
+imap <c-b> <Left>
 
 cmap <c-a> <home>
 " <C-e> cmapped to <End> by default
@@ -114,6 +111,8 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtExpandDir()':       ['<c-j>'],
 \ }
 let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_map = '<c-f>'
+let g:ctrlp_max_height = 15
 
 
 " -----------------scripts------------------
@@ -123,9 +122,9 @@ au TabLeave * let g:lasttab = tabpagenr()
 
 let NERDTreeShowHidden = 1
 
-nmap ;a :Ack -i "" app <Left><Left><Left><Left><Left><Left>
-nmap ;f :Ack -i "" features <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-nmap ;s :Ack -i "" <Left><Left>
+nmap ;a :Ack "" app <Left><Left><Left><Left><Left><Left>
+nmap ;f :Ack "" features <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+nmap ;s :Ack "" <Left><Left>
 nmap <C-e> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
