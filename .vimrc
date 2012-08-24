@@ -78,6 +78,17 @@ cmap <C-o> <S-Tab>
 cabbrev hv vertical topleft help
 cmap <C-c> <Right>
 
+" -------------- ctrlp mappings
+
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtSelectMove("j")':   ['<c-i>', '<down>'],
+  \ 'PrtSelectMove("k")':   ['<c-o>', '<up>'],
+  \ 'PrtExpandDir()':       ['<c-j>'],
+\ }
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_map = '<c-f>'
+let g:ctrlp_max_height = 15
+
 " ------------------set------------------------------
 
 set smartindent
@@ -102,18 +113,6 @@ imap <c-b> <Left>
 cmap <c-a> <home>
 " <C-e> cmapped to <End> by default
 cmap <c-b> <Left>
-
-" -------------- ctrlp mappings
-
-let g:ctrlp_prompt_mappings = {
-  \ 'PrtSelectMove("j")':   ['<c-i>', '<down>'],
-  \ 'PrtSelectMove("k")':   ['<c-o>', '<up>'],
-  \ 'PrtExpandDir()':       ['<c-j>'],
-\ }
-let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_map = '<c-f>'
-let g:ctrlp_max_height = 15
-
 
 " -----------------scripts------------------
 let g:lasttab = 1
