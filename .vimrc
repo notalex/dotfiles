@@ -80,11 +80,6 @@ cmap <C-c> <Right>
 
 " -------------- ctrlp mappings
 
-let g:ctrlp_prompt_mappings = {
-  \ 'PrtSelectMove("j")':   ['<c-i>', '<down>'],
-  \ 'PrtSelectMove("k")':   ['<c-o>', '<up>'],
-  \ 'PrtExpandDir()':       ['<c-j>'],
-\ }
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_map = '<c-f>'
 let g:ctrlp_max_height = 15
