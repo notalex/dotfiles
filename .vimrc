@@ -50,6 +50,8 @@ nmap <CR> O<Esc>
 nmap <c-j> i<CR><Esc>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F4> :NERDTreeFind<CR>
+nmap <C-b> :CtrlPBuffer<CR>
+nmap <C-r> :CtrlPMRU<CR>
 nmap F :Note<Space>
 nmap R :SearchNotes<Space>
 nmap K :filetype detect<cr>
@@ -83,6 +85,9 @@ cmap <C-c> <Right>
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_map = '<c-f>'
 let g:ctrlp_max_height = 15
+let g:ctrlp_mruf_exclude = '/tmp/.*\|/temp/.*'
+let g:ctrlp_mruf_relative = 1
+let g:ctrlp_extensions = ['undo']
 
 " ------------------set------------------------------
 
