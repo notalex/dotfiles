@@ -1,0 +1,32 @@
+" vim: set ft=vim:
+
+let NERDTreeShowHidden = 1
+
+" -------------- Ack mappings
+
+" :Ack translates to the following command
+let g:ackprg="ack-grep -H --nocolor --nogroup --column -i"
+
+" -------------- ctrlp mappings
+
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_map = '<c-f>'
+let g:ctrlp_max_height = 15
+let g:ctrlp_mruf_exclude = '/tmp/.*\|/temp/.*'
+let g:ctrlp_mruf_relative = 1
+let g:ctrlp_extensions = ['undo']
+
+" #--------------------notes config------------------------------------------
+
+let g:notes_suffix = '.notes'
+let g:notes_directory = '~/gitbasket'
+
+hi notesTagName ctermfg=4
+hi notesBold ctermfg=14
+hi notesItalic ctermfg=12
+hi notesDoubleQuoted ctermfg=3
+hi notesSingleQuoted ctermfg=7
+hi notesXXX ctermfg=red
+hi notesBlockQuote ctermfg=lightgreen
+hi notesUnixPath ctermfg=yellow
+hi notesShortHeading ctermfg=red

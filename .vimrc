@@ -1,38 +1,6 @@
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-
-Bundle 'mileszs/ack.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-repeat'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'vim-scripts/Specky'
-Bundle 'vim-scripts/Auto-Pairs'
-Bundle 'vim-scripts/BufOnly.vim'
-Bundle 'vim-scripts/utl.vim'
-"Bundle 'vim-scripts/YankRing.vim'
-Bundle 'vim-scripts/dark-ruby'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'xolox/vim-notes'
-Bundle 'notalex/snipmate.vim'
-Bundle 'notalex/vim-ruby-run'
-Bundle 'notalex/vim-strip-trailers'
-
-filetype plugin on
+source ~/.rcvim/plugins
 colorscheme dark-ruby
-" :Ack translates to the following command
-let g:ackprg="ack-grep -H --nocolor --nogroup --column -i"
+source ~/.rcvim/custom_highlighting
 
 " #-----------------maps------------------
 
@@ -80,15 +48,6 @@ cmap <C-o> <S-Tab>
 cabbrev hv vertical topleft help
 cmap <C-c> <Right>
 
-" -------------- ctrlp mappings
-
-let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_map = '<c-f>'
-let g:ctrlp_max_height = 15
-let g:ctrlp_mruf_exclude = '/tmp/.*\|/temp/.*'
-let g:ctrlp_mruf_relative = 1
-let g:ctrlp_extensions = ['undo']
-
 " ------------------set------------------------------
 
 set smartindent
@@ -119,51 +78,11 @@ let g:lasttab = 1
 nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
-let NERDTreeShowHidden = 1
-
 nmap ;a :Ack "" app <Left><Left><Left><Left><Left><Left>
 nmap ;f :Ack "" features <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap ;s :Ack "" <Left><Left>
+
 nmap <C-e> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 vmap <C-x> d:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
-
-" syntax  highlighting overrides
-""""""""""""""""""""""""""""""""
-hi VertSPlit cterm=none ctermfg=green guifg=lightgray
-hi StatusLine ctermfg=green guifg=lightgray
-hi Pmenu ctermfg=22 ctermbg=black
-hi Underlined		ctermfg=grey	guifg=red
-
-hi rubyModule			ctermfg=5
-hi rubyClass			ctermfg=5
-hi rubySymbol			ctermfg=3
-hi rubyBlock			ctermfg=darkgray             " map-each statements
-hi rubyControl			ctermfg=40                 " do end blocks
-hi rubyConditional		ctermfg=52               " if-case conditions
-hi railsUserClass  ctermfg=4                   " Rails class variable names
-
-" haml/html tag
-hi htmlTagName	ctermfg=blue
-
-" custom filetype & highlighting for notes
-""""""""""""""""""""""""""""""""""""""""""
-au BufNewFile,BufRead *.notes setf notes
-
-syntax region notesHyphen start=/^-/ end=/\n/
-
-hi notesHyphen ctermfg=lightgreen
-
-" #--------------------notes config------------------------------------------
-  let g:notes_suffix = '.notes'
-  let g:notes_directory = '~/gitbasket'
-  hi notesTagName ctermfg=4
-  hi notesBold ctermfg=14
-  hi notesItalic ctermfg=12
-  hi notesDoubleQuoted ctermfg=3
-  hi notesSingleQuoted ctermfg=7
-  hi notesXXX ctermfg=red
-  hi notesBlockQuote ctermfg=lightgreen
-  hi notesUnixPath ctermfg=yellow
-  hi notesShortHeading ctermfg=red

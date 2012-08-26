@@ -1,0 +1,27 @@
+" vim: set ft=vim:
+
+" syntax  highlighting overrides
+""""""""""""""""""""""""""""""""
+hi VertSPlit cterm=none ctermfg=green guifg=lightgray
+hi StatusLine ctermfg=green guifg=lightgray
+hi Pmenu ctermfg=22 ctermbg=black
+hi Underlined		ctermfg=grey	guifg=red
+
+hi rubyModule			ctermfg=5
+hi rubyClass			ctermfg=5
+hi rubySymbol			ctermfg=3
+hi rubyBlock			ctermfg=darkgray             " map-each statements
+hi rubyControl			ctermfg=40                 " do end blocks
+hi rubyConditional		ctermfg=52               " if-case conditions
+hi railsUserClass  ctermfg=4                   " Rails class variable names
+
+" haml/html tag
+hi htmlTagName	ctermfg=blue
+
+" custom filetype & highlighting for notes
+""""""""""""""""""""""""""""""""""""""""""
+au BufNewFile,BufRead *.notes setf notes
+
+syntax region notesHyphen start=/^-/ end=/\n/
+
+hi notesHyphen ctermfg=lightgreen
