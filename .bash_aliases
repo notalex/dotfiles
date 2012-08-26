@@ -7,6 +7,8 @@ alias h='heroku run'
 
 # git
 alias gar="git add -A"
+alias gaf="git add -f"
+alias gan="ge git add -N"
 alias gap="ge git add -p"
 alias gcm="git commit -m"
 alias gcma="git commit --amend"
@@ -22,8 +24,9 @@ alias src='source ~/.bashrc'
 alias apti='sudo apt-get install'
 alias aptr='sudo apt-get remove'
 alias apts='sudo apt-cache search'
-dpks() { echo "dpkg --get-selections | grep $1"; dpkg --get-selections | grep $1;}
-pag() { echo 'ps aux | grep '$1; ps aux | grep $1; }
+dpks() { cmd="dpkg --get-selections | grep $1"; echo $cmd; eval $cmd; }
+pag() { cmd="ps aux | grep $1"; echo $cmd; eval $cmd; }
+pagm() { cmd="ps aux --sort -rss | less"; echo $cmd; eval $cmd; }
 les() { $@ | less; }
 hel() { $@ --help; }
 alias ccd='pushd > /dev/null'
@@ -31,7 +34,7 @@ alias pcd='popd > /dev/null'
 
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'
-delayed_emails() { echo 'rake jobs:clear && rake jobs:work'; rake jobs:clear; rake jobs:work; }
+delayed_emails() { rake jobs:clear; rake jobs:work; }
 
 # rvm
 alias rgu='rvm gemset use'
