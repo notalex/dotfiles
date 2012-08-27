@@ -1,3 +1,4 @@
+set nocompatible
 source ~/.rcvim/plugins
 colorscheme dark-ruby
 source ~/.rcvim/custom_highlighting
