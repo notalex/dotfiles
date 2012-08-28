@@ -9,14 +9,13 @@ alias h='heroku run'
 alias gar="git add -A"
 alias gaf="git add -f"
 alias gan="ge git add -N"
-alias gap="ge git add -p"
 alias gcm="git commit -m"
 alias gcma="git commit --amend"
 alias gcam="git commit -a -m"
 alias grl="git reflog"
 alias g_config="git config --list"
 alias gra="git remote add"
-alias gb="git branch -v"
+alias gbv="git branch -v"
 ggrep() { git log --oneline --grep=$1; }
 
 # bash
