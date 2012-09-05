@@ -1,0 +1,15 @@
+#! /bin/bash
+
+inotifywait -e attrib -m $2 |
+while read -r input; do
+  if [[ $2 == */$* ]]; then
+    file_name=$(echo $input | perl -ne '/(.+) ATTRIB (.+)$/; print "$1$2"')
+
+    params=( $(for i in $@; do echo $i; done) )
+
+    $1 $file_name ${params[@]:2}
+
+  else
+    $@
+  fi
+done
