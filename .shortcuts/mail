@@ -1,0 +1,18 @@
+#! /usr/bin/ruby
+
+vmail_dir = "#{ Dir.home }/.vmail/"
+begin
+  matching_files = Dir.foreach(vmail_dir).select do |filename| 
+    filename.match(ARGV[0])
+  end
+
+  config_file = vmail_dir + matching_files.first
+
+  command = "vmail -c #{ config_file }"
+  puts command
+  system command
+
+rescue
+  puts "Your input should match one of the following patterns"
+  puts Dir.foreach(vmail_dir).map { |filename| filename.slice(/vmailrc_(\w+)/, 1) }.compact
+end

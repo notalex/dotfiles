@@ -1,0 +1,6 @@
+username: alex_johnson@aol.in
+server: imap.aol.com
+port: 143
+smtp_server: smtp.aol.com
+smtp_port: 587
+smtp_domain: aol.com
