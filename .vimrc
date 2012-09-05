@@ -63,6 +63,7 @@ set nowritebackup
 set noswapfile
 set ttimeoutlen=50
 set wildignore+=app/assets/images/**,log/**,public/system/**
+set cedit=<C-s>  " since <C-f> has to be cmapped to emulate emacs mode
 
 " #-----------emacs mode
 imap <c-a> <Home>
@@ -72,6 +73,7 @@ imap <c-b> <Left>
 
 cmap <c-a> <home>
 " <C-e> cmapped to <End> by default
+cmap <c-f> <Right>
 cmap <c-b> <Left>
 
 " -----------------scripts------------------

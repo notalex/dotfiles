@@ -6,8 +6,8 @@ imap <C-m> <CR>
 
 cmap <C-p> <Up>
 cmap <C-n> <Down>
-cmap <C-i> <Tab>
-cmap <C-o> <S-Tab>
+cmap <C-j> <Tab>
+cmap <C-k> <S-Tab>
 
 nmap <C-e> :source ~/.muttatorrc<cr>:echomsg 'reloaded!'<cr>
 
