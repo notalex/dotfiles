@@ -1,5 +1,5 @@
---type-add
-html=.haml
+--type-set
+haml=.haml
 --type-set
 sass=.sass,.scss
 --type-set
