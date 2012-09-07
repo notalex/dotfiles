@@ -16,7 +16,9 @@ alias grl="git reflog"
 alias g_config="git config --list"
 alias gra="git remote add"
 alias gbv="git branch -v"
-ggrep() { git log --oneline --grep=$1; }
+alias gdf="ge git diff --color-words"
+alias gdfc="ge git diff --cached --color-words"
+ggrp() { git log --oneline --grep=$1; }
 
 # bash
 alias src='source ~/.bashrc'
