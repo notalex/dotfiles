@@ -17,6 +17,11 @@ let g:ctrlp_mruf_relative = 1
 let g:ctrlp_extensions = ['undo']
 let g:ctrlp_clear_cache_on_exit = 0
 
+" -------------- NERDTree mappings
+let g:NERDTreeMapOpenSplit = '<C-s>'
+let g:NERDTreeMapOpenVSplit = '<C-v>'
+let g:NERDTreeMapOpenInTab = '<C-t>'
+
 " #--------------------notes config------------------------------------------
 
 let g:notes_suffix = '.notes'
