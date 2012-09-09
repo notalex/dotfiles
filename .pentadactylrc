@@ -17,7 +17,7 @@ set guioptions=Cs
 imap <C-m> <CR>
 
 " Convert tabopen to open
-cmap <C-u> <Home><Del><Del><Del><End>
+cmap <C-u> <Home>tab<Up><Home><Del><Del><Del><End>
 
 cmap <C-p> <Up>
 cmap <C-n> <Down>
