@@ -1,0 +1,68 @@
+#! /usr/bin/ruby
+
+require 'listen'
+@src_folder = ARGV[0]
+@dtn_folder = ARGV[1]
+
+@dictionary = {
+  'haml' => 'html',
+  'coffee' => 'js',
+  'sass' => 'css'
+}
+
+@colors = {
+  reset: "\033[0m",
+  fg_red: "\033[31m",
+  fg_cyan: "\033[36m",
+  fg_white: "\033[37m",
+  bg_black: "\033[40m"
+}
+
+def get_destination(path)
+  filetype = File.extname(path).slice(/\w+/)
+  dtn_file = path.gsub(/[^\.](\w+?)$/, @dictionary[filetype])
+  dtn_path = @dtn_folder + dtn_file
+  { filetype: filetype, path: dtn_path }
+end
+
+def command_for(filetype, src_path, dtn_path)
+  case filetype
+  when 'haml'
+    "haml #{ src_path } #{ dtn_path }"
+  when 'sass'
+    "sass #{ src_path } #{ dtn_path }"
+  when 'coffee'
+    # remove file name from path due to Coffee's requirement of dir for output
+    dtn_path = File.expand_path('../', dtn_path)
+    "coffee -o #{ dtn_path } -c #{ src_path }"
+  end
+end
+
+def show_time
+  print @colors[:fg_white] + @colors[:bg_black] + Time.now.strftime("%H:%M:%S") + @colors[:reset] + " => "
+end
+
+callback = Proc.new do |updated, added, removed|
+
+  (updated + added).each do |path|
+    src_path = @src_folder + path
+    destination = get_destination(path)
+
+    if system command_for(destination[:filetype], src_path, destination[:path])
+      show_time
+      puts "compiled #{ @colors[:fg_cyan] + File.basename(path) + @colors[:reset] } successfully"
+    end
+  end
+
+  removed.each do |path|
+    destination = get_destination(path)
+
+    if system "rm #{ destination[:path] }"
+      show_time
+      puts "deleted #{ @colors[:fg_red] + File.basename(destination[:path]) + @colors[:reset] }"
+    end
+  end
+
+end
+
+Listen.to(@src_folder).relative_paths(true).change(&callback).start
