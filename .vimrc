@@ -20,11 +20,10 @@ nmap <c-j> i<CR><Esc>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F4> :NERDTreeFind<CR>
 nmap <C-b> :CtrlPBuffer<CR>
-nnoremap <C-r> :CtrlPUndo<CR>
+nnoremap ;r :CtrlPUndo<CR>
 nmap F :Note<Space>
 nmap R :SearchNotes<Space>
 nmap K :filetype detect<cr>
-nmap r :redo<cr>
 nmap ;v :Rview<Space>
 nmap <c-y> :wa<CR>
 nmap < <l
