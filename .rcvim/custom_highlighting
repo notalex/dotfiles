@@ -11,12 +11,12 @@ hi rubyModule			ctermfg=5
 hi rubyClass			ctermfg=5
 hi rubySymbol			ctermfg=3
 hi rubyBlock			ctermfg=darkgray             " map-each statements
-hi rubyControl			ctermfg=40                 " do end blocks
-hi rubyConditional		ctermfg=52               " if-case conditions
+hi rubyControl			ctermfg=45                 " do end blocks
+hi rubyConditional		ctermfg=2               " if-case conditions
 hi railsUserClass  ctermfg=4                   " Rails class variable names
 
 " haml/html tag
-hi htmlTagName	ctermfg=blue
+hi htmlTagName	ctermfg=45
 
 " custom filetype & highlighting for notes
 """"""""""""""""""""""""""""""""""""""""""
