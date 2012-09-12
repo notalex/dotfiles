@@ -37,22 +37,30 @@ session_attach() {
   tmux -u2 attach-session -t $session_name       # flags like -u need to be specified while creation and attach
 }
 
+assign_name() {
+  if [ -n "$2" ]; then
+    session_name=$2
+  else
+    session_name=$1
+  fi
+}
+
 case $1 in
   l)
-    session_name='Large'
+    assign_name Large $2
     common_setup
     rails_setup
     develop_setup
     session_attach
     ;;
   m)
-    session_name='Medium'
+    assign_name Medium $2
     common_setup
     rails_setup
     session_attach
     ;;
   s)
-    session_name='Small'
+    assign_name Small $2
     common_setup
     minimal_setup
     session_attach
