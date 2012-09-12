@@ -32,6 +32,8 @@ nmap <C-a>t :javascript d = new Date(); alert(d.toTimeString().replace(/GMT.+$/,
 " stub increment shortcut
 nmap <C-a> <Right>
 nmap <C-a>a <C-^>
+" C-j annoyingly opens up google.com
+nmap <C-j> <Down>
 
 " #-----------emacs mode
 imap <c-a> <Home>
