@@ -1,8 +1,8 @@
 # vim: set ft=sh:
 
 # git push
-alias staging_push="git push staging staging:master"
-alias m_staging_push="git push staging staging:master && h_migrate s"
+alias staging_push="git push staging release:master"
+alias m_staging_push="git push staging release:master && h_migrate s"
 alias h='heroku run'
 
 # git

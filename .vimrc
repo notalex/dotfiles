@@ -29,6 +29,7 @@ nmap <c-y> :wa<CR>
 nmap < <l
 nmap > >l
 nmap ;p o<Esc>p
+nmap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
 
 " #---------------- imaps --------------------------
 imap <c-y> <esc>:wa<CR>
