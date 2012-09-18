@@ -29,7 +29,7 @@ develop_setup() {
   tmux new-window -t $session_name:5
   tmux new-window -t $session_name:11 -n spork
 
-  tmux send-keys -t $session_name:11 "spork cucumber" C-m
+  tmux send-keys -t $session_name:11 'rake db:test:prepare && spork cucumber' C-m
 }
 
 minimal_setup() {
