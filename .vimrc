@@ -37,8 +37,6 @@ imap <c-y> <esc>:wa<CR>
 imap <Nul> <Space>
 " the default behaviour of C-h does not remove both braces() when the 1st is removed
 imap <C-h> <Backspace>
-imap <c-w> <Right>
-imap <c-j> <Right>
 imap <C-c> <Right>
 
 " #----------------- cmaps --------------------------------
