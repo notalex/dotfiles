@@ -4,6 +4,7 @@
 colorscheme custom
 
 cabbreviate py pentadactyl
+cabbreviate bo borderlands
 cabbreviate lu google_lucky
 
 "bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title 'Google feeling lucky search ' -keyword google_lucky
