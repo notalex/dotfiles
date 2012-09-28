@@ -11,10 +11,6 @@ map <C-h> <Leader>c<space>
 
 " #----------------nmaps---------------
 
-nnoremap <C-F7> :vertical resize -5<cr>
-nnoremap <C-F6> :resize +5<cr>
-nnoremap <C-F5> :resize -5<cr>
-nnoremap <C-F8> :vertical resize +5<cr>
 nmap <CR> O<Esc>
 nmap <c-j> i<CR><Esc>
 nmap <F2> :NERDTreeToggle<CR>
@@ -28,8 +24,6 @@ nmap ;v :Rview<Space>
 nmap <c-y> :wa<CR>
 nmap < <l
 nmap > >l
-nmap ;p o<Esc>p
-nmap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nmap <C-z> <right>
 
 " #---------------- imaps --------------------------
@@ -77,6 +71,9 @@ cmap <c-f> <Right>
 cmap <c-b> <Left>
 
 " -----------------scripts------------------
+nmap ;p o<Esc>p
+nmap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
+
 let g:lasttab = 1
 nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
