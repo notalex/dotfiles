@@ -18,7 +18,7 @@ alias gra="git remote add"
 alias gbv="git branch -v"
 alias gdf="ge git diff --color-words"
 alias gdfc="ge git diff --cached --color-words"
-ggrp() { git log --oneline --grep=$1; }
+ggrp() { cmd="git log --oneline --grep='$@'"; echo $cmd; eval $cmd; }
 
 # bash
 alias src='source ~/.bashrc'
