@@ -17,10 +17,10 @@ autocmd FileType qf nmap <buffer> <CR> :.cc<CR>
 nmap ;j i<CR><Esc>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F4> :NERDTreeFind<CR>
-nmap B :CtrlPBuffer<CR>
-nnoremap R :CtrlPUndo<CR>
-nmap ;f :Note<Space>
-nmap ;r :SearchNotes<Space>
+nmap <C-b> :CtrlPBuffer<CR>
+nnoremap ;r :CtrlPUndo<CR>
+nmap F :Note<Space>
+nmap R :SearchNotes<Space>
 nmap K :filetype detect<cr>
 nmap ;v :Rview<Space>
 nmap <c-y> :wa<CR>
@@ -81,6 +81,7 @@ nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
 nmap ;a :Ack "" app <Left><Left><Left><Left><Left><Left>
+nmap ;f :Ack "" features <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 nmap ;s :Ack "" <Left><Left>
 
 nmap <C-e> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>

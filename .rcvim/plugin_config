@@ -5,12 +5,12 @@ let NERDTreeShowHidden = 1
 " -------------- Ack mappings
 
 " :Ack translates to the following command
-let g:ackprg="ack-grep -H --nocolor --nogroup --column -i"
+let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=test -i"
 
 " -------------- ctrlp mappings
 
 let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_map = 'F'
+let g:ctrlp_map = '<C-f>'
 let g:ctrlp_max_height = 15
 let g:ctrlp_mruf_exclude = '/tmp/.*\|/temp/.*'
 let g:ctrlp_mruf_relative = 1
