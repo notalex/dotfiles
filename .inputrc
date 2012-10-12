@@ -1,4 +1,5 @@
 set editing-mode vi
+Control-x: shell-expand-line
 
 $if mode=vi
   "\C-l": clear-screen

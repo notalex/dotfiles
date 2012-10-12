@@ -36,6 +36,7 @@ alias pcd='popd > /dev/null'
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'
 delayed_emails() { rake jobs:clear; rake jobs:work; }
+alias cuke='cucumber features/'
 
 # rvm
 alias rgu='rvm gemset use'
