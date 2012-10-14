@@ -5,6 +5,7 @@ colorscheme custom
 
 cabbreviate py pentadactyl
 cabbreviate bo borderlands
+cabbreviate rd red dead redeemption
 cabbreviate lu google_lucky
 
 "bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title 'Google feeling lucky search ' -keyword google_lucky
@@ -19,6 +20,9 @@ imap <C-m> <CR>
 
 " Convert tabopen to open
 cmap <C-u> <Home>tab<Up><Home><Del><Del><Del><End>
+
+" Convert open to tabopen
+cmap <C-t> <Home>tab<CR>
 
 cmap <C-p> <Up>
 cmap <C-n> <Down>
