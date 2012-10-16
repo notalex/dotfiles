@@ -14,7 +14,7 @@ map <C-h> <Leader>c<space>
 nmap <CR> O<Esc>
 autocmd FileType qf nmap <buffer> <CR> :.cc<CR>
 
-nmap ;j i<CR><Esc>
+nmap <C-j> i<CR><Esc>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F4> :NERDTreeFind<CR>
 nmap <C-b> :CtrlPBuffer<CR>
