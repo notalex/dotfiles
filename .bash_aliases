@@ -11,7 +11,7 @@ alias gaf="git add -f"
 alias gan="ge git add -N"
 alias gcm="git commit -m"
 alias gcma="git commit --amend"
-alias gcam="git commit -a -m"
+alias gc-am="git commit -a -m"
 alias grl="git reflog"
 alias g_config="git config --list"
 alias gra="git remote add"
@@ -36,7 +36,7 @@ alias pcd='popd > /dev/null'
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'
 delayed_emails() { rake jobs:clear; rake jobs:work; }
-alias cuke='cucumber features/'
+alias cux='cucumber --no-source features/'
 
 # rvm
 alias rgu='rvm gemset use'
