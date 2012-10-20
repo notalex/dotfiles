@@ -17,8 +17,6 @@ autocmd FileType qf nmap <buffer> <CR> :.cc<CR>
 nmap <C-j> i<CR><Esc>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F4> :NERDTreeFind<CR>
-nmap ;b :CtrlPBuffer<CR>
-nnoremap ;r :CtrlPUndo<CR>
 nmap F :Note<Space>
 nmap R :SearchNotes<Space>
 nmap K :filetype detect<cr>
