@@ -4,3 +4,4 @@ driver_hook.rb
 .rvmrc
 testing_god.rake
 .sass-cache/
+nohup.out
