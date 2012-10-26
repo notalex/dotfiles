@@ -73,14 +73,11 @@ cmap <c-b> <Left>
 " -----------------scripts------------------
 nmap ;p o<Esc>p
 nmap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
+nmap ;s :Ack "" <Left><Left>
 
 let g:lasttab = 1
 nmap <c-a> :exe "tabn" .g:lasttab <CR>
 au TabLeave * let g:lasttab = tabpagenr()
-
-nmap ;a :Ack "" app <Left><Left><Left><Left><Left><Left>
-nmap ;f :Ack "" features <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-nmap ;s :Ack "" <Left><Left>
 
 nmap <C-e> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
