@@ -1,1 +1,3 @@
 set zoom=2.0
+map <C-d> 8j
+map <C-u> 8k
