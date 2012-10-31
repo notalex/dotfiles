@@ -1,0 +1,25 @@
+#! /usr/bin/ruby
+
+print "Confirm: "
+confirmation = gets.chomp
+exit unless confirmation == 'yes'
+  
+source_file_path = 'tmp/rerun.txt'
+target_file_path = 'tmp/copy_rerun.txt'
+
+failed_tests_string = File.readlines(source_file_path).first
+failed_test_files = failed_tests_string.split(/\s/)
+
+failed_test_files.each_with_index do |string, i|
+  if string.match(/:\d+:/)
+    file_path = string.slice(/[^:]+/)
+    line_numbers = string.scan(/:(\d+)/).flatten
+    array = line_numbers.map { |number| "#{ file_path }:#{ number }" }
+    failed_test_files[i] = array
+  end
+end
+
+failed_tests_string = failed_test_files.flatten.join(" ")
+File.open(target_file_path, 'w') { |f| f.puts failed_tests_string }
+
+puts "File copied"

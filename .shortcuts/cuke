@@ -1,0 +1,8 @@
+#! /bin/bash
+
+cucumber --no-source $@
+for i in 1, 2; do
+  if [ -s tmp/rerun.txt ]; then
+    cucumber --no-source $(cat tmp/rerun.txt)
+  fi
+done

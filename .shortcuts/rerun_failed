@@ -1,0 +1,17 @@
+#! /usr/bin/ruby
+
+rerun_file_path = 'tmp/copy_rerun.txt'
+command = "cucumber --no-source"
+param = ARGV[0].to_i
+
+failed_tests_string = File.readlines(rerun_file_path).first
+failed_test_files = failed_tests_string.split(/\s/)
+
+if param > 0 && failed_test_files.size >= param
+  index =  param - 1
+  puts "#{ param }/#{ failed_test_files.size } => #{ failed_test_files[index] }"
+  system "#{ command } #{ failed_test_files[index] }"
+else
+  puts "####### Running all failed tests #######"
+  system "#{ command } #{ failed_tests_string }"
+end
