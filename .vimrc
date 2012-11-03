@@ -5,7 +5,6 @@ source ~/.rcvim/custom_highlighting
 
 " #-----------------maps------------------
 
-map <Space> a<Space><Esc>
 " nerdcommenter binding
 map <C-h> <Leader>c<space>
 
@@ -14,17 +13,19 @@ map <C-h> <Leader>c<space>
 nmap <CR> O<Esc>
 autocmd FileType qf nmap <buffer> <CR> :.cc<CR>
 
+nmap <Space> a<Space><Esc>
 nmap <C-j> i<CR><Esc>
 nmap <F2> :NERDTreeToggle<CR>
 nmap <F4> :NERDTreeFind<CR>
 nmap ;f :Note<Space>
 nmap ;r :SearchNotes<Space>
-nmap K :filetype detect<cr>
 nmap ;v :Rview<Space>
+nmap ;d :filetype detect<cr>
 nmap <c-y> :wa<CR>
 nmap < <l
 nmap > >l
 nmap <C-z> <right>
+nmap K <right>
 
 " #---------------- imaps --------------------------
 imap <c-y> <esc>:wa<CR>
