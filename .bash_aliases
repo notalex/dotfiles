@@ -34,6 +34,7 @@ les() { $@ | less; }
 hel() { $@ --help; }
 alias ccd='pushd > /dev/null'
 alias pcd='popd > /dev/null'
+alias kr-spork="kill -9 $(ps aux | grep -m 1 spork | awk '{print $2}') ; spork cucumber"
 
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'
