@@ -24,9 +24,6 @@ cmap <C-u> <Home>tab<Up><Home><Del><Del><Del><End>
 " Convert open to tabopen
 cmap <C-t> <Home>tab<CR>
 
-" to follow single digit links
-cmap <C-m> <CR>
-
 cmap <C-p> <Up>
 cmap <C-n> <Down>
 cmap <C-i> <Tab>
