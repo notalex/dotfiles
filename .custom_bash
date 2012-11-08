@@ -11,6 +11,6 @@ KEY=(
 		[ENTER]="\n"
     )
 
-git_status="\"${KEY[CTRL]}-s\":\"gs${KEY[ENTER]}\""
+git_status="\"${KEY[CTRL]}-o\":\"gs${KEY[ENTER]}\""
 
 bind $git_status
