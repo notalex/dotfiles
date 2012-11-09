@@ -10,7 +10,7 @@ cabbreviate gl google_lucky
 cabbreviate gi google_image
 
 "bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title 'Google feeling lucky search ' -keyword google_lucky
-bmark http://images.google.com/images?q=%s -title 'Google Image search ' -keyword google_image
+"bmark http://images.google.com/images?q=%s -title 'Google Image search ' -keyword google_image
 
 " hide all scrollbars
 set guioptions=Cs
