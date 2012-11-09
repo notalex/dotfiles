@@ -51,7 +51,7 @@ minimal_setup() {
 }
 
 session_attach() {
-  tmux select-window -t $session_name:8
+  tmux select-window -t $session_name:1
   tmux -u2 attach-session -t $session_name       # flags like -u need to be specified while creation and attach
 }
 
