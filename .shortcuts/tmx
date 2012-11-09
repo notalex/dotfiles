@@ -32,6 +32,16 @@ develop_setup() {
   tmux send-keys -t $session_name:11 'nuke_spork' C-m
 }
 
+experiments_setup() {
+  tmux new-window -t $session_name:2 -n vi
+  tmux new-window -t $session_name:3
+  tmux new-window -t $session_name:9 -n console
+
+
+  tmux send-keys -t $session_name:2 "cd Ubuntu\ One/experiments/ruby; vim" C-m
+  tmux send-keys -t $session_name:9 "irb" C-m
+}
+
 minimal_setup() {
   tmux new-window -t $session_name:0
 
@@ -73,7 +83,14 @@ case $1 in
     minimal_setup
     session_attach
     ;;
+  e)
+    assign_name Exp $2
+    common_setup
+    minimal_setup
+    experiments_setup
+    session_attach
+    ;;
   *)
-    echo "Acceptable parameters: l m s"
+    echo "Acceptable parameters: l m s e"
     ;;
 esac
