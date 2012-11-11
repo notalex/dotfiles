@@ -39,10 +39,8 @@ nmap <C-m> <CR>
 
 nmap <C-e> :source ~/.pentadactylrc<cr>:echomsg 'reloaded!'<cr>  
 nmap <C-y> :colorscheme custom<cr>:echomsg 'colorscheme updated!'<cr>
-nmap <C-a>t :javascript d = new Date(); alert(d.toTimeString().replace(/GMT.+$/,''));<cr>
 " stub increment shortcut
 nmap <C-a> <Right>
-nmap <C-a>a <C-^>
 " C-j/C-k annoyingly opens up google.com
 nmap <C-j> <Down>
 nmap <C-k> <Down>
