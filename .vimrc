@@ -76,10 +76,6 @@ nmap ;p o<Esc>p
 nmap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nmap ;s :Ack "" <Left><Left>
 
-let g:lasttab = 1
-nmap <c-a> :exe "tabn" .g:lasttab <CR>
-au TabLeave * let g:lasttab = tabpagenr()
-
 nmap <C-e> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
