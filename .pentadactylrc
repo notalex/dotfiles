@@ -26,7 +26,6 @@ cmap <C-u> <Home>tab<Up><Home><Del><Del><Del><End>
 
 " Convert open to tabopen
 cmap <C-t> <Home>tab<CR>
-
 cmap <C-p> <Up>
 cmap <C-n> <Down>
 cmap <C-i> <Tab>
@@ -34,11 +33,14 @@ cmap <C-o> <S-Tab>
 cmap <C-j> <Tab>
 cmap <C-k> <S-Tab>
 
+map -m hints <C-m> <CR>
+
 " To jump to a link found after search
 nmap <C-m> <CR>
-
 nmap <C-e> :source ~/.pentadactylrc<cr>:echomsg 'reloaded!'<cr>  
 nmap <C-y> :colorscheme custom<cr>:echomsg 'colorscheme updated!'<cr>
+
+" #----------- stubs
 " stub increment shortcut
 nmap <C-a> <Right>
 " C-j/C-k annoyingly opens up google.com
