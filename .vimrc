@@ -20,6 +20,7 @@ nmap ;f :Note<Space>
 nmap ;r :SearchNotes<Space>
 nmap ;v :Rview<Space>
 nmap ;d :filetype detect<cr>
+nmap ;j i<CR><ESC>
 nmap <c-y> :wa<CR>
 nmap < <l
 nmap > >l
