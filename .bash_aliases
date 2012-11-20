@@ -21,6 +21,7 @@ alias gdfc="ge git diff --cached --color-words"
 ggrp() { cmd="git log --oneline --grep='$@'"; echo $cmd; eval $cmd; }
 gstshow() { git stash show -p stash@{$1} $2; }
 gstapply() { git stash apply stash@{$1} $2; }
+gshn() { git show HEAD~$1; }
 
 # bash
 alias src='source ~/.bashrc'
@@ -40,6 +41,7 @@ alias kr-spork="kill -9 $(ps aux | grep -m 1 spork | awk '{print $2}') ; spork c
 alias cuke_spork='rake db:test:prepare && spork cucumber'
 delayed_emails() { rake jobs:clear; rake jobs:work; }
 alias cux='cucumber --no-source features/'
+alias cappy='cap production deploy; cap production-pinnacle deploy'
 
 # rvm
 alias rgu='rvm gemset use'
