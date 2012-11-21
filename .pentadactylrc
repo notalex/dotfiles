@@ -30,8 +30,6 @@ cmap <C-p> <Up>
 cmap <C-n> <Down>
 cmap <C-i> <Tab>
 cmap <C-o> <S-Tab>
-cmap <C-j> <Tab>
-cmap <C-k> <S-Tab>
 
 map -m hints <C-m> <CR>
 
@@ -46,6 +44,8 @@ nmap <C-a> <Right>
 " C-j/C-k annoyingly opens up google.com
 nmap <C-j> <Down>
 nmap <C-k> <Down>
+" older motor movement
+cmap <C-j> <Right>
 
 " #-----------emacs mode
 imap <c-a> <Home>
