@@ -59,6 +59,8 @@ set noswapfile
 set ttimeoutlen=50
 set wildignore+=app/assets/images/**,log/**,public/system/**
 set cedit=<C-s>  " since <C-f> has to be cmapped to emulate emacs mode
+" add hyphen to keyword list
+set iskeyword+=-
 
 " #-----------emacs mode
 imap <c-a> <Home>
