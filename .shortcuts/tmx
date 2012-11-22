@@ -41,6 +41,7 @@ experiments_setup() {
 
 
   tmux send-keys -t $session_name:3 "cd Ubuntu\ One/experiments/ruby; vim" C-m
+  tmux send-keys -t $session_name:7 "pushd Ubuntu\ One/experiments/ruby" C-m
   tmux send-keys -t $session_name:9 "irb" C-m
 }
 
