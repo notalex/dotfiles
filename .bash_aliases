@@ -36,6 +36,7 @@ hel() { $@ --help; }
 alias ccd='pushd > /dev/null'
 alias pcd='popd > /dev/null'
 alias kr-spork="kill -9 $(ps aux | grep -m 1 spork | awk '{print $2}') ; spork cucumber"
+alias speed_test="wget --output-document=/dev/null http://speedtest.sea01.softlayer.com/speedtest/speedtest/random1000x1000.jpg"
 
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'
