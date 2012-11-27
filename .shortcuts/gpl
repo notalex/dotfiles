@@ -12,6 +12,8 @@ else
                   "release"
                 when 'm'
                   "master"
+                when 't'
+                  "temp"
                 else
                   branch
                 end
