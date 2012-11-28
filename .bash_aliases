@@ -4,6 +4,7 @@
 alias staging_push="git push staging release:master"
 alias m_staging_push="git push staging release:master && h_migrate s"
 alias h='heroku run'
+alias h_pg_info="heroku pg:info --app=ikonverse-staging"
 
 # git
 alias gar="git add -A"
