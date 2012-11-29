@@ -13,7 +13,7 @@ else
                 when 'm'
                   "master"
                 when 't'
-                  "temp"
+                  "temp -f"
                 else
                   branch
                 end
