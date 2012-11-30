@@ -1,0 +1,18 @@
+#! /bin/bash
+
+read -r -p "Are you sure? [Yes/n] " response
+
+if [ "$1" != "" ]; then
+  head=$1
+else
+  head="HEAD^"
+fi
+
+case $response in
+  [yY]es)
+    eval "git reset --soft $head"
+  ;;
+  *)
+    echo "no reset done"
+  ;;
+esac
