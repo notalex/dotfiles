@@ -41,6 +41,8 @@ alias speed_test="wget --output-document=/dev/null http://speedtest.sea01.softla
 
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'
+alias migrate_spork='rake db:migrate RAILS_ENV=test; spork cucumber'
+alias redo_migrate_spork='rake db:migrate:redo RAILS_ENV=test; spork cucumber'
 delayed_emails() { rake jobs:clear; rake jobs:work; }
 alias cux='cucumber --no-source features/'
 alias cappy='cap production deploy; cap production-pinnacle deploy'
