@@ -1,0 +1,14 @@
+#! /usr/bin/ruby
+
+
+branch_string = %x[ git branch ]
+branch_name = branch_string.slice(/\* (\w+)/, 1)
+
+options = ARGV.select { |el| el.match(/-\w/) }
+params = ""
+params += '-f' if options.include?('-f')
+params += '; h_migrate s' if options.include?('-m')
+
+command = "git push staging #{ branch_name }:master #{ params }"
+puts command
+system command
