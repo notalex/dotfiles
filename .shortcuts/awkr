@@ -1,3 +1,10 @@
 #! /bin/bash
+. ~/.bash_aliases
 
-awk "FNR == $2 { print \$$1 }"
+ar=(${@})
+length=${#ar[*]}
+row=${ar[$length-2]}
+col=${ar[$length-1]}
+command=${ar[*]:0:$length-2}
+
+$command | awk -v i=$row -v j=$col 'FNR == i { print $j  }'
