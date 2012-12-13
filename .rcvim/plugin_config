@@ -30,6 +30,7 @@ let g:NERDTreeMapOpenInTab = '<C-t>'
 
 let g:notes_suffix = '.notes'
 let g:notes_directory = '~/gitbasket'
+let g:notes_smart_quotes = 0
 
 hi notesTagName ctermfg=4
 hi notesBold ctermfg=14
