@@ -26,8 +26,6 @@ nmap < <l
 nmap > >l
 nmap <C-z> <right>
 nmap K <right>
-nmap / /\v
-nmap ? ?\v
 
 " #---------------- imaps --------------------------
 imap <c-y> <esc>:wa<CR>
