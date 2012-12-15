@@ -30,7 +30,7 @@ develop_setup() {
   tmux new-window -t $session_name:6
   tmux new-window -t $session_name:11 -n spork
 
-  tmux send-keys -t $session_name:11 'nuke_spork' C-m
+  tmux send-keys -t $session_name:11 'migrate_spork' C-m
 }
 
 experiments_setup() {
