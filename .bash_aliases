@@ -3,6 +3,8 @@
 # git push
 alias h='heroku run'
 alias h_pg_info="heroku pg:info --app=ikonverse-staging"
+hr() { heroku run $@ --app ikonverse-staging; }
+hk() { heroku $@ --app ikonverse-staging; }
 
 # git
 alias gar="git add -A"
