@@ -9,9 +9,9 @@ common_setup() {
 
   tmux send-keys -t $session_name:3 "vim" C-m
   if [ $session_name == 'Small' ]; then
-    tmux send-keys -t $session_name:4 "cd ~/gitbasket; git pull origin master; vim -p2 WorkFlow.notes ruby.notes" C-m
+    tmux send-keys -t $session_name:4 "cd ~/gitbasket; git pull origin master; vim WorkFlow.notes" C-m
   else
-    tmux send-keys -t $session_name:4 "cd ~/gitbasket; vim -p2 WorkFlow.notes ruby.notes" C-m
+    tmux send-keys -t $session_name:4 "cd ~/gitbasket; vim WorkFlow.notes" C-m
   fi
 }
 
