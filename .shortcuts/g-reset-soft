@@ -5,12 +5,12 @@ read -r -p "Are you sure? [Yes/n] " response
 if [ "$1" != "" ]; then
   head=$1
 else
-  head="HEAD^"
+  head=1
 fi
 
 case $response in
   [yY]es)
-    eval "git reset --soft $head"
+    eval "git reset --soft HEAD~$head"
   ;;
   *)
     echo "no reset done"
