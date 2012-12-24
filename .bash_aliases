@@ -45,6 +45,8 @@ xout() { xclip -o -selection clipboard; }
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'
 alias migrate_spork='rake db:migrate RAILS_ENV=test; spork cucumber'
+alias recreate-test-db='rake db:drop RAILS_ENV=test; rake db:create RAILS_ENV=test; rake db:migrate RAILS_ENV=test --trace;'
+alias test-migrate='rake db:migrate RAILS_ENV=test --trace;'
 alias redo_migrate_spork='rake db:migrate:redo RAILS_ENV=test; spork cucumber'
 delayed_emails() { rake jobs:clear; rake jobs:work; }
 alias cux='cucumber --no-source -p all_drivers features/'
