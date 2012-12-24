@@ -47,8 +47,9 @@ alias cuke_spork='rake db:test:prepare && spork cucumber'
 alias migrate_spork='rake db:migrate RAILS_ENV=test; spork cucumber'
 alias redo_migrate_spork='rake db:migrate:redo RAILS_ENV=test; spork cucumber'
 delayed_emails() { rake jobs:clear; rake jobs:work; }
-alias cux='cucumber --no-source features/'
+alias cux='cucumber --no-source -p all_drivers features/'
 alias cappy='cap production deploy; cap production-pinnacle deploy'
+alias commonly-failing-tests-run='cucumber -p all_drivers features/suggest_participants.feature features/todo.feature features/snippet_rules.feature features/related_conversations.feature'
 
 # rvm
 alias rgu='rvm gemset use'
