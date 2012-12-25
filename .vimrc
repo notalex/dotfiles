@@ -77,7 +77,7 @@ cmap <c-b> <Left>
 " -----------------scripts------------------
 nmap ;p o<Esc>p
 nmap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
-nmap ;s :Ack -i "" <Left><Left>
+nmap ;s :Ack "" <Left><Left>
 nmap ;m /.delay<cr>ved$a.deliver<Esc>:w<cr>
 
 nmap <C-e> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
