@@ -1,0 +1,13 @@
+#! /bin/bash
+
+HOSTNAME="$1";
+if [ -z "${HOSTNAME}" ]; then
+  echo "Missing hostname argument (e.g., www.yoursite.com)";
+fi
+if [ ! -e pass.key ]; then
+  openssl genrsa -des3 -out pass.key 1024
+else
+  echo "Key already exists ... skipping ..."
+fi
+openssl rsa -in pass.key -out $HOSTNAME.key
+openssl req -new -key $HOSTNAME.key -x509 -out $HOSTNAME.crt -days 999
