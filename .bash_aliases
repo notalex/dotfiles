@@ -49,9 +49,10 @@ alias recreate-test-db='rake db:drop RAILS_ENV=test; rake db:create RAILS_ENV=te
 alias test-migrate='rake db:migrate RAILS_ENV=test --trace;'
 alias redo_migrate_spork='rake db:migrate:redo RAILS_ENV=test; spork cucumber'
 delayed_emails() { rake jobs:clear; rake jobs:work; }
-alias cux='cucumber --no-source -p all_drivers features/'
+alias cux='cucumber --no-source -p run_all features/'
 alias cappy='cap production deploy; cap production-pinnacle deploy'
-alias commonly-failing-tests-run='cucumber -p all_drivers features/suggest_participants.feature features/todo.feature features/snippet_rules.feature features/related_conversations.feature'
+alias commonly-failing-tests-run='cucumber -p run_all features/suggest_participants.feature features/todo.feature features/snippet_rules.feature features/related_conversations.feature'
+alias ikonverse-ssh-server='thin start --ssl --ssl-verify --ssl-key-file ~/Documents/ikonverse/\*.ikonverse-dev.com.key --ssl-cert-file ~/Documents/ikonverse/\*.ikonverse-dev.com.crt'
 
 # rvm
 alias rgu='rvm gemset use'
