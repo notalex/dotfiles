@@ -24,8 +24,8 @@ nmap ;j i<CR><ESC>
 nmap <c-y> :wa<CR>
 nmap < <l
 nmap > >l
-nmap <C-z> <right>
-nmap K <right>
+nmap <C-z> <nop>
+nmap K <nop>
 
 " #---------------- imaps --------------------------
 imap <c-y> <esc>:wa<CR>
@@ -33,7 +33,6 @@ imap <c-y> <esc>:wa<CR>
 imap <Nul> <Space>
 " the default behaviour of C-h does not remove both braces() when the 1st is removed
 imap <C-h> <Backspace>
-imap <C-c> <Right>
 
 " #----------------- cmaps --------------------------------
 
@@ -42,7 +41,6 @@ cmap <c-j> <Down>
 cmap <Nul> <Space>
 cmap <C-o> <S-Tab>
 cabbrev hv vertical topleft help
-cmap <C-c> <Right>
 
 " ------------------set------------------------------
 

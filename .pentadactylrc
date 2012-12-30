@@ -19,6 +19,7 @@ set guioptions=Cs
 "set! browser.tabs.closeWindowWithLastTab = false
 
 imap <C-m> <CR>
+imap <C-j> <nop>
 
 " Convert tabopen to open
 cmap <C-u> <Home>tab<Up><Home><Del><Del><Del><End>
@@ -38,13 +39,9 @@ nmap <C-e> :source ~/.pentadactylrc<cr>:echomsg 'reloaded!'<cr>
 nmap <C-y> :colorscheme custom<cr>:echomsg 'colorscheme updated!'<cr>
 
 " #----------- stubs
-" stub increment shortcut
-nmap <C-a> <Right>
 " C-j/C-k annoyingly opens up google.com
-nmap <C-j> <Down>
-nmap <C-k> <Down>
-" older motor movement
-cmap <C-j> <Right>
+nmap <C-j> <nop>
+nmap <C-k> <nop>
 
 " #-----------emacs mode
 imap <c-a> <Home>
