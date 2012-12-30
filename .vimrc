@@ -47,7 +47,7 @@ cabbrev hv vertical topleft help
 set smartindent
 set nobackup
 set ignorecase
-set tabstop=2
+set softtabstop=2
 set shiftwidth=2
 set expandtab
 set hidden
