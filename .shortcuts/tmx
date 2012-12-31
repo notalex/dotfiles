@@ -30,7 +30,7 @@ develop_setup() {
   tmux new-window -t $session_name:6
   tmux new-window -t $session_name:11 -n spork
 
-  tmux send-keys -t $session_name:11 'migrate_spork' C-m
+  tmux send-keys -t $session_name:11 'rake db:migrate RAILS_ENV=test; git checkout db/schema.rb; spork cucumber' C-m
 }
 
 experiments_setup() {
