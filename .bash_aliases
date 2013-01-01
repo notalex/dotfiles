@@ -42,6 +42,7 @@ alias speed_test="wget --output-document=/dev/null http://speedtest.sea01.softla
 alias disk-usage="du -h --max-depth=1 $@"
 xin() { echo $@ | xclip -selection clipboard; }
 xout() { xclip -o -selection clipboard; }
+hss() { sudo ssh $1@192.168.3.$2; }
 
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'
