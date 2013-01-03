@@ -8,6 +8,10 @@ module T
     colorize { inspected_and_joined(args) }
   end
 
+  def y(data)
+    puts data.to_yaml
+  end
+
 private
 
   def inspected_and_joined(array)
