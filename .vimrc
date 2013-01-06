@@ -27,6 +27,8 @@ nmap < <l
 nmap > >l
 nmap <C-z> <nop>
 nmap K <nop>
+nnoremap / /\v
+nnoremap ? ?\v
 
 " #---------------- imaps --------------------------
 imap <c-y> <esc>:wa<CR>
@@ -76,9 +78,9 @@ cmap <c-b> <Left>
 
 " -----------------scripts------------------
 nmap ;p o<Esc>p
-nmap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
+nnoremap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nmap ;s :Ack "" <Left><Left>
-nmap ;m /.delay<cr>ved$a.deliver<Esc>:w<cr>
+nnoremap ;m /.delay<cr>ved$a.deliver<Esc>:w<cr>
 
 nmap <C-e> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
