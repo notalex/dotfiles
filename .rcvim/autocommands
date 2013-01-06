@@ -1,0 +1,8 @@
+fun! CoffeeMaker()
+  set filetype=coffee
+endf
+
+augroup nonRepeater
+ au!
+ au BufRead,BufNewFile *.coffee.erb call CoffeeMaker()
+augroup END
