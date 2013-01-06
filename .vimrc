@@ -55,6 +55,7 @@ set hidden
 set smartcase
 set nowritebackup
 set noswapfile
+set incsearch
 set ttimeoutlen=50
 set wildignore+=app/assets/images/**,log/**,public/system/**
 set cedit=<C-s>  " since <C-f> has to be cmapped to emulate emacs mode
