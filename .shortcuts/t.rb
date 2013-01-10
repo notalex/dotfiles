@@ -12,6 +12,10 @@ module T
     puts data.to_yaml
   end
 
+  def d
+    require 'debugger'; debugger
+  end
+
 private
 
   def inspected_and_joined(array)
