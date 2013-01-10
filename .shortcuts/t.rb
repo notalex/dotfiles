@@ -16,6 +16,10 @@ module T
     require 'debugger'; debugger
   end
 
+  def x(data)
+    abort data.inspect
+  end
+
 private
 
   def inspected_and_joined(array)
