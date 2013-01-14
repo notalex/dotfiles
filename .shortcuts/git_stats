@@ -1,8 +1,13 @@
 #! /usr/bin/ruby
 
-dirty = 2
-untracked = 6
-clean = 7
+RED = 2
+BLUE = 6
+WHITE = 7
+
+dirty = RED
+untracked = BLUE
+clean = WHITE
+
 status = %x[ git status ]
 
 case ARGV[0]
@@ -12,16 +17,16 @@ when 'branch_name'
   puts branch_name
 when 'branch_color_code'
   if status.slice(/Changes not staged for commit/m, 0)
-    puts "tput setaf #{dirty}"
+    puts "tput setaf #{ dirty }"
   elsif status.slice(/Untracked files/m, 0)
-    puts "tput setaf #{untracked}"
+    puts "tput setaf #{ untracked }"
   else
-    puts "tput setaf #{clean}"
+    puts "tput setaf #{ clean }"
   end
 when 'symbol_color'
   if status.slice(/Changes to be committed/m, 0)
-    puts "tput setaf #{dirty}"
+    puts "tput setaf #{ dirty }"
   else
-    puts "tput setaf #{clean}"
+    puts "tput setaf #{ clean }"
   end
 end
