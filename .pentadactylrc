@@ -12,6 +12,7 @@ cabbreviate gome guardians of middle earth
 "bmark http://images.google.com/images?q=%s -title 'Google Image search ' -keyword google_image
 "bmark http://rubygems.org/gems/%s -title 'rubygems' -keyword 'rubygems'
 "bmark http://thesaurus.com/browse/%s -title 'thesaurus' -keyword 'thesaurus'
+"bmark! http://kat.ph/search/%s/ -title 'kat-torrents' -keyword 'kat-torrents'
 
 " hide all scrollbars
 set guioptions=Cs
