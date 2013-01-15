@@ -60,3 +60,6 @@ alias ikonverse-ssh-server='thin start --ssl --ssl-verify --ssl-key-file ~/Docum
 alias rgu='rvm gemset use'
 alias rgn='rvm gemset name'
 alias ru='rvm use'
+
+# tmux
+alias tmx-attach-session='tmux -u2 attach-session -t'
