@@ -9,6 +9,10 @@ run_command() {
   tmux send-keys -t $session_name:$1 "$2" C-m
 }
 
+move_window() {
+  tmux move-window -s $session_name:$1 -t $session_name:$2
+}
+
 create_session() {
   tmux start-server
   tmux -u2 new-session -d -s $session_name # -d starts in detached mode
@@ -27,21 +31,21 @@ setup_gitbasket_at() {
 }
 
 common_setup() {
-  new_window 3 vim
+  new_window 2 vim
   new_window 4 notes
 
-  run_command 3 vim
+  run_command 2 vim
   setup_gitbasket_at 4
 }
 
 rails_setup() {
-  new_window 2 vim
+  new_window 3 vim
   new_window 9 console
   new_window 7
   new_window 8
 
   run_command 0 'rails server'
-  run_command 2 'vim'
+  run_command 3 'vim'
   run_command 9 'rails console'
 }
 
@@ -51,6 +55,8 @@ setup_spork_at() {
 }
 
 experiments_setup() {
+  move_window 2 3
+
   new_window 2 vim
   new_window 9 console
 
@@ -64,7 +70,7 @@ minimal_setup() {
 }
 
 attach_session() {
-  tmux select-window -t $session_name:3
+  tmux select-window -t $session_name:2
   tmux -u2 attach-session -t $session_name
 }
 
