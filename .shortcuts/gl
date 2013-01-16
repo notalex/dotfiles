@@ -1,9 +1,10 @@
-#! /bin/sh
-case $1 in
-  [0-9]*)
-    git log --oneline -$1
-  ;;
-  *)
-    git log --oneline -5
-  ;;
-esac
+#! /bin/bash
+
+if [[ $1 = *[[:digit:]]* ]]; then
+  count=$1
+  shift
+else
+  count=5
+fi
+
+git log --oneline -$count $@
