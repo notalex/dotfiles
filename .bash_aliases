@@ -35,9 +35,9 @@ pag() { cmd="ps aux | grep $1"; echo $cmd; eval $cmd; }
 pagm() { cmd="ps aux --sort -rss | less"; echo $cmd; eval $cmd; }
 les() { $@ | less; }
 hel() { $@ --help; }
+pskill() { kill -9 $(ps aux | grep -m 1 $1 | awk '{print $2}'); }
 alias ccd='pushd > /dev/null'
 alias pcd='popd > /dev/null'
-alias kr-spork="kill -9 $(ps aux | grep -m 1 spork | awk '{print $2}') ; spork cucumber"
 alias speed_test="wget --output-document=/dev/null http://speedtest.sea01.softlayer.com/speedtest/speedtest/random1000x1000.jpg"
 alias disk-usage="du -h --max-depth=1 $@"
 xin() { echo $@ | xclip -selection clipboard; }
