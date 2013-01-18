@@ -113,16 +113,22 @@ setup_tmux() {
 }
 
 session_type=small
-while getopts e:hn:gml flag; do
+while getopts e:l:m:n:gh flag; do
   case $flag in
-    g) pull_from_repo=0 ;;
+    e)
+      experiments_folder=$OPTARG
+      session_type=exp
+    ;;
+    l)
+      cd $OPTARG
+      session_type=large
+    ;;
+    m)
+      cd $OPTARG
+      session_type=medium
+    ;;
     n) session_name=$OPTARG ;;
-
-    e) experiments_folder=$OPTARG
-       session_type=exp ;;
-    l) session_type=large ;;
-    m) session_type=medium ;;
-
+    g) pull_from_repo=0 ;;
     h) echo_help; exit ;;
     *) exit ;;
   esac
