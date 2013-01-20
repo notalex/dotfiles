@@ -44,6 +44,7 @@ cmap <c-j> <Down>
 cmap <Nul> <Space>
 cmap <C-o> <S-Tab>
 cabbrev hv vertical topleft help
+cabbrev src source ~/.vimrc
 
 " ------------------set------------------------------
 
@@ -84,7 +85,6 @@ nmap ;s :Ack "" <Left><Left>
 nnoremap ;m /.delay<cr>ved$a.deliver<Esc>:w<cr>
 nnoremap ;bs :set scrollbind!<cr>
 
-nmap <C-e> :source ~/.vimrc<cr>:echomsg 'reloaded!'<cr>
 map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 vmap <C-x> d:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
