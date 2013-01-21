@@ -1,23 +1,7 @@
 #! /usr/bin/ruby
-if ARGV[1]
-  command = "git push #{ARGV[0]} #{ARGV[1]}"
-else
-  branch_string = %x[ git branch ]
-  branch_name = branch_string.slice(/\* (\w+)/, 1)
-  branch = ARGV[0] || branch_name
-  remote_name = case branch
-                when 'd'
-                  "develop"
-                when 'r'
-                  "release"
-                when 'm'
-                  "master"
-                when 't'
-                  "temp -f"
-                else
-                  branch
-                end
-  command = "git push origin #{branch_name}:#{remote_name}"
-end
+require_relative 'git_remote_and_branch'
+
+command = "git push #{ remote_name } #{ local_branch_name }:#{ remote_branch_name } #{ options_string }"
+
 puts command
 system command
