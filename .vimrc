@@ -12,7 +12,6 @@ map <C-h> <Leader>c<space>
 " #----------------nmaps---------------
 
 nmap <CR> O<Esc>
-autocmd FileType qf nmap <buffer> <CR> :.cc<CR>
 
 nmap <Space> a<Space><Esc>
 nmap ;nt :NERDTreeToggle<CR>

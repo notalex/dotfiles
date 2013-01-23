@@ -1,3 +1,5 @@
+" vim: set ft=vim:
+
 fun! CoffeeMaker()
   set filetype=coffee
 endf
@@ -5,4 +7,6 @@ endf
 augroup nonRepeater
  au!
  au BufRead,BufNewFile *.coffee.erb call CoffeeMaker()
+ au FileType qf nmap <buffer> <CR> :.cc<CR>
+ au CmdwinEnter * nnoremap <buffer> <CR> <CR>
 augroup END
