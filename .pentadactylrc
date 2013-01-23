@@ -44,8 +44,9 @@ nmap w :open wikipedia<Space>
 " firebug
 nmap ;ff :firebug<Space>
 nmap ;fq :firebug toggle<cr>
-nmap ;fc :firebug toggle-console<cr>
 nmap ;ft :firebug tab<Space>
+nmap ;fct :firebug toggle-console<cr>:firebug tab console<cr>
+nmap ;c :firebug tab console<cr>
 
 " #----------- stubs
 " C-j/C-k annoyingly opens up google.com
