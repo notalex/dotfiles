@@ -56,6 +56,7 @@ alias cux='cucumber --no-source -p run_all features/'
 alias cappy='cap production deploy; cap production-pinnacle deploy'
 alias commonly-failing-tests-run='cucumber -p run_all features/suggest_participants.feature features/todo.feature features/snippet_rules.feature features/related_conversations.feature'
 alias ikonverse-ssh-server='thin start --ssl --ssl-verify --ssl-key-file ~/Documents/ikonverse/\*.ikonverse-dev.com.key --ssl-cert-file ~/Documents/ikonverse/\*.ikonverse-dev.com.crt'
+alias rjw='rake jobs:work'
 
 # rvm
 alias rgu='rvm gemset use'
