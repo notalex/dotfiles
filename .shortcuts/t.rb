@@ -20,6 +20,10 @@ module T
     abort data.inspect
   end
 
+  def purge_emails
+    Delayed::Job.destroy_all
+  end
+
 private
 
   def inspected_and_joined(array)
