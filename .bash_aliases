@@ -35,7 +35,6 @@ pag() { cmd="ps aux | grep $1"; echo $cmd; eval $cmd; }
 pagm() { cmd="ps aux --sort -rss | less"; echo $cmd; eval $cmd; }
 les() { $@ | less; }
 hel() { $@ --help; }
-pskill() { kill -9 $(ps aux | grep -m 1 $1 | awk '{print $2}'); }
 alias ccd='pushd > /dev/null'
 alias pcd='popd > /dev/null'
 alias speed_test="wget --output-document=/dev/null http://speedtest.sea01.softlayer.com/speedtest/speedtest/random1000x1000.jpg"
