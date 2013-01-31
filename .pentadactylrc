@@ -22,6 +22,9 @@ set guioptions=Cs
 
 imap <C-m> <CR>
 imap <C-j> <nop>
+imap <C-i> <TAB>
+imap <C-o> <S-TAB>
+imap -builtin <C-s> <C-i>
 
 " Convert tabopen to open
 cmap <C-u> <Home>tab<Up><Home><Del><Del><Del><End>
