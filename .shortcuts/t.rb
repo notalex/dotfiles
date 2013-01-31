@@ -24,6 +24,11 @@ module T
     Delayed::Job.destroy_all
   end
 
+  def cv(url)
+    uuid = url.slice(/\/((\w+-)+\w+)\//, 1)
+    Conversation.find_by_uuid(uuid)
+  end
+
 private
 
   def inspected_and_joined(array)
