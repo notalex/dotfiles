@@ -35,6 +35,7 @@ cmap <C-p> <Up>
 cmap <C-n> <Down>
 cmap <C-i> <Tab>
 cmap <C-o> <S-Tab>
+cmap <C-l> <Home><C-right><Space>google_lucky<CR>
 
 map -m hints <C-m> <CR>
 
