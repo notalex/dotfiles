@@ -1,0 +1,5 @@
+#! /bin/bash
+message='Finch - new messages'
+
+notify-send "$message"
+tmux display "$message"
