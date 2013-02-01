@@ -21,6 +21,7 @@ nmap ;r :SearchNotes<Space>
 nmap ;v :Rview<Space>
 nmap ;d :filetype detect<cr>
 nmap ;j i<CR><ESC>
+nmap ;hs :set hlsearch!<cr>
 nmap <c-y> :wa<CR>
 nmap < <l
 nmap > >l

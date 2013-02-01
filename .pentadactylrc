@@ -22,6 +22,9 @@ set guioptions=Cs
 
 imap <C-m> <CR>
 imap <C-j> <nop>
+imap <C-i> <TAB>
+imap <C-o> <S-TAB>
+imap -builtin <C-s> <C-i>
 
 " Convert tabopen to open
 cmap <C-u> <Home>tab<Up><Home><Del><Del><Del><End>
@@ -32,6 +35,7 @@ cmap <C-p> <Up>
 cmap <C-n> <Down>
 cmap <C-i> <Tab>
 cmap <C-o> <S-Tab>
+cmap <C-l> <Home><C-right><Space>google_lucky<CR>
 
 map -m hints <C-m> <CR>
 
