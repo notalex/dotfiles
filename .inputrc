@@ -1,7 +1,7 @@
 set editing-mode vi
 set bind-tty-special-chars off
 
-Control-x: shell-expand-line
+Control-k: shell-expand-line
 Control-w: backward-kill-word
 
 $if mode=vi
