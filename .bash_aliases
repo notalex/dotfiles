@@ -26,6 +26,7 @@ gshn() { git show HEAD~$1; }
 alias notes-push="git add -A; git commit -m '-'; git push origin master;"
 
 # bash
+alias s='sudo'
 alias src='source ~/.bashrc'
 alias apti='sudo apt-get install'
 alias aptr='sudo apt-get remove'
@@ -43,6 +44,7 @@ xin() { echo $@ | xclip -selection clipboard; }
 xout() { xclip -o -selection clipboard; }
 hss() { ssh $1@192.168.3.$2; }
 add_to_path() { [[ $PATH != *$1* ]] && PATH=$PATH:$1; }
+tmux-run-and-inform() { $@; tmux display 'Process finished...'; }
 
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'
@@ -51,9 +53,9 @@ alias recreate-test-db='rake db:drop RAILS_ENV=test; rake db:create RAILS_ENV=te
 alias test-migrate='rake db:migrate RAILS_ENV=test --trace;'
 alias redo_migrate_spork='rake db:migrate:redo RAILS_ENV=test; spork cucumber'
 delayed_emails() { rake jobs:clear; rake jobs:work; }
-alias cux='cucumber --no-source -p run_all features/'
+alias cux='tmux-run-and-inform cucumber --no-source -p run_all features/'
 alias cappy='cap production deploy; cap production-pinnacle deploy'
-alias commonly-failing-tests-run='cucumber -p run_all features/suggest_participants.feature features/todo.feature features/snippet_rules.feature features/related_conversations.feature'
+alias commonly-failing-tests-run='cucumber -p run_all features/suggest_participants.feature features/todo.feature features/snippet_rules.feature features/related_conversations.feature features/first_time_user.feature'
 alias ikonverse-ssh-server='thin start --ssl --ssl-verify --ssl-key-file ~/Documents/ikonverse/\*.ikonverse-dev.com.key --ssl-cert-file ~/Documents/ikonverse/\*.ikonverse-dev.com.crt'
 alias rjw='rake jobs:work'
 
