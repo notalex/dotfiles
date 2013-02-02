@@ -1,5 +1,8 @@
 #! /bin/bash
 
+cd ~/gitbasket
+notes_push
+
 exit_status=$(oms_check_out)
 
 [ "$exit_status" == '0' ] && shutdown -P now
