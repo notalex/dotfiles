@@ -19,4 +19,5 @@ export EDITOR=vim
 
 add_to_path $HOME/.rvm/bin
 add_to_path $HOME/.shortcuts
+add_to_path $HOME/bin
 add_to_path $HOME/.project_shortcuts
