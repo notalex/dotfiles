@@ -1,5 +1,2 @@
 #! /bin/bash
-message='Finch - new messages'
-
-notify-send "$message"
-tmux display "$message"
+notify-send -u critical 'Finch - new messages'
