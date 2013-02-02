@@ -1,0 +1,7 @@
+#! /usr/bin/ruby
+
+require_relative 'oms_actions'
+
+automaton = OmsActions.new('check-out')
+automaton.perform_operations
+puts automaton.exit_status
