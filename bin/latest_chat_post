@@ -1,0 +1,28 @@
+#! /usr/bin/ruby
+
+class LatestChatPost
+
+  def get
+    latest_chat_file = all_chat_files.last
+    latest_html_post = File.read latest_chat_file
+
+    parsed_html_post = slice_after_bold_and_before_body_end(latest_html_post)
+
+    strip_html(parsed_html_post)
+  end
+
+private
+  def slice_after_bold_and_before_body_end(html)
+    html.split(/<b>/).last
+  end
+
+  def all_chat_files
+    Dir['/home/alex/.purple/logs/jabber/**/*.html'].sort_by { |f| File.mtime(f) }
+  end
+
+  def strip_html(html)
+    html.gsub(/<.+?>/, '')
+  end
+end
+
+puts LatestChatPost.new.get

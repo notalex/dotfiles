@@ -1,2 +1,2 @@
 #! /bin/bash
-notify-send -u critical 'Finch - new messages'
+notify-send -u critical "$(latest_chat_post)"
