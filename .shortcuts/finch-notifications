@@ -1,2 +1,2 @@
 #! /bin/bash
-notify-send -u critical "$(latest_chat_post)"
+notify-send -u critical -i /home/alex/Pictures/chat.png "$(latest_chat_post)"
