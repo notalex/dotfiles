@@ -84,8 +84,18 @@ assign_name() {
   [ -z $session_name ] && session_name=$session_type
 }
 
+start_finch() {
+  new_window 1 finch
+  run_command 1 finch
+}
+
+link_finch() {
+  tmux link-window -s small:finch -t $session_name:1
+}
+
 small_setup() {
   minimal_setup
+  [ $enable_finch ] && start_finch
 }
 
 exp_setup() {
@@ -98,6 +108,7 @@ medium_setup() {
 }
 
 large_setup() {
+  [ $enable_finch ] && link_finch
   rails_setup
   new_window 6
   setup_spork_at 11
@@ -113,7 +124,7 @@ setup_tmux() {
 }
 
 session_type=small
-while getopts e:l:m:n:gh flag; do
+while getopts e:l:m:n:ghf flag; do
   case $flag in
     e)
       experiments_folder=$OPTARG
@@ -129,6 +140,7 @@ while getopts e:l:m:n:gh flag; do
     ;;
     n) session_name=$OPTARG ;;
     g) pull_from_repo=0 ;;
+    f) enable_finch=0;;
     h) echo_help; exit ;;
     *) exit ;;
   esac
