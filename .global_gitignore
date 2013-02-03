@@ -7,4 +7,3 @@ testing_god.rake
 nohup.out
 delete.*
 t.rb
-focus_guake.rb
