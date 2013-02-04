@@ -1,1 +1,1 @@
-(if (matches (window_name) "(Mozilla Firefox|Google Chrome)") (begin minimize (set_viewport 2)))
+(if (matches (window_name) "(Mozilla Firefox|Google Chrome)") (minimize))
