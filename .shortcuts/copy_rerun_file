@@ -1,8 +1,10 @@
 #! /usr/bin/ruby
 
-print "Confirm: "
-confirmation = gets.chomp
-exit unless confirmation == 'yes'
+unless ARGV[0] == '-y'
+  print "Confirm: "
+  confirmation = gets.chomp
+  exit unless confirmation == 'yes'
+end
   
 source_file_path = 'tmp/rerun.txt'
 target_file_path = 'tmp/copy_rerun.txt'

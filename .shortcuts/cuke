@@ -1,8 +1,10 @@
 #! /bin/bash
 
-cucumber --no-source $@
+cucumber --no-source -p run_all $@
+copy_rerun_file -y
 for i in 1, 2; do
   if [ -s tmp/rerun.txt ]; then
-    cucumber --no-source $(cat tmp/rerun.txt)
+    rerun_failed
+    copy_rerun_file -y
   fi
 done
