@@ -11,3 +11,5 @@ guake --new-tab=1
 guake --select-tab=1
 command_path="/home/alex/bin/guake-tab-1-command"
 [ -s "$command_path" ] && guake -e "$(cat $command_path)"
+
+tmux set -g status off
