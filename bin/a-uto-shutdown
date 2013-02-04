@@ -1,7 +1,12 @@
 #! /bin/bash
 
-cd ~/gitbasket
-notes_push
+cd $HOME
+git push origin master
+
+cd $HOME/gitbasket
+git add -A
+git commit -m '-'
+git push origin master
 
 exit_status=$(oms_check_out)
 
