@@ -1,9 +1,12 @@
 #! /usr/bin/ruby
 
 class LatestChatPost
+  DEFAULT_MESSAGE = 'Finch: new message'
 
   def get
     latest_chat_file = all_chat_files.last
+    return DEFAULT_MESSAGE unless latest_chat_file
+
     latest_html_post = File.read latest_chat_file
 
     parsed_html_post = slice_after_bold_and_before_body_end(latest_html_post)
@@ -17,7 +20,9 @@ private
   end
 
   def all_chat_files
-    Dir['/home/alex/.purple/logs/jabber/**/*.html'].sort_by { |f| File.mtime(f) }
+    Dir['/home/alex/.purple/logs/jabber/**/*.html'].
+      select { |f| File.mtime(f).to_i > (Time.now.to_i - 5) }.
+      sort_by { |f| File.mtime(f) }
   end
 
   def strip_html(html)
