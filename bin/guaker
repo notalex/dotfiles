@@ -4,7 +4,7 @@ sleep 20
 guake &
 
 sleep 5
-guake -e 'tmx -g'
+guake -e 'tmx -fg'
 
 sleep 10
 guake --new-tab=1
