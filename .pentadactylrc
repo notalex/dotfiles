@@ -25,6 +25,8 @@ imap <C-j> <nop>
 imap <C-i> <TAB>
 imap <C-o> <S-TAB>
 imap -builtin <C-s> <C-i>
+imap <C-n> <Down>
+imap <C-p> <Up>
 
 " Convert tabopen to open
 cmap <C-u> <Home>tab<Up><Home><Del><Del><Del><End>
