@@ -41,8 +41,10 @@ private
   end
 
   def click_link_and_accept_alert(text)
+    delay
     link = get_link(text)
     link.click
+    delay
     driver.switch_to.alert.accept
   end
 
@@ -75,6 +77,10 @@ private
 
   def icon_for(code)
     "/home/alex/Pictures/#{ status_text_for(code) }-icon.png"
+  end
+
+  def delay
+    sleep 1
   end
 end
 
