@@ -8,3 +8,4 @@ for i in 1, 2; do
     copy_rerun_file -y
   fi
 done
+commonly-failing-tests-run
