@@ -25,6 +25,7 @@ gstshow() { git stash show -p stash@{$1} $2; }
 gstapply() { git stash apply stash@{$1} $2; }
 gshn() { git show HEAD~$1; }
 alias notes-push="git add -A; git commit -m '-'; git push origin master;"
+gcr() { git branch $1 origin/$1; }
 
 # bash
 alias s='sudo'
