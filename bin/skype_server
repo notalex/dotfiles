@@ -1,0 +1,14 @@
+#! /usr/bin/ruby
+
+require 'rype'
+require 'pp'
+
+Rype.on(:chatmessage_received) do |chatmessage|
+  chatmessage.chat do |chat|
+    chatmessage.body do |body|
+      %x[notify-send -u critical -i /home/alex/Pictures/chat.png #{ body }]
+    end
+  end
+end
+
+Rype.attach.join
