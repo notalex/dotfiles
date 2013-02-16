@@ -1,7 +1,7 @@
 #! /usr/bin/ruby
 
 class LatestChatPost
-  DEFAULT_MESSAGE = 'Finch: new message'
+  DEFAULT_MESSAGE = nil
 
   def get
     latest_chat_file = all_chat_files.last
