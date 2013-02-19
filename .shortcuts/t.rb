@@ -25,7 +25,7 @@ module T
   end
 
   def cv(url)
-    uuid = url.slice(/\/((\w+-)+\w+)\//, 1)
+    uuid = url.slice(/\/((\w+-)+\w+)/, 1)
     Conversation.find_by_uuid(uuid)
   end
 
