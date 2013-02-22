@@ -45,6 +45,7 @@ alias disk-usage="du -h --max-depth=1 $@"
 xin() { echo $@ | xclip -selection clipboard; }
 xout() { xclip -o -selection clipboard; }
 hss() { ssh $1@192.168.3.$2; }
+vnc() { vncviewer 192.168.3.$1 ; }
 add_to_path() { [[ $PATH != *$1* ]] && PATH=$PATH:$1; }
 tmux-run-and-inform() { $@; tmux display 'Process finished...'; }
 pskill() { kill -9 $(ps aux | grep -m 1 $1 | awk '{print $2}'); }
