@@ -22,7 +22,17 @@ run_git_pull_at() {
   run_command $1 'git pull origin master'
 }
 
+setup_or_link_notes() {
+  if [ $session_name == 'small' ]; then
+    setup_gitbasket_at 4
+  else
+    link_notes
+  fi
+}
+
 setup_gitbasket_at() {
+  new_window $1 notes
+
   run_command $1 'cd ~/gitbasket'
 
   [ $pull_from_repo ] && run_git_pull_at $1
@@ -32,9 +42,9 @@ setup_gitbasket_at() {
 
 common_setup() {
   new_window 2 vim
-  new_window 4 notes
-
   run_command 2 vim
+
+  setup_or_link_notes
 }
 
 rails_setup() {
@@ -99,7 +109,6 @@ link_notes() {
 small_setup() {
   minimal_setup
   [ $enable_finch ] && start_finch
-  setup_gitbasket_at 4
 }
 
 exp_setup() {
@@ -109,12 +118,10 @@ exp_setup() {
 
 medium_setup() {
   rails_setup
-  link_notes
 }
 
 large_setup() {
   [ $enable_finch ] && link_finch
-  link_notes
   rails_setup
   new_window 6
   setup_spork_at 11
