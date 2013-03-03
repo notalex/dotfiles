@@ -30,6 +30,10 @@ nmap K <nop>
 nnoremap / /\v
 nnoremap ? ?\v
 
+" #---------------- vmaps --------------------------
+
+vmap K <nop>
+
 " #---------------- imaps --------------------------
 imap <c-y> <esc>:wa<CR>
 " remap ctrl space to just space
