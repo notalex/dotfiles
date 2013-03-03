@@ -89,6 +89,14 @@ nmap ;s :Ack "" <Left><Left>
 nnoremap ;m /.delay<cr>ved$a.deliver<Esc>:w<cr>
 nnoremap ;bs :set scrollbind!<cr>
 
+function! OpenLinkInFirefox()
+  let pattern = escape('(http|www)[^ ]+', '()+|')
+  let url = matchstr(getline('.'), pattern)
+  call system('firefox ' . shellescape(url))
+endfunction
+
+nmap ;o :call OpenLinkInFirefox()<cr>
+
 map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 vmap <C-x> d:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
