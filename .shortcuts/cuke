@@ -1,11 +1,13 @@
 #! /bin/bash
 
 cucumber --no-source -p run_all $@
-copy_rerun_file -y
-for i in 1, 2; do
-  if [ -s tmp/rerun.txt ]; then
-    rerun_failed
-    copy_rerun_file -y
-  fi
-done
-commonly-failing-tests-run
+
+if [ -s tmp/rerun.txt ]; then
+  copy_rerun_file -y
+  rerun_failed
+fi
+
+if [ -s tmp/rerun.txt ]; then
+  copy_rerun_file -y
+  rerun_failed -i
+fi
