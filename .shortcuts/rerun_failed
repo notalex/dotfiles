@@ -1,17 +1,54 @@
 #! /usr/bin/ruby
 
-rerun_file_path = 'tmp/copy_rerun.txt'
-command = "cucumber --no-source"
-param = ARGV[0].to_i
+class RerunTests
+  attr_reader :argument, :failed_test_files, :failed_tests_string
+  attr_accessor :passed_tests
 
-failed_tests_string = File.readlines(rerun_file_path).first
-failed_test_files = failed_tests_string.split(/\s/)
+  RERUN_FILE_PATH = 'tmp/rerun.txt'
+  COPY_RERUN_FILE_PATH = 'tmp/copy_rerun.txt'
+  COMMAND = "cucumber --no-source"
 
-if param > 0 && failed_test_files.size >= param
-  index =  param - 1
-  puts "#{ param }/#{ failed_test_files.size } => #{ failed_test_files[index] }"
-  system "#{ command } #{ failed_test_files[index] }"
-else
-  puts "####### Running all failed tests #######"
-  system "#{ command } #{ failed_tests_string }"
+  def initialize(argument)
+    @argument = argument
+    @failed_tests_string = File.read(COPY_RERUN_FILE_PATH)
+    @failed_test_files = failed_tests_string.split(/\s/)
+    @passed_tests = []
+  end
+
+  def failed
+    if (param = argument.to_i) > 0 && failed_test_files.size >= param
+      index =  param - 1
+      puts "#{ param }/#{ failed_test_files.size } => #{ failed_test_files[index] }"
+      system "#{ COMMAND } #{ failed_test_files[index] }"
+
+    # Running this script individually for each test and storing failures back into COPY_RERUN_FILE
+    elsif argument == '-i'
+      failed_test_files.each_with_index do |test_path, index|
+        system "rerun_failed #{ index + 1 }"
+        add_to_passed_tests(test_path) if current_test_passed?
+      end
+
+      remove_passed_tests_from_rerun_file
+    else
+      puts "####### Running all failed tests #######"
+      system "#{ COMMAND } #{ failed_tests_string }"
+    end
+  end
+
+private
+
+  def remove_passed_tests_from_rerun_file
+    failed_tests = failed_test_files - passed_tests
+    File.open(COPY_RERUN_FILE_PATH, 'w') { |f| f.write(failed_tests.join(' ')) }
+  end
+
+  def current_test_passed?
+    File.read(RERUN_FILE_PATH).strip.empty?
+  end
+
+  def add_to_passed_tests(test_path)
+    self.passed_tests.push(test_path)
+  end
 end
+
+RerunTests.new(ARGV[0]).failed
