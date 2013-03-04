@@ -18,6 +18,11 @@ failed_test_files.each_with_index do |string, i|
     line_numbers = string.scan(/:(\d+)/).flatten
     array = line_numbers.map { |number| "#{ file_path }:#{ number }" }
     failed_test_files[i] = array
+
+  # For first scenario failures rerun entire feature. When the first scenario fails, sometimes the rest of the scenarios in the feature are skipped.
+  elsif string.slice(/:(\d+)/, 1).to_i < 20
+    file_path = string.slice(/[^:]+/)
+    failed_test_files[i] = file_path
   end
 end
 
