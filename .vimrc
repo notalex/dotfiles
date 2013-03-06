@@ -3,6 +3,7 @@ source ~/.rcvim/plugins
 source ~/.rcvim/autocommands
 colorscheme dark-ruby
 source ~/.rcvim/custom_highlighting
+source $VIMRUNTIME/macros/matchit.vim
 
 " #-----------------maps------------------
 
