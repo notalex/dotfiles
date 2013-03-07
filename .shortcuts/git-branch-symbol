@@ -1,0 +1,11 @@
+#! /bin/bash
+
+#ǂɎΞϠж٭»
+vcs_symbol=Ϡ
+no_vcs_symbol=ǂ
+
+if [ -d '.git' ]; then
+  echo $vcs_symbol
+else
+  echo $no_vcs_symbol
+fi

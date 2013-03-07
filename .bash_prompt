@@ -1,8 +1,6 @@
 # vim: set ft=sh:
 
-#ǂɎΞϠж٭»
 # for git branch names in prompt
-symbol=Ϡ
 c_reset=$( tput sgr0 )
 c_dir=$( tput setaf 3 )
 c_arrow=$( tput setaf 6 )
@@ -11,9 +9,10 @@ c_arrow=$( tput setaf 6 )
 branch_name() { ~/.shortcuts/git_stats branch_name; }
 branch_color() { $( ~/.shortcuts/git_stats branch_color_code ); }
 symbol_color() { $( ~/.shortcuts/git_stats symbol_color ); }
+symbol() { echo $( ~/.shortcuts/git-branch-symbol ); }
 
 git_information() {
-  [ -d '.git' ] && echo '\[$(branch_color)\]$(branch_name)\[$(symbol_color)\]$symbol '
+  echo '\[$(branch_color)\]$(branch_name)\[$(symbol_color)\]$(symbol) '
 }
 
 directory_and_symbol='\[$c_dir\]\W\[$c_arrow\]:▶\[$c_reset\] '

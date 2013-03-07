@@ -1,5 +1,7 @@
 #! /usr/bin/ruby
 
+exit unless FileTest.directory?('.git')
+
 RED = 2
 BLUE = 6
 WHITE = 7
