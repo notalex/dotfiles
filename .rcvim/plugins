@@ -29,6 +29,7 @@ Bundle 'xolox/vim-notes'
 Bundle 'notalex/snipmate.vim'
 Bundle 'notalex/vim-ruby-run'
 Bundle 'notalex/vim-strip-trailers'
+Bundle 'notalex/vim-coffee-js'
 
 filetype plugin on
 
