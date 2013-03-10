@@ -27,7 +27,7 @@ Bundle 'vim-scripts/dark-ruby'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'xolox/vim-notes'
 Bundle 'notalex/snipmate.vim'
-Bundle 'notalex/vim-ruby-run'
+Bundle 'notalex/vim-ruby-eval'
 Bundle 'notalex/vim-strip-trailers'
 Bundle 'notalex/vim-coffee-js'
 
