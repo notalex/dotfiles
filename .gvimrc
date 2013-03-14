@@ -1,4 +1,4 @@
-colorscheme railscasts
+colorscheme jellybeans
 set guioptions-=T      "Removes toolbar
 set guioptions-=r      "Removes right scrollbar
 set guioptions-=m
