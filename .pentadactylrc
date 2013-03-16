@@ -15,6 +15,7 @@ cabbreviate gome guardians of middle earth
 "bmark! http://kat.ph/search/%s/ -title 'kat-torrents' -keyword 'kat-torrents'
 "bmark! http://en.wikipedia.org/wiki/%s -title 'wikipedia' -keyword 'wikipedia-en'
 "bmark! http://www.animefushigi.com/?s=%s -title 'Anime Fushigi' -keyword 'fushigi'
+"bmark! https://github.com/search?q=%s -title 'Github Search' -keyword 'github-search'
 
 " hide all scrollbars
 set guioptions=Cs
