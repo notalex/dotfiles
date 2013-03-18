@@ -41,3 +41,6 @@ hi notesXXX ctermfg=red
 hi notesBlockQuote ctermfg=lightgreen
 hi notesUnixPath ctermfg=yellow
 hi notesShortHeading ctermfg=red
+
+let g:run_live_remember_shell_command = 1
+let g:run_live_results_window_skip_threshold = 2
