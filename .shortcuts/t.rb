@@ -39,6 +39,10 @@ private
     @logger ||= Logger.new(FILE_PATH)
   end
 
+  def prng
+    @prng ||= Random.new(1234)
+  end
+
   def colorize
     random_color
     yield
@@ -46,11 +50,11 @@ private
   end
 
   def random_color
-    logger.info "\033[0;3#{ rand(1..7) }m"
+    logger.info "\033[0;3#{ prng.rand(1..7) }m"
   end
 
   def log_time
-    logger.info "\033[0;30;4#{ rand(1..7) }m#{ Time.now.strftime('%H:%M:%S') }"
+    logger.info "\033[0;30;4#{ prng.rand(1..7) }m#{ Time.now.strftime('%H:%M:%S') }"
   end
 
   def reset_color
