@@ -63,6 +63,10 @@ alias commonly-failing-tests-run='cucumber -p run_all features/suggest_participa
 alias ikonverse-ssh-server='thin start --ssl --ssl-verify --ssl-key-file ~/Documents/ikonverse/\*.ikonverse-dev.com.key --ssl-cert-file ~/Documents/ikonverse/\*.ikonverse-dev.com.crt'
 alias rjw='rake jobs:work'
 
+# rails
+alias rdm='rake db:migrate'
+alias rdmr='rake db:migrate:redo'
+
 # rvm
 alias rgu='rvm gemset use'
 alias rgn='rvm gemset name'
