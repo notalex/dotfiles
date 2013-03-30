@@ -66,6 +66,7 @@ alias rjw='rake jobs:work'
 # rails
 alias rdm='rake db:migrate'
 alias rdmr='rake db:migrate:redo'
+alias rdr='rake db:rollback'
 
 # rvm
 alias rgu='rvm gemset use'
