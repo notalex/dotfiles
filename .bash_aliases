@@ -49,6 +49,7 @@ vnc() { vncviewer 192.168.3.$1 ; }
 add_to_path() { [[ $PATH != *$1* ]] && PATH=$PATH:$1; }
 tmux-run-and-inform() { $@; tmux display 'Process finished...'; }
 pskill() { kill -9 $(ps aux | grep -m 1 $1 | awk '{print $2}'); }
+rmt() { mv $1 ~/.local/share/Trash; }
 
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'
