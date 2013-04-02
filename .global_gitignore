@@ -5,5 +5,4 @@ driver_hook.rb
 testing_god.rake
 .sass-cache/
 nohup.out
-delete.*
 t.rb
