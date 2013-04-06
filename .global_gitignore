@@ -6,3 +6,5 @@ testing_god.rake
 .sass-cache/
 nohup.out
 t.rb
+vmail.db
+vmail.log
