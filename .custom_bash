@@ -21,3 +21,5 @@ add_to_path $HOME/.rvm/bin
 add_to_path $HOME/.shortcuts
 add_to_path $HOME/bin
 add_to_path $HOME/.project_shortcuts
+
+complete -W "$(~/projects/automux/bin/automux blueprint list)" automux
