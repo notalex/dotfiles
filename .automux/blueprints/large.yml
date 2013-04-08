@@ -1,0 +1,21 @@
+name: large
+root: '-r:'
+flags: -u2
+hooks:
+  post:
+    - <%= link_window 'small', 'finch' %>
+    - <%= link_window 'small', 4, 4%>
+    - <%= select_window 2 %>
+windows:
+  - panes: rails server
+  - panes: vim
+    index: 2
+  - panes: vim
+    index: 3
+  - index: 6
+  - index: 7
+  - index: 8
+  - index: 9
+    panes: rails console
+  - index: 11
+    panes: 'rake db:migrate RAILS_ENV=test; git checkout db/schema.rb; spork cucumber'

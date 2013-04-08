@@ -1,0 +1,22 @@
+name: small
+root: '-r:'
+flags: -u2
+hooks:
+  post: <%= select_window 2 %>
+windows:
+  - panes:
+  - panes: finch
+    index: 1
+    opt: '-f'
+  - panes: vim
+    index: 2
+  - panes: vim
+    index: 3
+  - hooks:
+      pre: git pull origin master
+    root: ~/gitbasket
+    index: 4
+    panes: vim WorkFlow.notes
+  - index: 7
+    hooks:
+      pre: git pull origin master
