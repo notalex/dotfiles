@@ -1,15 +1,14 @@
 #! /bin/bash
 
-sleep 20
+sleep 30
 guake &
 
 sleep 5
-guake -e 'tmx -fg'
+guake -e 'automux small -f'
 
-sleep 10
+sleep 20
 guake --new-tab=1
 guake --select-tab=1
-command_path="/home/alex/bin/guake-tab-1-command"
-[ -s "$command_path" ] && guake -e "$(cat $command_path)"
+guake -e 'automux large -r projects/iKonverse'
 
 tmux set -g status off
