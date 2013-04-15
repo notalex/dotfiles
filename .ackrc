@@ -3,6 +3,6 @@ haml=.haml
 --type-set
 sass=.sass,.scss
 --type-set
-coffee=.coffee
+coffee=.coffee,.erb
 --type-set
 cuke=.feature
