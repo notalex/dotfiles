@@ -47,7 +47,7 @@ xout() { xclip -o -selection clipboard; }
 hss() { ssh $1@192.168.3.$2; }
 vnc() { vncviewer 192.168.3.$1 ; }
 add_to_path() { [[ $PATH != *$1* ]] && PATH=$PATH:$1; }
-notify-on-finish() { $@; notify-send -u critical 'Process finished...'; }
+ntf() { $@; notify-send -u critical 'Process finished...'; }
 pskill() { kill -9 $(ps aux | grep -m 1 $1 | awk '{print $2}'); }
 rmt() { mv $1 ~/.local/share/Trash; }
 
@@ -58,7 +58,7 @@ alias recreate-test-db='rake db:drop RAILS_ENV=test; rake db:create RAILS_ENV=te
 alias test-migrate='rake db:migrate RAILS_ENV=test --trace;'
 alias redo_migrate_spork='rake db:migrate:redo RAILS_ENV=test; spork cucumber'
 delayed_emails() { rake jobs:clear; rake jobs:work; }
-alias cux='notify-on-finish cucumber --no-source -p run_all features/'
+alias cux='ntf cucumber --no-source -p run_all features/'
 alias mnt='ruby -Itest test/'
 alias cappy='cap production deploy; cap production-pinnacle deploy'
 alias commonly-failing-tests-run='cucumber -p run_all features/suggest_participants.feature features/todo.feature features/snippet_rules.feature features/related_conversations.feature features/first_time_user.feature'
