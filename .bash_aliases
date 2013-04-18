@@ -24,7 +24,7 @@ ggrp() { cmd="git log --oneline --grep='$@'"; echo $cmd; eval $cmd; }
 gstshow() { git stash show -p stash@{$1} $2; }
 gstapply() { git stash apply stash@{$1} $2; }
 gshn() { git show HEAD~$1; }
-alias notes-push="cd ~/gitbasket; git add -A; git commit -m '-'; git push origin master;"
+alias notes-push="cd ~/gitbasket; git add -A; git commit -m '-'; git push origin master"
 gcr() { git branch $1 origin/$1; }
 
 # bash
@@ -50,6 +50,7 @@ add_to_path() { [[ $PATH != *$1* ]] && PATH=$PATH:$1; }
 ntf() { $@; notify-send -u critical 'Process finished...'; }
 pskill() { kill -9 $(ps aux | grep -m 1 $1 | awk '{print $2}'); }
 rmt() { mv $1 ~/.local/share/Trash; }
+alias hibernate-auto='pushd $HOME; gps; notes-push; popd; guake -t; sudo pm-hibernate'
 
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'
