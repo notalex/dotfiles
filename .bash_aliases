@@ -25,7 +25,7 @@ gstshow() { git stash show -p stash@{$1} $2; }
 gstapply() { git stash apply stash@{$1} $2; }
 gshn() { git show HEAD~$1; }
 alias notes-push="cd ~/gitbasket; git add -A; git commit -m '-'; git push origin master"
-alias notes-pull="pushd ~/gitbasket; git pull origin master; popd"
+alias all-pull="pushd $HOME; git pull origin master; cd ~/gitbasket; git pull origin master; popd"
 gcr() { git branch $1 origin/$1; }
 
 # bash
