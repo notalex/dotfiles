@@ -52,6 +52,7 @@ ntf() { $@; notify-send -u critical 'Process finished...'; }
 pskill() { kill -9 $(ps aux | grep -m 1 $1 | awk '{print $2}'); }
 rmt() { mv $1 ~/.local/share/Trash; }
 alias hibernate-auto='pushd $HOME; gps; notes-push; popd; guake -t; sudo pm-hibernate'
+alias sp='spring'
 
 # gems
 alias cuke_spork='rake db:test:prepare && spork cucumber'
