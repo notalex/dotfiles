@@ -4,3 +4,4 @@ require_relative 'oms_actions'
 
 automaton = OmsActions.new('check-in')
 automaton.perform_operations
+system %[zenity --error --text 'Check-in Failed' &] if automaton.failed?

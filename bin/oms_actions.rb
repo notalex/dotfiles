@@ -25,6 +25,10 @@ class OmsActions
     end
   end
 
+  def failed?
+    exit_status == FAILED
+  end
+
 private
 
   def link_name_from_action_type
