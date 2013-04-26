@@ -55,6 +55,7 @@ alias hibernate-auto='pushd $HOME; gps; notes-push; popd; guake -t; sudo pm-hibe
 alias sp='spring'
 
 # gems
+alias spc='spork cucumber'
 alias cuke_spork='rake db:test:prepare && spork cucumber'
 alias migrate_spork='rake db:migrate RAILS_ENV=test; spork cucumber'
 alias recreate-test-db='rake db:drop RAILS_ENV=test; rake db:create RAILS_ENV=test; rake db:migrate RAILS_ENV=test --trace;'
