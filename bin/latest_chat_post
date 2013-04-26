@@ -2,6 +2,7 @@
 
 class LatestChatPost
   DEFAULT_MESSAGE = nil
+  TIMER = 7
 
   def get
     latest_chat_file = all_chat_files.last
@@ -21,7 +22,7 @@ private
 
   def all_chat_files
     Dir['/home/alex/.purple/logs/jabber/**/*.html'].
-      select { |f| File.mtime(f).to_i > (Time.now.to_i - 5) }.
+      select { |f| File.mtime(f).to_i > (Time.now.to_i - TIMER) }.
       sort_by { |f| File.mtime(f) }
   end
 
