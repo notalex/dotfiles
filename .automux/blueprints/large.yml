@@ -16,6 +16,6 @@ windows:
   - index: 7
   - index: 8
   - index: 9
-    panes: rails console
+    panes: spring rails console
   - index: 11
     panes: 'rake db:migrate RAILS_ENV=test; git checkout db/schema.rb; spork cucumber'
