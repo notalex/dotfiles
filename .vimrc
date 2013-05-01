@@ -92,6 +92,7 @@ nnoremap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nmap ;s :Ack "" <Left><Left>
 nnoremap ;m /.delay<cr>ved$a.deliver<Esc>:w<cr>
 nnoremap ;bs :set scrollbind!<cr>
+vnoremap ;. :s/^/  /<cr>
 
 function! OpenLinkInFirefox()
   let pattern = escape('(http|www)[^ ]+', '()+|')
