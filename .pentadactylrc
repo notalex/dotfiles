@@ -61,6 +61,9 @@ nmap ;f/ :firebug tab html <cr>:firebug / <cr>
 nmap ;fct :firebug toggle-console<cr>:firebug tab console<cr>
 nmap ;c :firebug tab console<cr>
 
+" convert to localhost
+nmap ;l O<C-a><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del>open localhost<cr>
+
 " #----------- stubs
 " C-j/C-k annoyingly opens up google.com
 nmap <C-j> <nop>
