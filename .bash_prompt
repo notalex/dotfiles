@@ -6,10 +6,10 @@ c_dir=$( tput setaf 3 )
 c_arrow=$( tput setaf 6 )
 
 # using methods ensures that the values are refreshed everytime PS1 is read.
-branch_name() { ~/.shortcuts/git_stats branch_name; }
-branch_color() { $( ~/.shortcuts/git_stats branch_color_code ); }
-symbol_color() { $( ~/.shortcuts/git_stats symbol_color ); }
-symbol() { echo $( ~/.shortcuts/git-branch-symbol ); }
+branch_name() { ~/.git_helpers/git_stats branch_name; }
+branch_color() { $( ~/.git_helpers/git_stats branch_color_code ); }
+symbol_color() { $( ~/.git_helpers/git_stats symbol_color ); }
+symbol() { echo $( ~/.git_helpers/git-branch-symbol ); }
 
 git_information() {
   echo '\[$(branch_color)\]$(branch_name)\[$(symbol_color)\]$(symbol) '
