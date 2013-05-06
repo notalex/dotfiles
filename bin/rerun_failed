@@ -1,11 +1,14 @@
 #! /usr/bin/ruby
 
+require 'fileutils'
+
 class RerunTests
   attr_reader :argument, :failed_test_files, :failed_tests_string
   attr_accessor :passed_tests
 
   RERUN_FILE_PATH = 'tmp/rerun.txt'
   COPY_RERUN_FILE_PATH = 'tmp/copy_rerun.txt'
+  TEMP_RERUN_FILE_PATH = 'tmp/temp_rerun.txt'
   COMMAND = "cucumber --no-source"
 
   def initialize(argument)
@@ -23,6 +26,8 @@ class RerunTests
 
     # Running this script individually for each test and storing failures back into COPY_RERUN_FILE
     elsif argument == '-i'
+      FileUtils.cp COPY_RERUN_FILE_PATH, TEMP_RERUN_FILE_PATH
+
       failed_test_files.each_with_index do |test_path, index|
         system "rerun_failed #{ index + 1 }"
         add_to_passed_tests(test_path) if current_test_passed?
