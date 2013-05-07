@@ -1,0 +1,20 @@
+name: medium
+root: '-r:'
+flags: -u2
+hooks:
+  post:
+    - <%= link_window 'small', 4, 4%>
+    - <%= select_window 2 %>
+windows:
+  - panes: rails server
+    opt: '-s'
+  - panes: vim
+    index: 2
+  - panes: vim
+    index: 3
+  - index: 7
+  - index: 8
+    opt: '-a'
+  - index: 9
+    panes: rails console
+    opt: '-c'
