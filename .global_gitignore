@@ -8,3 +8,5 @@ nohup.out
 t.rb
 vmail.db
 vmail.log
+.ruby-gemset
+.ruby-version
