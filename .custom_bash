@@ -1,5 +1,6 @@
 # vim: set ft=sh:
 
+. ~/.bash_functions
 . ~/.bash_prompt
 
 stty stop undef
@@ -22,4 +23,4 @@ add_to_path $HOME/.git_helpers
 add_to_path $HOME/bin
 add_to_path $HOME/.project_shortcuts
 
-complete -W "$(automux blueprint list)" automux
+automux_installed && complete -W "$(automux blueprint list)" automux
