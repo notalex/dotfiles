@@ -4,9 +4,7 @@
 colorscheme custom
 
 cabbreviate py pentadactyl
-cabbreviate gl google_lucky
 cabbreviate gi google_image
-cabbreviate gome guardians of middle earth
 
 "bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title 'Google feeling lucky search ' -keyword google_lucky
 "bmark http://images.google.com/images?q=%s -title 'Google Image search ' -keyword google_image
