@@ -17,6 +17,7 @@ cabbreviate gome guardians of middle earth
 "bmark! http://www.animefushigi.com/?s=%s -title 'Anime Fushigi' -keyword 'fushigi'
 "bmark! https://github.com/search?q=%s -title 'Github Search' -keyword 'github-search'
 "bmark! http://www.iconfinder.com/search/?q=%s -title 'IconFinder' -keyword 'iconfinder'
+"bmark! https://duckduckgo.com/?q=%s -title 'DuckDuckGo' -keyword 'duckgo'
 
 " hide all scrollbars
 set guioptions=Cs
