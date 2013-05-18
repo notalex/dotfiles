@@ -20,7 +20,7 @@ cabbreviate gi google_image
 " hide all scrollbars
 set guioptions=Cs
 
-" will not work without ! and spaces around =
+" will not work without ! " experiment with or without spaces around =
 "set! browser.tabs.closeWindowWithLastTab = false
 
 imap <C-m> <CR>
