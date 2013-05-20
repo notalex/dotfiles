@@ -16,7 +16,7 @@ windows:
       pre: git pull origin master
     root: ~/gitbasket
     index: 4
-    panes: vim
+    panes: vim WorkFlow.notes
   - index: 7
     hooks:
       pre: git pull origin master
