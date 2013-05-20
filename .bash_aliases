@@ -51,7 +51,8 @@ add_to_path() { [[ $PATH != *$1* ]] && PATH=$PATH:$1; }
 ntf() { $@; notify-send -u critical 'Process finished...'; }
 pskill() { kill -9 $(ps aux | grep -m 1 $1 | awk '{print $2}'); }
 rmt() { mv $1 ~/.local/share/Trash; }
-alias hibernate-auto='pushd $HOME; gps; notes-push; popd; guake -t; sudo pm-hibernate'
+alias zzp='pushd $HOME; gps; notes-push; popd; guake -t; sudo pm-hibernate'
+alias zzh='guake -t; sudo pm-hibernate'
 alias sp='spring'
 
 # gems
