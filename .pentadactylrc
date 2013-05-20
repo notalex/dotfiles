@@ -16,6 +16,7 @@ cabbreviate gi google_image
 "bmark! https://github.com/search?q=%s -title 'Github Search' -keyword 'github-search'
 "bmark! http://www.iconfinder.com/search/?q=%s -title 'IconFinder' -keyword 'iconfinder'
 "bmark! https://duckduckgo.com/?q=%s -title 'DuckDuckGo' -keyword 'duckgo'
+"bmark! http://www.dailymotion.com/in/relevance/search/%s -title 'Dailymotion' -keyword 'dailymotion'
 
 " hide all scrollbars
 set guioptions=Cs
