@@ -3,6 +3,7 @@
 set gui=nomail,nomenu,nostatus
 
 imap <C-m> <CR>
+cnoremap <C-m> <CR>
 
 cmap <C-p> <Up>
 cmap <C-n> <Down>
