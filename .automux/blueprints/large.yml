@@ -4,7 +4,7 @@ flags: -u2
 hooks:
   post:
     - <%= link_window 'small', 'finch' %>
-    - <%= link_window 'small', 4, 4%>
+    - <%= link_window 'small', 4, 4 %>
     - <%= select_window 2 %>
 windows:
   - panes: rails server
@@ -12,6 +12,8 @@ windows:
     index: 2
   - panes: vim
     index: 3
+  - panes: vim
+    index: 5
   - index: 6
   - index: 7
   - index: 8
