@@ -1,5 +1,26 @@
 #! /usr/bin/ruby
 
+class String
+  def is_first_test_in_file?
+    line_number < 20
+  end
+
+  def line_number
+    slice(/(?<=:)\d+/).to_i
+  end
+
+  def file_name
+    slice(/^\w+(?=:)/)
+  end
+end
+
+def next_test_is_not_from_the_same_file?(test_list)
+  current_test = test_list[0]
+  next_test = test_list[1]
+
+  next_test.nil? || next_test.file_name != current_test.file_name
+end
+
 unless ARGV[0] == '-y'
   print "Confirm: "
   confirmation = gets.chomp
@@ -20,7 +41,7 @@ failed_test_files.each_with_index do |string, i|
     failed_test_files[i] = array
 
   # For first scenario failures rerun entire feature. When the first scenario fails, sometimes the rest of the scenarios in the feature are skipped.
-  elsif string.slice(/:(\d+)/, 1).to_i < 20
+  elsif string.is_first_test_in_file? && next_test_is_not_from_the_same_file?(failed_test_files[i..i+1])
     file_path = string.slice(/[^:]+/)
     failed_test_files[i] = file_path
   end
