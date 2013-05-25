@@ -25,3 +25,11 @@ au BufNewFile,BufRead *.notes setf notes
 syntax region notesHyphen start=/^-/ end=/\n/
 
 hi notesHyphen ctermfg=lightgreen
+
+" Diff
+"""""""
+hi DiffText ctermbg=LightYellow ctermfg=Black " changed portion in partial line
+hi DiffChange ctermbg=none                  " unchanged portion in partial line
+
+hi DiffAdd ctermbg=LightYellow ctermfg=Black
+hi DiffDelete ctermbg=none ctermfg=Red
