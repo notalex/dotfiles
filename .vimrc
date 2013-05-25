@@ -23,6 +23,8 @@ nmap ;v :Rview<Space>
 nmap ;d :filetype detect<cr>
 nmap ;j i<CR><ESC>
 nmap ;hs :set hlsearch!<cr>
+nmap ;bs :set scrollbind!<cr>
+nmap ;e :edit!<cr>
 nmap <c-y> :wa<CR>
 nmap < <l
 nmap > >l
@@ -91,7 +93,6 @@ nnoremap ;y I<C-m><C-m><Esc>jdd3k
 nnoremap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nmap ;s :Ack "" <Left><Left>
 nnoremap ;m /.delay<cr>ved$a.deliver<Esc>:w<cr>
-nnoremap ;bs :set scrollbind!<cr>
 vnoremap ;. :s/^/  /<cr>
 
 function! OpenLinkInFirefox()
