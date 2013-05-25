@@ -13,6 +13,8 @@ hi TabLineSel ctermbg=none ctermfg=Cyan
 hi Pmenu ctermfg=22 ctermbg=black
 hi Underlined		ctermfg=grey	guifg=red
 
+hi Folded ctermfg=black ctermbg=grey
+
 hi rubyModule			ctermfg=5
 hi rubyClass			ctermfg=5
 hi rubySymbol			ctermfg=3
