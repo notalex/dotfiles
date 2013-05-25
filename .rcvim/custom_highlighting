@@ -5,6 +5,11 @@
 hi VertSplit cterm=none ctermfg=DarkGray guifg=DarkGray
 hi StatusLine ctermfg=DarkCyan guifg=DarkCyan
 hi StatusLineNC ctermfg=DarkGray guifg=LightGray
+
+hi TabLineFill ctermfg=DarkGray
+hi TabLine ctermbg=DarkGray ctermfg=Black cterm=none
+hi TabLineSel ctermbg=none ctermfg=Cyan
+
 hi Pmenu ctermfg=22 ctermbg=black
 hi Underlined		ctermfg=grey	guifg=red
 
