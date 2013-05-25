@@ -1,5 +1,6 @@
 set nocompatible
 source ~/.rcvim/plugins
+source ~/.rcvim/scripts.vim
 source ~/.rcvim/autocommands
 colorscheme dark-ruby
 source ~/.rcvim/custom_highlighting
@@ -94,12 +95,6 @@ nnoremap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nmap ;s :Ack "" <Left><Left>
 nnoremap ;m /.delay<cr>ved$a.deliver<Esc>:w<cr>
 vnoremap ;. :s/^/  /<cr>
-
-function! OpenLinkInFirefox()
-  let pattern = escape('(http|www)[^ ]+', '()+|')
-  let url = matchstr(getline('.'), pattern)
-  call system('firefox ' . shellescape(url))
-endfunction
 
 nmap ;o :call OpenLinkInFirefox()<cr>
 
