@@ -2,8 +2,9 @@
 
 " syntax  highlighting overrides
 """"""""""""""""""""""""""""""""
-hi VertSPlit cterm=none ctermfg=green guifg=lightgray
-hi StatusLine ctermfg=green guifg=lightgray
+hi VertSplit cterm=none ctermfg=DarkGray guifg=DarkGray
+hi StatusLine ctermfg=DarkCyan guifg=DarkCyan
+hi StatusLineNC ctermfg=DarkGray guifg=LightGray
 hi Pmenu ctermfg=22 ctermbg=black
 hi Underlined		ctermfg=grey	guifg=red
 
