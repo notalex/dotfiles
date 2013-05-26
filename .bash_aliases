@@ -71,6 +71,10 @@ alias commonly-failing-tests-run='cucumber -p run_all features/suggest_participa
 alias ikonverse-ssh-server='thin start --ssl --ssl-verify --ssl-key-file ~/Documents/ikonverse/\*.ikonverse-dev.com.key --ssl-cert-file ~/Documents/ikonverse/\*.ikonverse-dev.com.crt'
 alias rjw='rake jobs:work'
 
+# ikonverse
+alias dump-sidibat='pg_dump sidibat_dev > ~/gitbasket/db/latest.sql'
+alias load-sidibat='rake db:drop RAILS_ENV=development; rake db:create; psql sidibat_dev < ~/gitbasket/db/latest.sql'
+
 # rails
 alias rdm='rake db:migrate'
 alias rdmr='rake db:migrate:redo'
