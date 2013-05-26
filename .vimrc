@@ -90,7 +90,7 @@ cmap <c-b> <Left>
 " -----------------scripts------------------
 nmap ;p o<Esc>p
 nmap ;t 2ddo<Esc>k
-nnoremap ;y I<C-m><C-m><Esc>jdd3k
+nnoremap ;y I<C-m><C-m><Esc>2k
 nnoremap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nmap ;s :Ack "" <Left><Left>
 nnoremap ;m /.delay<cr>ved$a.deliver<Esc>:w<cr>
