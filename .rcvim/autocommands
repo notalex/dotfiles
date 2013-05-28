@@ -11,10 +11,17 @@ function! s:SetupDiffWindow()
   endif
 endfunction
 
+function! s:SetupSpacing()
+  set tabstop=2
+  set softtabstop=2
+  set shiftwidth=2
+endfunction
+
 augroup nonRepeater
  au!
  au BufRead,BufNewFile *.coffee.erb call CoffeeMaker()
  au FileType qf nmap <buffer> <CR> :.cc<CR>
  au CmdwinEnter * nnoremap <buffer> <CR> <CR>
  au FilterWritePre * call s:SetupDiffWindow()
+ au FileType notes call s:SetupSpacing()
 augroup END
