@@ -4,9 +4,17 @@ fun! CoffeeMaker()
   set filetype=coffee
 endf
 
+function! s:SetupDiffWindow()
+  if &diff
+    set foldcolumn=0
+    set wrap
+  endif
+endfunction
+
 augroup nonRepeater
  au!
  au BufRead,BufNewFile *.coffee.erb call CoffeeMaker()
  au FileType qf nmap <buffer> <CR> :.cc<CR>
  au CmdwinEnter * nnoremap <buffer> <CR> <CR>
+ au FilterWritePre * call s:SetupDiffWindow()
 augroup END
