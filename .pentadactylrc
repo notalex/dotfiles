@@ -51,6 +51,7 @@ nmap <C-y> :colorscheme custom<cr>:echomsg 'colorscheme updated!'<cr>
 nmap w :open wikipedia-en<Space>
 " Useful to center the search result.
 nmap zz <C-d>
+nmap gl <C-^>
 
 " firebug
 nmap ;ff :firebug<Space>
