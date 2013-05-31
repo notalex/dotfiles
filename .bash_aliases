@@ -76,9 +76,9 @@ alias dump-sidibat='pg_dump sidibat_dev > ~/gitbasket/db/latest.sql'
 alias load-sidibat='rake db:drop RAILS_ENV=development; rake db:create; psql sidibat_dev < ~/gitbasket/db/latest.sql'
 
 # rails
-alias rdm='rake db:migrate'
-alias rdmr='rake db:migrate:redo'
-alias rdr='rake db:rollback'
+alias rdm='rake db:migrate; rake db:migrate RAILS_ENV=test'
+alias rdmr='rake db:migrate:redo; rake db:migrate:redo RAILS_ENV=test'
+alias rdr='rake db:rollback; rake db:rollback RAILS_ENV=test'
 
 # rvm
 alias rgu='rvm gemset use'
