@@ -44,6 +44,9 @@ imap <c-y> <esc>:wa<CR>
 imap <Nul> <Space>
 " the default behaviour of C-h does not remove both braces() when the 1st is removed
 imap <C-h> <Backspace>
+" Backward kills should be available in undo/redo stack
+inoremap <C-u> <C-g>u<C-u>
+inoremap <C-w> <C-g>u<C-w>
 
 " #----------------- cmaps --------------------------------
 
