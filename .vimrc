@@ -26,7 +26,7 @@ nmap ;j i<CR><ESC>
 nmap ;hs :set hlsearch!<cr>
 nmap ;bs :set scrollbind!<cr>
 nmap ;e :edit!<cr>
-nmap <c-y> :wa<CR>
+nmap ;w :wa<CR>
 nmap < <l
 nmap > >l
 nmap <C-z> <nop>
@@ -39,7 +39,6 @@ nnoremap ? ?\v
 vmap K <nop>
 
 " #---------------- imaps --------------------------
-imap <c-y> <esc>:wa<CR>
 " remap ctrl space to just space
 imap <Nul> <Space>
 " the default behaviour of C-h does not remove both braces() when the 1st is removed
