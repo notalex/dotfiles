@@ -46,6 +46,7 @@ imap <C-h> <Backspace>
 " Backward kills should be available in undo/redo stack
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
+imap ;w <Esc>:wa<CR>
 
 " #----------------- cmaps --------------------------------
 
