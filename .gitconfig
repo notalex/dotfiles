@@ -1,0 +1,11 @@
+[user]
+	name = Alex Johnson
+	email = notalexjohnson@gmail.com
+[core]
+  pager = less -r
+  excludesfile = ~/.global_gitignore
+[color]
+  diff = true
+[color "diff"]
+  new = yellow
+  old = green
