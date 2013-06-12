@@ -19,5 +19,8 @@ windows:
     panes: rails console
     opt: '-c'
   - index: 11
-    panes: 'rake db:migrate RAILS_ENV=test; git checkout db/schema.rb; spork cucumber'
-    opt: '-t'
+    panes: 'spork cucumber'
+    opt: '-1'
+  - index: 11
+    panes: 'spork'
+    opt: '-2'
