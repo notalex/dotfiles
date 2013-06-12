@@ -9,3 +9,5 @@
 [color "diff"]
   new = yellow
   old = green
+[alias]
+  del = branch -D
