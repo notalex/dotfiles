@@ -1,7 +1,5 @@
 " vim: set ft=vim:
 
-let NERDTreeShowHidden = 1
-
 " -------------- Ack mappings
 
 " :Ack translates to the following command
@@ -49,3 +47,8 @@ let g:run_live_results_window_skip_threshold = 2
 " Explicit path is required when both ctags & exuberant ctags are in load path.
 
 let Tlist_Ctags_Cmd='/usr/bin/ctags'
+
+" ------------- NERDTree -------
+
+let NERDTreeShowHidden = 1
+let g:NERDTreeMapJumpNextSibling = '<C-n>'
