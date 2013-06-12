@@ -8,6 +8,4 @@ git add -A
 git commit -m '-'
 git push origin master
 
-exit_status=$(oms_check_out)
-
-[ "$exit_status" == '0' ] && sudo shutdown -P now
+sudo shutdown -P now
