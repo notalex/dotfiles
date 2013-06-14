@@ -20,3 +20,9 @@ windows:
   - index: 7
     hooks:
       pre: git pull origin master
+  - index: 8
+    panes: mail not
+    opt: '-m'
+  - index: 9
+    panes: mail idy
+    opt: '-m'
