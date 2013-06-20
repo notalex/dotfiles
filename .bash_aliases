@@ -31,8 +31,8 @@ gcr() { git branch $1 origin/$1; }
 # bash
 alias s='sudo'
 alias src='source ~/.bashrc'
-alias apti='sudo apt-get install'
-alias aptr='sudo apt-get remove'
+alias apti='sudo apt-get install -y'
+alias aptr='sudo apt-get remove -y'
 alias apts='sudo apt-cache search'
 dpks() { cmd="dpkg --get-selections | grep $1"; echo $cmd; eval $cmd; }
 pag() { cmd="ps aux | grep $1"; echo $cmd; eval $cmd; }
