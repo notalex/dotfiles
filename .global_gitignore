@@ -10,3 +10,4 @@ vmail.db
 vmail.log
 .ruby-gemset
 .ruby-version
+.pt
