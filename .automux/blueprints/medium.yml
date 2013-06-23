@@ -1,4 +1,4 @@
-name: medium
+name: '-n:'
 root: '-r:'
 flags: -u2
 hooks:
