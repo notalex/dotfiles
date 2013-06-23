@@ -1,14 +1,7 @@
 #! /bin/bash
 
-sleep 30
+sleep 10
 guake &
 
 sleep 5
-guake -e 'automux small -f'
-
-sleep 20
-guake --new-tab=1
-guake --select-tab=1
-guake -e 'automux large -r projects/iKonverse'
-
-tmux set -g status off
+guake -e 'automux small -fm'
