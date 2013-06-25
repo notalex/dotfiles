@@ -1,10 +1,10 @@
 # vim: set ft=sh:
 
 # Heroku
-h-pg-info() { heroku pg:info --app $(heroku_repo_name); }
-h-tail() { heroku logs --tail --app $(heroku_repo_name); }
-hk() { heroku $@ --app $(heroku_repo_name);  }
-hr() { heroku run $@ --app $(heroku_repo_name); }
+alias h='heroku'
+alias hr='heroku run'
+alias h-tail='heroku logs --tail'
+alias h-pg-info='heroku pg:info'
 
 # git
 alias gar="git add -A"
