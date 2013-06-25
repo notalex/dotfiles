@@ -1,5 +1,5 @@
 #! /usr/bin/env ruby
 
 lines = File.readlines('.git/config')
-remote_address = lines.grep(/url\s*=/).first
+remote_address = lines.grep(/url\s*=\s*git@heroku.com/).first
 puts remote_address.slice(/(?<=:).+?(?=\.git)/)
