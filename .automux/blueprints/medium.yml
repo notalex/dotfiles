@@ -19,9 +19,9 @@ windows:
   - index: 9
     panes: rails console
     opt: '-c'
-  - index: 11
+  - index: 5
     panes: 'spork cucumber'
     opt: '-1'
-  - index: 11
+  - index: 5
     panes: 'spork'
     opt: '-2'
