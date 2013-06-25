@@ -1,10 +1,9 @@
 # vim: set ft=sh:
 
-# git push
-alias h='heroku run'
-alias h_pg_info="heroku pg:info --app=ikonverse-staging"
-hr() { heroku run $@ --app ikonverse-staging; }
-hk() { heroku $@ --app ikonverse-staging; }
+# Heroku
+h-pg-info() { heroku pg:info --app $(heroku_repo_name); }
+hk() { heroku $@ --app $(heroku_repo_name);  }
+hr() { heroku run $@ --app $(heroku_repo_name); }
 
 # git
 alias gar="git add -A"

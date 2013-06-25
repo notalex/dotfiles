@@ -20,6 +20,7 @@ export EDITOR=vim
 
 add_to_path $HOME/.rvm/bin
 add_to_path $HOME/.git_helpers
+add_to_path $HOME/.heroku_helpers
 add_to_path $HOME/bin
 add_to_path $HOME/.project_shortcuts
 
