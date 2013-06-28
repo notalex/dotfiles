@@ -1,5 +1,5 @@
 #! /usr/bin/ruby
-require_relative 'git_remote_and_branch'
+require File.expand_path('../git_remote_and_branch', __FILE__)
 
 command = "git pull #{ remote_name } #{ remote_branch_name }"
 
