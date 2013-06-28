@@ -1,7 +1,7 @@
 " vim: set ft=vim:
 "loadplugins '\.(js|penta)$'
 
-colorscheme custom
+colorscheme vimium
 
 cabbreviate py pentadactyl
 cabbreviate gi google_image
