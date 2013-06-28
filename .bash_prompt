@@ -15,6 +15,6 @@ git_information() {
   echo '\[$(branch_color)\]$(branch_name)\[$(symbol_color)\]$(symbol) '
 }
 
-directory_and_symbol='\[$c_dir\]\W\[$c_arrow\]:▶\[$c_reset\] '
+directory_and_symbol='\[$c_dir\]\W\[$c_arrow\]:\[$c_reset\] '
 
 export PS1="$(git_information)$directory_and_symbol"
