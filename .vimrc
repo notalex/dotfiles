@@ -61,6 +61,7 @@ cabbrev fn vertical topleft help function-list
 
 " ------------------set------------------------------
 
+set modelines=1
 set smartindent
 set nobackup
 set ignorecase
