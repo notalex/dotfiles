@@ -1,6 +1,6 @@
 #! /usr/bin/ruby
 
-vmail_dir = "#{ Dir.home }/.vmail/"
+vmail_dir = File.expand_path('~/.vmail/')
 begin
   matching_files = Dir.foreach(vmail_dir).select do |filename| 
     filename.match(ARGV[0])
