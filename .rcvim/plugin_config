@@ -3,7 +3,7 @@
 " -------------- Ack mappings
 
 " :Ack translates to the following command
-let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir=test"
+let g:ackprg="ack-search -H --nocolor --nogroup --column --ignore-dir=test"
 
 " -------------- ctrlp mappings
 
