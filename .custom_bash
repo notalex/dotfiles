@@ -1,8 +1,6 @@
 # vim: set ft=sh:
 
 source ~/.bash_functions
-. ~/.bash_aliases
-. ~/.bash_prompt
 
 stty stop undef
 
@@ -18,3 +16,6 @@ add_to_path $HOME/bin
 add_to_path $HOME/.project_shortcuts
 
 automux_installed && complete -W "$(automux blueprint list)" automux
+
+source ~/.bash_aliases
+source ~/.bash_prompt
