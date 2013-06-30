@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+
+if $(on-mac)
+then
+  open -a Firefox $@
+else
+  firefox $@
+fi
