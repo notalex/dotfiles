@@ -48,7 +48,6 @@ xout() { xclip -o -selection clipboard; }
 hss() { ssh $1@192.168.3.$2; }
 vnc() { vncviewer 192.168.3.$1 ; }
 add_to_path() { [[ $PATH != *$1* ]] && PATH=$PATH:$1; }
-ntf() { $@; terminal-notifier-notify -message 'Process finished...'; tmux display-message 'Process finished...'; }
 pskill() { kill -9 $(ps aux | grep -m 1 $1 | awk '{print $2}'); }
 rmt() { mv $1 ~/.local/share/Trash; }
 alias zzp='pushd $HOME; gps; notes-push; popd; guake -t; sudo pm-hibernate'
@@ -92,3 +91,10 @@ alias ru='rvm use'
 # tmux
 alias tmx-attach-session='tmux -u2 attach-session -t'
 alias mux='automux'
+
+if $(on-mac)
+then
+  ntf() { $@; terminal-notifier-notify -message 'Process finished...'; tmux display-message 'Process finished...'; }
+else
+  ntf() { $@; notify-send -u critical 'Process finished...'; }
+fi
