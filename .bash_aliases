@@ -94,6 +94,8 @@ alias mux='automux'
 
 if $(on-mac)
 then
+  alias quarantine='xattr -d com.apple.quarantine'
+
   ntf() { $@; terminal-notifier-notify -message 'Process finished...'; tmux display-message 'Process finished...'; }
 else
   ntf() { $@; notify-send -u critical 'Process finished...'; }
