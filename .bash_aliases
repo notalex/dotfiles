@@ -30,7 +30,7 @@ gcr() { git branch $1 origin/$1; }
 
 # bash
 alias s='sudo'
-alias src='source ~/.bashrc'
+alias src='source ~/.bash_profile'
 alias apti='sudo apt-get install -y'
 alias aptr='sudo apt-get remove -y'
 alias apts='sudo apt-cache search'
