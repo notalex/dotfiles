@@ -1,7 +1,7 @@
 # vim: set ft=sh:
 
+source ~/.bash_functions
 . ~/.bash_aliases
-. ~/.bash_functions
 . ~/.bash_prompt
 
 stty stop undef
