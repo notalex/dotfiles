@@ -1,5 +1,6 @@
 # vim: set ft=sh:
 
+. ~/.bash_aliases
 . ~/.bash_functions
 . ~/.bash_prompt
 
