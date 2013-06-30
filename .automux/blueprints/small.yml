@@ -21,8 +21,8 @@ windows:
     hooks:
       pre: git pull origin master
   - index: 8
-    panes: mail not
+    panes: start-vmail not
     opt: '-m'
   - index: 9
-    panes: mail idy
+    panes: start-vmail idy
     opt: '-m'
