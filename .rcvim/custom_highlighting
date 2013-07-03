@@ -22,7 +22,8 @@ hi rubySymbol			ctermfg=3
 hi rubyBlock			ctermfg=darkgray             " map-each statements
 hi rubyControl			ctermfg=45                 " do end blocks
 hi rubyConditional		ctermfg=2               " if-case conditions
-hi railsUserClass  ctermfg=4                   " Rails class variable names
+
+hi railsUserClass  ctermfg=28                 " Rails class variable names
 
 " haml/html tag
 hi htmlTagName	ctermfg=45
