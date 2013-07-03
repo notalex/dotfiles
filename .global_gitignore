@@ -11,3 +11,4 @@ vmail.log
 .ruby-gemset
 .ruby-version
 .pt
+.rspec
