@@ -1,4 +1,9 @@
 #! /bin/bash
 if [ "$(latest_chat_post)" ]; then
-  notify-send -u critical -i /home/alex/Pictures/chat.png "$(latest_chat_post)"
+  if $(on-mac); then
+    terminal-notifier-notify -message $(latest_chat_post)
+    tmux display-message 'New chat message'
+  else
+    notify-send -u critical -i /home/alex/Pictures/chat.png "$(latest_chat_post)"
+  fi
 fi
