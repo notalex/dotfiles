@@ -21,7 +21,7 @@ private
   end
 
   def all_chat_files
-    Dir['/home/alex/.purple/logs/jabber/**/*.html'].
+    Dir["#{ ENV['HOME'] }/.purple/logs/jabber/**/*.html"].
       select { |f| File.mtime(f).to_i > (Time.now.to_i - TIMER) }.
       sort_by { |f| File.mtime(f) }
   end
