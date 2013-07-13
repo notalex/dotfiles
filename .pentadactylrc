@@ -19,6 +19,7 @@ cabbreviate gi google_image
 "bmark! http://www.dailymotion.com/in/relevance/search/%s -title 'Dailymotion' -keyword 'dailymotion'
 "bmark! http://stackoverflow.com/search?q=%s -title 'Stack Overflow' -keyword 'stack-overflow-search'
 "bmark! http://www.youtube.com/results?search_query=%s -title 'Youtube' -keyword 'youtube-search'
+"bmark! http://www.goodreads.com/search?&q=%s -title 'Good Reads' -keyword 'good-reads-search'
 
 " hide all scrollbars
 set guioptions=Cs
