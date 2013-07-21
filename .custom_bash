@@ -4,6 +4,14 @@ source ~/.bash_functions
 
 stty stop undef
 
+declare -A KEY
+
+KEY=(
+  [CTRL]="\C"
+  [META]="\e"
+  [ENTER]="\n"
+)
+
 git_status="\"${KEY[CTRL]}-o\":\"gs${KEY[ENTER]}\""
 
 bind $git_status
