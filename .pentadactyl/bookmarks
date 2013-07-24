@@ -1,0 +1,30 @@
+" vim: set ft=vim:
+
+" Google Apps
+bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title 'Google feeling lucky search ' -keyword google_lucky
+bmark http://images.google.com/images?q=%s -title 'Google Image search ' -keyword google_image
+
+" Search Engines
+bmark https://duckduckgo.com/?q=%s -title 'DuckDuckGo' -keyword 'duckgo'
+
+" Programming
+bmark http://rubygems.org/gems/%s -title 'rubygems' -keyword 'rubygems'
+bmark https://github.com/search?q=%s -title 'Github Search' -keyword 'github-search'
+bmark http://stackoverflow.com/search?q=%s -title 'Stack Overflow' -keyword 'stack-overflow-search'
+bmark http://www.iconfinder.com/search/?q=%s -title 'IconFinder' -keyword 'iconfinder'
+
+" Information
+bmark http://en.wikipedia.org/wiki/%s -title 'wikipedia' -keyword 'wikipedia-en'
+bmark http://thesaurus.com/browse/%s -title 'thesaurus' -keyword 'thesaurus'
+
+" Torrents
+bmark http://kat.ph/search/%s/ -title 'kat-torrents' -keyword 'kat-torrents'
+
+" Entertainment
+bmark http://www.youtube.com/results?search_query=%s -title 'Youtube' -keyword 'youtube-search'
+bmark http://www.dailymotion.com/in/relevance/search/%s -title 'Dailymotion' -keyword 'dailymotion'
+bmark http://www.animefushigi.com/?s=%s -title 'Anime Fushigi' -keyword 'fushigi'
+bmark http://www.goodreads.com/search?&q=%s -title 'Good Reads' -keyword 'good-reads-search'
+
+" Shopping
+bmark http://www.ebay.in/sch/i.html?_nkw=%s&_sop=15 -title 'Ebay India' -keyword 'ebay-search'
