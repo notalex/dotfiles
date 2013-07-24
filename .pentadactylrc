@@ -20,7 +20,8 @@ cabbreviate gi google_image
 "bmark! http://stackoverflow.com/search?q=%s -title 'Stack Overflow' -keyword 'stack-overflow-search'
 "bmark! http://www.youtube.com/results?search_query=%s -title 'Youtube' -keyword 'youtube-search'
 "bmark! http://www.goodreads.com/search?&q=%s -title 'Good Reads' -keyword 'good-reads-search'
-"bmark! rover.ebay.com/rover/1/4686-104522-33622-0/4?mpre=http://shop.ebay.in/?_nkw=%s -title 'Ebay India' -keyword 'ebay-search'
+bmark http://www.ebay.in/sch/i.html?_nkw=%s&_sop=15 -title 'Ebay India' -keyword 'ebay-search'
+
 
 " hide all scrollbars
 set guioptions=Cs
