@@ -19,6 +19,7 @@ bmark http://thesaurus.com/browse/%s -title 'thesaurus' -keyword 'thesaurus'
 
 " Torrents
 bmark http://kat.ph/search/%s/ -title 'kat-torrents' -keyword 'kat-torrents'
+bmark http://torrentz.eu/search?q=%s -title 'Torrentz Search' -keyword 'torrentz-search'
 
 " Entertainment
 bmark http://www.youtube.com/results?search_query=%s -title 'Youtube' -keyword 'youtube-search'
