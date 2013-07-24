@@ -6,20 +6,20 @@ colorscheme custom
 cabbreviate py pentadactyl
 cabbreviate gi google_image
 
-"bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title 'Google feeling lucky search ' -keyword google_lucky
-"bmark http://images.google.com/images?q=%s -title 'Google Image search ' -keyword google_image
-"bmark http://rubygems.org/gems/%s -title 'rubygems' -keyword 'rubygems'
-"bmark http://thesaurus.com/browse/%s -title 'thesaurus' -keyword 'thesaurus'
-"bmark! http://kat.ph/search/%s/ -title 'kat-torrents' -keyword 'kat-torrents'
-"bmark! http://en.wikipedia.org/wiki/%s -title 'wikipedia' -keyword 'wikipedia-en'
-"bmark! http://www.animefushigi.com/?s=%s -title 'Anime Fushigi' -keyword 'fushigi'
-"bmark! https://github.com/search?q=%s -title 'Github Search' -keyword 'github-search'
-"bmark! http://www.iconfinder.com/search/?q=%s -title 'IconFinder' -keyword 'iconfinder'
-"bmark! https://duckduckgo.com/?q=%s -title 'DuckDuckGo' -keyword 'duckgo'
-"bmark! http://www.dailymotion.com/in/relevance/search/%s -title 'Dailymotion' -keyword 'dailymotion'
-"bmark! http://stackoverflow.com/search?q=%s -title 'Stack Overflow' -keyword 'stack-overflow-search'
-"bmark! http://www.youtube.com/results?search_query=%s -title 'Youtube' -keyword 'youtube-search'
-"bmark! http://www.goodreads.com/search?&q=%s -title 'Good Reads' -keyword 'good-reads-search'
+bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title 'Google feeling lucky search ' -keyword google_lucky
+bmark http://images.google.com/images?q=%s -title 'Google Image search ' -keyword google_image
+bmark http://rubygems.org/gems/%s -title 'rubygems' -keyword 'rubygems'
+bmark http://thesaurus.com/browse/%s -title 'thesaurus' -keyword 'thesaurus'
+bmark http://kat.ph/search/%s/ -title 'kat-torrents' -keyword 'kat-torrents'
+bmark http://en.wikipedia.org/wiki/%s -title 'wikipedia' -keyword 'wikipedia-en'
+bmark http://www.animefushigi.com/?s=%s -title 'Anime Fushigi' -keyword 'fushigi'
+bmark https://github.com/search?q=%s -title 'Github Search' -keyword 'github-search'
+bmark http://www.iconfinder.com/search/?q=%s -title 'IconFinder' -keyword 'iconfinder'
+bmark https://duckduckgo.com/?q=%s -title 'DuckDuckGo' -keyword 'duckgo'
+bmark http://www.dailymotion.com/in/relevance/search/%s -title 'Dailymotion' -keyword 'dailymotion'
+bmark http://stackoverflow.com/search?q=%s -title 'Stack Overflow' -keyword 'stack-overflow-search'
+bmark http://www.youtube.com/results?search_query=%s -title 'Youtube' -keyword 'youtube-search'
+bmark http://www.goodreads.com/search?&q=%s -title 'Good Reads' -keyword 'good-reads-search'
 bmark http://www.ebay.in/sch/i.html?_nkw=%s&_sop=15 -title 'Ebay India' -keyword 'ebay-search'
 
 
