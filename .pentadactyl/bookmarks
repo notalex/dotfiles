@@ -28,3 +28,4 @@ bmark http://www.goodreads.com/search?&q=%s -title 'Good Reads' -keyword 'good-r
 
 " Shopping
 bmark http://www.ebay.in/sch/i.html?_nkw=%s&_sop=15 -title 'Ebay India' -keyword 'ebay-search'
+bmark http://www.flipkart.com/search?q=%s -title 'Flipkart Search' -keyword 'flipkart-search'
