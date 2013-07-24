@@ -38,7 +38,7 @@ map -m hints <C-m> <CR>
 " To jump to a link found after search
 nmap <C-m> <CR>
 nmap <C-e> :source ~/.pentadactylrc<cr>:echomsg 'reloaded!'<cr>  
-nmap <C-y> :colorscheme custom<cr>:echomsg 'colorscheme updated!'<cr>
+nmap <C-y> :source ~/.pentadactyl/bookmarks<cr>:echomsg 'Bookmarks updated!'<cr>
 nmap w :open wikipedia-en<Space>
 " Useful to center the search result.
 nmap zz <C-d>
