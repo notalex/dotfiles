@@ -1,3 +1,5 @@
+#! /usr/bin/env bash
+
 automux_installed() {
   gem list | grep automux 1> /dev/null
 }
@@ -8,4 +10,10 @@ add_to_path() {
 
 alternate-fox() {
   /Applications/Firefox.app/Contents/MacOS/firefox -p Alternate &> /dev/null &
+}
+
+# git
+git-add-force-plus-git-status() {
+  git add -f $@
+  gs
 }
