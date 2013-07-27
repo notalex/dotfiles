@@ -1,18 +1,16 @@
-#! /usr/bin/ruby
+#! /usr/bin/env ruby
 
-vmail_dir = "#{ ENV['HOME'] }/.vmail/"
-begin
-  matching_files = Dir.foreach(vmail_dir).select do |filename| 
-    filename.match(ARGV[0])
-  end
+vmail_dir = "#{ ENV['HOME'] }/.vmail/**/"
 
-  config_file = vmail_dir + matching_files.first
+matching_config_path = Dir[vmail_dir].find do |filename|
+  filename.match(ARGV[0])
+end
 
-  command = "vmail -c #{ config_file }"
-  puts command
-  system command
-
-rescue
+if matching_config_path
+  puts "using #{ matching_config_path }"
+  system "VMAIL_HOME=#{ matching_config_path } vmail"
+else
   puts "Your input should match one of the following patterns"
-  puts Dir.foreach(vmail_dir).map { |filename| filename.slice(/vmailrc_(\w+)/, 1) }.compact
+  puts Dir[vmail_dir].map { |dir_name| dir_name.slice(/(?<=\/)\w+(?=\/$)/) }
+                     .reject { |dir_name| %w[.vmail default].include?(dir_name) }
 end
