@@ -25,8 +25,8 @@ ggrp() { cmd="git log --oneline --grep='$@'"; echo $cmd; eval $cmd; }
 gstshow() { git stash show -p stash@{$1} $2; }
 gstapply() { git stash apply stash@{$1} $2; }
 gshn() { git show HEAD~$1; }
-alias all-push="pushd $HOME; git push origin master; cd ~/gitbasket; git add -A; git commit -m '-'; git push origin master; popd"
-alias all-pull="pushd $HOME; git pull origin master; cd ~/gitbasket; git pull origin master; popd"
+alias aps="pushd $HOME; git push origin master; cd ~/gitbasket; git add -A; git commit -m '-'; git push origin master; popd"
+alias apl="pushd $HOME; git pull origin master; cd ~/gitbasket; git pull origin master; popd"
 gcr() { git branch $1 origin/$1; }
 
 # bash
