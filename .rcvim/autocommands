@@ -24,5 +24,4 @@ augroup nonRepeater
  au CmdwinEnter * nnoremap <buffer> <CR> <CR>
  au FilterWritePre * call s:SetupDiffWindow()
  au FileType notes call s:SetupSpacing()
- au FileType mail vnoremap ;v :call AddVmailContact()<CR>
 augroup END
