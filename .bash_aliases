@@ -53,6 +53,8 @@ rmt() { mv $1 ~/.local/share/Trash; }
 alias zzp='pushd $HOME; gps; notes-push; popd; guake -t; sudo pm-hibernate'
 alias zzh='guake -t; sudo pm-hibernate'
 alias sp='spring'
+alias st-devilspie='devilspie &> /dev/null &'
+alias kl-devilspie='pskill devilspie'
 
 # gems
 alias spc='spork cucumber'
