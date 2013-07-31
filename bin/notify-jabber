@@ -1,0 +1,38 @@
+#! /usr/bin/env ruby
+
+require 'rb-inotify'
+
+module Notify
+  extend self
+
+  def do(file_path)
+    html_content = File.read(file_path)
+    chat_content = slice_after_bold_and_before_body_end(html_content)
+    plain_text_content = strip_html(chat_content)
+
+    unless from_alex?(plain_text_content)
+      %x[notify-send -u critical "#{ plain_text_content }"]
+    end
+  end
+
+  private
+
+  def from_alex?(chat)
+    chat.match(/^Alex/)
+  end
+
+  def slice_after_bold_and_before_body_end(html)
+    html.split(/<b>/).last
+  end
+
+  def strip_html(html)
+    html.gsub(/<.+?>/, '')
+  end
+end
+
+notifier = INotify::Notifier.new
+notifier.watch("#{ ENV['HOME'] }/.purple/logs/jabber/", :modify, :create, :recursive) do |event|
+  Notify.do(event.absolute_name)
+end
+
+notifier.run
