@@ -7,12 +7,16 @@ module Notify
 
   def do(file_path)
     html_content = File.read(file_path)
+
+    return if contains_html_end_tags(html_content)
     chat_content = slice_after_bold_and_before_body_end(html_content)
+
+    # When a new chat arrives, a new base html file is created which will have no actual chat content.
+    return if chat_content.nil?
     plain_text_content = strip_html(chat_content)
 
-    unless from_alex?(plain_text_content)
-      %x[notify-send -u critical "#{ plain_text_content }"]
-    end
+    return if from_alex?(plain_text_content)
+    %x[notify-send -u critical "#{ plain_text_content }"]
   end
 
   private
@@ -27,6 +31,10 @@ module Notify
 
   def strip_html(html)
     html.gsub(/<.+?>/, '')
+  end
+
+  def contains_html_end_tags(content)
+    content.match(/<\/html>$/)
   end
 end
 
