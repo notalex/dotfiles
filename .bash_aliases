@@ -9,7 +9,6 @@ heroku-push() { gps -r heroku -f m; heroku run rake db:migrate; }
 
 # git
 alias gar="git add -A"
-alias gaf="git-add-force-plus-git-status"
 alias gan="ge git add -N"
 alias gcm="git commit -m"
 alias gcma="git commit --amend"

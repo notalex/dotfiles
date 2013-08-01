@@ -13,7 +13,7 @@ alternate-fox() {
 }
 
 # git
-git-add-force-plus-git-status() {
+gaf() {
   git add -f $@
   gs
 }
