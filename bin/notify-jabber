@@ -6,8 +6,11 @@ module Notify
   extend self
 
   def do(file_path)
+    # When a chat arrives from a user for the first time, a new folder is created.
+    return if Dir.exists?(file_path)
     html_content = File.read(file_path)
 
+    # When a chat window is closed, html end tags are appended to the file.
     return if contains_html_end_tags(html_content)
     chat_content = slice_after_bold_and_before_body_end(html_content)
 
