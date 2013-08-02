@@ -12,7 +12,6 @@ cabbreviate gi google_image
 set guioptions=Cs
 
 set! browser.tabs.closeWindowWithLastTab=false
-set editor='/usr/local/bin/mvim -f +<line> +"sil! call cursor(0, <column>)" <file>'
 
 imap <C-m> <CR>
 imap <C-j> <nop>
