@@ -3,7 +3,7 @@ root: '-r:'
 flags: -u2
 hooks:
   post:
-    - <%= link_window 'small', 'finch' %>
+    - <%= link_window 'small', 'finch', 1 %>
     - <%= link_window 'small', 4, 4%>
     - <%= select_window 2 %>
 windows:
