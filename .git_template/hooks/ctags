@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+
+# Exit if a subprocess fails.
+set -e
+
+trap "rm -f .git/tags.tmp" EXIT
+ctags --tag-relative -Rf .git/tags.tmp --exclude=.git --languages=-sql
+mv .git/tags.tmp .git/tags

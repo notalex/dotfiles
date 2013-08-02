@@ -11,3 +11,5 @@
   old = green
 [alias]
   del = branch -D
+[init]
+  templatedir = ~/.git_template
