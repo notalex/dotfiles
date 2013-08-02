@@ -19,7 +19,9 @@ module Notify
     plain_text_content = strip_html(chat_content)
 
     return if from_alex?(plain_text_content)
-    %x[notify-send -u critical "#{ plain_text_content }"]
+
+    sender, message = split_content(plain_text_content)
+    %x[notify-send -u critical "#{ sender }" "#{ message }"]
   end
 
   private
@@ -38,6 +40,10 @@ module Notify
 
   def contains_html_end_tags(content)
     content.match(/<\/html>$/)
+  end
+
+  def split_content(content)
+    content.split(':')
   end
 end
 
