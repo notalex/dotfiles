@@ -47,7 +47,6 @@ xin() { echo $@ | xclip -selection clipboard; }
 xout() { xclip -o -selection clipboard; }
 hss() { ssh $1@192.168.3.$2; }
 vnc() { vncviewer 192.168.3.$1 ; }
-pskill() { kill -9 $(ps aux | grep -m 1 $1 | awk '{print $2}'); }
 rmt() { mv $1 ~/.local/share/Trash; }
 alias zzp='pushd $HOME; gps; notes-push; popd; guake -t; sudo pm-hibernate'
 alias zzh='guake -t; sudo pm-hibernate'

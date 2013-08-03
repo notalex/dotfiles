@@ -1,0 +1,13 @@
+#! /usr/bin/env ruby
+
+processes = %x[ps aux | grep #{ ARGV[0] }].split("\n")
+
+relevant_processes = processes.reject do |process_string|
+  process_string.match(/:\d\d.+(grep|pskill).+$/)
+end
+
+killable_pids = relevant_processes.map { |process_name| process_name.squeeze.split(/\s/)[1].to_i }
+
+killable_pids.each do |pid|
+  Process.kill(-9, pid)
+end
