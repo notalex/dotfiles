@@ -20,7 +20,6 @@ nmap <Space> a<Space><Esc>
 nmap ;nt :NERDTreeToggle<CR>
 nmap ;nf :NERDTreeFind<CR>
 nmap ;f :Note<Space>
-nmap ;r :SearchNotes<Space>
 nmap ;v :Rview<Space>
 nmap ;d :filetype detect<cr>
 nmap ;j i<CR><ESC>
