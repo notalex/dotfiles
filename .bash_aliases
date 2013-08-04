@@ -43,8 +43,8 @@ alias ccd='pushd > /dev/null'
 alias pcd='popd > /dev/null'
 alias speed_test="wget --output-document=/dev/null http://speedtest.sea01.softlayer.com/speedtest/speedtest/random1000x1000.jpg"
 alias disk-usage="du -h --max-depth=1 $@"
-xin() { echo $@ | xclip -selection clipboard; }
-xout() { xclip -o -selection clipboard; }
+xin() { $@ | xclip -selection clipboard; }
+alias xout='xclip -o -selection clipboard'
 hss() { ssh $1@192.168.3.$2; }
 vnc() { vncviewer 192.168.3.$1 ; }
 rmt() { mv $1 ~/.local/share/Trash; }
