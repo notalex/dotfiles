@@ -12,6 +12,8 @@ killable_pids = relevant_processes.map do |process_name|
               .to_i
 end
 
+puts "### No matching process found" if killable_pids.empty?
+
 killable_pids.each do |pid|
   Process.kill(-9, pid)
 end
