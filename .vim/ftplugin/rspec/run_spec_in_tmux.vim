@@ -7,8 +7,13 @@ function! s:Notification()
   return "; notify-send -u critical Done"
 endfunction
 
-function! s:RunTest()
+function! s:RunFocusedTest()
   call system("tmux send-key -t 7 'rspec " . s:FocusedTestName() . s:Notification() . "' Enter")
 endfunction
 
-nmap ;r :call <SID>RunTest()<CR>
+function! s:RunTest()
+  call system("tmux send-key -t 7 'rspec " . expand('%:p') . s:Notification() . "' Enter")
+endfunction
+
+nmap ;r :call <SID>RunFocusedTest()<CR>
+nmap ;a :call <SID>RunTest()<CR>
