@@ -35,6 +35,12 @@ hi htmlH1	ctermfg=yellow
 hi htmlScriptTag ctermfg=248
 hi htmlSpecialTagName ctermfg=183
 
+" Javascript/Coffeescript
+hi coffeePrototypeName	ctermfg=150
+hi coffeeConditional cterm=bold ctermfg=lightblue
+hi coffeeExtendedOp cterm=bold ctermfg=lightblue
+hi coffeeKeyword cterm=bold ctermfg=230
+
 " notes
 syntax region notesHyphen start=/^-/ end=/\n/
 
