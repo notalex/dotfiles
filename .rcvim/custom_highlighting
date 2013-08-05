@@ -16,6 +16,7 @@ hi Underlined		ctermfg=grey	guifg=red
 
 hi Folded ctermfg=black ctermbg=grey
 
+" ruby/rails
 hi rubyModule			ctermfg=5
 hi rubyClass			ctermfg=5
 hi rubySymbol			ctermfg=3
@@ -25,19 +26,27 @@ hi rubyConditional		ctermfg=2               " if-case conditions
 
 hi railsUserClass  ctermfg=28                 " Rails class variable names
 
-" haml/html tag
-hi htmlTagName	ctermfg=45
+" haml/html
+hi htmlTag	ctermfg=248
+hi htmlEndTag	ctermfg=248
+hi htmlTagName	ctermfg=248
+hi htmlSpecialChar ctermfg=70
+hi htmlH1	ctermfg=white
+hi htmlScriptTag ctermfg=248
+hi htmlSpecialTagName ctermfg=183
 
-" custom filetype & highlighting for notes
-""""""""""""""""""""""""""""""""""""""""""
-au BufNewFile,BufRead *.notes setf notes
+" Javascript/Coffeescript
+hi coffeePrototypeName	ctermfg=150
+hi coffeeConditional cterm=bold ctermfg=lightblue
+hi coffeeExtendedOp cterm=bold ctermfg=lightblue
+hi coffeeKeyword cterm=bold ctermfg=230
 
+" notes
 syntax region notesHyphen start=/^-/ end=/\n/
 
 hi notesHyphen ctermfg=lightgreen
 
 " Diff
-"""""""
 hi DiffText ctermbg=LightYellow ctermfg=Black " changed portion in partial line
 hi DiffChange ctermbg=none                  " unchanged portion in partial line
 
