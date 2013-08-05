@@ -31,7 +31,7 @@ hi htmlTag	ctermfg=248
 hi htmlEndTag	ctermfg=248
 hi htmlTagName	ctermfg=248
 hi htmlSpecialChar ctermfg=70
-hi htmlH1	ctermfg=yellow
+hi htmlH1	ctermfg=white
 hi htmlScriptTag ctermfg=248
 hi htmlSpecialTagName ctermfg=183
 
