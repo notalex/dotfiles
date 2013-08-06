@@ -48,7 +48,7 @@ alias xout='xclip -o -selection clipboard'
 hss() { ssh $1@192.168.3.$2; }
 vnc() { vncviewer 192.168.3.$1 ; }
 rmt() { mv $1 ~/.local/share/Trash; }
-alias zzp='pushd $HOME; gps; notes-push; popd; guake -t; sudo pm-hibernate'
+alias zzp='aps; guake -t; sudo pm-hibernate'
 alias zzh='guake -t; sudo pm-hibernate'
 alias sp='spring'
 alias st-devilspie='devilspie &> /dev/null &'
