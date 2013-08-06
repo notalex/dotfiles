@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+
+set -e
+
+apl() {
+  pushd $HOME; git pull origin master; cd ~/gitbasket; git pull origin master; popd;
+}
+
+aps
+gnome-screensaver-command -l
+sudo pm-hibernate
+apl
