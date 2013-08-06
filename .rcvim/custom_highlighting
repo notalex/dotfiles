@@ -42,9 +42,9 @@ hi coffeeExtendedOp cterm=bold ctermfg=lightblue
 hi coffeeKeyword cterm=bold ctermfg=230
 
 " notes
-syntax region notesHyphen start=/^-/ end=/\n/
-
-hi notesHyphen ctermfg=lightgreen
+hi notesHyphen ctermfg=green
+hi notesAsterisk ctermfg=red
+hi notesBlockQuote ctermfg=215
 
 " Diff
 hi DiffText ctermbg=LightYellow ctermfg=Black " changed portion in partial line
