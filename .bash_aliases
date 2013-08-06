@@ -44,8 +44,8 @@ alias speed_test="wget --output-document=/dev/null http://speedtest.sea01.softla
 alias disk-usage="du -h --max-depth=1 $@"
 xin() { $@ | xclip -selection clipboard; }
 alias xout='xclip -o -selection clipboard'
-hss() { ssh $1@192.168.3.$2; }
-vnc() { vncviewer 192.168.3.$1 ; }
+hss() { ssh $1@192.168.6.$2; }
+vnc() { vncviewer 192.168.6.$1 ; }
 rmt() { mv $1 ~/.local/share/Trash; }
 alias zzh='guake -t; sudo pm-hibernate'
 alias sp='spring'
