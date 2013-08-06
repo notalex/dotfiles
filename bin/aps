@@ -1,0 +1,19 @@
+#! /usr/bin/env bash
+
+set -e
+
+notes-push() {
+  cd ~/gitbasket
+
+  if [ -n "$(git status --porcelain)" ]; then
+    git add -A
+    git commit -m '-'
+    git push origin master
+  fi
+}
+
+pushd $HOME
+git push origin master
+
+notes-push
+popd
