@@ -54,6 +54,9 @@ nmap ;c :firebug tab console<cr>
 " convert to localhost
 nmap ;l O<C-a><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del><del>open localhost<cr>
 
+" Test internet connection
+nmap <c-s> :tabopen google<CR>
+
 " #----------- stubs
 " C-j/C-k annoyingly opens up google.com
 nmap <C-j> <nop>
