@@ -11,7 +11,7 @@ command = config.select { |k, v| extension.match(k) }.values.first
 
 if command
   # Path needs to be in quotes to handle filenames with spaces.
-  system %(#{ command } "#{ file_path }")
+  system %(#{ command } "#{ file_path }" &> /dev/null &)
 else
   puts "Could not find a suitable program for the extension *#{ extension }*."
 end
