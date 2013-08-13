@@ -1,4 +1,5 @@
 pdf: evince
 pptx*: loimpress
+docx*: lowriter
 csv: localc
 xlsx*: localc
