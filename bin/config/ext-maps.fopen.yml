@@ -3,3 +3,4 @@ pptx*: loimpress
 docx*: lowriter
 csv: localc
 xlsx*: localc
+deb: software-center
