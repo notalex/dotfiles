@@ -4,3 +4,4 @@ docx*: lowriter
 csv: localc
 xlsx*: localc
 deb: software-center
+(png|jpe?g|gif): eog
