@@ -11,5 +11,11 @@ add_to_path() {
 # git
 gaf() {
   git add -f $@
-  gs
+
+  printf '\033[0;34m'
+  echo '              ***###***'
+  printf '\033[0m'
+
+  git status
+  git diff --cached
 }
