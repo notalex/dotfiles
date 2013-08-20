@@ -24,7 +24,7 @@ hi rubyBlock			ctermfg=darkgray             " map-each statements
 hi rubyControl			ctermfg=45                 " do end blocks
 hi rubyConditional		ctermfg=2               " if-case conditions
 
-hi railsUserClass  ctermfg=28                 " Rails class variable names
+hi railsUserClass  ctermfg=28 cterm=bold               " Rails class variable names
 
 " haml/html
 hi htmlTag	ctermfg=248
