@@ -6,9 +6,13 @@
   excludesfile = ~/.global_gitignore
 [color]
   diff = true
+  status = true
 [color "diff"]
   new = yellow
   old = green
+[color "status"]
+  changed = green
+  untracked = cyan
 [alias]
   del = branch -D
 [init]
