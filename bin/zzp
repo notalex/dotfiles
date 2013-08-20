@@ -3,5 +3,4 @@
 set -e
 
 aps
-guake -t
 sudo pm-hibernate
