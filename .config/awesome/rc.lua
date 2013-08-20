@@ -246,6 +246,12 @@ globalkeys = awful.util.table.join(
     -- Prompt
     awful.key({modkey }, "r", function() awful.util.spawn( "dmenu_run" ) end),
 
+    awful.key({ modkey }, 'l',
+      function()
+        awful.util.spawn('gnome-screensaver-command -l')
+      end
+    ),
+
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run({ prompt = "Run Lua code: " },
@@ -374,4 +380,9 @@ end)
 
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+awful.util.spawn('nm-applet')
+awful.util.spawn('guake')
+awful.util.spawn('firefox')
+awful.util.spawn('notify-jabber')
 -- }}}
