@@ -106,6 +106,8 @@ bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+Delete exit
+# lock screen
+bindsym $mod+Delete exec i3lock
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
