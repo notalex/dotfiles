@@ -30,3 +30,5 @@ bmark http://www.goodreads.com/search?&q=%s -title 'Good Reads' -keyword 'good-r
 " Shopping
 bmark http://www.ebay.in/sch/i.html?_nkw=%s&_sop=15 -title 'Ebay India' -keyword 'ebay-search'
 bmark http://www.flipkart.com/search?p%5B%5D=sort%3Dprice_asc&q=%s -title 'Flipkart Search' -keyword 'flipkart-search'
+
+bmark http://www.amazon.com/s/url=search-alias%3Ddigital-text&field-keywords=%s -title 'Amazon Kindle Search' -keyword 'amazon-kindle-search'
