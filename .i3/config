@@ -152,3 +152,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Windows without border
+new_window none
