@@ -7,6 +7,6 @@ apl() {
 }
 
 aps
-gnome-screensaver-command -l
+i3lock
 sudo pm-hibernate
 apl
