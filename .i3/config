@@ -162,6 +162,9 @@ new_window none
 # i3 commandline
 bindsym $mod+Shift+colon exec i3-input
 
+# Move mouse cursor to extreme right
+bindsym $mod+Shift+m exec swarp 1300 500
+
 for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
 
 exec --no-startup-id $HOME/.i3/startup_script
