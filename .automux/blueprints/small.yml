@@ -10,8 +10,6 @@ windows:
     opt: '-f'
   - panes: vim
     index: 2
-  - panes: vim
-    index: 3
   - hooks:
       pre: git pull origin master
     root: ~/gitbasket
