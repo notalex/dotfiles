@@ -163,3 +163,5 @@ new_window none
 bindsym $mod+Shift+colon exec i3-input
 
 for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
+
+exec --no-startup-id $HOME/.i3/startup_script

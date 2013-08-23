@@ -1,0 +1,14 @@
+# /usr/bin/env bash
+
+i3 workspace 7
+
+guake -t &
+sleep 3
+guake -e 'automux small -fm'
+
+firefox &
+
+clipit &
+nm-applet &
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
+notify-jabber &
