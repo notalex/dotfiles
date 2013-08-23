@@ -4,7 +4,7 @@ function! s:FocusedTestName()
 endfunction
 
 function! s:Notification()
-  return "; notify-send -u critical Done"
+  return "; notify-send -t 2000 Done"
 endfunction
 
 function! s:RunFocusedTest()

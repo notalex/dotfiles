@@ -96,5 +96,5 @@ then
 
   ntf() { $@; terminal-notifier-notify -message 'Process finished...'; tmux display-message 'Process finished...'; }
 else
-  ntf() { $@; notify-send -u critical 'Process finished...'; }
+  ntf() { $@; notify-send -t 3000 'Process finished...'; }
 fi
