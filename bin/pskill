@@ -15,5 +15,5 @@ end
 puts "### No matching process found" if killable_pids.empty?
 
 killable_pids.each do |pid|
-  Process.kill(-9, pid)
+  system "kill -9 #{ pid }"
 end
