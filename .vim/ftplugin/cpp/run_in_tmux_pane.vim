@@ -1,4 +1,5 @@
 function! s:RunTest()
+  call delete('a.out')
   call system("tmux send-key -t 1 'exit' Enter 2> /dev/null")
   call system('tmux split-window')
   call system("tmux send-key -t 1 'g++ " . expand('%:p') . "' Enter")
