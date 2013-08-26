@@ -11,9 +11,17 @@ function! s:RunFocusedTest()
   call system("tmux send-key -t 7 'rspec " . s:FocusedTestName() . s:Notification() . "' Enter")
 endfunction
 
+function! s:RunFocusedTestInSplit()
+  call system("tmux send-key -t 1 'exit' Enter 2> /dev/null")
+  call system('tmux split-window')
+  call system("tmux send-key -t 1 'rspec " . expand('%:p') . "' Enter")
+  call system("tmux select-pane -t 0")
+endfunction
+
 function! s:RunTest()
   call system("tmux send-key -t 7 'rspec " . expand('%:p') . s:Notification() . "' Enter")
 endfunction
 
-nmap ;r :call <SID>RunFocusedTest()<CR>
+nmap ;rt :call <SID>RunFocusedTest()<CR>
+nmap ;rs :call <SID>RunFocusedTestInSplit()<CR>
 nmap ;a :call <SID>RunTest()<CR>
