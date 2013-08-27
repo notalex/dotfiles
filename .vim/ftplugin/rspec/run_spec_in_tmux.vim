@@ -11,9 +11,16 @@ function! s:RunFocusedTest()
   call system("tmux send-key -t 7 'rspec " . s:FocusedTestName() . s:Notification() . "' Enter")
 endfunction
 
+function! s:SwitchOrCreateResultsPane()
+  if system('tmux list-panes | wc -l') == 2
+    call system('tmux select-pane -t 1')
+  else
+    call system('tmux split-window')
+  endif
+endfunction
+
 function! s:RunFocusedTestInSplit()
-  call system("tmux send-key -t 1 'exit' Enter 2> /dev/null")
-  call system('tmux split-window')
+  call s:SwitchOrCreateResultsPane()
   call system("tmux send-key -t 1 'rspec " . s:FocusedTestName() . "' Enter")
   call system("tmux select-pane -t 0")
 endfunction
