@@ -14,7 +14,7 @@ endfunction
 function! s:RunFocusedTestInSplit()
   call system("tmux send-key -t 1 'exit' Enter 2> /dev/null")
   call system('tmux split-window')
-  call system("tmux send-key -t 1 'rspec " . expand('%:p') . "' Enter")
+  call system("tmux send-key -t 1 'rspec " . s:FocusedTestName() . "' Enter")
   call system("tmux select-pane -t 0")
 endfunction
 
