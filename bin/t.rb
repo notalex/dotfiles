@@ -29,6 +29,16 @@ module T
     Conversation.find_by_uuid(uuid)
   end
 
+  def tb(pattern = nil)
+    list = ActiveRecord::Base.connection.tables
+
+    if pattern
+      list.grep Regexp.new(pattern)
+    else
+      list
+    end
+  end
+
 private
 
   def inspected_and_joined(array)
