@@ -32,7 +32,4 @@
 (setq-default tab-width 2)
 (setq indent-line-function 'insert-tab)
 
-;; bindings
-(global-set-key "\C-h" 'delete-backward-char)
-(global-set-key "\C-u" 'backward-kill-line)
-(global-set-key "\C-w" 'backward-kill-word)
+(load "~/.emacs_conf/keybindings.el")
