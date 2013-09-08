@@ -23,6 +23,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+Q kill
 
+# Kill notify dialog
+bindsym $mod+x [class="Xfce4-notifyd"] kill
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
