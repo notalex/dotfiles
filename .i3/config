@@ -156,9 +156,6 @@ bar {
   position top
 }
 
-# Windows without border
-new_window none
-
 # i3 commandline
 bindsym $mod+Shift+colon exec i3-input
 
