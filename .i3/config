@@ -166,6 +166,6 @@ bindsym $mod+Shift+m exec swarp 1277 500
 
 for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
 for_window [class="Gvim"] floating enable
-for_window [class="Firefox"] move workspace 8
+for_window [class="Firefox" window_role="browser"] move workspace 8
 
 exec --no-startup-id $HOME/.i3/startup_script
