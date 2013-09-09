@@ -7,6 +7,8 @@ colorscheme custom
 
 cabbreviate py pentadactyl
 cabbreviate gi google_image
+cabbreviate src source ~/.pentadactylrc
+cabbreviate srcb source ~/.pentadactyl/bookmarks
 
 " hide all scrollbars
 set guioptions=Cs
@@ -36,8 +38,6 @@ map -m hints <C-m> <CR>
 
 " To jump to a link found after search
 nmap <C-m> <CR>
-nmap <C-e> :source ~/.pentadactylrc<cr>:echomsg 'reloaded!'<cr>  
-nmap <C-y> :source ~/.pentadactyl/bookmarks<cr>:echomsg 'Bookmarks updated!'<cr>
 nmap w :open wikipedia-en<Space>
 " Useful to center the search result.
 nmap zz <C-d>
