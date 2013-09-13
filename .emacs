@@ -32,4 +32,4 @@
 (setq-default tab-width 2)
 (setq indent-line-function 'insert-tab)
 
-(load "~/.emacs_conf/keybindings.el")
+(load "~/.emacs.conf/keybindings.el")
