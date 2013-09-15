@@ -64,7 +64,6 @@ nmap <C-k> <nop>
 
 " #-----------emacs mode
 imap <c-a> <Home>
-imap <C-e> <End>
 imap <c-f> <Right>
 imap <c-b> <Left>
 
