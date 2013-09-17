@@ -5,7 +5,7 @@ alias h='heroku'
 alias hr='heroku run'
 alias h-tail='heroku logs --tail'
 alias h-pg-info='heroku pg:info'
-heroku-push() { gps -r heroku -f m; heroku run rake db:migrate; }
+heroku-push() { gps -r heroku $@ m; heroku run rake db:migrate; }
 
 # git
 alias gar="git add -A"
