@@ -17,10 +17,17 @@ function! s:SetupSpacing()
   set shiftwidth=2
 endfunction
 
+function! s:AddRequireLineInRspec()
+  if &ft == 'rspec'
+    call setline('.', "require 'spec_helper'")
+  endif
+endfunction
+
 augroup nonRepeater
  au!
  au BufRead,BufNewFile *.coffee.erb call CoffeeMaker()
  au BufRead,BufNewFile *.jst.ejs set filetype=html
+ au BufNewFile *.rb call s:AddRequireLineInRspec()
  au FileType qf nmap <buffer> <CR> :.cc<CR>
  au CmdwinEnter * nnoremap <buffer> <CR> <CR>
  au FilterWritePre * call s:SetupDiffWindow()
