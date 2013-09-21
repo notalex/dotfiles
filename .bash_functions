@@ -25,5 +25,11 @@ dump-development-db() {
 }
 
 load-development-db() {
-  rake db:drop RAILS_ENV=development; rake db:create; psql $(development-db-name) < ~/gitbasket/db/$(development-db-name).sql
+  if [ $1 ]; then
+    db_path=$1
+  else
+    db_path=~/gitbasket/db/$(development-db-name).sql
+  fi
+
+  rake db:drop RAILS_ENV=development; rake db:create; psql $(development-db-name) < $db_path
 }
