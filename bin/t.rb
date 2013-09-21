@@ -1,7 +1,7 @@
 module T
   extend self
 
-  FILE_PATH = 'tmp/trace.log'
+  FILE_PATH = 'log/trace.log'
 
   def l(*args)
     log_time
