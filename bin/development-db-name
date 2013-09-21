@@ -1,0 +1,7 @@
+#! /usr/bin/env ruby
+require 'yaml'
+
+database_config_path = File.join(Dir.pwd, 'config', 'database.yml')
+config = YAML.load(File.read database_config_path)
+
+puts config['development']['database']

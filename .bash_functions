@@ -19,3 +19,11 @@ gaf() {
   git status
   git diff --cached
 }
+
+dump-development-db() {
+  pg_dump $(development-db-name) > ~/gitbasket/db/$(development-db-name).sql
+}
+
+load-development-db() {
+  rake db:drop RAILS_ENV=development; rake db:create; psql $(development-db-name) < ~/gitbasket/db/$(development-db-name).sql
+}
