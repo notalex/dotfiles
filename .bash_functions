@@ -33,3 +33,11 @@ load-development-db() {
 
   rake db:drop RAILS_ENV=development; rake db:create; psql $(development-db-name) < $db_path
 }
+
+rr() {
+  if [ $@ ]; then
+    rake routes CONTROLLER=$@
+  else
+    rake routes
+  fi
+}

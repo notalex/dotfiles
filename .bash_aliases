@@ -75,7 +75,6 @@ alias rdm='rake db:migrate; rake db:migrate RAILS_ENV=test'
 alias rd-migrate-redo='rake db:migrate:redo; rake db:migrate:redo RAILS_ENV=test'
 alias rd-rollback='rake db:rollback; rake db:rollback RAILS_ENV=test'
 alias nuke-test-db='rake db:drop RAILS_ENV=test; rake db:create RAILS_ENV=test; rake db:migrate RAILS_ENV=test; rake db:seed RAILS_ENV=test'
-rr() { rake routes CONTROLLER=$@; }
 
 # rvm
 alias rgu='rvm gemset use'
