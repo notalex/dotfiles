@@ -8,5 +8,3 @@ map <C-s> :x<Enter>
 imap <C-s> <Esc>:x<Enter>
 
 hi rubyControl			guifg=violet
-
-nmap <C-e> :source ~/.gvimrc<cr>:echomsg 'reloaded!'<cr>
