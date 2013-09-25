@@ -56,11 +56,11 @@ private
   end
 
   def random_color
-    logger.info "\033[0;3#{ rand(8) }m"
+    logger.info "\033[0;32m"
   end
 
   def log_time
-    logger.info "\033[0;30;4#{ rand(8) }m#{ Time.now.strftime('%H:%M:%S') }"
+    logger.info "\033[0;30;46m#{ Time.now.strftime('%H:%M:%S') }"
   end
 
   def reset_color
