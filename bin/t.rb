@@ -39,6 +39,10 @@ module T
     end
   end
 
+  def m(object)
+    object.methods - Object.methods
+  end
+
 private
 
   def inspected_and_joined(array)
