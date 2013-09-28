@@ -15,7 +15,6 @@ map <C-h> <Leader>c<space>
 " #----------------nmaps---------------
 
 nmap <CR> O<Esc>
-
 nmap <Space> a<Space><Esc>
 nmap ;nt :NERDTreeToggle<CR>
 nmap ;nf :NERDTreeFind<CR>
