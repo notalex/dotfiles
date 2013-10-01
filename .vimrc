@@ -19,7 +19,6 @@ nmap <Space> a<Space><Esc>
 nmap ;nt :NERDTreeToggle<CR>
 nmap ;nf :NERDTreeFind<CR>
 nmap ;f :Note<Space>
-nmap ;v :Rview<Space>
 nmap ;d :filetype detect<cr>
 nmap ;j i<CR><ESC>
 nmap ;hs :set hlsearch!<cr>
@@ -102,6 +101,6 @@ nmap ;s :Ack "" <Left><Left>
 nnoremap ;m /.delay<cr>ved$a.deliver<Esc>:w<cr>
 nmap ;o :call OpenLinkInFirefox()<cr>
 
-map <c-v> :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
+map ;v :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 vmap <C-x> d:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
