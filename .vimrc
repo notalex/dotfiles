@@ -99,7 +99,7 @@ nnoremap ;y I<C-m><C-m><Esc>2k
 nnoremap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nmap ;s :Ack "" <Left><Left>
 nnoremap ;m /.delay<cr>ved$a.deliver<Esc>:w<cr>
-nmap ;o :call OpenLinkInFirefox()<cr>
+nmap ;o :echom OpenLinkInFirefox()<cr>
 
 map ;v :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
