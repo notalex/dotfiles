@@ -20,6 +20,8 @@ endfunction
 function! s:AddRequireLineInRspec()
   if &ft == 'rspec'
     call setline('.', "require 'spec_helper'")
+  elseif &ft == 'minitest'
+    call setline('.', "require 'test_helper'")
   endif
 endfunction
 
