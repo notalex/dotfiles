@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+if [ $2 ]; then
+  count=$(($2 - 1))
+  path=$1
+else
+  count=$(($1 - 1))
+fi
+
+sha=$(git log --pretty=format:'%H' -1 --skip=$count $path)
+git show $sha
