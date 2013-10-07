@@ -1,10 +1,5 @@
 " vim: set ft=vim:
 
-" -------------- Ack mappings
-
-" :Ack translates to the following command
-let g:ackprg="ack-search -H --nocolor --nogroup --column --ignore-dir=test"
-
 " -------------- ctrlp mappings
 
 let g:ctrlp_show_hidden = 1
