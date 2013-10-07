@@ -6,17 +6,18 @@ function! OpenLinkInFirefox()
 endfunction
 
 function! CustomGrep()
-  let s:user_input = input("Search: ", '* . | ')
+  let s:user_input = input("Search: ", '* . ')
 
   if strlen(s:user_input)
-    let s:pattern_and_options = split(s:user_input, '\s*|\s*')
+    let s:regexp = escape('^([^ ]+ [^ ]+) (.+)$', '()+')
+    let s:pattern_and_options = matchlist(s:user_input, s:regexp)
 
-    let s:pattern = s:pattern_and_options[1]
+    let s:pattern = s:pattern_and_options[2]
     let s:replaced_pattern = substitute(s:pattern, '\s', '.', 'g')
     let s:escaped_pattern = escape(s:replaced_pattern, '+()')
 
 
-    let s:options_string = s:pattern_and_options[0]
+    let s:options_string = s:pattern_and_options[1]
     let s:grep_options = split(s:options_string, ' ')
 
     " txt,rb => *.{txt,rb,} | * => *.{*,} (matches all)
