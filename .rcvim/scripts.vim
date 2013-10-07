@@ -27,6 +27,7 @@ function! CustomGrep()
     " grep -r app --include=*.*{rb,}
     silent execute "grep -r '" . s:escaped_pattern . "' " . s:folder .
       \' --exclude-from=' . $HOME . '/.better-grep-exclusions' .
+      \' --exclude-dir={fixtures,coverage,public}' .
       \' --include=' . s:type
     cw
     redraw!
