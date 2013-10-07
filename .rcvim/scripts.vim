@@ -26,6 +26,7 @@ function! CustomGrep()
     " grep -r app --include=*.*{rb,}
     silent execute "grep -r '" . s:escaped_pattern . "' " . s:folder . " --include=" . s:type
     cw
+    redraw!
   endif
 endfunction
 
