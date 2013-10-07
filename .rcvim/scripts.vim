@@ -6,10 +6,10 @@ function! OpenLinkInFirefox()
 endfunction
 
 function! CustomGrep()
-  let s:user_input = input("Search: ", '* . ; ')
+  let s:user_input = input("Search: ", '* . | ')
 
   if strlen(s:user_input)
-    let s:pattern_and_options = split(s:user_input, '\s*;\s*')
+    let s:pattern_and_options = split(s:user_input, '\s*|\s*')
 
     let s:pattern = s:pattern_and_options[1]
     let s:replaced_pattern = substitute(s:pattern, '\s', '.', 'g')
