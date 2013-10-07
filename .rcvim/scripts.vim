@@ -25,7 +25,8 @@ function! CustomGrep()
     let s:folder = s:grep_options[-1]
 
     " grep -r app --include=*.*{rb,}
-    silent execute "grep -r '" . s:escaped_pattern . "' " . s:folder . " --include=" . s:type
+    silent execute "grep -r '" . s:escaped_pattern . "' " . s:folder . " --include=" . s:type .
+      \ ' --exclude-from=' . $HOME . '/.better-grep-exclusions'
     cw
     redraw!
   endif
