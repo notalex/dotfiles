@@ -6,7 +6,7 @@ function! OpenLinkInFirefox()
 endfunction
 
 function! CustomGrep()
-  let s:user_input = input("Search: ", '* . ')
+  let s:user_input = input("Search: ", '. * ')
 
   if strlen(s:user_input)
     let s:regexp = escape('^([^ ]+ [^ ]+) (.+)$', '()+')
@@ -21,8 +21,8 @@ function! CustomGrep()
     let s:grep_options = split(s:options_string, ' ')
 
     " txt,rb => *.{txt,rb,} | * => *.{*,} (matches all)
-    let s:type = '*.{' . s:grep_options[0] . ',}'
-    let s:folder = s:grep_options[-1]
+    let s:type = '*.{' . s:grep_options[-1] . ',}'
+    let s:folder = s:grep_options[0]
 
     " grep -r app --include=*.*{rb,}
     silent execute "grep -r '" . s:escaped_pattern . "' " . s:folder .
