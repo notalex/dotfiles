@@ -20,8 +20,14 @@ function! CustomGrep()
     let s:options_string = s:pattern_and_options[1]
     let s:grep_options = split(s:options_string, ' ')
 
-    " txt,rb => *.{txt,rb,} | * => *.{*,} (matches all)
-    let s:type = '*.{' . s:grep_options[1] . ',}'
+    " txt,rb => *.{txt,rb,} | * => * (matches all)
+    let s:filetypes = s:grep_options[1]
+    if strlen(matchstr(s:filetypes, '^\w'))
+      let s:type = '*.{' . s:grep_options[1] . ',}'
+    else
+      let s:type = s:filetypes
+    endif
+
     let s:folder = s:grep_options[0]
     let s:exclude_dirs = '{.git,tmp,fixtures,coverage,' . s:grep_options[2] . '}'
     let s:options = s:pattern_and_options[3]
