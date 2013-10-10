@@ -1,5 +1,5 @@
 function! OpenLinkInFirefox()
-  let pattern = escape('(http|www)[^ ]+', '()+|')
+  let pattern = '\v(http|www)[^ ]+'
   let url = matchstr(getline('.'), pattern)
   call system('firefox-open ' . shellescape(url))
   return 'opened ' . url
@@ -9,7 +9,7 @@ function! CustomGrep()
   let s:user_input = input("Search: ", '. * public, ')
 
   if strlen(s:user_input)
-    let s:regexp = escape('^([^ ]+ [^ ]+ [^ ]+) ([^ ]+)( .+)*$', '()+')
+    let s:regexp = '\v^([^ ]+ [^ ]+ [^ ]+) ([^ ]+)( .+)*$'
     let s:pattern_and_options = matchlist(s:user_input, s:regexp)
 
     let s:pattern = s:pattern_and_options[2]
