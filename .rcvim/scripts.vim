@@ -23,10 +23,10 @@ function! CustomGrep()
     " txt,rb => *.{txt,rb,} | * => *.{*,} (matches all)
     let s:type = '*.{' . s:grep_options[1] . ',}'
     let s:folder = s:grep_options[0]
-    let s:exclude_dirs = '{fixtures,coverage,' . s:grep_options[2] . '}'
+    let s:exclude_dirs = '{.git,tmp,fixtures,coverage,' . s:grep_options[2] . '}'
     let s:options = s:pattern_and_options[3]
 
-    " grep -r app --include=*.*{rb,}
+    " grep -r pattern app --include=*.{rb,}
     silent execute "grep -r '" . s:escaped_pattern . "' " . s:folder .
       \' --exclude-from=' . $HOME . '/.better-grep-exclusions' .
       \' --exclude-dir=' . s:exclude_dirs .
