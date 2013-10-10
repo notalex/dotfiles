@@ -9,7 +9,7 @@ function! CustomGrep()
   let s:user_input = input("Search: ", '. * public, ')
 
   if strlen(s:user_input)
-    let s:regexp = escape('^([^ ]+ [^ ]+ [^ ]+) (.+)$', '()+')
+    let s:regexp = escape('^([^ ]+ [^ ]+ [^ ]+) ([^ ]+)( .+)*$', '()+')
     let s:pattern_and_options = matchlist(s:user_input, s:regexp)
 
     let s:pattern = s:pattern_and_options[2]
@@ -24,12 +24,13 @@ function! CustomGrep()
     let s:type = '*.{' . s:grep_options[1] . ',}'
     let s:folder = s:grep_options[0]
     let s:exclude_dirs = '{fixtures,coverage,' . s:grep_options[2] . '}'
+    let s:options = s:pattern_and_options[3]
 
     " grep -r app --include=*.*{rb,}
     silent execute "grep -r '" . s:escaped_pattern . "' " . s:folder .
       \' --exclude-from=' . $HOME . '/.better-grep-exclusions' .
       \' --exclude-dir=' . s:exclude_dirs .
-      \' --include=' . s:type
+      \' --include=' . s:type . s:options
     cw
     redraw!
   endif
