@@ -17,8 +17,6 @@ alias grl="git reflog"
 alias g_config="git config --list"
 alias gra="git remote add"
 alias gbv="git branch -v"
-alias gdf="ge git diff --color-words"
-alias gdfc="ge git diff --cached --color-words"
 alias g-save="git stash; git stash apply"
 ggrp() { cmd="git log --oneline --grep='$@'"; echo $cmd; eval $cmd; }
 gstshow() { git stash show -p stash@{$1} $2; }
