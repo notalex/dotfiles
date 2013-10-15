@@ -48,8 +48,6 @@ vnc() { vncviewer 192.168.6.$1 ; }
 rmt() { mv $1 ~/.local/share/Trash; }
 alias zzh='sudo pm-hibernate'
 alias sp='spring'
-alias st-devilspie='devilspie &> /dev/null &'
-alias kl-devilspie='pskill devilspie'
 
 # gems
 alias spc='spork cucumber'
