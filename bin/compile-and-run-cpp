@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+
+rm /tmp/temp-cpp-file.out 2> /dev/null
+
+cp $1 /tmp/temp-cpp-file.cpp
+g++ /tmp/temp-cpp-file.cpp -o /tmp/temp-cpp-file.out
+
+[ -s /tmp/temp-cpp-file.out ] && /tmp/temp-cpp-file.out
