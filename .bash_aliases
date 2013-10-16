@@ -26,6 +26,7 @@ gcr() { git branch $1 origin/$1; }
 
 # bash
 alias s='sudo'
+alias v='vagrant'
 alias src='source ~/.bash_profile'
 alias apti='sudo apt-get install -y'
 alias aptr='sudo apt-get remove -y'
