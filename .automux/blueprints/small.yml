@@ -5,7 +5,8 @@ hooks:
   post: <%= select_window 2 %>
 windows:
   - panes:
-  - panes: finch
+  - panes: barking-finch
+    name: finch
     index: 1
     opt: '-f'
   - panes: vim

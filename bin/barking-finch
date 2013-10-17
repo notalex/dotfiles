@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+
+pskill notify-jabber
+notify-jabber &
+finch
