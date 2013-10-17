@@ -41,3 +41,7 @@ rr() {
     rake routes
   fi
 }
+
+on-vagrant() {
+  [ $HOME == '/home/vagrant' ] && echo true
+}

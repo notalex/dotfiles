@@ -15,6 +15,18 @@ git_information() {
   echo '\[$(branch_color)\]$(branch_name)\[$(symbol_color)\]$(symbol) '
 }
 
-directory_and_symbol='\[$c_dir\]\W\[$c_arrow\]:\[$c_reset\] '
+machine-indicator() {
+  if $(on-vagrant); then
+    echo 'Ⱌ'
+  else
+    echo '▶'
+  fi
+}
 
-export PS1="$(git_information)$directory_and_symbol"
+machine-information() {
+  echo "\[$c_arrow\]$(machine-indicator)\[$c_reset\] "
+}
+
+directory='\[$c_dir\]\W:'
+
+export PS1="$(git_information)$directory$(machine-information)"
