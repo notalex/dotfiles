@@ -18,7 +18,6 @@ nmap <CR> O<Esc>
 nmap <Space> a<Space><Esc>
 nmap ;nt :NERDTreeToggle<CR>
 nmap ;nf :NERDTreeFind<CR>
-nmap ;f :Note<Space>
 nmap ;d :filetype detect<cr>
 nmap ;j i<CR><ESC>
 nmap ;hs :set hlsearch!<cr>
