@@ -6,7 +6,7 @@ function! OpenLinkInFirefox()
 endfunction
 
 function! CustomGrep()
-  let s:user_input = input("Search: ", '. * public, ')
+  let s:user_input = input("Search: ", '* . public, ')
 
   if strlen(s:user_input)
     let s:regexp = '\v^([^ ]+ [^ ]+ [^ ]+) ([^ ]+)( .+)*$'
@@ -21,14 +21,14 @@ function! CustomGrep()
     let s:grep_options = split(s:options_string, ' ')
 
     " txt,rb => *.{txt,rb,} | * => * (matches all)
-    let s:filetypes = s:grep_options[1]
+    let s:filetypes = s:grep_options[0]
     if strlen(matchstr(s:filetypes, '^\w'))
-      let s:type = '*.{' . s:grep_options[1] . ',}'
+      let s:type = '*.{' . s:grep_options[0] . ',}'
     else
       let s:type = s:filetypes
     endif
 
-    let s:folder = s:grep_options[0]
+    let s:folder = s:grep_options[1]
     let s:exclude_dirs = '{.git,tmp,fixtures,coverage,' . s:grep_options[2] . '}'
     let s:options = s:pattern_and_options[3]
 
