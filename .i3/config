@@ -166,7 +166,7 @@ bindsym $mod+Shift+B border none
 bindsym $mod+Shift+colon exec i3-input
 
 # Move mouse cursor to extreme right
-bindsym $mod+Shift+m exec swarp 1277 500
+bindsym $mod+Shift+m exec edge-swarp
 
 for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
 for_window [class="Gvim"] floating enable

@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+resolution=$(xrandr | awk 'FNR == 3 { print $1 }')
+
+screen_width=$(perl-slice $resolution '^(\d+)' 1)
+screen_height=$(perl-slice $resolution '(\d+)$' 1)
+
+target_width=$(( screen_width - 3 ))
+target_height=$(( screen_height / 2 ))
+
+swarp $target_width $target_height
