@@ -112,6 +112,7 @@ bindsym $mod+Shift+R restart
 bindsym $mod+Shift+Delete exit
 # lock screen
 bindsym $mod+Delete exec i3lock -c 000000
+bindsym $mod+End exec sudo pm-hibernate
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
