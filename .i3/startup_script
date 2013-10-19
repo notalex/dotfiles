@@ -3,6 +3,7 @@
 i3 workspace 7
 
 bash ~/.setxkb.conf
+bash ~/.xinput.conf
 
 guake -t &
 sleep 5
