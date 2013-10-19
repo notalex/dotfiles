@@ -29,6 +29,7 @@ augroup nonRepeater
  au!
  au BufRead,BufNewFile *.coffee.erb call CoffeeMaker()
  au BufRead,BufNewFile *.jst.ejs set filetype=html
+ au BufRead,BufNewFile *.conf set filetype=conf
  au BufNewFile *.rb call s:AddRequireLineInRspec()
  au FileType qf nmap <buffer> <CR> :.cc<CR>
  au CmdwinEnter * nnoremap <buffer> <CR> <CR>
