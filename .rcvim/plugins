@@ -29,6 +29,7 @@ Bundle 'xolox/vim-notes'
 Bundle 'notalex/snipmate.vim'
 Bundle 'notalex/vim-run-live'
 Bundle 'notalex/vim-strip-trailers'
+Bundle 'TwitVim'
 
 filetype plugin on
 
