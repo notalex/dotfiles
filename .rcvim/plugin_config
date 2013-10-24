@@ -49,10 +49,6 @@ let Tlist_Ctags_Cmd='/usr/bin/ctags'
 let NERDTreeShowHidden = 1
 let g:NERDTreeMapJumpNextSibling = '<C-n>'
 
-" ------------- EasyMotion -------
-let g:EasyMotion_leader_key = ';f'
-let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyzBCDEFGHIJKLMNOPQRSTUVWY02345789'
-
 " ------------- TwitVim -------
 let twitvim_enable_ruby = 1
 let twitvim_timestamp_format = '%R %F'
