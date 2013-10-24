@@ -16,14 +16,14 @@ map <C-h> <Leader>c<space>
 
 nmap <CR> O<Esc>
 nmap <Space> a<Space><Esc>
-nmap ;nt :NERDTreeToggle<CR>
-nmap ;nf :NERDTreeFind<CR>
-nmap ;d :filetype detect<cr>
-nmap ;j i<CR><ESC>
-nmap ;hs :set hlsearch!<cr>
-nmap ;bs :set scrollbind!<cr>
-nmap ;e :edit!<cr>
-nmap ;w :wa<CR>
+nmap <F7>nt :NERDTreeToggle<CR>
+nmap <F7>nf :NERDTreeFind<CR>
+nmap <F7>d :filetype detect<cr>
+nmap <F7>j i<CR><ESC>
+nmap <F7>hs :set hlsearch!<cr>
+nmap <F7>bs :set scrollbind!<cr>
+nmap <F7>e :edit!<cr>
+nmap <F7>w :wa<CR>
 nmap < <l
 nmap > >l
 nmap <C-z> <nop>
@@ -43,7 +43,7 @@ imap <Nul> <Space>
 " Backward kills should be available in undo/redo stack
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
-imap ;w <Esc>:wa<CR>
+imap <F7>w <Esc>:wa<CR>
 
 " #----------------- cmaps --------------------------------
 
@@ -90,14 +90,14 @@ cmap <c-f> <Right>
 cmap <c-b> <Left>
 
 " -----------------scripts------------------
-nmap ;p o<Esc>p
-nmap ;t 2ddo<Esc>k
-nnoremap ;y I<C-m><C-m><Esc>2k
-nnoremap ;q /:\w* =><cr>xelvec:<Esc>:w<cr>
-nmap ;s :echo CustomGrep()<cr>
-nnoremap ;m /.delay<cr>ved$a.deliver<Esc>:w<cr>
-nmap ;o :echom OpenLinkInFirefox()<cr>
+nmap <F7>p o<Esc>p
+nmap <F7>t 2ddo<Esc>k
+nnoremap <F7>y I<C-m><C-m><Esc>2k
+nnoremap <F7>q /:\w* =><cr>xelvec:<Esc>:w<cr>
+nmap <F7>s :echo CustomGrep()<cr>
+nnoremap <F7>m /.delay<cr>ved$a.deliver<Esc>:w<cr>
+nmap <F7>o :echom OpenLinkInFirefox()<cr>
 
-map ;v :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
+map <F7>v :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
 map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 vmap <C-x> d:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>

@@ -20,4 +20,4 @@ function! s:AddVmailContact()
   endif
 endfunction
 
-vnoremap ;v :call <SID>AddVmailContact()<CR>
+vnoremap <F7>v :call <SID>AddVmailContact()<CR>

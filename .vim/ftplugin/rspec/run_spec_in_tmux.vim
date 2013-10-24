@@ -29,6 +29,6 @@ function! s:RunTest()
   call system("tmux send-key -t 7 'rspec " . expand('%:p') . s:Notification() . "' Enter")
 endfunction
 
-nmap ;rt :call <SID>RunFocusedTest()<CR>
-nmap ;rs :call <SID>RunFocusedTestInSplit()<CR>
-nmap ;a :call <SID>RunTest()<CR>
+nmap <F7>rt :call <SID>RunFocusedTest()<CR>
+nmap <F7>rs :call <SID>RunFocusedTestInSplit()<CR>
+nmap <F7>a :call <SID>RunTest()<CR>
