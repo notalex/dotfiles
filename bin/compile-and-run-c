@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+
+rm /tmp/temp-c-file.out 2> /dev/null
+
+cp $1 /tmp/temp-c-file.c
+gcc /tmp/temp-c-file.c -o /tmp/temp-c-file.out
+
+[ -s /tmp/temp-c-file.out ] && /tmp/temp-c-file.out
