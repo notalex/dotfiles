@@ -38,6 +38,7 @@ hi notesUnixPath ctermfg=yellow
 hi notesShortHeading ctermfg=red
 
 let g:run_live_results_window_skip_threshold = 2
+let g:run_mode_map = '<F7>rr'
 
 " #-------------- Taglist config -------------
 " Explicit path is required when both ctags & exuberant ctags are in load path.
