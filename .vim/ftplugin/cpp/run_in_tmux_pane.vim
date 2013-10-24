@@ -7,4 +7,4 @@ function! s:RunTest()
   call system("tmux select-pane -t 0")
 endfunction
 
-nmap <F7>r :call <SID>RunTest()<CR>
+nmap <F7>rs :call <SID>RunTest()<CR>

@@ -15,5 +15,5 @@ function! s:RunTest()
   call system("tmux send-key -t 7 'cucumber " . expand('%:p') . s:Notification() . "' Enter")
 endfunction
 
-nmap <F7>r :call <SID>RunFocusedTest()<CR>
+nmap <F7>rs :call <SID>RunFocusedTest()<CR>
 nmap <F7>a :call <SID>RunTest()<CR>
