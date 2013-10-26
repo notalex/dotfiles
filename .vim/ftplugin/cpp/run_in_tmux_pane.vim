@@ -11,7 +11,6 @@ function! s:RunTest()
   call s:SwitchOrCreateResultsPane()
   call system("tmux send-key -t 1 'g++ " . expand('%:p') . "' Enter")
   call system("tmux send-key -t 1 ./a.out Enter")
-  call system("tmux select-pane -t 0")
 endfunction
 
 nmap <F7>rs :call <SID>RunTest()<CR>
