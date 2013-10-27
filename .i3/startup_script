@@ -12,3 +12,5 @@ firefox &
 
 clipit &
 nm-applet &
+bluetooth-applet &
+gnome-sound-applet &
