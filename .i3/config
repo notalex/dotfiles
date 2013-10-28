@@ -173,6 +173,7 @@ for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_togg
 for_window [class="Gvim"] floating enable
 for_window [class="Gcolor2"] floating enable
 for_window [class="Firefox" window_role="Preferences"] floating enable
+for_window [class="Smplayer" title="Find Subtitles"] floating enable
 
 # Firefox with pentadactyl gets the title "New Tab - Pentadactyl"
 # Move selenium spawned firefox to unused workspace.
