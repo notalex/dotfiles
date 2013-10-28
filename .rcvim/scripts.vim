@@ -29,7 +29,7 @@ function! CustomGrep()
     endif
 
     let s:folder = s:grep_options[1]
-    let s:exclude_dirs = '{.git,tmp,fixtures,coverage,' . s:grep_options[2] . '}'
+    let s:exclude_dirs = '{.git,tmp,fixtures,coverage,cassettes,' . s:grep_options[2] . '}'
     let s:options = s:pattern_and_options[3]
 
     " grep -r pattern app --include=*.{rb,}
