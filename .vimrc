@@ -92,7 +92,7 @@ cmap <c-b> <Left>
 " -----------------scripts------------------
 nmap <F7>p o<Esc>p
 nmap <F7>t 2ddo<Esc>k
-nnoremap <F7>y I<C-m><C-m><Esc>2k
+nnoremap <F7>y I<C-m><C-m><Esc>2ki
 nnoremap <F7>q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nmap <F7>s :echo CustomGrep()<cr>
 nnoremap <F7>m /.delay<cr>ved$a.deliver<Esc>:w<cr>
