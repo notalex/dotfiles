@@ -21,7 +21,13 @@ gaf() {
 }
 
 dump-development-db() {
-  pg_dump $(development-db-name) > ~/gitbasket/db/$(development-db-name).sql
+  if [ $1 ]; then
+    db_path=$1
+  else
+    db_path=$HOME/gitbasket/db/$(development-db-name).sql
+  fi
+
+  pg_dump $(development-db-name) > $db_path
 }
 
 load-development-db() {
