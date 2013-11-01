@@ -1,0 +1,11 @@
+name: notes
+flags: -u2
+hooks:
+  post:
+    - <%= select_window 2 %>
+windows:
+  - index: 2
+    panes: 'vim WorkFlow.notes'
+    hooks:
+      pre: 'cd ~/gitbasket'
+  - index: 7
