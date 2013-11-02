@@ -28,7 +28,7 @@ gcr() { git branch $1 origin/$1; }
 alias s='sudo'
 alias v='vagrant'
 alias src='source ~/.bash_profile'
-alias apti='sudo apt-get install -y'
+alias apti='sudo apt-get install -y --force-yes'
 alias aptr='sudo apt-get remove -y'
 alias apts='sudo apt-cache search'
 dpks() { cmd="dpkg --get-selections | grep $1"; echo $cmd; eval $cmd; }
