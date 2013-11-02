@@ -44,6 +44,7 @@ imap <Nul> <Space>
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
 imap <F7>w <Esc>:wa<CR>
+imap <F7> <Esc>
 
 " #----------------- cmaps --------------------------------
 
