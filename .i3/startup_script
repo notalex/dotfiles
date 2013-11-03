@@ -13,13 +13,7 @@ else
   guake -e 'automux small -fm'
 fi
 
-TMUX_ATTACH_NOTES=true gnome-terminal
-i3 move down
-i3 border none
-
-for i in 1 2 3; do
-  i3 resize shrink up
-done
+SETUP_NOTES_WINDOW=true gnome-terminal &
 
 firefox &
 
