@@ -6,7 +6,12 @@ bash ~/.xinput.conf
 
 guake -t &
 sleep 5
-guake -e 'automux small -fm'
+
+if $(tmux has-session -t small); then
+  guake -e 'tmx-attach-session small'
+else
+  guake -e 'automux small -fm'
+fi
 
 firefox &
 
