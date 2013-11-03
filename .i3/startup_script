@@ -14,6 +14,8 @@ else
 fi
 
 firefox &
+# Wait for firefox to startup.
+sleep 3
 i3 [class="Firefox"] move workspace 7
 
 SETUP_NOTES_WINDOW=true gnome-terminal &
