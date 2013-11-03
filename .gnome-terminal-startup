@@ -1,0 +1,9 @@
+# /usr/bin/env bash
+
+if [ $TMUX_ATTACH_NOTES ]; then
+  if $(tmux has-session -t notes); then
+    tmx-attach-session notes
+  else
+    automux notes
+  fi
+fi
