@@ -168,6 +168,10 @@ bindsym $mod+Shift+colon exec i3-input
 # Move mouse cursor to extreme right
 bindsym $mod+Shift+m exec edge-swarp
 
+bindsym XF86AudioMute exec pactl-toggle-mute
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +10%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -10%
+
 for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
 for_window [class="Gvim"] floating enable
 for_window [class="Gcolor2"] floating enable
