@@ -98,7 +98,3 @@ nnoremap <F7>q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nmap <F7>s :echo CustomGrep()<cr>
 nnoremap <F7>m /.delay<cr>ved$a.deliver<Esc>:w<cr>
 nmap <F7>o :echom OpenLinkInFirefox()<cr>
-
-map <F7>v :call setreg("\"",system("xclip -o -selection clipboard"))<CR>p
-map <c-c> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
-vmap <C-x> d:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
