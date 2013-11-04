@@ -6,3 +6,4 @@ xlsx*: localc
 deb: software-center
 (png|jpe?g|gif): eog
 (mp4|mpe?g|avi|mkv|divx|flv): smplayer
+html: firefox
