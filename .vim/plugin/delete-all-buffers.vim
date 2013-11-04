@@ -1,12 +1,12 @@
 function! s:DeleteAllBuffers()
-  let index = 1
+  let s:index = 1
 
-  while index <= bufnr('$')
-    if bufloaded(index)
-      execute 'bdelete ' . index
+  while s:index <= bufnr('$')
+    if bufloaded(s:index)
+      execute 'bdelete ' . s:index
     endif
 
-    let index += 1
+    let s:index += 1
   endwhile
 endfunction
 
