@@ -1,4 +1,4 @@
-# /usr/bin/env bash
+# vim: set ft=sh:
 
 if [ $SETUP_NOTES_WINDOW ]; then
   i3 move down
