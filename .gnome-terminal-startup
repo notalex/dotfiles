@@ -10,7 +10,5 @@ if [ $SETUP_NOTES_WINDOW ]; then
 
   if $(tmux has-session -t notes); then
     tmx-attach-session notes
-  else
-    automux notes
-  fi
+  fi # rvm is not detected on startup
 fi
