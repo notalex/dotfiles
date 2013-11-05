@@ -1,5 +1,5 @@
 function! OpenLinkInFirefox()
-  let pattern = '\v(http|www)[^ ]+'
+  let pattern = '\v(http|www)[^ >]+'
   let url = matchstr(getline('.'), pattern)
   call system('firefox-open ' . shellescape(url))
   return 'opened ' . url
