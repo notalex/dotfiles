@@ -27,7 +27,8 @@ function! s:SporkPresent()
 endfunction
 
 function! s:TestHelperPath()
-  return 'test'
+  let s:path = expand('%:.')
+  return matchstr(s:path, '\v.+test\/')
 endfunction
 
 function! s:RunTestInSplit()
