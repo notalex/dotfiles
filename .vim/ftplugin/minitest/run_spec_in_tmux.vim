@@ -1,5 +1,8 @@
 "function! s:FocusedTestName()
+  "" Since search backwards excludes current line, use j to move down first.
+  "normal! j
   "let s:line_no = search('\sit.\+do$', 'bn')
+  "normal! k
 
   "if s:line_no
     "let s:text = getline(s:line_no)
@@ -19,10 +22,24 @@ function! s:SwitchOrCreateResultsPane()
   endif
 endfunction
 
+function! s:SporkPresent()
+  return strlen(system('pidof spork'))
+endfunction
+
+function! s:TestHelperPath()
+  return 'test'
+endfunction
+
 function! s:RunTestInSplit()
   call s:SwitchOrCreateResultsPane()
-  call system("tmux send-key -t 1 'testdrb " . expand('%:p') . "' Enter")
-  call system("tmux select-pane -t 0")
+
+  if s:SporkPresent()
+    call system("tmux send-key -t 1 'testdrb " . expand('%:.') . "' Enter")
+  else
+    call system("tmux send-key -t 1 'ruby -I" . s:TestHelperPath() . " " . expand('%:.') . "' Enter")
+  endif
+
+  call system("tmux last-pane")
 endfunction
 
 function! s:RunTest()
