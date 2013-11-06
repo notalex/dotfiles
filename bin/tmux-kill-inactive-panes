@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+last-inactive-pane-info() {
+  tmux list-panes | grep -v -m 1 active | awk '{print $1}'
+}
+
+last-inactive-pane-number() {
+  expr match "$(last-inactive-pane-info)" '\([0-9]\)'
+}
+
+while [ $(tmux list-panes | wc -l) != 1 ]; do
+  tmux kill-pane -t $(last-inactive-pane-number)
+done
