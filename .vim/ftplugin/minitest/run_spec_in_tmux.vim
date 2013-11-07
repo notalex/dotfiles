@@ -28,7 +28,7 @@ endfunction
 
 function! s:TestHelperPath()
   let s:path = expand('%:.')
-  return matchstr(s:path, '\v.+test\/')
+  return matchstr(s:path, '\v.*test\/')
 endfunction
 
 function! s:RunTestInSplit()
