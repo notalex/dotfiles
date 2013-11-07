@@ -25,12 +25,25 @@ function! s:AddRequireLineInTest()
   endif
 endfunction
 
+function! s:AddDefaultCppDirectives()
+  call setline(1, '#include <iostream>')
+  call setline(2, 'using namespace std;')
+endfunction
+
+function! s:AddDefaultCDirectives()
+  call setline(1, '#include <stdio.h>')
+endfunction
+
 augroup nonRepeater
  au!
  au BufRead,BufNewFile *.coffee.erb call CoffeeMaker()
  au BufRead,BufNewFile *.jst.ejs set filetype=html
  au BufRead,BufNewFile *.conf set filetype=conf
+
  au BufNewFile *.rb call s:AddRequireLineInTest()
+ au BufNewFile *.cpp call <SID>AddDefaultCppDirectives()
+ au BufNewFile *.c call <SID>AddDefaultCDirectives()
+
  au FileType qf nmap <buffer> <CR> :.cc<CR>
  au CmdwinEnter * nnoremap <buffer> <CR> <CR>
  au FilterWritePre * call s:SetupDiffWindow()
