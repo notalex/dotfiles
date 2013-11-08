@@ -29,6 +29,7 @@ Bundle 'notalex/snipmate.vim'
 Bundle 'notalex/vim-run-live'
 Bundle 'notalex/vim-strip-trailers'
 Bundle 'notalex/vim-git-helpers'
+Bundle 'notalex/vim-run-tests'
 
 filetype plugin on
 
