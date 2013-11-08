@@ -3,7 +3,7 @@ function! s:FocusedTestName()
   normal! j
 
   let l:it_line_no = search('\v\sit.+do$', 'bn', 1)
-  let l:def_line_no = search('\v\s+def\s', 'bn', 1)
+  let l:def_line_no = search('\v\s+def %(\w|_)+$', 'bn', 1)
 
   normal! k
 
