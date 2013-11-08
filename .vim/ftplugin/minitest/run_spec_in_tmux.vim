@@ -40,11 +40,11 @@ function! s:TestHelperPath()
   return matchstr(s:path, '\v.*test\/')
 endfunction
 
-function! s:RunTestInSplit()
+function! s:RunTestInSplit(run_focused)
   call s:SwitchOrCreateResultsPane()
 
   " strlen(0) => 1
-  if strlen(s:FocusedTestName()) > 1
+  if strlen(s:FocusedTestName()) > 1 && a:run_focused
     let l:test_name_option = '--name /' . s:FocusedTestName() . '/'
   else
     let l:test_name_option = ''
@@ -65,5 +65,6 @@ function! s:RunTest()
   call system("tmux send-key -t 7 'testdrb " . expand('%:p') . s:Notification() . "' Enter")
 endfunction
 
-nmap <F7>rs :call <SID>RunTestInSplit()<CR>
+nmap <F7>rf :call <SID>RunTestInSplit(1)<CR>
+nmap <F7>rs :call <SID>RunTestInSplit(0)<CR>
 nmap <F7>rt :call <SID>RunTest()<CR>
