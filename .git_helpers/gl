@@ -1,10 +1,12 @@
 #! /bin/bash
 
-if [[ $1 = *[[:digit:]]* ]]; then
+if [[ $2 =~ [0-9] ]]; then
+  folder=$1
+  count=$2
+elif [[ $1 =~ [0-9] ]]; then
   count=$1
-  shift
 else
   count=5
 fi
 
-git log --oneline -$count $@
+git log --oneline -$count $folder
