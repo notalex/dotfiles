@@ -2,7 +2,7 @@ function! s:FocusedTestName()
   " Since search backwards excludes current line, use j to move down first.
   normal! j
 
-  let l:it_line_no = search('\v\sit.+do$', 'bn', 1)
+  let l:it_line_no = search('\v\s(it|test).+do$', 'bn', 1)
   let l:def_line_no = search('\v\s+def %(\w|_)+$', 'bn', 1)
 
   normal! k
