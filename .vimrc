@@ -60,7 +60,7 @@ cabbrev vb vertical sbuffer
 " ------------------set------------------------------
 
 set modelines=1
-set smartindent
+set autoindent
 set nobackup
 set ignorecase
 set tabstop=2
