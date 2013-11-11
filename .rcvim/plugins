@@ -17,8 +17,6 @@ Bundle 'vim-scripts/AnsiEsc.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'TwitVim'
 
-Bundle 'nanotech/jellybeans.vim'
-
 Bundle 'xolox/vim-notes'
   Bundle 'xolox/vim-misc'
 
