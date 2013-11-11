@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+value=$(tmux show-buffer -b $1)
+tmux send-key "$value"
