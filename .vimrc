@@ -2,9 +2,7 @@ set nocompatible
 source ~/.rcvim/plugins
 source ~/.rcvim/scripts.vim
 source ~/.rcvim/autocommands
-colorscheme dark-ruby
 syntax on
-source ~/.rcvim/custom_highlighting
 source $VIMRUNTIME/macros/matchit.vim
 
 " #-----------------maps------------------
