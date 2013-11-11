@@ -1,0 +1,15 @@
+" vim: set ft=vim:
+
+" notes
+hi notesTagName ctermfg=4
+hi notesBold ctermfg=14
+hi notesItalic ctermfg=12
+hi notesDoubleQuoted ctermfg=3
+hi notesSingleQuoted ctermfg=7
+hi notesXXX ctermfg=red
+hi notesBlockQuote ctermfg=lightgreen
+hi notesUnixPath ctermfg=yellow
+hi notesShortHeading ctermfg=red
+hi notesHyphen ctermfg=green
+hi notesAsterisk ctermfg=red
+hi notesBlockQuote ctermfg=215
