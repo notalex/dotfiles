@@ -57,6 +57,7 @@ cabbrev vb vertical sbuffer
 
 " ------------------set------------------------------
 
+set t_Co=256
 set modelines=1
 set autoindent
 set nobackup
