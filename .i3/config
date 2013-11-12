@@ -166,10 +166,10 @@ bindsym $mod+Shift+B border none
 bindsym $mod+Shift+colon exec i3-input
 
 # Move mouse cursor to extreme right
-bindsym $mod+Shift+m exec edge-swarp
+bindsym $mod+Shift+m exec cornered-and-disabled-mouse
 
 # Toggle touchpad
-bindsym $mod+shift+i exec toggle-touchpad
+bindsym $mod+shift+i exec xinput set-prop 11 "Device Enabled" 1
 
 bindsym XF86AudioMute exec pactl-toggle-mute
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +10%
