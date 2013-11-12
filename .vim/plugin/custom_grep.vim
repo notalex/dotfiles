@@ -35,4 +35,4 @@ function! s:CustomGrep()
   endif
 endfunction
 
-nmap <F7>s :echo <SID>CustomGrep()<cr>
+nmap <F6>s :echo <SID>CustomGrep()<cr>

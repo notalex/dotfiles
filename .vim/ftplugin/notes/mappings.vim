@@ -1,1 +1,1 @@
-nmap <F7>r :SearchNotes<Space>
+nmap <F6>r :SearchNotes<Space>

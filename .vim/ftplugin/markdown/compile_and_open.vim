@@ -7,4 +7,4 @@ function! s:CompileAndOpenMarkdown()
   end
 endfunction
 
-nmap <F7>rs :echo <SID>CompileAndOpenMarkdown()<CR>
+nmap <F6>rs :echo <SID>CompileAndOpenMarkdown()<CR>

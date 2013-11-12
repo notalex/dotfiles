@@ -17,6 +17,6 @@ function! s:CopyToClipboard()
   call setreg('"', s:previous_yank)
 endfunction
 
-nmap <F7>vv :call <SID>PasteFromTmuxClipboard()<CR>
-nmap <F7>vc :call <SID>PasteFromClipboard()<CR>
+nmap <F6>vv :call <SID>PasteFromTmuxClipboard()<CR>
+nmap <F6>vc :call <SID>PasteFromClipboard()<CR>
 vmap <C-c> :<C-u>call <SID>CopyToClipboard()<CR>

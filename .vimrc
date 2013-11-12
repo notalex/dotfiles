@@ -15,14 +15,14 @@ map <C-h> <Leader>c<space>
 
 nmap <CR> O<Esc>
 nmap <Space> a<Space><Esc>
-nmap <F7>nt :NERDTreeToggle<CR>
-nmap <F7>nf :NERDTreeFind<CR>
-nmap <F7>d :filetype detect<cr>
-nmap <F7>j i<CR><ESC>
-nmap <F7>hs :set hlsearch!<cr>
-nmap <F7>bs :set scrollbind!<cr>
-nmap <F7>e :edit!<cr>
-nmap <F7>w :wa<CR>
+nmap <F6>nt :NERDTreeToggle<CR>
+nmap <F6>nf :NERDTreeFind<CR>
+nmap <F6>d :filetype detect<cr>
+nmap <F6>j i<CR><ESC>
+nmap <F6>hs :set hlsearch!<cr>
+nmap <F6>bs :set scrollbind!<cr>
+nmap <F6>e :edit!<cr>
+nmap <F6>w :wa<CR>
 nmap < <l
 nmap > >l
 nmap <C-z> <nop>
@@ -42,8 +42,8 @@ imap <Nul> <Space>
 " Backward kills should be available in undo/redo stack
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
-imap <F7>w <Esc>:wa<CR>
-imap <F7> <Esc>
+imap <F6>w <Esc>:wa<CR>
+imap <F6> <Esc>
 
 " #----------------- cmaps --------------------------------
 
@@ -91,9 +91,9 @@ cmap <c-f> <Right>
 cmap <c-b> <Left>
 
 " -----------------scripts------------------
-nmap <F7>p o<Esc>p
-nmap <F7>t 2ddo<Esc>k
-nnoremap <F7>y I<C-m><C-m><Esc>2ka
-nnoremap <F7>q /:\w* =><cr>xelvec:<Esc>:w<cr>
-nnoremap <F7>m /.delay<cr>ved$a.deliver<Esc>:w<cr>
-nmap <F7>o :echom OpenLinkInFirefox()<cr>
+nmap <F6>p o<Esc>p
+nmap <F6>t 2ddo<Esc>k
+nnoremap <F6>y I<C-m><C-m><Esc>2ka
+nnoremap <F6>q /:\w* =><cr>xelvec:<Esc>:w<cr>
+nnoremap <F6>m /.delay<cr>ved$a.deliver<Esc>:w<cr>
+nmap <F6>o :echom OpenLinkInFirefox()<cr>

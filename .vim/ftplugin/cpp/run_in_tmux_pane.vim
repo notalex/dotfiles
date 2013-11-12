@@ -13,4 +13,4 @@ function! s:RunTest()
   call system("tmux send-key -t 1 ./a.out Enter")
 endfunction
 
-nmap <F7>rs :call <SID>RunTest()<CR>
+nmap <F6>rs :call <SID>RunTest()<CR>

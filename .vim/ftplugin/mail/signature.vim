@@ -1,1 +1,1 @@
-nmap <F7>1 o<Enter>Regards,<Enter>Alex<Esc>
+nmap <F6>1 o<Enter>Regards,<Enter>Alex<Esc>
