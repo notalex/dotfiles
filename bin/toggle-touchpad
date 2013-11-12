@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+temp_file_name=/tmp/touchpad_on
+
+if [ -e $temp_file_name ]; then
+  rm $temp_file_name
+  next_touchpad_state=0
+else
+  touch $temp_file_name
+  next_touchpad_state=1
+fi
+
+xinput set-prop 11 "Device Enabled" $next_touchpad_state

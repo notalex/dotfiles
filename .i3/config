@@ -168,6 +168,9 @@ bindsym $mod+Shift+colon exec i3-input
 # Move mouse cursor to extreme right
 bindsym $mod+Shift+m exec edge-swarp
 
+# Toggle touchpad
+bindsym $mod+shift+i exec toggle-touchpad
+
 bindsym XF86AudioMute exec pactl-toggle-mute
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +10%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -10%
