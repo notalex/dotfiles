@@ -51,3 +51,7 @@ rr() {
 on-vagrant() {
   [ $HOME == '/home/vagrant' ] && echo true
 }
+
+g-set-upstream() {
+  git branch --set-upstream $1 origin/$1
+}
