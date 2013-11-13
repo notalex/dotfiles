@@ -1,8 +1,11 @@
 function! OpenLinkInFirefox()
   let pattern = '\v(http|www)[^ >]+'
   let url = matchstr(getline('.'), pattern)
-  call system('firefox-open ' . shellescape(url))
-  return 'opened ' . url
+
+  if strlen(matchstr(url, '\v^(http|www)'))
+    call system('firefox-open ' . shellescape(url))
+    return 'opened ' . url
+  endif
 endfunction
 
 let g:last_visited_tab = 1
