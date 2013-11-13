@@ -15,4 +15,4 @@ function! s:DeleteAllBuffers()
   return s:count - 1 . ' buffers deleted!'
 endfunction
 
-command! Bdall echo <SID>DeleteAllBuffers()
+command! Bdall echom <SID>DeleteAllBuffers()
