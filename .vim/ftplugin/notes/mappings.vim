@@ -1,1 +1,1 @@
-nmap <F6>r :SearchNotes<Space>
+cabbrev s SearchNotes
