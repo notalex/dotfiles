@@ -25,6 +25,7 @@ Bundle 'notalex/vim-strip-trailers'
 Bundle 'notalex/vim-git-helpers'
 Bundle 'notalex/vim-run-tests'
 Bundle 'notalex/vim-syntax-highlighter'
+Bundle 'notalex/vim-buff-killer'
 
 filetype plugin on
 
