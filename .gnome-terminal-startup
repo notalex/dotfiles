@@ -1,6 +1,8 @@
 # vim: set ft=sh:
 
-if [ $SETUP_NOTES_WINDOW ]; then
+if [ -e /tmp/setup-notes-window ]; then
+  rm /tmp/setup-notes-window
+
   i3 move down
   i3 border none
 

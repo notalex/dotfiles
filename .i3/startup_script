@@ -18,7 +18,8 @@ firefox &
 sleep 3
 i3 [class="Firefox"] move workspace 7
 
-SETUP_NOTES_WINDOW=true gnome-terminal &
+touch /tmp/setup-notes-window
+gnome-terminal &
 
 clipit &
 nm-applet &
