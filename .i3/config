@@ -178,8 +178,9 @@ for_window [class="Gcolor2"] floating enable
 for_window [class="Firefox" window_role="Preferences"] floating enable
 for_window [class="Smplayer" title="Find Subtitles"] floating enable
 
-# Firefox with pentadactyl gets the title "New Tab - Pentadactyl"
+# Before Pentadactyl is fully loaded, FF has the title "Mozilla Firefox".
 # Move selenium spawned firefox to unused workspace.
-for_window [title="Mozilla Firefox$"] move workspace 8
+# To apply on future windows, for_window has to be defined in config.
+#for_window [title="Mozilla Firefox$"] move workspace 8
 
 exec --no-startup-id $HOME/.i3/startup_script
