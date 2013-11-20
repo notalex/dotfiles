@@ -18,7 +18,7 @@ nmap <CR> O<Esc>
 nmap <Space> a<Space><Esc>
 nmap <F6>nt :NERDTreeToggle<CR>
 nmap <F6>nf :NERDTreeFind<CR>
-nmap <F6>d :filetype detect<cr>
+nmap <F6>dt :filetype detect<cr>
 nmap <F6>j i<CR><ESC>
 nmap <F6>hs :set hlsearch!<cr>
 nmap <F6>hc :set cursorline!<cr>
@@ -99,3 +99,5 @@ nnoremap <F6>y I<C-m><C-m><Esc>2ka
 nnoremap <F6>q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nnoremap <F6>m /.delay<cr>ved$a.deliver<Esc>:w<cr>
 nmap <F6>o :echom OpenLinkInFirefox()<cr>
+nmap <F6>o :echom OpenLinkInFirefox()<cr>
+nmap <F6>dg Odebugger; true<Esc>:w<CR>
