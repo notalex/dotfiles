@@ -9,7 +9,11 @@ def options_string
 end
 
 def remote_name
-  remote_name = options['r'] || :origin
+  partial_remote_name = options['r']
+  return :origin unless partial_remote_name
+
+  remote_names = %x[git remote show].split("\n")
+  remote_names.grep(/#{ partial_remote_name }/).first
 end
 
 def remote_branch_name
