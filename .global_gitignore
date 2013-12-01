@@ -12,3 +12,4 @@ vmail.log
 .ruby-version
 .pt
 .rspec
+spec/tmp
