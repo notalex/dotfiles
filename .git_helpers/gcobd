@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+
+current_branch_name=$(git_stats branch_name)
+git checkout -b $1
+git branch -d $current_branch_name
