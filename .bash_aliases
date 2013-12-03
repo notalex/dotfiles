@@ -67,6 +67,7 @@ alias ikonverse-ssh-server='thin start --ssl --ssl-verify --ssl-key-file ~/Docum
 alias rjw='rake jobs:work'
 
 # rails
+alias rgm='rails generate migration'
 alias rdm='rake db:migrate; rake db:migrate RAILS_ENV=test'
 alias rd-migrate-redo='rake db:migrate:redo; rake db:migrate:redo RAILS_ENV=test'
 alias rd-rollback='rake db:rollback; rake db:rollback RAILS_ENV=test'
