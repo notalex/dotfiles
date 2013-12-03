@@ -43,3 +43,5 @@ let g:NERDTreeMapJumpNextSibling = '<C-n>'
 " ------------- TwitVim -------
 let twitvim_enable_ruby = 1
 let twitvim_timestamp_format = '%R %F'
+
+let g:strip_whitespaces_on_save = 1
