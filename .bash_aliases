@@ -29,6 +29,7 @@ gcr() { git branch $1 origin/$1; }
 alias s='sudo'
 alias v='vagrant'
 alias src='source ~/.bash_profile'
+alias appa='sudo add-apt-repository'
 alias apti='sudo apt-get install -y --force-yes'
 alias aptr='sudo apt-get remove -y'
 alias apts='sudo apt-cache search'
