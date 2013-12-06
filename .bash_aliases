@@ -14,7 +14,7 @@ alias gcm="git commit -m"
 alias gcma="git commit --amend"
 alias gc-am="git commit -a -m"
 alias grl="git reflog"
-alias g_config="git config --list"
+alias g-config="git config --list"
 alias gra="git remote add"
 alias gbv="git branch -v"
 alias g-save="git stash; git stash apply"
@@ -40,7 +40,7 @@ les() { $@ | less; }
 hel() { $@ --help; }
 alias ccd='pushd > /dev/null'
 alias pcd='popd > /dev/null'
-alias speed_test="wget --output-document=/dev/null http://speedtest.sea01.softlayer.com/speedtest/speedtest/random1000x1000.jpg"
+alias speedtest="wget --output-document=/dev/null http://speedtest.sea01.softlayer.com/speedtest/speedtest/random1000x1000.jpg"
 alias disk-usage="du -h --max-depth=1 $@"
 xin() { $@ | xclip -selection clipboard; }
 alias xout='xclip -o -selection clipboard'
@@ -51,13 +51,13 @@ alias zzh='sudo pm-hibernate'
 
 # gems
 alias spc='spork cucumber'
-alias cuke_spork='rake db:test:prepare && spork cucumber'
-alias migrate_spork='rake db:migrate RAILS_ENV=test; spork cucumber'
+alias cuke-spork='rake db:test:prepare && spork cucumber'
+alias migrate-spork='rake db:migrate RAILS_ENV=test; spork cucumber'
 alias reset-spork='rake db:reset RAILS_ENV=test; rake db:migrate RAILS_ENV=test; spork'
 alias recreate-test-db='rake db:drop RAILS_ENV=test; rake db:create RAILS_ENV=test; rake db:migrate RAILS_ENV=test --trace;'
 alias test-migrate='rake db:migrate RAILS_ENV=test --trace;'
-alias redo_migrate_spork='rake db:migrate:redo RAILS_ENV=test; spork cucumber'
-delayed_emails() { rake jobs:clear; rake jobs:work; }
+alias redo-migrate-spork='rake db:migrate:redo RAILS_ENV=test; spork cucumber'
+delayed-emails() { rake jobs:clear; rake jobs:work; }
 alias cux='ntf cucumber --no-source -p run_all features/'
 alias mnt='ruby -Itest test/'
 alias mns='ntf ruby -Ispec spec/'
