@@ -108,10 +108,10 @@ autosave_bookmarks = True
 show_cursor = False
 
 # One of: size, basename, mtime, type
-sort = 'natural'
+sort = 'mtime'
 sort_reverse = False
 sort_case_insensitive = False
-sort_directories_first = True
+sort_directories_first = False
 
 # Enable this if key combinations with the Alt Key don't work for you.
 # (Especially on xterm)
