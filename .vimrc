@@ -34,6 +34,10 @@ nnoremap ? ?\v
 " Avoid Ex mode
 nmap Q <nop>
 
+" ` is harder to reach than '
+nnoremap ` '
+nnoremap ' `
+
 " #---------------- vmaps --------------------------
 
 vmap K <nop>
