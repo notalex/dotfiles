@@ -25,3 +25,4 @@ bluetooth-applet &
 gnome-sound-applet &
 
 tmux set -g status off
+edge-swarp
