@@ -4,7 +4,7 @@ set bind-tty-special-chars off
 Control-k: shell-expand-line
 Control-w: backward-kill-word
 
-$if mode=vi
+set keymap vi-insert
   "\C-l": clear-screen
   "\C-p":history-search-backward
   "\C-n":history-search-forward
@@ -12,4 +12,3 @@ $if mode=vi
   "\C-e":end-of-line
   "\C-f":forward-char
   "\C-b":backward-char
-$endif
