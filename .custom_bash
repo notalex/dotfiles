@@ -2,6 +2,7 @@
 
 source ~/.bash_functions
 
+# Disable suspend.
 stty stop undef
 
 export EDITOR=vim
