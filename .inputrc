@@ -11,6 +11,8 @@ set keymap vi-insert
   Control-f: forward-char
   Control-b: backward-char
   Control-k: shell-expand-line
+  Control-i: menu-complete
+  Control-o: menu-complete-backward
 
 set keymap vi-command
   "gUw": upcase-word
