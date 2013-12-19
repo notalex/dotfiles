@@ -1,6 +1,7 @@
 set editing-mode vi
 set bind-tty-special-chars off
 set completion-ignore-case On
+set mark-symlinked-directories On
 
 set keymap vi-insert
   Control-w: backward-kill-word
