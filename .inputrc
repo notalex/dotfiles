@@ -1,3 +1,7 @@
+$if mode=emacs
+  Control-g: vi-editing-mode
+$endif
+
 set editing-mode vi
 set bind-tty-special-chars off
 set completion-ignore-case On
