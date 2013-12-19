@@ -13,6 +13,7 @@ set keymap vi-insert
   Control-k: shell-expand-line
   Control-i: menu-complete
   Control-o: menu-complete-backward
+  Control-g: "gs\n"
 
 set keymap vi-command
   "gUw": upcase-word
