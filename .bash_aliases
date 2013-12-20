@@ -5,7 +5,7 @@ alias h='heroku'
 alias hr='heroku run'
 alias h-tail='heroku logs --tail'
 alias h-pg-info='heroku pg:info'
-alias h-console="heroku run 'echo \"set editing-mode vi\" > .inputrc; rails c'"
+alias h-console="heroku run \"echo '$(cat ~/.inputrc)' > .inputrc; rails c\""
 heroku-push() { gps -r heroku $@ m; heroku run rake db:migrate; }
 
 # git
