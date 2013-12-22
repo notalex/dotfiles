@@ -184,3 +184,5 @@ for_window [class="Smplayer" title="Find Subtitles"] floating enable
 #for_window [title="Mozilla Firefox$"] move workspace 8
 
 exec --no-startup-id $HOME/.i3/startup_script
+
+bindsym $mod+End exec blank
