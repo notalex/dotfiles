@@ -26,7 +26,7 @@ function! s:CustomGrep()
     let s:options = s:pattern_and_options[3]
 
     " grep -r pattern app --include=*.{rb,}
-    silent execute "grep -r '" . s:escaped_pattern . "' " . s:folder .
+    silent execute "grep -Pr '" . s:escaped_pattern . "' " . s:folder .
       \' --exclude-from=' . $HOME . '/.better-grep-exclusions' .
       \' --exclude-dir=' . s:exclude_dirs .
       \' --include=' . s:type . s:options
