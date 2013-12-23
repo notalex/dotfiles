@@ -21,6 +21,8 @@ set keymap vi-insert
   Control-o: menu-complete-backward
   Control-g: "gs\n"
 
+  "\C-x\C-i": possible-completions
+
 set keymap vi-command
   "gUw": upcase-word
   "guw": downcase-word
