@@ -14,7 +14,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/Auto-Pairs'
 Bundle 'vim-scripts/AnsiEsc.vim'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'ZoomWin'
 Bundle 'TwitVim'
 
 Bundle 'xolox/vim-notes'
