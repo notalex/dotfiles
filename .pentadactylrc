@@ -36,6 +36,9 @@ map -m hints <C-m> <CR>
 " To jump to a link found after search
 nmap <C-m> <CR>
 nmap w :open wikipedia-en<Space>
+" Default C-d/C-u do not work correctly.
+nmap <C-u> 19k
+nmap <C-d> 19j
 " Useful to center the search result.
 nmap zz <C-d>
 nmap gl <C-^>
