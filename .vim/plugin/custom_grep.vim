@@ -7,8 +7,6 @@ function! s:CustomGrep()
 
     let s:pattern = s:pattern_and_options[2]
     let s:replaced_pattern = substitute(s:pattern, '\s', '.', 'g')
-    let s:escaped_pattern = escape(s:replaced_pattern, '+()')
-
 
     let s:options_string = s:pattern_and_options[1]
     let s:grep_options = split(s:options_string, ' ')
@@ -26,7 +24,7 @@ function! s:CustomGrep()
     let s:options = s:pattern_and_options[3]
 
     " grep -r pattern app --include=*.{rb,}
-    silent execute "grep -Pr '" . s:escaped_pattern . "' " . s:folder .
+    silent execute "grep -Pr '" . s:replaced_pattern . "' " . s:folder .
       \' --exclude-from=' . $HOME . '/.better-grep-exclusions' .
       \' --exclude-dir=' . s:exclude_dirs .
       \' --include=' . s:type . s:options
