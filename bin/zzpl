@@ -2,10 +2,6 @@
 
 set -e
 
-apl() {
-  pushd $HOME; git pull origin master; cd ~/gitbasket; git pull origin master; popd;
-}
-
 aps
 i3lock
 sudo pm-hibernate

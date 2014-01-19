@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+pushd $HOME; git pull origin master; cd ~/gitbasket; git pull origin master; popd;
