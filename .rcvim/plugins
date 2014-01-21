@@ -13,12 +13,12 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/Auto-Pairs'
 Bundle 'vim-scripts/AnsiEsc.vim'
-Bundle 'vim-ruby/vim-ruby'
 Bundle 'TwitVim'
 
 Bundle 'xolox/vim-notes'
   Bundle 'xolox/vim-misc'
 
+Bundle 'notalex/vim-potent-motion'
 Bundle 'notalex/snipmate.vim'
 Bundle 'notalex/vim-run-live'
 Bundle 'notalex/vim-strip-trailers'
