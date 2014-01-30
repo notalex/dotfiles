@@ -34,5 +34,5 @@ end
 
 def local_branch_name
   branch_string = %x[ git branch ]
-  branch_string.slice(/(?<=\* ).+/)
+  branch_string.slice(/\* (.+)/, 1)
 end
