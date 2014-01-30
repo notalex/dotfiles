@@ -38,6 +38,9 @@ nmap Q <nop>
 nnoremap ` '
 nnoremap ' `
 
+nmap <Down> <C-e>
+nmap <Up> <C-y>
+
 " #---------------- vmaps --------------------------
 
 vmap K <nop>
