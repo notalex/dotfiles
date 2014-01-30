@@ -6,6 +6,7 @@ source ~/.bash_functions
 stty stop undef
 
 export EDITOR=vim
+export TERMINAL=xfce4-terminal
 
 add_to_path $HOME/.rvm/bin
 add_to_path $HOME/.git_helpers

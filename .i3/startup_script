@@ -17,7 +17,7 @@ firefox &
 sleep 10
 
 touch /tmp/setup-notes-window
-gnome-terminal &
+i3-sensible-terminal &
 
 clipit &
 nm-applet &
