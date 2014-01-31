@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+
+if [ -e $HOME/bin/persist-notifications ]; then
+  option='-u critical'
+else
+  option='-t 5000'
+fi
+
+notify-send $option "$@"

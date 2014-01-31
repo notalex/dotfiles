@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+indicator=$HOME/bin/persist-notifications
+
+if [ -e $indicator ]; then
+  rm $indicator
+  message='New notifications will not be persisted'
+else
+  touch $indicator
+  message='Persistent notifications enabled'
+fi
+
+notify-send "$message"

@@ -21,7 +21,7 @@ module Notify
     return if from_alex?(plain_text_content)
 
     sender, message = split_content(plain_text_content)
-    %x[notify-send -t 5000 "#{ sender }" "#{ message }"]
+    %x[notify "#{ sender }" "#{ message }"]
   end
 
   private
