@@ -8,7 +8,7 @@
 (toggle-menu-bar-mode-from-frame -1)
 
 ;; Enable evil mode By Default
-(add-to-list 'load-path "~/.emacs.d/elpa/evil-1.0.7")
+(add-to-list 'load-path "~/.emacs.d/elpa/evil-1.0.8")
 (require 'evil)
 (evil-mode 1)
 
