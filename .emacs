@@ -25,6 +25,8 @@
       "http://marmalade-repo.org/packages/"))
 
 (package-initialize)
+(require 'helm-config)
+(helm-mode 1)
 
 ;; functions
 (defun backward-kill-line (arg)
