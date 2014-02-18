@@ -1,8 +1,6 @@
 # vim: set ft=sh:
 
 # Heroku
-alias h='heroku'
-alias hr='heroku run'
 alias h-tail='heroku logs --tail'
 alias h-pg-info='heroku pg:info'
 alias h-console="heroku run \"echo '$(cat ~/.inputrc)' > .inputrc; rails c\""
