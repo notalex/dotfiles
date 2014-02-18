@@ -12,10 +12,16 @@ class Heroku
         puts "#{ index + 1 }: #{ app_name }"
       end
 
-      user_input = get_user_input
-      app_name = get_matching_app_name(user_input)
+      puts "#{ heroku_apps.length + 1 }: All"
 
-      execute_command_for_app(app_name)
+      user_input = get_user_input
+      app_names = get_matching_app_names(user_input)
+
+      print_content(app_names.join(' | '), false)
+
+      app_names.each do |app_name|
+        execute_command_for_app(app_name)
+      end
     else
       execute_command
     end
@@ -23,10 +29,10 @@ class Heroku
 
   private
 
-  def print_content(content)
+  def print_content(content, add_bottom = true)
     puts '-' * content.length
     puts content
-    puts '-' * content.length
+    puts '-' * content.length if add_bottom
   end
 
   def execute_command_for_app(app_name = nil)
@@ -42,14 +48,16 @@ class Heroku
     system(command)
   end
 
-  def get_matching_app_name(user_input)
+  def get_matching_app_names(user_input)
     index = user_input.to_i - 1
 
-    if index < 0 || index >= heroku_apps.length
+    if index < 0 || index > heroku_apps.length
       puts 'Incorrect entry'
       exit
+    elsif index == heroku_apps.length
+      heroku_apps
     else
-      heroku_apps[index]
+      [heroku_apps[index]]
     end
   end
 
