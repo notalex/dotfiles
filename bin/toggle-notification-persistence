@@ -10,4 +10,4 @@ else
   message='Persistent notifications enabled'
 fi
 
-notify-send "$message"
+notify-send -t 2000 "$message"
