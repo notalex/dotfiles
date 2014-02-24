@@ -1,0 +1,14 @@
+#! /usr/bin/env bash
+
+i3 move down
+i3 border none
+
+for i in 1 2 3; do
+  i3 resize shrink up
+done
+
+if $(tmux has-session -t notes); then
+  tmx-attach-session notes
+else
+  automux notes
+fi

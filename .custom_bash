@@ -18,4 +18,3 @@ automux_installed && complete -W "$(automux blueprint list)" automux
 source ~/.bash_aliases
 source ~/.bash_prompt
 source ~/.rails-environment-variables
-source ~/.gnome-terminal-startup

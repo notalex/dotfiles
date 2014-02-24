@@ -16,8 +16,7 @@ fi
 firefox &
 sleep 10
 
-touch /tmp/setup-notes-window
-xfce4-terminal &
+i3-msg exec 'xfce4-terminal -e setup-notes-session'
 
 clipit &
 nm-applet &
