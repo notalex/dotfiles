@@ -1,9 +1,9 @@
-name: large
+name: '-n:'
 root: '-r:'
 flags: -u2
 hooks:
   post:
-    - <%= link_window 'small', 'finch' %>
+    - <%= link_window 'small', 'finch', 1 %>
     - <%= link_window 'small', 4, 4 %>
     - <%= select_window 2 %>
 windows:
@@ -12,12 +12,9 @@ windows:
     index: 2
   - panes: vim
     index: 3
-  - panes: vim
+  - panes: 'zeus start'
     index: 5
-  - index: 6
   - index: 7
   - index: 8
   - index: 9
     panes: rails console
-  - index: 11
-    panes: 'rake db:migrate RAILS_ENV=test; git checkout db/schema.rb; spork cucumber'
