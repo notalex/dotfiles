@@ -1,4 +1,4 @@
-name: exp
+name: '-n:'
 root: ~/experiments/'-r:'
 flags: -u2
 hooks:
