@@ -55,3 +55,7 @@ on-vagrant() {
 g-set-upstream() {
   git branch --set-upstream $1 origin/$1
 }
+
+brk() {
+  sleep $1; notify-send -u critical 'Break!!'
+}
