@@ -57,5 +57,5 @@ g-set-upstream() {
 }
 
 brk() {
-  sleep $1; notify-send -u critical 'Break!!'
+  sleep $@; notify-send -u critical 'Break!!'
 }
