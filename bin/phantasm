@@ -1,0 +1,20 @@
+#! /usr/bin/env bash
+
+output_filepath='/tmp/phantasm-output'
+
+file_contents=$(cat $1)
+
+echo 'try {' > $output_filepath
+echo "$file_contents" >> $output_filepath
+
+cat << EOF >> $output_filepath
+}
+catch (error) {
+  console.log(error);
+}
+finally {
+  phantom.exit();
+}
+EOF
+
+phantomjs $output_filepath
