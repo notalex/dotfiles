@@ -14,5 +14,5 @@ windows:
   - index: 8
     opt: '-a'
   - index: 9
-    panes: irb
-    opt: '-i'
+    panes: '-c:'
+    opt: '-9'
