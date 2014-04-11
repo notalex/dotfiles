@@ -185,4 +185,7 @@ for_window [class="Smplayer" title="Find Subtitles"] floating enable
 
 exec --no-startup-id $HOME/.i3/startup_script
 
+# Set black background for all workspaces.
+exec xsetroot -solid black
+
 bindsym $mod+End exec blank
