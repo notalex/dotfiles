@@ -5,7 +5,9 @@ hooks:
     - <%= select_window 2 %>
 windows:
   - index: 2
-    panes: 'vim WorkFlow.notes'
+    panes:
+      - vim WorkFlow.notes
+      - tmux select-layout even-horizontal; tmux resize -R 10; vim /tmp/del
     hooks:
-      pre: 'cd ~/gitbasket'
+      pre: cd ~/gitbasket
   - index: 7
