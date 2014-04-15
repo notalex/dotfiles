@@ -7,13 +7,13 @@ hooks:
     - <%= link_window 'small', 4, 4 %>
     - <%= select_window 2 %>
 windows:
-  - panes: rails server
+  - panes:
+    - rails server
+    - zeus start
   - panes: vim
     index: 2
   - panes: vim
     index: 3
-  - panes: 'zeus start'
-    index: 5
   - index: 7
   - index: 8
   - index: 9
