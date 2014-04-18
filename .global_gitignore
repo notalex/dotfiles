@@ -14,3 +14,4 @@ vmail.log
 .rspec
 spec/tmp
 Vagrantfile
+.vagrant/
