@@ -38,7 +38,7 @@ les() { $@ | less; }
 hel() { $@ --help; }
 alias ccd='pushd > /dev/null'
 alias pcd='popd > /dev/null'
-alias speedtest="wget --output-document=/dev/null http://speedtest.sea01.softlayer.com/speedtest/speedtest/random1000x1000.jpg"
+alias sptest="wget --output-document=/dev/null http://speedtest.sea01.softlayer.com/speedtest/speedtest/random1000x1000.jpg"
 alias disk-usage="du -h --max-depth=1 $@"
 xin() { $@ | xclip -selection clipboard; }
 alias xout='xclip -o -selection clipboard'
