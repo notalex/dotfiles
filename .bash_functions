@@ -59,3 +59,7 @@ g-set-upstream() {
 brk() {
   sleep $@; notify-send -u critical 'Break!!'
 }
+
+on-mac() {
+  [[ $(uname) == 'Darwin' ]] && echo true
+}
