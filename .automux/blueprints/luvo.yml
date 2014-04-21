@@ -1,0 +1,40 @@
+name: luvo
+root: ~/luv
+flags: -u2
+
+hooks:
+  pre:
+    - vagrant up
+  post:
+    - <%= link_window 'small', 'finch', 1 %>
+    - <%= link_window 'small', 4, 4 %>
+    - <%= select_window 2 %>
+
+windows:
+  - panes: vagrant ssh -- 'luvs'
+    name: server
+
+  - index: 2
+    hooks:
+      pre: cd luvocracy/ 2&> /dev/null
+    panes: vim
+
+  - index: 3
+    hooks:
+      pre: cd luvocracy/ 2&> /dev/null
+    panes: vim
+
+  - index: 5
+    panes: vagrant ssh
+
+  - index: 7
+    hooks:
+      pre: cd luvocracy/ 2&> /dev/null
+
+  - index: 8
+    hooks:
+      pre: cd luvocracy/ 2&> /dev/null
+
+  - index: 9
+    panes: vagrant ssh
+    name: console
