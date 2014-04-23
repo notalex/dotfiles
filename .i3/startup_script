@@ -18,7 +18,7 @@ sleep 10
 
 i3-msg exec 'xfce4-terminal -e setup-notes-session'
 
-clipit &
+copyq &
 nm-applet &
 bluetooth-applet &
 gnome-sound-applet &
