@@ -28,12 +28,10 @@ windows:
     panes: vagrant ssh
 
   - index: 7
-    hooks:
-      pre: cd luvocracy/ 2&> /dev/null
+    panes: vagrant ssh
 
   - index: 8
-    hooks:
-      pre: cd luvocracy/ 2&> /dev/null
+    panes: vagrant ssh
 
   - index: 9
     panes: vagrant ssh
