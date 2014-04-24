@@ -16,3 +16,6 @@ hi notesBlockQuote ctermfg=215
 
 " Visual selection
 hi Visual ctermbg=216 ctermfg=black guibg=216 guifg=black
+
+" CtrlP
+hi CtrlPMatch ctermfg=blue guifg=blue
