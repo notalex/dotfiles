@@ -2,6 +2,7 @@
 
 " -------------- ctrlp mappings
 
+let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_use_caching = 400
 let g:ctrlp_match_window_reversed = 0
