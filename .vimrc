@@ -82,6 +82,7 @@ set noswapfile
 set incsearch
 set ttimeoutlen=50
 set wildignore+=app/assets/images/**,log/**,public/system/**
+set wildignorecase  " case insensitive file name completion in command mode.
 set cedit=<C-s>  " since <C-f> has to be cmapped to emulate emacs mode
 " add hyphen to keyword list
 set iskeyword+=-
