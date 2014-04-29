@@ -11,7 +11,9 @@ hooks:
     - <%= select_window 2 %>
 
 windows:
-  - panes: vagrant ssh -- 'luvs'
+  - panes: vagrant ssh
+    hooks:
+      post: luvs
     name: server
 
   - index: 2
@@ -26,13 +28,21 @@ windows:
 
   - index: 5
     panes: vagrant ssh
+    hooks:
+      post: cd ~/luv/luvocracy
 
   - index: 7
     panes: vagrant ssh
+    hooks:
+      post: cd ~/luv/luvocracy
 
   - index: 8
     panes: vagrant ssh
+    hooks:
+      post: cd ~/luv/luvocracy
 
   - index: 9
     panes: vagrant ssh
+    hooks:
+      post: cd ~/luv/luvocracy; rails c
     name: console
