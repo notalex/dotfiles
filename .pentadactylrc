@@ -9,7 +9,7 @@ cabbreviate py pentadactyl
 cabbreviate gi google_image
 cabbreviate src source ~/.pentadactylrc
 cabbreviate srcb source ~/.pentadactyl/bookmarks
-cabbreviate gg google google
+cabbreviate g google
 
 " hide all scrollbars
 set guioptions=Cs
