@@ -32,7 +32,6 @@ windows:
       post: cd ~/luv/luvocracy
 
   - index: 7
-    panes: vagrant ssh
     hooks:
       post: cd ~/luv/luvocracy
 
