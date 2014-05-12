@@ -13,7 +13,7 @@ cabbreviate g google
 
 " hide all scrollbars
 set guioptions=Cs
-
+set hintkeys=asdfg;lkjh
 set! browser.tabs.closeWindowWithLastTab=false
 
 imap <C-m> <CR>
