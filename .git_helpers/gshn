@@ -8,4 +8,4 @@ else
 fi
 
 sha=$(git log --pretty=format:'%H' -1 --skip=$count $path)
-git show $sha
+git show $sha $path
