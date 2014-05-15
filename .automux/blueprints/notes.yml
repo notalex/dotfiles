@@ -7,7 +7,8 @@ windows:
   - index: 2
     panes:
       - vim WorkFlow.notes
-      - tmux select-layout even-horizontal; tmux resize -R 10; vim /tmp/del
     hooks:
       pre: cd ~/gitbasket
+  - index: 3
+    panes: vim /tmp/scratchpad
   - index: 7
