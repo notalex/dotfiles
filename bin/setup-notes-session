@@ -1,12 +1,10 @@
 #! /usr/bin/env bash
 
 i3 mark notes-window
-i3 move down
 i3 border none
+i3 floating enable
 
-for i in 1 2 3; do
-  i3 resize shrink up
-done
+bash ~/bin/resize-notes-window
 
 if $(tmux has-session -t notes); then
   tmx-attach-session notes
