@@ -22,9 +22,10 @@ windows:
     panes: vim
 
   - index: 3
+    panes: vagrant ssh
     hooks:
-      pre: cd luvocracy/ 2&> /dev/null
-    panes: vim
+      post: automux specs
+    name: specs
 
   - index: 5
     panes: vagrant ssh
