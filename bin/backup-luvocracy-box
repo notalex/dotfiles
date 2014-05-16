@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+mv ~/Vagrant-boxes/luvocracy.box ~/Vagrant-boxes/luvocracy-old.box &&
+  vagrant package --base luvocracy-default --output ~/Vagrant-boxes/luvocracy.box
