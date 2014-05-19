@@ -46,3 +46,8 @@ let twitvim_enable_ruby = 1
 let twitvim_timestamp_format = '%R %F'
 
 let g:strip_whitespaces_on_save = 1
+
+" ------ AutoPairs ------
+" Prevent autopairs from reducing identation level
+  " when Enter is pressed at `function() {|}`
+let g:AutoPairsMapCR = 0
