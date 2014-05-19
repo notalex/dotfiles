@@ -20,6 +20,11 @@ gaf() {
   git diff --cached
 }
 
+gcm() {
+  git commit -m "$(echo $@)"
+}
+
+# misc
 dump-development-db() {
   if [ $1 ]; then
     db_path=$1
