@@ -1,33 +1,33 @@
 function! s:CustomGrep()
-  let s:user_input = input("Search: ", '. * public, ')
+  let user_input = input("Search: ", '. * public, ')
 
-  if strlen(s:user_input)
-    let s:regexp = '\v^([^ ]+ [^ ]+ [^ ]+) ([^ ]+)( .+)*$'
-    let s:pattern_and_options = matchlist(s:user_input, s:regexp)
+  if strlen(user_input)
+    let regexp = '\v^([^ ]+ [^ ]+ [^ ]+) ([^ ]+)( .+)*$'
+    let pattern_and_options = matchlist(user_input, regexp)
 
-    let s:options_string = s:pattern_and_options[1]
-    let s:grep_options = split(s:options_string, ' ')
+    let options_string = pattern_and_options[1]
+    let grep_options = split(options_string, ' ')
 
     " txt,rb => *.{txt,rb,} | * => * (matches all)
-    let s:filetypes = s:grep_options[1]
-    if strlen(matchstr(s:filetypes, '^\w'))
-      let s:type = '*.{' . s:grep_options[1] . ',}'
+    let filetypes = grep_options[1]
+    if strlen(matchstr(filetypes, '^\w'))
+      let type = '*.{' . grep_options[1] . ',}'
     else
-      let s:type = s:filetypes
+      let type = filetypes
     endif
 
-    let s:folder = s:grep_options[0]
-    let s:exclude_dirs = '{.git,tmp,fixtures,coverage,cassettes,' . s:grep_options[2] . '}'
+    let folder = grep_options[0]
+    let exclude_dirs = '{.git,tmp,fixtures,coverage,cassettes,' . grep_options[2] . '}'
 
-    let s:pattern = s:pattern_and_options[2]
-    let escaped_pattern = escape(s:pattern, "'")
-    let s:options = s:pattern_and_options[3]
+    let pattern = pattern_and_options[2]
+    let escaped_pattern = escape(pattern, "'")
+    let options = pattern_and_options[3]
 
     " grep -r pattern app --include=*.{rb,}
-    silent execute "grep -Pr " . escaped_pattern . " " . s:folder .
+    silent execute "grep -Pr " . escaped_pattern . " " . folder .
       \' --exclude-from=' . $HOME . '/.better-grep-exclusions' .
-      \' --exclude-dir=' . s:exclude_dirs .
-      \' --include=' . s:type . s:options
+      \' --exclude-dir=' . exclude_dirs .
+      \' --include=' . type . options
     cw
     redraw!
   endif
