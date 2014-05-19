@@ -20,10 +20,11 @@ function! s:CustomGrep()
     let s:exclude_dirs = '{.git,tmp,fixtures,coverage,cassettes,' . s:grep_options[2] . '}'
 
     let s:pattern = s:pattern_and_options[2]
+    let escaped_pattern = escape(s:pattern, "'")
     let s:options = s:pattern_and_options[3]
 
     " grep -r pattern app --include=*.{rb,}
-    silent execute "grep -Pr '" . s:pattern . "' " . s:folder .
+    silent execute "grep -Pr " . escaped_pattern . " " . s:folder .
       \' --exclude-from=' . $HOME . '/.better-grep-exclusions' .
       \' --exclude-dir=' . s:exclude_dirs .
       \' --include=' . s:type . s:options
