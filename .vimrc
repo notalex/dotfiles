@@ -87,6 +87,10 @@ set cedit=<C-s>  " since <C-f> has to be cmapped to emulate emacs mode
 " add hyphen to keyword list
 set iskeyword+=-
 set iskeyword+=?
+set wildmenu           " Show list of commands for completion.
+set showcmd            " Show typed keys.
+set nomodeline         " Disable vim settings defined inside file.
+set confirm            " Confirm to save file instead of errors.
 
 " #-----------emacs mode
 imap <c-a> <Home>
