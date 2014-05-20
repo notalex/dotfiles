@@ -38,9 +38,6 @@ nmap Q <nop>
 nnoremap ` '
 nnoremap ' `
 
-nmap <Down> <C-e>
-nmap <Up> <C-y>
-
 " #---------------- vmaps --------------------------
 
 vmap K <nop>
@@ -92,6 +89,7 @@ set showcmd            " Show typed keys.
 set nomodeline         " Disable vim settings defined inside file.
 set confirm            " Confirm to save file instead of errors.
 set tags+=.git/tags
+set scrolloff=999
 
 " #-----------emacs mode
 imap <c-a> <Home>
