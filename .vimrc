@@ -91,6 +91,7 @@ set wildmenu           " Show list of commands for completion.
 set showcmd            " Show typed keys.
 set nomodeline         " Disable vim settings defined inside file.
 set confirm            " Confirm to save file instead of errors.
+set tags+=.git/tags
 
 " #-----------emacs mode
 imap <c-a> <Home>

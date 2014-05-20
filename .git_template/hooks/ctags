@@ -4,5 +4,5 @@
 set -e
 
 trap "rm -f .git/tags.tmp" EXIT
-ctags --tag-relative -Rf .git/tags.tmp --exclude=.git --languages=-sql
+ctags-exuberant --tag-relative -Rf .git/tags.tmp --exclude=.git --exclude=coverage --languages=-sql --exclude=*min.js
 mv .git/tags.tmp .git/tags
