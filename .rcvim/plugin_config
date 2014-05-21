@@ -51,3 +51,6 @@ let g:strip_whitespaces_on_save = 1
 " Prevent autopairs from reducing identation level
   " when Enter is pressed at `function() {|}`
 let g:AutoPairsMapCR = 0
+
+" ------- Rails -------
+let g:rails_no_syntax = 0
