@@ -2,3 +2,4 @@
 --langmap=coffee:.coffee
 --langmap=coffee:.coffee.erb
 --regex-coffee=/([^.]+)\s*=.*[=-]>.*$/\1/f, function/
+--regex-javascript=/([^.]+)\s*: function.*$/\1/f, function/
