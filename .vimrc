@@ -57,6 +57,7 @@ imap <F6> <Esc>
 cmap <c-k> <Up>
 cmap <c-j> <Down>
 cmap <Nul> <Space>
+cmap <C-o> <S-Tab>
 cabbrev hv vertical topleft help
 cabbrev src source ~/.vimrc
 cabbrev fn vertical topleft help function-list
