@@ -20,7 +20,7 @@ function! s:CustomGrep()
     let exclude_dirs = '{.git,tmp,fixtures,coverage,cassettes,' . grep_options[2] . '}'
 
     let pattern = pattern_and_options[2]
-    let escaped_pattern = escape(pattern, "'")
+    let escaped_pattern = shellescape(pattern)
     let options = pattern_and_options[3]
 
     " grep -r pattern app --include=*.{rb,}
