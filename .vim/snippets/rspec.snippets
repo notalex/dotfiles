@@ -4,7 +4,12 @@ snippet be
 	end
 
 snippet con
-	context "${1}" do
+	context '${1}' do
+		${2}
+	end
+
+snippet i
+	it '${1}' do
 		${2}
 	end
 
