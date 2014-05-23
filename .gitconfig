@@ -17,3 +17,5 @@
   del = branch -D
 [init]
   templatedir = ~/.git_template
+[status]
+  showUntrackedFiles = all
