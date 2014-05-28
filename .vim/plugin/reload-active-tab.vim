@@ -5,11 +5,19 @@
 " run :AutoReloadBrowserTab.
 
 let s:compiled_extensions = { 'haml': 'html', 'coffee': 'js', 'sass': 'css' }
+let s:tempfile = '/tmp/vim-reload-active-tab-errors'
 
 function! s:MakeDirectories()
   for directory in ['sass', 'css', 'coffee', 'js']
     silent! call mkdir(getcwd() . '/' . directory)
   endfor
+endfunction
+
+function! s:EchoErrors()
+  if getfsize(s:tempfile) > 0
+    echom join(readfile(s:tempfile), "\n")
+    call delete(s:tempfile)
+  endif
 endfunction
 
 function! s:CompileFileAndReloadTab()
@@ -25,7 +33,8 @@ function! s:CompileFileAndReloadTab()
     let command = 'sass --no-cache ' . file_path . ' ' . compiled_path
   endif
 
-  call system(command)
+  call system(command . ' 2> ' . s:tempfile)
+  call s:EchoErrors()
 
   let window_ids = system("xdotool search --name '^" . s:html_title . "'")
 
