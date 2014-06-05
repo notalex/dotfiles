@@ -8,10 +8,4 @@ screen_height=$(perl-slice $resolution '(\d+)$' 1)
 target_width=$(( screen_width / 2 ))
 target_height=0
 
-swarp $target_width $target_height
-
-# Handle cases where current window focus is lost.
-i3-msg mark last_focused_window
-i3-msg workspace 1
-i3-msg '[con_mark="last_focused_window"] focus'
-i3-msg unmark last_focused_window
+xdotool mousemove $target_width $target_height
