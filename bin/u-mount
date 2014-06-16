@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+sudo mkdir /media/usb 2> /dev/null
+sudo mount /dev/sdb1 /media/usb
