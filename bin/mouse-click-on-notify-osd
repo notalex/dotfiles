@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+# Clicks at possible notify-osd locations.
+for y_position in 0 25 50 75;
+do
+  xdotool mousemove 0 $y_position
+  xdotool click 1
+done
+
+edge-swarp
