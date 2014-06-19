@@ -11,6 +11,10 @@ let g:ctrlp_mruf_exclude = '/tmp/.*\|/temp/.*'
 let g:ctrlp_mruf_relative = 1
 let g:ctrlp_extensions = ['undo']
 let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v(tmp|log|public|\.git|app\/assets\/images)$',
+  \ 'file': '\v(\.keep)',
+  \ }
 let g:ctrlp_prompt_mappings = {
   \ 'PrtSelectMove("j")':   ['<c-i>', '<down>'],
   \ 'PrtSelectMove("k")':   ['<c-o>', '<up>'],
