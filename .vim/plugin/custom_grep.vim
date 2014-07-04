@@ -17,7 +17,7 @@ function! s:CustomGrep()
     endif
 
     let folder = grep_options[0]
-    let exclude_dirs = '{.git,tmp,fixtures,coverage,cassettes,' . grep_options[2] . '}'
+    let exclude_dirs = '{.git,tmp,fixtures,coverage,cassettes,log,locales,' . grep_options[2] . '}'
 
     let pattern = pattern_and_options[2]
     let escaped_pattern = shellescape(pattern)
