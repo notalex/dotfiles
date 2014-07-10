@@ -19,9 +19,3 @@ windows:
   - index: 7
     hooks:
       pre: git pull origin master
-  - index: 8
-    panes: st-vmail notalex
-    opt: '-m'
-  - index: 9
-    panes: st-vmail imaginea
-    opt: '-m'

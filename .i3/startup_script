@@ -10,13 +10,17 @@ sleep 5
 if $(tmux has-session -t small); then
   guake -e 'tmx-attach-session small'
 else
-  guake -e 'automux small -fm'
+  guake -e 'automux small -f'
 fi
 
 firefox &
 sleep 10
 
+i3-msg exec 'xfce4-terminal -e setup-mail-client'
+sleep 5
+
 i3-msg exec 'xfce4-terminal -e setup-notes-session'
+sleep 5
 
 copyq &
 nm-applet &

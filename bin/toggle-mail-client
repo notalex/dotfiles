@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+mail_client_stashed=/tmp/mail-client-stashed
+
+if [ -e $mail_client_stashed ]; then
+  i3 [con_mark="mail-client"] scratchpad show
+
+  rm $mail_client_stashed
+else
+  i3 [con_mark="mail-client"] move scratchpad
+
+  touch $mail_client_stashed
+fi

@@ -169,6 +169,7 @@ bindsym $mod+Shift+colon exec i3-input
 bindsym $mod+Shift+m exec toggle-touchpad
 
 bindsym $mod+n exec toggle-notes-window
+bindsym $mod+m exec toggle-mail-client
 
 bindsym XF86AudioMute exec pactl-toggle-mute
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +10%
