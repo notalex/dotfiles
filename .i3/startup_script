@@ -1,5 +1,9 @@
 # vim: set ft=sh:
 
+i3 workspace 1
+i3-msg exec 'xfce4-terminal -e setup-mail-client'
+sleep 5
+
 i3 workspace 7
 
 bash ~/.xinput.conf
@@ -15,9 +19,6 @@ fi
 
 firefox &
 sleep 10
-
-i3-msg exec 'xfce4-terminal -e setup-mail-client'
-sleep 5
 
 i3-msg exec 'xfce4-terminal -e setup-notes-session'
 sleep 5
