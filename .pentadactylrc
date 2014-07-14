@@ -49,6 +49,7 @@ nmap gl <C-^>
 nmap ;ff :firebug<Space>
 nmap ;fq :firebug toggle<cr>
 nmap ;ft :firebug tab<Space>
+nmap ;fh :firebug tab html<CR>
 nmap ;f/ :firebug tab html <cr>:firebug / <cr>
 nmap ;fct :firebug toggle-console<cr>:firebug tab console<cr>
 nmap ;c :firebug tab console<cr>
