@@ -27,6 +27,7 @@ imap <C-p> <Up>
 " Convert open to tabopen
 cmap <C-t> <Home><C-Right><C-w>tabopen<CR>
 cmap <C-y> <Home><C-Right><C-w>open<CR>
+cmap <C-g> <Home><C-Right><C-Right><C-w>
 cmap <C-p> <Up>
 cmap <C-n> <Down>
 cmap <C-i> <Tab>
