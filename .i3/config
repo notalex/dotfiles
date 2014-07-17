@@ -160,7 +160,7 @@ bar {
   position top
 }
 
-bindsym $mod+Shift+B border none
+bindsym $mod+Shift+Z border none
 
 # i3 commandline
 bindsym $mod+Shift+colon exec i3-input
