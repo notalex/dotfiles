@@ -27,22 +27,6 @@
 ctrl+semicolon start
 Escape end
 ctrl+bracketleft end
-h cut-left
-j cut-down
-k cut-up
-l cut-right
-y cut-left,cut-up
-u cut-right,cut-up
-b cut-left,cut-down
-n cut-right,cut-down
-shift+h move-left
-shift+j move-down
-shift+k move-up
-shift+l move-right
-shift+y move-left,move-up
-shift+u move-right,move-up
-shift+b move-left,move-down
-shift+n move-right,move-down
 space warp,click 1,end
 semicolon warp,end
 1 click 1
@@ -50,31 +34,42 @@ semicolon warp,end
 3 click 3
 
 # Zoom to the current window
-w windowzoom
+#z windowzoom
 
 # Zoom to the cursor location with a given height and width
-c cursorzoom 200 200
+f cursorzoom 30 30
 
-# Handy for holding ctrl while using keynav:
-ctrl+h cut-left
-ctrl+j cut-down
-ctrl+k cut-up
-ctrl+l cut-right
-ctrl+y cut-left,cut-up
-ctrl+u cut-right,cut-up
-ctrl+b cut-left,cut-down
-ctrl+n cut-right,cut-down
+# Movement keys
+w cut-left,cut-up
+e cut-right,cut-up
+s cut-left,cut-down
+d cut-right,cut-down
+
+shift+w move-left,move-up
+shift+e move-right,move-up
+shift+s move-left,move-down
+shift+d move-right,move-down
+
+h move-left
+j move-down
+k move-up
+l move-right
+
+shift+h cut-left
+shift+j cut-down
+shift+k cut-up
+shift+l cut-right
 
 # Record keynav actions
 q record
 
 ### Example using the 'sh' command.
 # Make firefox the active window
-f sh "xdotool windowactivate $(xdotool search -title -- '- Mozilla Firefox')", end
+#f sh "xdotool windowactivate $(xdotool search -title -- '- Mozilla Firefox')", end
 # Make a new tab in google chrome:
-t sh "xdotool windowactivate $(xdotool search --title -- '- Google Chrome' | head -1); xdotool key ctrl+t",end
+#t sh "xdotool windowactivate $(xdotool search --title -- '- Google Chrome' | head -1); xdotool key ctrl+t",end
 # Paste
-v sh "xdotool key shift+Insert"
+#v sh "xdotool key shift+Insert"
 
 ### Drag examples
 # Start drag holding the left mouse button
@@ -83,7 +78,7 @@ v sh "xdotool key shift+Insert"
 #w drag 2 ctrl+shift
 
 ### History
-a history-back
+u history-back
 
 ### Example of cut and move without the default values
 #h cut-left .75
