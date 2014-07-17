@@ -171,6 +171,9 @@ bindsym $mod+Shift+m exec toggle-touchpad
 bindsym $mod+n exec toggle-notes-window
 bindsym $mod+m exec toggle-mail-client
 
+# Helps to focus out of flash windows.
+bindsym $mod+g exec click-at-edge
+
 bindsym XF86AudioMute exec pactl-toggle-mute
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +10%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -10%

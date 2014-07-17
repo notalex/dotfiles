@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+source ~/bin/shared/resolution
+
+target_width=$(($screen_width - 30))
+target_height=130
+
+xdotool mousemove $target_width $target_height click 1
