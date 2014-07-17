@@ -54,6 +54,8 @@ nmap ;fh :firebug tab html<CR>
 nmap ;f/ :firebug tab html <cr>:firebug / <cr>
 nmap ;fct :firebug toggle-console<cr>:firebug tab console<cr>
 nmap ;c :firebug tab console<cr>
+" Some applications only respond to ESC.
+nmap <C-[> <ESC>
 
 " Disable easily clickable paste shortcut.
 nmap p <Nop>
