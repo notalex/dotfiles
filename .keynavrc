@@ -37,7 +37,7 @@ semicolon warp,end
 #z windowzoom
 
 # Zoom to the cursor location with a given height and width
-f cursorzoom 30 30
+f cursorzoom 20 10
 
 # Movement keys
 w cut-left,cut-up
