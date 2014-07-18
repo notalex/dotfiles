@@ -28,6 +28,7 @@ ctrl+semicolon start
 Escape end
 ctrl+bracketleft end
 space warp,click 1,end
+ctrl+m warp,click 1,end
 semicolon warp,end
 1 click 1
 2 click 2
