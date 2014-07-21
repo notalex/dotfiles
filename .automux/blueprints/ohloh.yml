@@ -32,5 +32,5 @@ windows:
   - index: 9
     panes: vagrant ssh
     hooks:
-      post: cd ~/ohloh; script/console
+      post: cd ~/ohloh; script/console --irb=pry
     name: console
