@@ -20,7 +20,10 @@ windows:
     panes: vim
 
   - index: 3
-    panes: vim
+    panes: vagrant ssh
+    hooks:
+      post: automux specs
+    name: specs
 
   - index: 7
 
