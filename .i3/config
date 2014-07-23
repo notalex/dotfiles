@@ -169,7 +169,6 @@ bindsym $mod+Shift+colon exec i3-input
 bindsym $mod+Shift+m exec toggle-touchpad
 
 bindsym $mod+n exec toggle-notes-window
-bindsym $mod+m exec toggle-mail-client
 
 # Helps to focus out of flash windows.
 bindsym $mod+g exec click-at-edge

@@ -1,6 +1,6 @@
 # vim: set ft=sh:
 
-i3 workspace 1
+i3 workspace 3
 i3-msg exec 'xfce4-terminal -e setup-mail-client'
 sleep 5
 
