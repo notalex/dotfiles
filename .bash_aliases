@@ -45,6 +45,7 @@ hss() { ssh $1@192.168.6.$2; }
 vnc() { vncviewer 192.168.6.$1 ; }
 rmt() { mv $1 ~/.local/share/Trash; }
 alias zzh='sudo pm-hibernate'
+alias u-un-mount="sudo umount /media/usb"
 
 # gems
 alias spc='spork cucumber'
