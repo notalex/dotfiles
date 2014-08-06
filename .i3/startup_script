@@ -27,6 +27,7 @@ copyq &
 nm-applet &
 bluetooth-applet &
 gnome-sound-applet &
+keynav &
 
 tmux set -g status off
 edge-swarp
