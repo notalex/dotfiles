@@ -83,6 +83,10 @@ alias tmx-attach-session='tmux -u2 attach-session -t'
 alias tmx-detach-session='tmux detach-client -s'
 alias mux='automux'
 
+# docker
+alias d='docker'
+alias dr='docker run'
+
 if $(on-mac)
 then
   alias quarantine='xattr -d com.apple.quarantine'
