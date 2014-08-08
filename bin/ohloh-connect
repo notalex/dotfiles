@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+cd ~/openvpn
+sudo openvpn --config client.ovpn
