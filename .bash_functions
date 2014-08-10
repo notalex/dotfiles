@@ -57,6 +57,10 @@ on-vagrant() {
   [ $HOME == '/home/vagrant' ] && echo true
 }
 
+on-docker() {
+  [ $HOME == '/home/docker' ] && echo true
+}
+
 g-set-upstream() {
   git branch --set-upstream $1 origin/$1
 }

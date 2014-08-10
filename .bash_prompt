@@ -18,6 +18,8 @@ git_information() {
 machine-indicator() {
   if $(on-vagrant); then
     echo 'Ⱌ'
+  elif $(on-docker); then
+    echo 'D'
   else
     echo '▶'
   fi
