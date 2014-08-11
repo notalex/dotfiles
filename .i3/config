@@ -165,10 +165,8 @@ bindsym $mod+Shift+B border normal
 # i3 commandline
 bindsym $mod+Shift+colon exec i3-input
 
-# Move mouse cursor to extreme right
-bindsym $mod+Shift+m exec toggle-touchpad
-
-bindsym $mod+n exec toggle-notes-window
+bindsym $mod+Shift+m exec script-touchpad-toggle
+bindsym $mod+n exec script-toggle-notes-window
 
 # Helps to focus out of flash windows.
 bindsym $mod+g exec click-at-edge

@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
+# Enable touchpad or disable and move to edge.
 
 # When no touchpad, only move mouse pointer.
 [ -e ~/bin/no-touchpad ] && edge-swarp && exit
