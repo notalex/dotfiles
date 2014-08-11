@@ -3,37 +3,31 @@ root: ~/projects/ohloh
 flags: -u2
 
 hooks:
-  pre:
-    - vagrant up
   post:
     - <%= link_window 'small', 'finch', 1 %>
     - <%= link_window 'small', 4, 4 %>
     - <%= select_window 2 %>
 
 windows:
-  - panes: vagrant ssh
-    hooks:
-      post: cd ~/ohloh; script/server
+  - panes: script/server
     name: server
+    hooks:
+      pre: 'cd; cd -'
 
   - index: 2
     panes: vim
-
   - index: 3
-    panes: vagrant ssh
-    hooks:
-      post: automux specs
-    name: specs
+    panes: vim
 
   - index: 7
-
-  - index: 8
-    panes: vagrant ssh
     hooks:
-      post: cd ~/ohloh
+      pre: 'cd; cd -'
+  - index: 8
+    hooks:
+      pre: 'cd; cd -'
 
   - index: 9
-    panes: vagrant ssh
-    hooks:
-      post: cd ~/ohloh; script/console --irb=pry
+    panes: script/console --irb=pry
     name: console
+    hooks:
+      pre: 'cd; cd -'
