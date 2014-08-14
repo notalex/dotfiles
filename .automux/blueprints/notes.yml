@@ -10,5 +10,5 @@ windows:
     hooks:
       pre: cd ~/gitbasket
   - index: 3
-    panes: vim /tmp/scratchpad
+    panes: vim ~/projects/history.txt
   - index: 7
