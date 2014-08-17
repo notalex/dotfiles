@@ -14,7 +14,6 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/Auto-Pairs'
 Bundle 'vim-scripts/AnsiEsc.vim'
-Bundle 'vim-scripts/DrawIt'
 Bundle 'ciaranm/securemodelines'
 
 Bundle 'xolox/vim-notes'
@@ -28,6 +27,7 @@ Bundle 'notalex/vim-git-helpers'
 Bundle 'notalex/vim-run-tests'
 Bundle 'notalex/vim-syntax-highlighter'
 Bundle 'notalex/vim-buff-killer'
+Bundle 'notalex/DrawIt'
 
 filetype plugin on
 
