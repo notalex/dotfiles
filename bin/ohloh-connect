@@ -1,6 +1,12 @@
 #! /usr/bin/env bash
 
-nmcli con up id Ohloh
+if [ $1 ]; then
+  action=down
+else
+  action=up
+fi
+
+nmcli con $action id Ohloh
 exit
 
 cd ~/openvpn
