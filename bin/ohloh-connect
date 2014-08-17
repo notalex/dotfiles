@@ -1,4 +1,7 @@
 #! /usr/bin/env bash
 
+nmcli con up id Ohloh
+exit
+
 cd ~/openvpn
 sudo openvpn --config client.ovpn
