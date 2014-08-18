@@ -26,6 +26,8 @@ nmap <F6>bs :set scrollbind!<cr>
 nmap <F6>e :edit!<cr>
 nmap <F6>w :wa<CR>
 nmap <F6>rv :Eview<Space>
+nmap <F6>rm :Emodel<Space>
+nmap <F6>rc :Econtroller<Space>
 nmap < <l
 nmap > >l
 nmap <C-z> <nop>
