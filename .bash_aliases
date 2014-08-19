@@ -46,8 +46,8 @@ vnc() { vncviewer 192.168.6.$1 ; }
 rmt() { mv $1 ~/.local/share/Trash; }
 alias zzh='sudo pm-hibernate'
 alias u-un-mount="sudo umount /media/usb"
-alias hdmi-connect="xrandr --output VGA1 --off; xrandr --output HDMI1 --auto --right-of eDP1"
-alias vga-connect="xrandr --output HDMI1 --off; xrandr --output VGA1 --auto --right-of eDP1"
+alias hdmi-connect="xrandr --output VGA1 --off; xrandr --output HDMI1 --auto --right-of eDP1; xmodmap ~/.Xmodmap"
+alias vga-connect="xrandr --output HDMI1 --off; xrandr --output VGA1 --auto --right-of eDP1; xmodmap ~/.Xmodmap"
 
 # gems
 alias spc='spork cucumber'
