@@ -46,6 +46,9 @@ nmap <C-d> 19j
 nmap zz <C-d>
 nmap gl <C-^>
 
+" Disable view-source shortcut.
+nmap gf <nop>
+
 " firebug
 nmap ;ff :firebug<Space>
 nmap ;fq :firebug toggle<cr>
