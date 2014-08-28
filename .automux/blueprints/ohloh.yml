@@ -9,7 +9,7 @@ hooks:
     - <%= select_window 2 %>
 
 windows:
-  - panes: script/server
+  - panes: cache_classes=true script/server
     name: server
     hooks:
       pre: 'cd; cd -'
@@ -27,7 +27,7 @@ windows:
       pre: 'cd; cd -'
 
   - index: 9
-    panes: script/console --irb=pry
+    panes: script/console --irb=pry --debugger
     name: console
     hooks:
       pre: 'cd; cd -'
