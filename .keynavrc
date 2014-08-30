@@ -29,6 +29,7 @@ Escape end
 ctrl+bracketleft end
 space warp,click 1,end
 ctrl+m warp,click 1,end
+o warp, click 1
 r warp,click 3,end
 semicolon warp,end
 1 click 1
