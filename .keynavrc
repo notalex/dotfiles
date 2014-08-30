@@ -61,10 +61,15 @@ j move-down
 k move-up
 l move-right
 
-shift+h cut-left
-shift+j cut-down
-shift+k cut-up
-shift+l cut-right
+shift+h move-left,move-left,move-left,move-left,move-left,move-left,move-left,move-left
+shift+j move-down,move-down,move-down,move-down,move-down,move-down,move-down,move-down
+shift+k move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up
+shift+l move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right
+
+#shift+h cut-left
+#shift+j cut-down
+#shift+k cut-up
+#shift+l cut-right
 
 # Record keynav actions
 q record
