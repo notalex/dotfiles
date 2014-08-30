@@ -44,6 +44,7 @@ f cursorzoom 30 20
 
 # Move mouse pointer to the center of current grid and zoom in.
 c warp, cursorzoom 20 10
+p warp, cursorzoom 20 10
 
 # Movement keys
 w cut-left,cut-up
