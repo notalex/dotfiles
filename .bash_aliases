@@ -31,7 +31,7 @@ alias apti='sudo apt-get install -y --force-yes'
 alias aptr='sudo apt-get remove -y'
 alias apts='apt-cache search'
 dpks() { cmd="dpkg --get-selections | grep $1"; echo $cmd; eval $cmd; }
-pag() { cmd="ps aux | grep $1"; echo $cmd; eval $cmd; }
+pag() { cmd="ps aux | grep $1 | grep -v grep"; echo $cmd; eval $cmd; }
 pagm() { cmd="ps aux --sort -rss | less"; echo $cmd; eval $cmd; }
 les() { $@ | less; }
 hel() { $@ --help; }
