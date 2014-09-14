@@ -30,6 +30,10 @@ bindsym $mod+x [class="Xfce4-notifyd"] kill
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
+# Copyq shortcuts
+bindsym Ctrl+Mod1+p exec copyq menu
+bindsym Ctrl+Mod1+y exec copyq toggle
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
