@@ -73,6 +73,33 @@ on-mac() {
   [[ $(uname) == 'Darwin' ]] && echo true
 }
 
+# ruby
+heroku-push() { gps -r heroku $@ m; heroku run rake db:migrate; }
+delayed-emails() { rake jobs:clear; rake jobs:work; }
+
+# bash
+dpks() { cmd="dpkg --get-selections | grep $1"; echo $cmd; eval $cmd; }
+pag() { cmd="ps aux | grep $1 | grep -v grep"; echo $cmd; eval $cmd; }
+pagm() { cmd="ps aux --sort -rss | less"; echo $cmd; eval $cmd; }
+les() { $@ | less; }
+hel() { $@ --help; }
+xin() { $@ | xclip -selection clipboard; }
+hss() { ssh $1@192.168.6.$2; }
+vnc() { vncviewer 192.168.6.$1 ; }
+rmt() { mv $1 ~/.local/share/Trash; }
+
 # git
+ggrp() { cmd="git log --oneline --grep='$@'"; echo $cmd; eval $cmd; }
+gstshow() { git stash show -p stash@{$1} $2; }
+gstapply() { git stash apply stash@{$1} $2; }
+gcr() { git branch $1 origin/$1; }
 g-clone() { git clone git://github.com/$1.git; }
 g-author() { git commit --amend --reset-author; }
+
+
+if $(on-mac)
+then
+  ntf() { $@; terminal-notifier-notify -message 'Process finished...'; tmux display-message 'Process finished...'; }
+else
+  ntf() { $@; notify-send -t 3000 'Process finished...'; }
+fi
