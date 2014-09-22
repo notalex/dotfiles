@@ -72,3 +72,7 @@ brk() {
 on-mac() {
   [[ $(uname) == 'Darwin' ]] && echo true
 }
+
+# git
+g-clone() { git clone git://github.com/$1.git; }
+g-author() { git commit --amend --reset-author; }
