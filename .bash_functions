@@ -1,14 +1,36 @@
 #! /usr/bin/env bash
 
-automux_installed() {
-  gem list | grep automux 1> /dev/null
-}
+# ruby
+heroku-push() { gps -r heroku $@ m; heroku run rake db:migrate; }
+delayed-emails() { rake jobs:clear; rake jobs:work; }
 
-add_to_path() {
- [[ $PATH != *$1* ]] && PATH=$PATH:$1
-}
+# bash
+on-mac() { [[ $(uname) == 'Darwin' ]] && echo true; }
+on-docker() { [ $HOME == '/home/docker' ] && echo true; }
+on-vagrant() { [ $HOME == '/home/vagrant' ] && echo true; }
+add_to_path() { [[ $PATH != *$1* ]] && PATH=$PATH:$1; }
+dpks() { cmd="dpkg --get-selections | grep $1"; echo $cmd; eval $cmd; }
+pag() { cmd="ps aux | grep $1 | grep -v grep"; echo $cmd; eval $cmd; }
+pagm() { cmd="ps aux --sort -rss | less"; echo $cmd; eval $cmd; }
+les() { $@ | less; }
+hel() { $@ --help; }
+xin() { $@ | xclip -selection clipboard; }
+hss() { ssh $1@192.168.6.$2; }
+vnc() { vncviewer 192.168.6.$1 ; }
+rmt() { mv $1 ~/.local/share/Trash; }
+brk() { sleep $@; notify-send -u critical 'Break!!'; }
+automux_installed() { gem list | grep automux 1> /dev/null; }
 
 # git
+gcm() { git commit -m "$(echo $@)"; }
+ggrp() { cmd="git log --oneline --grep='$@'"; echo $cmd; eval $cmd; }
+gstshow() { git stash show -p stash@{$1} $2; }
+gstapply() { git stash apply stash@{$1} $2; }
+gcr() { git branch $1 origin/$1; }
+g-clone() { git clone git://github.com/$1.git; }
+g-author() { git commit --amend --reset-author; }
+g-set-upstream() { git branch --set-upstream $1 origin/$1; }
+
 gaf() {
   git add -f $@
 
@@ -20,11 +42,8 @@ gaf() {
   git diff --cached
 }
 
-gcm() {
-  git commit -m "$(echo $@)"
-}
-
 # misc
+
 dump-development-db() {
   if [ $1 ]; then
     db_path=$1
@@ -34,7 +53,6 @@ dump-development-db() {
 
   pg_dump $(development-db-name) > $db_path
 }
-
 load-development-db() {
   if [ $1 ]; then
     db_path=$1
@@ -52,50 +70,6 @@ rr() {
     rake routes
   fi
 }
-
-on-vagrant() {
-  [ $HOME == '/home/vagrant' ] && echo true
-}
-
-on-docker() {
-  [ $HOME == '/home/docker' ] && echo true
-}
-
-g-set-upstream() {
-  git branch --set-upstream $1 origin/$1
-}
-
-brk() {
-  sleep $@; notify-send -u critical 'Break!!'
-}
-
-on-mac() {
-  [[ $(uname) == 'Darwin' ]] && echo true
-}
-
-# ruby
-heroku-push() { gps -r heroku $@ m; heroku run rake db:migrate; }
-delayed-emails() { rake jobs:clear; rake jobs:work; }
-
-# bash
-dpks() { cmd="dpkg --get-selections | grep $1"; echo $cmd; eval $cmd; }
-pag() { cmd="ps aux | grep $1 | grep -v grep"; echo $cmd; eval $cmd; }
-pagm() { cmd="ps aux --sort -rss | less"; echo $cmd; eval $cmd; }
-les() { $@ | less; }
-hel() { $@ --help; }
-xin() { $@ | xclip -selection clipboard; }
-hss() { ssh $1@192.168.6.$2; }
-vnc() { vncviewer 192.168.6.$1 ; }
-rmt() { mv $1 ~/.local/share/Trash; }
-
-# git
-ggrp() { cmd="git log --oneline --grep='$@'"; echo $cmd; eval $cmd; }
-gstshow() { git stash show -p stash@{$1} $2; }
-gstapply() { git stash apply stash@{$1} $2; }
-gcr() { git branch $1 origin/$1; }
-g-clone() { git clone git://github.com/$1.git; }
-g-author() { git commit --amend --reset-author; }
-
 
 if $(on-mac)
 then
