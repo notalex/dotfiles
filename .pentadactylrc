@@ -46,6 +46,11 @@ nmap <C-d> 19j
 nmap zz <C-d>
 nmap gl <C-^>
 
+" Disable default close application shortcut.
+nmap <C-S-w> <nop>
+cmap <C-S-w> <nop>
+imap <C-S-w> <nop>
+
 " Disable view-source shortcut.
 nmap gf <nop>
 
