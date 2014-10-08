@@ -15,3 +15,4 @@ vmail.log
 spec/tmp
 Vagrantfile
 .vagrant/
+coverage/
