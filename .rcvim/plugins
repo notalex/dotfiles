@@ -15,6 +15,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/Auto-Pairs'
 Bundle 'vim-scripts/AnsiEsc.vim'
 Bundle 'ciaranm/securemodelines'
+Bundle 'elixir-lang/vim-elixir'
 
 Bundle 'xolox/vim-notes'
   Bundle 'xolox/vim-misc'
