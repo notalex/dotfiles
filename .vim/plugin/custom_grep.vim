@@ -1,5 +1,5 @@
 function! s:CustomGrep()
-  let user_input = input("Search: ", '. * public, ')
+  let user_input = input("Search: ", '. * public, ', 'file')
 
   if strlen(user_input)
     let regexp = '\v^([^ ]+ [^ ]+ [^ ]+) ([^ ]+)( .+)*$'
@@ -17,7 +17,7 @@ function! s:CustomGrep()
     endif
 
     let folder = grep_options[0]
-    let exclude_dirs = '{.git,tmp,fixtures,coverage,cassettes,log,locales,' . grep_options[2] . '}'
+    let exclude_dirs = '{' . grep_options[2] . 'locales,.git,tmp,fixtures,coverage,cassettes,log}'
 
     let pattern = pattern_and_options[2]
     let escaped_pattern = shellescape(pattern)
