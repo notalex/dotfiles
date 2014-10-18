@@ -25,9 +25,9 @@ function! s:CustomGrep()
 
     " grep -r pattern app --include=*.{rb,}
     silent execute "grep -Pr " . escaped_pattern . " " . folder .
-      \' --exclude-from=' . $HOME . '/.better-grep-exclusions' .
       \' --exclude-dir=' . exclude_dirs .
-      \' --include=' . type . options
+      \' --include=' . type .
+      \' --exclude-from=' . $HOME . '/.better-grep-exclusions' . options
     cw
     redraw!
   endif
