@@ -49,4 +49,7 @@ augroup nonRepeater
  au CmdwinEnter * nnoremap <buffer> <CR> <CR>
  au FilterWritePre * call s:SetupDiffWindow()
  au FileType notes call s:SetupSpacing()
+
+ au FileType elixir let b:run_live_command = 'elixir'
+ au FileType ruby let b:run_live_command = 'ruby'
 augroup END
