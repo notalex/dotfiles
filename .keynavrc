@@ -67,6 +67,11 @@ shift+j move-down,move-down,move-down,move-down,move-down,move-down,move-down,mo
 shift+k move-up,move-up,move-up,move-up,move-up,move-up,move-up,move-up
 shift+l move-right,move-right,move-right,move-right,move-right,move-right,move-right,move-right
 
+Up move-up,warp
+Down move-down,warp
+Left move-left,warp
+Right move-right,warp
+
 #shift+h cut-left
 #shift+j cut-down
 #shift+k cut-up
