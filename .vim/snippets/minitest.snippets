@@ -23,3 +23,13 @@ snippet af
 	after do
 		${1}
 	end
+
+snippet def
+	def test_${1}
+		${2}
+	end
+
+snippet cla
+	class ${1:`ToCamelCase(expand('%:t:r'))`} < ${2:ActiveSupport::TestCase}
+		${3}
+	end
