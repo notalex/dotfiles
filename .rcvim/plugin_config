@@ -58,3 +58,6 @@ let g:AutoPairsMapCR = 0
 
 " ------- Rails -------
 let g:rails_no_syntax = 0
+
+" ------- OpenPdf -----
+let g:pdf_convert_on_edit = 1
