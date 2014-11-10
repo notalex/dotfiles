@@ -19,3 +19,5 @@
   templatedir = ~/.git_template
 [status]
   showUntrackedFiles = all
+[receive]
+	denyCurrentBranch = ignore
