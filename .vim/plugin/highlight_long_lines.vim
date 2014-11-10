@@ -13,6 +13,6 @@ nmap <F6>ht :call <SID>ToggleLongLinesHighlight()<CR>
 
 " Do not highlight long lines for Vmail or notes.
 " Cannot depend on filetypes since this is read before all syntax & ftplugins.
-if !strlen($VMAIL_HOME) && expand('%:p:h:t') != 'gitbasket'
+if !strlen($VMAIL_HOME) && match(expand('%:e'), '\v%(txt|notes)$') != 0
   call <SID>ToggleLongLinesHighlight()
 endif
