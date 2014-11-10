@@ -61,3 +61,6 @@ let g:rails_no_syntax = 0
 
 " ------- OpenPdf -----
 let g:pdf_convert_on_edit = 1
+
+" Disable highlighting end braces.
+let loaded_matchparen = 0
