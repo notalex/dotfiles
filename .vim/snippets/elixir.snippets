@@ -6,25 +6,21 @@ snippet def
 	end
 snippet defl
 	def ${1:method_name}, do: ${2}
-
 snippet defp
 	defp ${1:method_name} do
 		${2}
 	end
 snippet defpl
 	defp ${1:method_name}, do: ${2}
-
 snippet fn
 	fn ${1} ->
 		${2}
 	end
 snippet fnl
 	fn ${1} -> ${2} end
-
 snippet defm
 	defmodule ${1:`ToCamelCase(expand('%:t:r'))`} do
 		${2}
 	end
-
 snippet p
 	IO.inspect ${1}
