@@ -24,3 +24,7 @@ snippet defm
 	end
 snippet p
 	IO.inspect ${1}
+snippet rec
+	receive do
+		{${1}} -> ${2}
+	end
