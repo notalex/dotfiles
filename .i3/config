@@ -34,6 +34,10 @@ bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 bindsym Ctrl+Mod1+p exec copyq menu
 bindsym Ctrl+Mod1+y exec copyq toggle
 
+# Move to other monitor.
+bindsym $mod+F5 move workspace to output left
+bindsym $mod+F8 move workspace to output right
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
