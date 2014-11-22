@@ -7,11 +7,14 @@ stty stop undef
 
 export EDITOR=vim
 export TERMINAL=xfce4-terminal
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
 add_to_path $HOME/.rvm/bin
 add_to_path $HOME/.git_helpers
 add_to_path $HOME/.project_shortcuts
 add_to_path /opt/vagrant/bin
+add_to_path $HOME/.linuxbrew/bin
 
 automux_installed && complete -W "$(automux blueprint list)" automux
 
