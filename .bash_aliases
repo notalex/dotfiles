@@ -16,6 +16,8 @@ alias gra="git remote add"
 alias gbv="git branch -v"
 alias g-save="git stash; git stash apply"
 alias gpl-src='git pull src master'
+alias gbo='git checkout --orphan'
+alias gpo='git pull origin'
 
 # bash
 alias s='sudo'
