@@ -1,2 +1,4 @@
 *.log
 *.sql
+*.compile.elixir
+*.app
