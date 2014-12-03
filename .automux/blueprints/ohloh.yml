@@ -15,9 +15,9 @@ windows:
       pre: 'cd; cd -'
 
   - index: 2
-    panes: vim
+    panes: nvim
   - index: 3
-    panes: vim
+    panes: nvim
 
   - index: 7
     hooks:

@@ -11,11 +11,11 @@ windows:
     opt: '-s'
     hooks:
       pre: 'cd; cd -'
-  - panes: vim
+  - panes: nvim
     index: 2
     hooks:
       pre: 'cd; cd -'
-  - panes: vim
+  - panes: nvim
     index: 3
     hooks:
       pre: 'cd; cd -'
