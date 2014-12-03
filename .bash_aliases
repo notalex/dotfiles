@@ -35,7 +35,7 @@ alias xout='xclip -o -selection clipboard'
 alias zzh='sudo pm-hibernate'
 alias u-un-mount="sudo umount /media/usb"
 alias hdmi-connect="xrandr --output VGA1 --off; xrandr --output HDMI1 --auto --left-of eDP1; xmodmap ~/.Xmodmap"
-alias vga-connect="xrandr --output HDMI1 --off; xrandr --output VGA1 --auto --left-of eDP1; xmodmap ~/.Xmodmap"
+alias vga-connect="xrandr --output HDMI1 --off; xrandr --output VGA1 --auto --right-of eDP1; xmodmap ~/.Xmodmap"
 
 # gems
 alias spc='spork cucumber'
