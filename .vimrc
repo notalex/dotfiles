@@ -107,7 +107,6 @@ cmap <c-b> <Left>
 
 " -----------------scripts------------------
 nmap <F6>p o<Esc>p
-nmap <F6>t 2ddo<Esc>k
 nnoremap <F6>q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nmap <F6>O :echom OpenLinkInFirefox()<cr>
 nmap <F6>o I<C-m><C-m><Esc>2ka
