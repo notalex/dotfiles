@@ -9,7 +9,7 @@ windows:
     name: finch
     index: 1
     opt: '-f'
-  - panes: vim
+  - panes: nvim
     index: 2
   - panes: rtorrent
     index: 3
@@ -19,7 +19,7 @@ windows:
       pre: git pull origin master
     root: ~/gitbasket
     index: 4
-    panes: vim WorkFlow.notes
+    panes: nvim WorkFlow.notes
   - index: 7
     hooks:
       pre: git pull origin master

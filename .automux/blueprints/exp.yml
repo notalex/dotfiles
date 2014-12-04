@@ -6,9 +6,9 @@ hooks:
     - <%= link_window 'small', 4, 4 %>
     - <%= select_window 2 %>
 windows:
-  - panes: vim
+  - panes: nvim
     index: 2
-  - panes: vim
+  - panes: nvim
     index: 3
   - index: 7
   - index: 8
