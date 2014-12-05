@@ -20,8 +20,12 @@ windows:
     hooks:
       pre: 'cd; cd -'
   - index: 7
+    hooks:
+      pre: 'cd; cd -'
   - index: 8
     opt: '-a'
+    hooks:
+      pre: 'cd; cd -'
   - index: 9
     panes: rails console
     opt: '-c'
