@@ -45,6 +45,10 @@ let Tlist_Ctags_Cmd='/usr/bin/ctags'
 let NERDTreeShowHidden = 1
 let g:NERDTreeMapJumpNextSibling = '<C-n>'
 
+" ------------- NERDCommenter -----
+" Add space after comment.
+let NERDSpaceDelims = 1
+
 " ------------- TwitVim -------
 let twitvim_enable_ruby = 1
 let twitvim_timestamp_format = '%R %F'
