@@ -64,7 +64,7 @@ load-development-db() {
 }
 
 vga-connect() {
-  if [ $1 == 'r' ]; then
+  if [[ $1 == 'r' ]]; then
     direction='right'
   else
     direction='left'
