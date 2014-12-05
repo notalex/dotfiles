@@ -93,6 +93,7 @@ set nomodeline         " Disable vim settings defined inside file.
 set confirm            " Confirm to save file instead of errors.
 set tags+=.git/tags
 set scrolloff=999
+set backspace=indent,eol,start
 
 " #-----------emacs mode
 imap <c-a> <Home>
