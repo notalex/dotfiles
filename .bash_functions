@@ -63,6 +63,16 @@ load-development-db() {
   rake db:drop RAILS_ENV=development; rake db:create; psql $(development-db-name) < $db_path
 }
 
+vga-connect() {
+  if [ $1 == 'r' ]; then
+    direction='right'
+  else
+    direction='left'
+  fi
+
+  xrandr --output HDMI1 --off; xrandr --output VGA1 --auto --$direction-of eDP1; xmodmap ~/.Xmodmap
+}
+
 rr() {
   if [ $@ ]; then
     rake routes CONTROLLER=$@
