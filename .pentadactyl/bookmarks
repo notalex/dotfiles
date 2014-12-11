@@ -3,6 +3,7 @@
 " Google Apps
 bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title 'Google feeling lucky search ' -keyword google_lucky
 bmark http://images.google.com/images?q=%s -title 'Google Image search ' -keyword google_image
+bmark https://maps.google.co.in/maps?q=%s -title 'Google Maps' -keyword 'maps'
 bmark https://www.google.co.in/search?tbm=nws&q=%s -title 'Google News' -keyword 'news'
 
 " Search Engines
