@@ -62,6 +62,11 @@ nmap ;fh :firebug tab html<CR>
 nmap ;f/ :firebug tab html <cr>:firebug / <cr>
 nmap ;fct :firebug toggle-console<cr>:firebug tab console<cr>
 nmap ;c :firebug tab console<cr>
+
+" Use dd instead of d for tabclose.
+nmap d <nop>
+nmap -builtin dd d
+
 " Some applications only respond to ESC.
 nmap <C-[> <ESC>
 
