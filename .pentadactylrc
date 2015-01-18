@@ -67,6 +67,10 @@ nmap ;c :firebug tab console<cr>
 nmap d <nop>
 nmap -builtin dd d
 
+" Use yy instead of y for yank.
+nmap y <nop>
+nmap -builtin yy y
+
 " Some applications only respond to ESC.
 nmap <C-[> <ESC>
 
