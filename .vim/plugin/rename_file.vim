@@ -6,5 +6,4 @@ endfunction
 
 command! -nargs=1 -complete=file Rename call <SID>rename_file(<f-args>)
 
-let current_file_path = expand('%:p')
-execute 'cabbrev ren Rename ' . current_file_path
+cabbrev ren Rename %:p
