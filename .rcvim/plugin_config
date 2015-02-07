@@ -68,3 +68,6 @@ let g:pdf_convert_on_edit = 1
 
 " Disable highlighting end braces.
 let loaded_matchparen = 0
+
+" Disable sparkup's next tag mapping which is <C-n> by default.
+let g:sparkupNextMapping = '<nop>'
