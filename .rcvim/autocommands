@@ -43,6 +43,7 @@ augroup nonRepeater
  au BufRead,BufNewFile *.pdf.txt set filetype=pdf_txt
  au BufRead,BufNewFile *.pdf.txt set syntax=notes
  au BufRead,BufNewFile *.sbt set filetype=scala
+ au BufRead,BufNewFile *.hbs set filetype=html
 
  au BufNewFile *.rb call s:AddRequireLineInTest()
  au BufNewFile *.cpp call <SID>AddDefaultCppDirectives()
