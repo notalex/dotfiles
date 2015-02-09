@@ -26,7 +26,7 @@ bmark http://torrentz.eu/search?q=%s -title 'Torrentz Search' -keyword 'torrentz
 
 " Entertainment
 bmark http://www.youtube.com/results?search_query=%s -title 'Youtube' -keyword 'youtube-search'
-bmark http://www.youtube.com/results?search_sort=video_date_uploaded&search_query=%s -title 'Youtube' -keyword 'youtube-sorted-search'
+bmark http://www.youtube.com/results?search_sort=video_date_uploaded&search_query=%s -title 'Youtube' -keyword 'youtube-searchsorted'
 bmark http://www.dailymotion.com/in/relevance/search/%s -title 'Dailymotion' -keyword 'dailymotion'
 bmark http://www.animefushigi.com/?s=%s -title 'Anime Fushigi' -keyword 'fushigi'
 bmark http://www.goodreads.com/search?&q=%s -title 'Good Reads' -keyword 'good-reads-search'
