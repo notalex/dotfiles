@@ -1,5 +1,5 @@
-function! s:CustomGrep()
-  let user_input = input("Search: ", '. * public, ', 'file')
+function! s:CustomGrep(folder_path)
+  let user_input = input("Search: ", a:folder_path . ' * public, ', 'file')
 
   if strlen(user_input)
     let regexp = '\v^([^ ]+ [^ ]+ [^ ]+) ([^ ]+)( .+)*$'
@@ -33,4 +33,9 @@ function! s:CustomGrep()
   endif
 endfunction
 
-nmap <F6>s :echo <SID>CustomGrep()<cr>
+nmap <F6>ss :echo <SID>CustomGrep('.')<cr>
+nmap <F6>sm :echo <SID>CustomGrep('app/models')<cr>
+nmap <F6>sc :echo <SID>CustomGrep('app/controllers')<cr>
+nmap <F6>sv :echo <SID>CustomGrep('app/views')<cr>
+nmap <F6>sj :echo <SID>CustomGrep('app/assets/javascripts')<cr>
+nmap <F6>st :echo <SID>CustomGrep('test')<cr>
