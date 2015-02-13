@@ -6,3 +6,4 @@ hooks:
     - tmux send-key 2
 windows:
   - panes: cmus
+  - panes:
