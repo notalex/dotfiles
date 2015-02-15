@@ -17,8 +17,6 @@ add_to_path /opt/vagrant/bin
 add_to_path $HOME/.linuxbrew/bin
 add_to_path $HOME/neovim/bin
 
-automux_installed && complete -W "$(automux blueprint list)" automux
-
 source ~/.bash_aliases
 source ~/.bash_prompt
 
