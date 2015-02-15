@@ -81,6 +81,12 @@ rr() {
   fi
 }
 
+set-rvm-gemset() {
+  if [ -e .ruby-version ] && [ -e .ruby-gemset ]; then
+    rvm use $(cat .ruby-version)@$(cat .ruby-gemset) 2> /dev/null
+  fi
+}
+
 if $(on-mac)
 then
   ntf() { $@; terminal-notifier-notify -message 'Process finished...'; tmux display-message 'Process finished...'; }
