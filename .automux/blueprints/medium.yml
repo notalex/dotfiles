@@ -9,28 +9,16 @@ hooks:
 windows:
   - panes: rails server
     opt: '-s'
-    hooks:
-      pre: 'cd; cd -'
   - panes: nvim
     index: 2
-    hooks:
-      pre: 'cd; cd -'
   - panes: nvim
     index: 3
-    hooks:
-      pre: 'cd; cd -'
   - index: 7
-    hooks:
-      pre: 'cd; cd -'
   - index: 8
     opt: '-a'
-    hooks:
-      pre: 'cd; cd -'
   - index: 9
     panes: rails console
     opt: '-c'
-    hooks:
-      pre: 'cd; cd -'
   - index: 5
     panes: 'spork cucumber'
     opt: '-1'

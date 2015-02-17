@@ -11,23 +11,14 @@ hooks:
 windows:
   - panes: cache_classes=true script/server
     name: server
-    hooks:
-      pre: 'cd; cd -'
-
   - index: 2
     panes: nvim
   - index: 3
     panes: nvim
 
   - index: 7
-    hooks:
-      pre: 'cd; cd -'
   - index: 8
-    hooks:
-      pre: 'cd; cd -'
 
   - index: 9
     panes: script/console --irb=pry --debugger
     name: console
-    hooks:
-      pre: 'cd; cd -'
