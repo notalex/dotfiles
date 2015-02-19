@@ -34,6 +34,7 @@ function! s:CustomGrep(folder_path)
 endfunction
 
 nmap <F6>ss :echo <SID>CustomGrep('.')<cr>
+nmap <F6>sa :echo <SID>CustomGrep('app')<cr>
 nmap <F6>sm :echo <SID>CustomGrep('app/models')<cr>
 nmap <F6>sc :echo <SID>CustomGrep('app/controllers')<cr>
 nmap <F6>sv :echo <SID>CustomGrep('app/views')<cr>
