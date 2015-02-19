@@ -23,7 +23,7 @@ nmap <F6>j i<CR><ESC>
 nmap <F6>hs :set hlsearch!<cr>
 nmap <F6>cs :set cursorline!<cr>
 nmap <F6>cc :cclose<CR>
-nmap <F6>bs :set scrollbind!<cr>
+nmap <F6>sb :set scrollbind!<cr>
 nmap <F6>e :edit!<cr>
 nmap <F6>w :wa<CR>
 nmap <F6>rv :Eview<Space>
