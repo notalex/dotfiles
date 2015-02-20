@@ -18,7 +18,6 @@ Bundle 'ciaranm/securemodelines'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'rhysd/open-pdf.vim'
 Bundle 'justinmk/vim-sneak'
-Bundle 'rstacruz/sparkup'
 
 Bundle 'xolox/vim-notes'
   Bundle 'xolox/vim-misc'
