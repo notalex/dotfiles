@@ -95,6 +95,8 @@ set confirm            " Confirm to save file instead of errors.
 set tags+=.git/tags
 set scrolloff=999
 set backspace=indent,eol,start
+" w -> content in non buffer files(like help files) in the same tab. b -> other loaded buffers.
+set complete=.,w,b
 
 " #-----------emacs mode
 imap <c-a> <Home>
