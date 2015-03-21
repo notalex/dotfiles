@@ -32,6 +32,7 @@ Bundle 'notalex/vim-syntax-highlighter'
 Bundle 'notalex/vim-buff-killer'
 Bundle 'notalex/DrawIt'
 Bundle 'notalex/vim-style-police'
+Bundle 'notalex/vim_common_functions'
 
 filetype plugin on
 
