@@ -1,5 +1,5 @@
 " Highlight all instances of word under cursor, when idle.
-nnoremap <F6>/ :if AutoHighlightToggle()<Bar>set hlsearch<Bar>endif<CR>
+nnoremap <F6>/ :set nohlsearch<Bar>if AutoHighlightToggle()<Bar>set hlsearch<Bar>endif<CR>
 
 function! AutoHighlightToggle()
   let @/ = ''
