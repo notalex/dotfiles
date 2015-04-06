@@ -9,6 +9,7 @@ export EDITOR=vim
 export TERMINAL=xfce4-terminal
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+export TERM=xterm-256color
 
 add_to_path $HOME/.rvm/bin
 add_to_path $HOME/.git_helpers
