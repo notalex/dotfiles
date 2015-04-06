@@ -1,13 +1,22 @@
 #! /usr/bin/ruby
 
 # Usage:
-# $ gem install listen -v 1.3.1
+# $ gem install listen -v 2.10.0
 #
-# $ iwatch src_dir dst_dir
+# src_dir/
+#   coffee/
+#   js/
+#   sass/
+#   css/
+#   index.haml
+#   index.html
+#
+# $ iwatch src_dir
+# OR
+# $ iwatch src_dir/coffee
 
 require 'listen'
 @src_folder = ARGV[0]
-@dtn_folder = ARGV[1]
 
 @dictionary = {
   'haml' => 'html',
@@ -26,8 +35,8 @@ require 'listen'
 def get_destination(path)
   filetype = File.extname(path).slice(/\w+/)
   fail SyntaxError, "avoiding #{ @colors[:fg_white] + path + @colors[:reset] }" unless @dictionary[filetype]
-  dtn_file = path.gsub(/[^\.](\w+?)$/, @dictionary[filetype])
-  dtn_path = @dtn_folder + dtn_file
+  dest_filetype = @dictionary[filetype]
+  dtn_path = path.gsub(/[^\/]+\/(\w+)\.\w+$/, "#{ dest_filetype }/#{ $1 }.#{ dest_filetype }")
   { filetype: filetype, path: dtn_path }
 end
 
@@ -48,18 +57,16 @@ def show_time
   print @colors[:fg_white] + @colors[:bg_black] + Time.now.strftime("%H:%M:%S") + @colors[:reset] + " => "
 end
 
-def compile(path)
-  src_path = @src_folder + path
-  destination = get_destination(path)
+def compile(src_path)
+  destination = get_destination(src_path)
 
   if system command_for(destination[:filetype], src_path, destination[:path])
     show_time
-    puts "compiled #{ @colors[:fg_cyan] + File.basename(path) + @colors[:reset] } successfully"
+    puts "compiled #{ @colors[:fg_cyan] + File.basename(src_path) + @colors[:reset] } successfully"
   end
 end
 
 callback = Proc.new do |updated, added, removed|
-
   begin
     (updated + added).each do |path|
       compile(path)
@@ -81,4 +88,5 @@ callback = Proc.new do |updated, added, removed|
   end
 end
 
-Listen.to(@src_folder).relative_paths(true).change(&callback).start
+Listen.to(@src_folder, &callback).start
+sleep
