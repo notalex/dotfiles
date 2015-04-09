@@ -76,3 +76,5 @@ let loaded_matchparen = 0
 
 " Disable sparkup's next tag mapping which is <C-n> by default.
 let g:sparkupNextMapping = '<nop>'
+
+let g:vim_run_tests_prefix = '<F6>'
