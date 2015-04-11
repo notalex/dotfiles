@@ -1,5 +1,7 @@
 " vim: set ft=vim:
 
+let g:plug_url_format = 'git@github.com:%s.git'
+
 " -------------- ctrlp mappings
 
 let g:ctrlp_working_path_mode = 'a'

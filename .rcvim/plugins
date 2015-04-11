@@ -1,40 +1,37 @@
 " vim: set ft=vim:
 
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call plug#begin('~/.vim/plugged')
 
-Bundle 'gmarik/vundle'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rails'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'jiangmiao/auto-pairs'
+Plug 'vim-scripts/AnsiEsc.vim'
+Plug 'ciaranm/securemodelines'
+Plug 'elixir-lang/vim-elixir'
+Plug 'rhysd/open-pdf.vim'
+Plug 'justinmk/vim-sneak'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'jelera/vim-javascript-syntax'
 
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-rails'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'jiangmiao/auto-pairs'
-Bundle 'vim-scripts/AnsiEsc.vim'
-Bundle 'ciaranm/securemodelines'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'rhysd/open-pdf.vim'
-Bundle 'justinmk/vim-sneak'
-Bundle 'terryma/vim-multiple-cursors'
+Plug 'xolox/vim-notes'
+  Plug 'xolox/vim-misc'
 
-Bundle 'xolox/vim-notes'
-  Bundle 'xolox/vim-misc'
+Plug 'notalex/vim-potent-motion'
+Plug 'notalex/snipmate.vim'
+Plug 'notalex/vim-run-live'
+Plug 'notalex/vim-strip-trailers'
+Plug 'notalex/vim-git-helpers'
+Plug 'notalex/vim-run-tests'
+Plug 'notalex/vim-syntax-highlighter'
+Plug 'notalex/vim-buff-killer'
+Plug 'notalex/DrawIt'
+Plug 'notalex/vim-style-police'
+Plug 'notalex/vim_common_functions'
 
-Bundle 'notalex/vim-potent-motion'
-Bundle 'notalex/snipmate.vim'
-Bundle 'notalex/vim-run-live'
-Bundle 'notalex/vim-strip-trailers'
-Bundle 'notalex/vim-git-helpers'
-Bundle 'notalex/vim-run-tests'
-Bundle 'notalex/vim-syntax-highlighter'
-Bundle 'notalex/vim-buff-killer'
-Bundle 'notalex/DrawIt'
-Bundle 'notalex/vim-style-police'
-Bundle 'notalex/vim_common_functions'
-
-filetype plugin on
+call plug#end()
 
 source ~/.rcvim/plugin_config
