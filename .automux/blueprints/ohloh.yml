@@ -9,7 +9,7 @@ hooks:
     - <%= select_window 2 %>
 
 windows:
-  - panes: cache_classes=true script/server
+  - panes: cache_classes=true script/server -p 4000
     name: server
   - index: 2
     panes: nvim
@@ -20,5 +20,5 @@ windows:
   - index: 8
 
   - index: 9
-    panes: script/console --irb=pry --debugger
+    panes: script/console
     name: console
