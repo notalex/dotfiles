@@ -1,18 +1,25 @@
 highlight LongLineMatcher ctermbg = 235
 
+" Private {{{
 function! s:ToggleLongLinesHighlight()
   if exists('s:matcher')
     call matchdelete(s:matcher)
     unlet s:matcher
   else
-    let s:matcher = matchadd('LongLineMatcher', '\v%>70v.+')
+    call <SID>HighlightLongLines()
   endif
 endfunction
 
-nmap <F6>ht :call <SID>ToggleLongLinesHighlight()<CR>
+function! s:HighlightLongLines()
+  let s:matcher = matchadd('LongLineMatcher', '\v%>100v.+')
+endfunction
 
-" Do not highlight long lines for Vmail or notes.
-" Cannot depend on filetypes since this is read before all syntax & ftplugins.
-if !strlen($VMAIL_HOME) && match(expand('%:e'), '\v%(txt|notes)$') != 0
-  call <SID>ToggleLongLinesHighlight()
-endif
+function! s:HighlightLongLinesAndSetMapping()
+  call <SID>HighlightLongLines()
+  nmap <buffer> <F6>ht :call <SID>ToggleLongLinesHighlight()<CR>
+endfunction
+" }}}
+
+augroup LongHighlighter
+  autocmd! BufCreate *.coffee,*.rb call <SID>HighlightLongLinesAndSetMapping()
+augroup END
