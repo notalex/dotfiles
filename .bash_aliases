@@ -38,13 +38,7 @@ alias hdmi-connect="xrandr --output VGA1 --off; xrandr --output HDMI1 --auto --l
 alias wifi-restart='nmcli nm wifi off && nmcli nm wifi on'
 
 # gems
-alias spc='spork cucumber'
-alias cuke-spork='rake db:test:prepare && spork cucumber'
-alias migrate-spork='rake db:migrate RAILS_ENV=test; spork cucumber'
-alias reset-spork='rake db:reset RAILS_ENV=test; rake db:migrate RAILS_ENV=test; spork'
-alias recreate-test-db='rake db:drop RAILS_ENV=test; rake db:create RAILS_ENV=test; rake db:migrate RAILS_ENV=test --trace;'
 alias test-migrate='rake db:migrate RAILS_ENV=test --trace;'
-alias redo-migrate-spork='rake db:migrate:redo RAILS_ENV=test; spork cucumber'
 alias cux='ntf cucumber --no-source -p run_all features/'
 alias mnt='ruby -Itest test/'
 alias mns='ntf ruby -Ispec spec/'
