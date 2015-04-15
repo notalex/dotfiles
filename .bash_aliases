@@ -38,7 +38,6 @@ alias hdmi-connect="xrandr --output VGA1 --off; xrandr --output HDMI1 --auto --l
 alias wifi-restart='nmcli nm wifi off && nmcli nm wifi on'
 
 # gems
-alias test-migrate='rake db:migrate RAILS_ENV=test --trace;'
 alias cux='ntf cucumber --no-source -p run_all features/'
 alias mnt='ruby -Itest test/'
 alias mns='ntf ruby -Ispec spec/'
@@ -52,6 +51,7 @@ alias bi='bundle install'
 # rails
 alias rgm='rails generate migration'
 alias rdm='rake db:migrate; rake db:migrate RAILS_ENV=test'
+alias rdmt='rake db:migrate RAILS_ENV=test --trace;'
 alias rta='rake test:all'
 alias rd-migrate-redo='rake db:migrate:redo; rake db:migrate:redo RAILS_ENV=test'
 alias rd-rollback='rake db:rollback; rake db:rollback RAILS_ENV=test'
