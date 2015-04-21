@@ -66,6 +66,12 @@ cabbrev src source ~/.vimrc
 cabbrev fn vertical topleft help function-list
 cabbrev vb vertical sbuffer
 
+" #----------- nvim terminal mappings --------------------
+if has('nvim')
+  tnoremap <F6>n <C-\><C-n>
+  tnoremap <F6>w <C-\><C-n><C-w>w
+endif
+
 " ------------------set------------------------------
 
 set t_Co=256
