@@ -61,6 +61,10 @@ cmap <c-k> <Up>
 cmap <c-j> <Down>
 cmap <Nul> <Space>
 cmap <C-o> <S-Tab>
+" Converts Emodel to Tmodel.
+cmap <C-t> <Home><Right><Backspace>T<CR>
+cmap <C-v> <Home><Right><Backspace>V<CR>
+
 cabbrev hv vertical belowright help
 cabbrev src source ~/.vimrc
 cabbrev fn vertical topleft help function-list
