@@ -28,6 +28,6 @@ nm-applet &
 bluetooth-applet &
 gnome-sound-applet &
 keynav &
+unclutter -idle 0.4 &
 
 tmux set -g status off
-edge-swarp
