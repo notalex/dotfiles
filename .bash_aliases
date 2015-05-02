@@ -47,12 +47,14 @@ alias bi='bundle install'
 
 # rails
 alias rgm='rails generate migration'
-alias rdm='rake db:migrate; rake db:migrate RAILS_ENV=test'
-alias rdmt='rake db:migrate RAILS_ENV=test --trace;'
+alias rdm='rake db:migrate'
+alias rdm-t='rake db:migrate; rake db:migrate RAILS_ENV=test'
 alias rdtp='rake db:test:prepare'
 alias rta='rake test:all'
-alias rd-migrate-redo='rake db:migrate:redo; rake db:migrate:redo RAILS_ENV=test'
-alias rd-rollback='rake db:rollback; rake db:rollback RAILS_ENV=test'
+alias rd-migrate-redo='rake db:migrate:redo'
+alias rd-migrate-redo-t='rake db:migrate:redo; rake db:migrate:redo RAILS_ENV=test'
+alias rd-rollback='rake db:rollback'
+alias rd-rollback-t='rake db:rollback; rake db:rollback RAILS_ENV=test'
 alias nuke-test-db='rake db:drop RAILS_ENV=test; rake db:create RAILS_ENV=test; rake db:migrate RAILS_ENV=test; rake db:seed RAILS_ENV=test'
 
 # rvm
