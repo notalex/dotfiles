@@ -1,4 +1,4 @@
-i3 resize grow down 320px
-i3 resize shrink up 500px
+i3 resize grow down 200px
+i3 resize shrink up 340px
 i3 resize shrink left 250px
 i3 resize grow right 320px
