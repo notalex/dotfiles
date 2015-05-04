@@ -34,7 +34,6 @@ nmap <C-z> <nop>
 nmap K <nop>
 nnoremap / /\v
 nnoremap ? ?\v
-nnoremap <C-w>x <C-w>x<C-w>w
 " Avoid Ex mode
 nmap Q <nop>
 
