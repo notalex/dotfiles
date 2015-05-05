@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+extension=$1
+vim ~/.trash/test.$1
