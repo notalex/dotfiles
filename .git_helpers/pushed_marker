@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+
+current_git_head=$(git log -1 --oneline | awk '{print $1}')
+last_pushed_head=$(cat .git/pushed_head 2> /dev/null)
+
+if [[ $current_git_head != $last_pushed_head ]]; then
+  echo '+'
+fi

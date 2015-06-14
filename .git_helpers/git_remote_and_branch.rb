@@ -36,3 +36,9 @@ def local_branch_name
   branch_string = %x[ git branch ]
   branch_string.slice(/\* (.+)/, 1)
 end
+
+def write_pushed_head
+  file_path = "#{ Dir.pwd }/.git/pushed_head"
+  current_git_head = %x[git log -1 --oneline | awk '{print $1}']
+  File.open(file_path, 'w') { |f| f.write(current_git_head) }
+end

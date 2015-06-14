@@ -4,4 +4,7 @@ require File.expand_path('../git_remote_and_branch', __FILE__)
 command = "git pull #{ remote_name } #{ remote_branch_name }"
 
 puts command
-system command
+
+if system(command)
+  write_pushed_head
+end

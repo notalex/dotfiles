@@ -10,9 +10,14 @@ branch_name() { ~/.git_helpers/git_stats branch_name; }
 branch_color() { $( ~/.git_helpers/git_stats branch_color_code ); }
 symbol_color() { $( ~/.git_helpers/git_stats symbol_color ); }
 symbol() { echo $( ~/.git_helpers/git-branch-symbol ); }
+pushed_marker() { bash ~/.git_helpers/pushed_marker; }
 
 git_information() {
-  echo '\[$(branch_color)\]$(branch_name)\[$(symbol_color)\]$(symbol) '
+  branch_name_and_color='\[$(branch_color)\]$(branch_name)'
+  symbol_name_and_color='\[$(symbol_color)\]$(symbol)'
+  pushed_state='\[$c_reset\]$(pushed_marker)'
+
+  echo "$branch_name_and_color$pushed_state$symbol_name_and_color "
 }
 
 machine-indicator() {

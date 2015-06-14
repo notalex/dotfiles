@@ -4,4 +4,7 @@ require File.expand_path('../git_remote_and_branch', __FILE__)
 command = "git push #{ remote_name } #{ local_branch_name }:#{ remote_branch_name } #{ options_string }"
 
 puts command
-system command
+
+if system(command)
+  write_pushed_head
+end

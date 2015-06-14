@@ -8,12 +8,12 @@ notes-push() {
   if [ -n "$(git status --porcelain)" ]; then
     git add -A
     git commit -m '-'
-    git push origin master
+    gps
   fi
 }
 
 pushd $HOME
-git push origin master
+gps
 
 notes-push
 popd
