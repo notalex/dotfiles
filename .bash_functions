@@ -91,5 +91,7 @@ if $(on-mac)
 then
   ntf() { $@; terminal-notifier-notify -message 'Process finished...'; tmux display-message 'Process finished...'; }
 else
-  ntf() { $@; notify-send -t 3000 'Process finished...'; }
+  ntf() { $@; notify-send -u critical "Process finished: $@"; }
 fi
+
+ntfs() { $@; mplayer ~/tones/notify-tone.mp3 1> /dev/null; notify-send -t 3000 "Process finished: $@"; }
