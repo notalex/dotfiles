@@ -17,7 +17,7 @@ else
   guake -e 'automux small -f'
 fi
 
-firefox &
+latest-fox &
 sleep 10
 
 i3-msg exec 'xfce4-terminal -e setup-notes-session'
@@ -28,6 +28,6 @@ nm-applet &
 bluetooth-applet &
 gnome-sound-applet &
 keynav &
-unclutter -idle 0.4 &
+unclutter -idle 1 &
 
 tmux set -g status off
