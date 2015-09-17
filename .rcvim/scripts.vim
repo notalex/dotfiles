@@ -11,3 +11,11 @@ endfunction
 let g:last_visited_tab = 1
 au! TabLeave * let g:last_visited_tab = tabpagenr()
 nmap gl :execute "tabn" . g:last_visited_tab <CR>
+
+"----------------------------------------------
+nmap <F6>p o<Esc>p
+nnoremap <F6>q /:\w* =><cr>xelvec:<Esc>:w<cr>
+nmap <F6>O :echom OpenLinkInFirefox()<cr>
+nmap <F6>o I<C-m><C-m><Esc>2ka
+nmap <F6>dg Odebugger; true<Esc>:w<CR>
+nmap <F6>' cs"'
