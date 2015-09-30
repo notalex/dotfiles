@@ -7,7 +7,3 @@ else
 fi
 
 nmcli con $action id OpenHub
-exit
-
-cd ~/openvpn
-sudo openvpn --config client.ovpn
