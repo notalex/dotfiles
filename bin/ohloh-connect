@@ -6,7 +6,7 @@ else
   action=up
 fi
 
-nmcli con $action id Ohloh
+nmcli con $action id OpenHub
 exit
 
 cd ~/openvpn
