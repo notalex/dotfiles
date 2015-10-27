@@ -8,7 +8,6 @@ windows:
   - panes: barking-finch
     name: finch
     index: 1
-    opt: '-f'
   - panes: nvim
     index: 2
   - panes: rtorrent
