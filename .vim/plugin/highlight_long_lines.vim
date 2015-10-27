@@ -11,7 +11,7 @@ function! s:ToggleLongLinesHighlight()
 endfunction
 
 function! s:HighlightLongLines()
-  let s:matcher = matchadd('LongLineMatcher', '\v%>100v.+')
+  let s:matcher = matchadd('LongLineMatcher', '\v%>120v.+')
 endfunction
 
 function! s:HighlightLongLinesAndSetMapping()
