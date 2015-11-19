@@ -14,7 +14,7 @@ sleep 5
 if $(tmux has-session -t small); then
   guake -e 'tmx-attach-session small'
 else
-  guake -e 'automux small -f'
+  guake -e 'automux small'
 fi
 
 latest-fox &
