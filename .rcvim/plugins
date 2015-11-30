@@ -1,8 +1,7 @@
 " vim: set ft=vim:
 
 call plug#begin('~/.vim/plugged')
-
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rails'
