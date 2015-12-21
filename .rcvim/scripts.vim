@@ -17,6 +17,6 @@ nmap <F6>p o<Esc>p
 nnoremap <F6>q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nmap <F6>O :echom OpenLinkInFirefox()<cr>
 nmap <F6>o I<C-m><C-m><Esc>2ka
-nmap <F6>dg Odebugger; true<Esc>:w<CR>
+nmap <F6>dg Orequire 'debugger'; debugger; true<Esc>:w<CR>
 nmap <F6>db Orequire 'byebug'; byebug<Esc>:w<CR>
 nmap <F6>' cs"'
