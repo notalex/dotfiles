@@ -30,6 +30,7 @@ Plug 'notalex/vim-buff-killer'
 Plug 'notalex/DrawIt'
 Plug 'notalex/vim-style-police'
 Plug 'notalex/vim_common_functions'
+Plug 'notalex/vim-alternate'
 
 call plug#end()
 
