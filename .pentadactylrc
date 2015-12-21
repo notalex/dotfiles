@@ -15,6 +15,8 @@ cabbreviate g google
 set guioptions=Csn
 set hintkeys=asdfg;lkjh
 set! browser.tabs.closeWindowWithLastTab=false
+" Do not focus menu when alt is pressed.
+set! ui.key.menuAccessKeyFocuses=false
 
 imap <C-m> <CR>
 imap <C-j> <nop>
