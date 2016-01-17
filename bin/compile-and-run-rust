@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+
+compiled_file=/tmp/temp-rust-code-compiled
+
+rm $compiled_file 2> /dev/null
+
+rustc $1 -o $compiled_file
+
+[ -s $compiled_file ] && $compiled_file
