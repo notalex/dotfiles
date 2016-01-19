@@ -32,6 +32,7 @@ bmark http://putlocker.is/search/search.php?q=%s -title 'Putlocker' -keyword 'pu
 bmark http://www.animefushigi.com/?s=%s -title 'Anime Fushigi' -keyword 'fushigi'
 bmark http://www.goodreads.com/search?&q=%s -title 'Good Reads' -keyword 'good-reads-search'
 bmark http://www.lyricsmode.com/search.php?search=%s -title 'Lyrics Search' -keyword 'lyrics-search'
+bmark https://yify-movie.com/search/%s/All/All/0/latest/20/ -title 'YIFY Torrents' -keyword 'yify'
 
 " Shopping
 bmark http://www.ebay.in/sch/i.html?_nkw=%s&_sop=15 -title 'Ebay India' -keyword 'ebay-search'
