@@ -57,4 +57,5 @@ augroup nonRepeater
  au FileType elixir let b:run_live_command = 'elixir'
  au FileType ruby let b:run_live_command = 'ruby'
  au FileType scala let b:run_live_command = 'scala'
+ au FileType haskell let b:run_live_command = 'runhaskell'
 augroup END
