@@ -34,7 +34,7 @@ alias disk-usage="du -h --max-depth=1 $@"
 alias xout='xclip -o -selection clipboard'
 alias zzh='sudo pm-hibernate'
 alias u-un-mount="sudo umount /media/usb"
-alias hdmi-connect="xrandr --output VGA1 --off; xrandr --output HDMI1 --auto --left-of eDP1; xmodmap ~/.Xmodmap"
+alias hdmi-connect="xrandr --output HDMI2 --auto --left-of eDP1; xmodmap ~/.Xmodmap"
 alias wifi-restart='nmcli nm wifi off && nmcli nm wifi on'
 
 # gems
