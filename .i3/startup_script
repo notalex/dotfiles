@@ -27,9 +27,9 @@ sleep 5
 
 copyq &
 nm-applet &
-bluetooth-applet &
+# bluetooth-applet &
 gnome-sound-applet &
 keynav &
-unclutter -idle 1 &
+# unclutter -idle 1 &
 
 tmux set -g status off
