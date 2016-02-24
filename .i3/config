@@ -24,7 +24,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+Q kill
 
 # Kill notify dialog
-bindsym $mod+x [class="Xfce4-notifyd"] kill
+# bindsym $mod+x [class="Xfce4-notifyd"] kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -179,11 +179,11 @@ bindsym $mod+Shift+m exec script-touchpad-toggle
 bindsym $mod+n exec script-toggle-notes-window
 
 # Helps to focus out of flash windows.
-bindsym $mod+g exec click-at-edge
+# bindsym $mod+g exec click-at-edge
 
-bindsym XF86AudioMute exec pactl-toggle-mute
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +10%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -10%
+# bindsym XF86AudioMute exec pactl-toggle-mute
+# bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +10%
+# bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -10%
 
 for_window [class="Xfce4-notifyd"] floating enable; border none; focus mode_toggle
 for_window [class="Gvim"] floating enable
