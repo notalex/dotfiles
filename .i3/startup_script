@@ -19,7 +19,7 @@ else
   guake -e 'automux small'
 fi
 
-latest-fox &
+firefox &
 sleep 10
 
 i3-msg exec 'xfce4-terminal -e setup-notes-session'
