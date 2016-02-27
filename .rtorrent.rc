@@ -1,4 +1,4 @@
 directory = ~/Videos
 session = ~/.rtorrent_sessions
-system.method.set_key = event.download.finished, notify_me, "execute = rtorrent-notify"
+# system.method.set_key = event.download.finished, notify_me, "execute = rtorrent-notify"
 system.method.set_key = event.download.inserted_new, move_tor, "execute = rm, $d.get_loaded_file="
