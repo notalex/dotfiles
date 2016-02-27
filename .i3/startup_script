@@ -32,4 +32,5 @@ gnome-sound-applet &
 keynav &
 # unclutter -idle 1 &
 
+synclient TouchpadOff=1  # Disable OSX trackpad.
 tmux set -g status off
