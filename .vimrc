@@ -1,4 +1,9 @@
 set nocompatible
+
+if has('nvim')
+  let &runtimepath.=',' . $HOME . '/.vim'
+endif
+
 source ~/.rcvim/plugins
 source ~/.rcvim/scripts.vim
 source ~/.rcvim/autocommands
