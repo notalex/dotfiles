@@ -51,6 +51,7 @@ nmap gl <C-^>
 
 " Disable default close application shortcut.
 nmap <C-S-w> <nop>
+nmap <C-q> <nop>
 cmap <C-S-w> <nop>
 imap <C-S-w> <nop>
 
