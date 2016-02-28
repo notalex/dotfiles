@@ -6,7 +6,7 @@ hooks:
 windows:
   - index: 2
     panes:
-      - vim WorkFlow.notes
+      - vim home_work.notes
     hooks:
       pre: cd ~/gitbasket
   - index: 3
