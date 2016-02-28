@@ -2,6 +2,7 @@ set nocompatible
 
 if has('nvim')
   let &runtimepath.=',' . $HOME . '/.vim'
+  set laststatus=1
 endif
 
 source ~/.rcvim/plugins
