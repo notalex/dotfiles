@@ -30,6 +30,7 @@ nm-applet &
 # bluetooth-applet &
 gnome-sound-applet &
 keynav &
+udiskie &
 # unclutter -idle 1 &
 
 synclient TouchpadOff=1  # Disable OSX trackpad.
