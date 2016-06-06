@@ -21,6 +21,7 @@ vnc() { vncviewer 192.168.6.$1 ; }
 rmt() { mv $1 ~/.trash; }
 brk() { sleep $@; notify-send -u critical 'Break!!'; }
 automux_installed() { gem list | grep automux 1> /dev/null; }
+pskill() { ps aux | grep $1 | grep -v grep | awk '{print $2}' | xargs kill -9 ; }
 
 # git
 gcm() { git commit -m "$(echo $@)"; }
