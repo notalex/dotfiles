@@ -5,9 +5,6 @@ hooks:
   post: <%= select_window 2 %>
 windows:
   - panes:
-  - panes: barking-finch
-    name: finch
-    index: 1
   - panes: nvim
     index: 2
   - panes: rtorrent
