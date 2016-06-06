@@ -9,8 +9,6 @@ windows:
     index: 2
   - panes: rtorrent
     index: 3
-  - panes: ohloh-connect
-    index: 5
   - hooks:
       pre: git pull origin master
     root: ~/gitbasket
