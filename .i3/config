@@ -119,7 +119,7 @@ bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+Delete exit
+bindsym $mod+Shift+O exit
 # lock screen
 bindsym $mod+Delete exec i3lock -c 000000
 
@@ -175,7 +175,7 @@ bindsym $mod+Shift+B border normal
 # i3 commandline
 bindsym $mod+Shift+colon exec i3-input
 
-bindsym $mod+Shift+m exec script-touchpad-toggle
+# bindsym $mod+Shift+m exec script-touchpad-toggle
 bindsym $mod+n exec script-toggle-notes-window
 
 # Helps to focus out of flash windows.
