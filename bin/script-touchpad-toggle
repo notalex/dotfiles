@@ -17,7 +17,8 @@ else
   next_touchpad_state=1
 fi
 
-id_value=$(xinput list | grep -i 'touchpad' | awk '{ print $6  }')
-touchpad_id=${id_value:3}    # id_value will have a value like id=14.
+# id_value=$(xinput list | grep -i 'touchpad' | awk '{ print $6  }')
+# touchpad_id=${id_value:3}    # id_value will have a value like id=14.
+# xinput set-prop $touchpad_id "Device Enabled" $next_touchpad_state
 
-xinput set-prop $touchpad_id "Device Enabled" $next_touchpad_state
+synclient TouchpadOff=$((1 - next_touchpad_state))
