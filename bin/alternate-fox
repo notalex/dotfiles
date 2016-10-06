@@ -1,3 +1,3 @@
 #! /usr/bin/env bash
 
-firefox -p alternate-fox --no-remote
+firefox -p alternate --no-remote
