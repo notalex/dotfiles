@@ -1,5 +1,5 @@
-! clear Lock
-! keycode 66 = F6
+clear Lock
+keycode 66 = F6
 
 ! Swap left Super & Alt
 ! keycode 64 = Alt_L
