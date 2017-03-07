@@ -175,7 +175,7 @@ bindsym $mod+Shift+B border normal
 # i3 commandline
 bindsym $mod+Shift+colon exec i3-input
 
-# bindsym $mod+Shift+m exec script-touchpad-toggle
+bindsym $mod+Shift+m exec script-touchpad-toggle
 bindsym $mod+n exec script-toggle-notes-window
 
 # Helps to focus out of flash windows.
