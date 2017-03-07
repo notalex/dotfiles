@@ -35,7 +35,7 @@ alias xout='xclip -o -selection clipboard'
 alias zzh='sudo pm-hibernate'
 alias u-un-mount="sudo umount /media/usb"
 alias hdmi-connect="xrandr --output HDMI2 --auto --left-of eDP1"
-alias wifi-restart='nmcli radio wifi off && nmcli radio wifi on'
+alias wifi-restart='nmcli nm wifi off && nmcli nm wifi on'
 
 # gems
 alias cux='ntf cucumber --no-source -p run_all features/'
