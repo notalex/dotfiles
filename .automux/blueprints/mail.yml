@@ -3,5 +3,3 @@ flags: -u2
 windows:
   - index: 8
     panes: st-vmail notalex
-  - index: 9
-    panes: st-vmail imaginea
