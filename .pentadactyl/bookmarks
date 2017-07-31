@@ -21,8 +21,7 @@ bmark http://en.wikipedia.org/wiki/%s -title 'wikipedia' -keyword 'wikipedia-en'
 bmark http://thesaurus.com/browse/%s -title 'thesaurus' -keyword 'thesaurus'
 
 " Torrents
-bmark http://kat.ph/search/%s/ -title 'kat-torrents' -keyword 'kat-torrents'
-bmark http://torrentz.eu/search?q=%s -title 'Torrentz Search' -keyword 'torrentz-search'
+bmark https://thepiratebay.rocks/search/%s/0/99/0 -title 'Pirate Search' -keyword 'pirate-search'
 
 " Entertainment
 bmark http://www.youtube.com/results?search_query=%s -title 'Youtube' -keyword 'youtube-search'
@@ -35,7 +34,8 @@ bmark http://www.lyricsmode.com/search.php?search=%s -title 'Lyrics Search' -key
 bmark https://yify-movie.com/search/%s/All/All/0/latest/20/ -title 'YIFY Torrents' -keyword 'yify'
 
 " Shopping
-bmark http://www.ebay.in/sch/i.html?_nkw=%s&_sop=15 -title 'Ebay India' -keyword 'ebay-search'
+bmark http://www.ebay.in/sch/i.html?_nkw=%s -title 'Ebay India' -keyword 'ebay-search'
+bmark http://www.ebay.in/sch/i.html?_nkw=%s&_sop=15 -title 'Ebay India' -keyword 'ebay-search-lowest-price'
 bmark http://www.flipkart.com/search?p%5B%5D=sort%3Dpopularity&q=%s -title 'Flipkart Search' -keyword 'flipkart-search'
 bmark http://www.amazon.in/s/url=search-alias%3Ddigital-text&field-keywords=%s -title 'Amazon Kindle Search' -keyword 'amazon-kindle-search'
 bmark http://www.amazon.in/s/field-keywords=%s -title 'Amazon India Search' -keyword 'amazon-india'
