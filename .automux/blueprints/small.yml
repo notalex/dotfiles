@@ -7,8 +7,8 @@ windows:
   - panes:
   - panes: nvim
     index: 2
-  - panes: rtorrent
-    index: 3
+  - panes: cisco-anyconnect connect vpn-dc1.blackducksoftware.com
+    index: 1
   - hooks:
       pre: git pull origin master
     root: ~/gitbasket
