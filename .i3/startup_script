@@ -3,7 +3,7 @@
 xrandr --output eDP1 --mode 1920x1080
 
 i3 workspace 3
-i3-msg exec 'xfce4-terminal -e setup-mail-client'
+thunderbird &
 sleep 5
 
 i3 workspace 7
