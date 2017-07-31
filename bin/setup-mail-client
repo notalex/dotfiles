@@ -3,7 +3,7 @@
 i3 border none
 
 if $(tmux has-session -t mail); then
-  tmx-attach-session mail
+  tmux attach-session -t mail
 else
   automux mail
 fi
