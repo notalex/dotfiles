@@ -44,6 +44,7 @@ alias mns='ntf ruby -Ispec spec/'
 alias mnr='ntf rspec spec/'
 alias rjw='rake jobs:work'
 alias bi='bundle install'
+alias gi='gem install'
 
 # rails
 alias rgm='rails generate migration'
