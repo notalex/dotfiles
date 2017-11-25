@@ -1,0 +1,28 @@
+#! /usr/bin/env bash
+
+container_id=$(docker ps -aq | head -1)
+
+__start_container() {
+  local running_container_id=$(docker ps -q | head -1)
+  if [ -z "$running_container_id" ]; then
+    docker start $container_id
+  fi
+}
+
+case $1 in
+  sta*)
+    docker start $container_id
+  ;;
+  sto*)
+    docker stop $container_id
+  ;;
+  b*)
+    __start_container
+    docker exec -it $container_id /bin/bash --login
+  ;;
+  e*)
+    __start_container
+    shift
+    docker exec -t $container_id /bin/bash --login -c "$@"
+  ;;
+esac

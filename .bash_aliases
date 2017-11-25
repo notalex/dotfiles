@@ -70,6 +70,5 @@ alias mux='automux'
 
 # docker
 alias d='docker'
-alias dr='docker run'
 
 $(on-mac) && alias quarantine='xattr -d com.apple.quarantine'
