@@ -71,4 +71,8 @@ alias mux='automux'
 # docker
 alias d='docker'
 
+# nixos
+alias nxsearch='nix-env -qaP | less'
+alias nxinstall='nix-env -i'
+
 $(on-mac) && alias quarantine='xattr -d com.apple.quarantine'
