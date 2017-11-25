@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/env bash
 if [ "$(latest_chat_post)" ]; then
   if $(on-mac); then
     terminal-notifier-notify -message $(latest_chat_post)

@@ -1,4 +1,4 @@
-#! /usr/bin/ruby
+#! /usr/bin/env ruby
 # default is HEAD~0
 param = ARGV[0]
 if param == 'c'

@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#! /usr/bin/env bash
 
 resolution=$(xrandr | awk 'FNR == 3 { print $1 }')
 

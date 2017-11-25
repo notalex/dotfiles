@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/env bash
 
 if [[ $2 =~ [0-9] ]]; then
   folder=$1

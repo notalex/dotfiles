@@ -1,4 +1,4 @@
-#! /usr/bin/ruby
+#! /usr/bin/env ruby
 klass = ARGV[0].capitalize
 type = ARGV[1]
 

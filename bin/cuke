@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/env bash
 
 cucumber --no-source -p run_all $@
 

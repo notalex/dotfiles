@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/env bash
 
 new_window() {
   [ $2 ] && local new_window_opts="-n $2"

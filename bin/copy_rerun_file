@@ -1,4 +1,4 @@
-#! /usr/bin/ruby
+#! /usr/bin/env ruby
 
 class String
   def is_first_test_in_file?
@@ -26,7 +26,7 @@ unless ARGV[0] == '-y'
   confirmation = gets.chomp
   exit unless confirmation == 'yes'
 end
-  
+
 source_file_path = 'tmp/rerun.txt'
 target_file_path = 'tmp/copy_rerun.txt'
 

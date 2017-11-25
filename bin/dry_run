@@ -1,4 +1,4 @@
-#! /usr/bin/ruby
+#! /usr/bin/env ruby
 
 branch_string = %x[ git branch ]
 branch_name = branch_string.slice(/\* (\w+)/, 1)

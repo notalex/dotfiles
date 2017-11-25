@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/env bash
 
 dir_path="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ruby "$dir_path/iwatch_config/iwatch_html" "$1" "$2"

@@ -1,4 +1,4 @@
-#! /usr/bin/ruby
+#! /usr/bin/env ruby
 
 # Usage:
 # $ gem install listen -v 2.10.0
