@@ -1,0 +1,8 @@
+name: elinks
+flags: -u2
+hooks:
+  post:
+    - <%= link_window 'small', 4, 4 %>
+    - <%= select_window 0 %>
+windows:
+  - panes: elinks
