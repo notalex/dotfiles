@@ -9,11 +9,7 @@ windows:
     index: 2
   - panes: cisco-anyconnect connect vpn-dc1.blackducksoftware.com
     index: 1
-  - hooks:
-      pre: git pull origin master
-    root: ~/gitbasket
+  - root: ~/gitbasket
     index: 4
     panes: nvim WorkFlow.notes
   - index: 7
-    hooks:
-      pre: git pull origin master
