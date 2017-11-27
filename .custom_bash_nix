@@ -1,0 +1,17 @@
+# vim: set ft=sh:
+
+source ~/.bash_functions
+
+# Disable suspend.
+stty stop undef
+
+export EDITOR=vim
+export TERMINAL=xfce4-terminal
+export TERM=xterm-256color
+
+add_to_path $HOME/.git_helpers
+add_to_path /home/alex/.gem/ruby/2.4.0/bin
+add_to_path ./node_modules/.bin
+
+source ~/.bash_aliases
+source ~/.bash_prompt
