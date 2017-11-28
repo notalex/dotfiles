@@ -11,7 +11,7 @@ i3-msg exec 'copyq'
 i3-msg exec 'udiskie'
 i3-msg exec 'bash ~/.xinput.conf'
 i3-msg exec 'xmodmap ~/.Xmodmap'
-i3-msg exec 'unclutter --timeout 1'
+i3-msg exec 'unclutter -idle 1'
 i3-msg exec "xfce4-terminal -e '/home/alex/.gem/ruby/2.4.0/bin/automux small'"
 
 i3 workspace 8
@@ -23,9 +23,9 @@ i3-msg exec "xfce4-terminal -e 'tmux set -g status off'"
 xfce4-terminal
 xfce4-terminal
 
-# nm-applet &
+nm-applet &
 # bluetooth-applet &
 # gnome-sound-applet &
 # keynav &
 
-# synclient TouchpadOff=1  # Disable trackpad.
+synclient TouchpadOff=1  # Disable trackpad.
