@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+
+file_path=/tmp/temp-go-file.go
+
+rm $file_path 2> /dev/null
+
+cp $1 $file_path
+go run $file_path
