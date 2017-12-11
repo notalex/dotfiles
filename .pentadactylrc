@@ -72,6 +72,10 @@ nmap ;c :firebug tab console<cr>
 nmap d <nop>
 nmap -builtin dd d
 
+" Use uu instead of u for undo tabclose.
+nmap u <nop>
+nmap -builtin uu u
+
 " Use yy instead of y for yank.
 nmap y <nop>
 nmap -builtin yy y
