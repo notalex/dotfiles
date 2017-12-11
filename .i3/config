@@ -203,3 +203,5 @@ exec --no-startup-id $HOME/.i3/startup_script
 exec xsetroot -solid black
 
 bindsym $mod+End exec blank
+
+focus_follows_mouse no
