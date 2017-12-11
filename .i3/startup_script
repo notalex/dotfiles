@@ -2,30 +2,21 @@
 
 # xrandr --output eDP1 --mode 1920x1080
 
-i3 workspace 9
+i3 workspace 7
 firefox &
 sleep 2
 
-i3 workspace 3
 i3-msg exec 'copyq'
 i3-msg exec 'udiskie'
 i3-msg exec 'bash ~/.xinput.conf'
 i3-msg exec 'xmodmap ~/.Xmodmap'
 i3-msg exec 'unclutter -idle 1'
-i3-msg exec "xfce4-terminal -e '/home/alex/.gem/ruby/2.4.0/bin/automux small'"
-
-i3 workspace 8
-i3-msg exec "xfce4-terminal -e '/home/alex/.gem/ruby/2.4.0/bin/automux elinks'"
-
-i3 workspace 7
-sleep 2
-i3-msg exec "xfce4-terminal -e 'tmux set -g status off'"
-xfce4-terminal
-xfce4-terminal
-
 nm-applet &
+synclient TouchpadOff=1  # Disable trackpad.
+
+guake -e 'mux medium -ar ~/projects/ohloh-ui -n ohloh-ui'
+guake
+xfce4-terminal &
 # bluetooth-applet &
 # gnome-sound-applet &
 # keynav &
-
-synclient TouchpadOff=1  # Disable trackpad.
