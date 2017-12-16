@@ -27,6 +27,7 @@ alias appa='sudo add-apt-repository'
 alias apti='sudo apt-get install -y --force-yes'
 alias aptr='sudo apt-get remove -y'
 alias apts='apt-cache search'
+alias aupdate='sudo apt-get update'
 alias ccd='pushd > /dev/null'
 alias pcd='popd > /dev/null'
 alias sptest="wget --output-document=/dev/null http://speedtest.sea01.softlayer.com/speedtest/speedtest/random1000x1000.jpg"
