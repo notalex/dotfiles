@@ -40,4 +40,4 @@ bmark http://www.flipkart.com/search?p%5B%5D=sort%3Dpopularity&q=%s -title 'Flip
 bmark http://www.amazon.in/s/url=search-alias%3Ddigital-text&field-keywords=%s -title 'Amazon Kindle Search' -keyword 'amazon-kindle-search'
 bmark http://www.amazon.in/s/field-keywords=%s -title 'Amazon India Search' -keyword 'amazon-india'
 bmark https://www.aliexpress.com/wholesale?SearchText=%s -title 'Aliexpress Search' -keyword 'aliexpress-search'
-bmark https://www.loveroms.com/roms.php?q=%s -title 'LoveRoms Search' -keyword 'loveroms-search'
+bmark https://www.loveroms.com/roms/?q=%s -title 'LoveRoms Search' -keyword 'loveroms-search'
