@@ -44,6 +44,8 @@ augroup nonRepeater
  au BufRead,BufNewFile *.pdf.txt set syntax=notes
  au BufRead,BufNewFile *.sbt set filetype=scala
  au BufRead,BufNewFile *.hbs set filetype=html
+ au BufRead,BufNewFile *.cr set filetype=crystal
+ au BufRead,BufNewFile *.cr set syntax=ruby
 
  au BufNewFile *.rb call s:AddRequireLineInTest()
  au BufNewFile *.cpp call <SID>AddDefaultCppDirectives()
@@ -58,4 +60,5 @@ augroup nonRepeater
  au FileType ruby let b:run_live_command = 'ruby'
  au FileType scala let b:run_live_command = 'scala'
  au FileType haskell let b:run_live_command = 'runhaskell'
+ au FileType crystal let b:run_live_command = 'crystal'
 augroup END
