@@ -41,3 +41,4 @@ bmark http://www.amazon.in/s/url=search-alias%3Ddigital-text&field-keywords=%s -
 bmark http://www.amazon.in/s/field-keywords=%s -title 'Amazon India Search' -keyword 'amazon-india'
 bmark https://www.aliexpress.com/wholesale?SearchText=%s -title 'Aliexpress Search' -keyword 'aliexpress-search'
 bmark https://www.loveroms.com/roms/?q=%s -title 'LoveRoms Search' -keyword 'loveroms-search'
+bmark http://store.steampowered.com/search/?term=%s -title 'Steam Search' -keyword 'steam-search'
