@@ -45,7 +45,6 @@ augroup nonRepeater
  au BufRead,BufNewFile *.sbt set filetype=scala
  au BufRead,BufNewFile *.hbs set filetype=html
  au BufRead,BufNewFile *.cr set filetype=crystal
- au BufRead,BufNewFile *.cr set syntax=ruby
 
  au BufNewFile *.rb call s:AddRequireLineInTest()
  au BufNewFile *.cpp call <SID>AddDefaultCppDirectives()
