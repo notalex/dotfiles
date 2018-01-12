@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+
+for filename in $(find . -name *_test.rb); do
+  mv ${filename:0:${#filename} - 8}{_test.rb,_spec.cr}
+done
+
+for filename in $(find . -name *.rb); do
+  mv ${filename:0:${#filename} - 2}{rb,cr}
+done
