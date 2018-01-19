@@ -71,7 +71,6 @@ cmap <C-t> <Home><Right><Backspace>T<CR>
 cmap <C-v> <Home><Right><Backspace>V<CR>
 
 cabbrev hv vertical belowright help
-cabbrev src source ~/.vimrc
 cabbrev fn vertical topleft help function-list
 cabbrev vb vertical sbuffer
 
