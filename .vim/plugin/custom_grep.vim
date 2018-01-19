@@ -1,4 +1,6 @@
 function! s:CustomGrep(folder_path)
+  if !isdirectory(a:folder_path) | return a:folder_path . " doesn't exist" | endif
+
   let user_input = input("Search: ", a:folder_path . ' * public, ', 'file')
 
   if strlen(user_input)
