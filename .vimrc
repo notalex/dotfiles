@@ -3,6 +3,7 @@ set nocompatible
 if has('nvim')
   let &runtimepath.=',' . $HOME . '/.vim'
   set laststatus=1
+  set guicursor=
 endif
 
 source ~/.rcvim/plugins
