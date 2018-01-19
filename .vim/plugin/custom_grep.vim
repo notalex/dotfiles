@@ -35,12 +35,20 @@ function! s:CustomGrep(folder_path)
   endif
 endfunction
 
+function! s:App()
+  if isdirectory('src') | return 'src' | else | return 'app' | endif
+endfunction
+
+function! s:TestFolder()
+  if isdirectory('spec') | return 'spec' | else | return 'test' | endif
+endfunction
+
 nmap <F6>ss :echo <SID>CustomGrep('.')<cr>
-nmap <F6>sa :echo <SID>CustomGrep('app')<cr>
+nmap <F6>sa :echo <SID>CustomGrep(<SID>App())<cr>
 nmap <F6>sl :echo <SID>CustomGrep('lib')<cr>
-nmap <F6>sm :echo <SID>CustomGrep('app/models')<cr>
-nmap <F6>sc :echo <SID>CustomGrep('app/controllers')<cr>
-nmap <F6>sv :echo <SID>CustomGrep('app/views')<cr>
-nmap <F6>sj :echo <SID>CustomGrep('app/assets/javascripts')<cr>
-nmap <F6>sd :echo <SID>CustomGrep('app/assets/stylesheets')<cr>
-nmap <F6>st :echo <SID>CustomGrep('test')<cr>
+nmap <F6>sm :echo <SID>CustomGrep(<SID>App() . '/models')<cr>
+nmap <F6>sc :echo <SID>CustomGrep(<SID>App() . '/controllers')<cr>
+nmap <F6>sv :echo <SID>CustomGrep(<SID>App() . '/views')<cr>
+nmap <F6>sj :echo <SID>CustomGrep(<SID>App() . '/assets/javascripts')<cr>
+nmap <F6>sd :echo <SID>CustomGrep(<SID>App() . '/assets/stylesheets')<cr>
+nmap <F6>st :echo <SID>CustomGrep(<SID>TestFolder())<cr>
