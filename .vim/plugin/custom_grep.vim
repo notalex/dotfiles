@@ -19,7 +19,7 @@ function! s:CustomGrep(folder_path)
     endif
 
     let folder = grep_options[0]
-    let exclude_dirs = '{' . grep_options[2] . 'locales,.git,tmp,fixtures,coverage,cassettes,log,deps,node_modules}'
+    let exclude_dirs = '{' . grep_options[2] . s:LangExcludes() . '.shards,locales,.git,tmp,log,deps,node_modules}'
 
     let pattern = pattern_and_options[2]
     let escaped_pattern = shellescape(pattern)
@@ -32,6 +32,18 @@ function! s:CustomGrep(folder_path)
       \' --exclude-from=' . $HOME . '/.better-grep-exclusions' . options
     cw
     redraw!
+  endif
+endfunction
+
+function! s:LangExcludes()
+  if filereadable('shard.yml')
+    return 'lib,'
+  elseif filereadable('Gemfile')
+    return 'fixtures,coverage,cassettes,'
+  elseif $PWD == $HOME
+    return '.bundle,.bzr.log,.cache,.config,.gconf,.gem,.gimp*,.ICAClient,.launchpadlib,.local,.mozilla,.node*,.npm,.openshot,.pentadactyl,.PlayOnLinux,.rvm,.scm_breeze,.steam*,.thunderbird,.trash,plugged,.viminfo,.wine,.xsession*,.zsnes,books,databases,Documents,Downloads,experiments,game_roms,gitbasket,ICAClient,Music,projects,PlayOnLinux*,Softwares,Tools,Videos,'
+  else
+    return ''
   endif
 endfunction
 
