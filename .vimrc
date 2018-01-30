@@ -3,7 +3,7 @@ set nocompatible
 if has('nvim')
   let &runtimepath.=',' . $HOME . '/.vim'
   set winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
-  set laststatus=1
+  set laststatus=0
   set guicursor=
 endif
 
