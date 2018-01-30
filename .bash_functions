@@ -23,6 +23,7 @@ brk() { sleep $@; notify-send -u critical 'Break!!'; }
 automux_installed() { gem list | grep automux 1> /dev/null; }
 pskill() { ps aux | grep $1 | grep -v grep | awk '{print $2}' | xargs kill -9 ; }
 aptversion() { apt-cache show $1 | grep Version: ; }
+pd() { pushd $1 > /dev/null; }
 
 # git
 gcm() { git commit -m "$(echo $@)"; }
