@@ -44,6 +44,7 @@ nnoremap / /\v
 nnoremap ? ?\v
 " Scrolldown terminal output.
 nnoremap <F6>g <C-w>wG<C-w>p
+nnoremap <F6>p :CtrlP<CR>
 " Avoid Ex mode
 nmap Q <nop>
 nnoremap <F6>cd :lcd %:h<CR>:pwd<CR>
