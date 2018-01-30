@@ -42,8 +42,11 @@ nmap <C-z> <nop>
 nmap K <nop>
 nnoremap / /\v
 nnoremap ? ?\v
+" Scrolldown terminal output.
+nnoremap <F6>g <C-w>wG<C-w>p
 " Avoid Ex mode
 nmap Q <nop>
+nnoremap <F6>cd :lcd %:h<CR>:pwd<CR>
 
 " ` is harder to reach than '
 nnoremap ` '
