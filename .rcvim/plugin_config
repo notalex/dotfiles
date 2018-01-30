@@ -28,6 +28,8 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtExpandDir()':       ['<c-k>'],
   \ }
 
+let g:ctrlp_cmd = 'CtrlPMRUFiles'
+
 " -------------- NERDTree mappings
 let g:NERDTreeMapOpenSplit = '<C-s>'
 let g:NERDTreeMapOpenVSplit = '<C-v>'
