@@ -48,11 +48,11 @@ function! s:LangExcludes()
 endfunction
 
 function! s:App()
-  if isdirectory('src') | return 'src' | else | return 'app' | endif
+  if isdirectory('src') | return 'src' | elseif isdirectory('app') | return 'app' | elseif isdirectory('lib') | return 'lib' | else | return '.' | endif
 endfunction
 
 function! s:TestFolder()
-  if isdirectory('spec') | return 'spec' | else | return 'test' | endif
+  if isdirectory('test') | return 'test' | else | return 'spec' | endif
 endfunction
 
 nmap <F6>ss :echo <SID>CustomGrep('.')<cr>
