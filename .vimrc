@@ -3,8 +3,10 @@ set nocompatible
 if has('nvim')
   let &runtimepath.=',' . $HOME . '/.vim'
   set winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
-  set laststatus=0
   set guicursor=
+  set statusline=-
+  set fillchars=stl:-,stlnc:-,vert:\|
+  set laststatus=0
 endif
 
 source ~/.rcvim/plugins

@@ -19,3 +19,7 @@ hi Visual ctermbg=216 ctermfg=black guibg=cyan guifg=black
 
 " CtrlP
 hi CtrlPMatch ctermfg=blue guifg=lightblue
+
+if has('nvim')
+  hi StatusLine cterm=NONE
+endif
