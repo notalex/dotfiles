@@ -55,6 +55,8 @@ nnoremap <F6>cd :lcd %:h<CR>:pwd<CR>
 nnoremap ` '
 nnoremap ' `
 
+nnoremap H :e #<CR>
+
 " #---------------- vmaps --------------------------
 
 vmap K <nop>
