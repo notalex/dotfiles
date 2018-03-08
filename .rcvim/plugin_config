@@ -57,6 +57,11 @@ let g:NERDTreeMapJumpNextSibling = '<C-n>'
 " ------------- NERDCommenter -----
 " Add space after comment.
 let NERDSpaceDelims = 1
+let g:NERDCustomDelimiters = {
+  \ 'crystal': { 'left': '#' },
+  \ 'minitest': { 'left': '#' },
+  \ 'notes': { 'left': '<' }
+  \ }
 
 " ------------- TwitVim -------
 let twitvim_enable_ruby = 1
