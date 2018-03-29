@@ -42,6 +42,8 @@ nmap < <l
 nmap > >l
 nmap <C-z> <nop>
 nmap K <nop>
+nnoremap ]q :cnext<CR>
+nnoremap [q :cprevious<CR>
 nnoremap / /\v
 nnoremap ? ?\v
 " Scrolldown terminal output.
