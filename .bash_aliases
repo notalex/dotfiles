@@ -67,7 +67,6 @@ alias ru='rvm use'
 # tmux
 alias tmx-attach-session='tmux -u2 attach-session -t'
 alias tmx-detach-session='tmux detach-client -s'
-alias mux='automux'
 
 # docker
 alias d='docker'
