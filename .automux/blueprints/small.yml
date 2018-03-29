@@ -7,8 +7,7 @@ windows:
   - panes:
   - panes: nvim
     index: 2
-  - panes: cisco-anyconnect connect vpn-dc1.blackducksoftware.com
-    index: 1
+  - index: 1
   - root: ~/gitbasket
     index: 4
     panes: nvim WorkFlow.notes
