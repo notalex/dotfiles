@@ -2,7 +2,7 @@
   borderless = True
   enabled_plugins = ,
   extra_styling = False
-  inactive_color_offset = 0.814903846154
+  inactive_color_offset = 0.917197452229
   tab_position = hidden
   window_state = maximise
 [keybindings]
@@ -21,7 +21,7 @@
 [profiles]
   [[default]]
     cursor_color = "#aaaaaa"
-    font = Monospace 9
+    font = Monaco 9
     foreground_color = "#ffffff"
     scrollback_lines = 1000
     scrollbar_position = hidden
