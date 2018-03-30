@@ -191,6 +191,7 @@ for_window [class="Gcolor2"] floating enable
 for_window [class="Firefox" window_role="Preferences"] floating enable
 for_window [class="Smplayer" title="Find Subtitles"] floating enable
 for_window [class="XTerm" title="^CSSH:"] floating enable
+for_window [class="^.*"] border none
 
 # Before Pentadactyl is fully loaded, FF has the title "Mozilla Firefox".
 # Move selenium spawned firefox to unused workspace.
