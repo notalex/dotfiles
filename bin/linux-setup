@@ -1,0 +1,52 @@
+#! /usr/bin/env bash
+
+if [[ ! $(dpkg --get-selections | grep git) ]]; then
+  # Get the dotfiles.
+  sudo apt-get install -y git
+  git init
+  git remote add origin https://github.com/notalex/dotfiles
+  git pull origin master
+fi
+
+sudo apt-get install -y vim-gnome curl htop ruby2.3 ruby2.3-dev ranger exuberant-ctags tmux keynav xclip i3 terminator imagemagick ubuntu-restricted-extras gimp build-essential libqt5script5 smplayer vlc elinks udiskie rtorrent mosh unclutter gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev
+
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
+sudo add-apt-repository -y ppa:hluk/copyq
+sudo add-apt-repository -y ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install -y neovim copyq
+
+sed -i '/^# Alias definitions.$/,+8d' ~/.bashrc
+echo 'source ~/.custom_bash' >> ~/.bashrc
+echo '### TRUNCATE BELOW ###' >> ~/.bashrc
+
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+curl -sSL https://get.rvm.io | bash -s stable
+
+git clone git://github.com/ndbroadbent/scm_breeze.git ~/.scm_breeze
+.scm_breeze/install.sh
+git checkout .git.scmbrc
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Set rvm and scm_breeze environment variables.
+sed -i '/^### TRUNCATE BELOW ###$/,$d' ~/.bashrc
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"' >> ~/.bashrc
+echo '[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"' >> ~/.bashrc
+git checkout ~/.bash_profile
+sed -i '/rvm/d' ~/.profile
+
+mkdir ~/Softwares
+wget -O ~/Softwares/firefox-43.tar.bz2 http://download.cdn.mozilla.net/pub/firefox/releases/43.0.4/linux-x86_64/en-US/firefox-43.0.4.tar.bz2
+
+source ~/.bashrc
+rvm install 2.2.3
+rvm install 2.2.5
+rvm install 2.0.0-p645
+
+curl -o /tmp/monaco.ttf https://github.com/todylu/monaco.ttf/blob/master/monaco.ttf
+gnome-font-viewer /tmp/monaco.ttf &
+vim -c 'PlugInstall'
