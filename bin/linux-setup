@@ -18,6 +18,10 @@ sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo apt-get update
 sudo apt-get install -y neovim copyq
 
+mkdir ~/.fonts
+curl -o ~/.fonts/monaco.ttf http://www.gringod.com/wp-upload/software/Fonts/Monaco_Linux.ttf
+sudo fc-cache -fv
+
 sed -i '/^# Alias definitions.$/,+8d' ~/.bashrc
 echo 'source ~/.custom_bash' >> ~/.bashrc
 echo '### TRUNCATE BELOW ###' >> ~/.bashrc
@@ -47,6 +51,4 @@ rvm install 2.2.3
 rvm install 2.2.5
 rvm install 2.0.0-p645
 
-curl -o /tmp/monaco.ttf https://github.com/todylu/monaco.ttf/blob/master/monaco.ttf
-gnome-font-viewer /tmp/monaco.ttf &
 vim -c 'PlugInstall'
