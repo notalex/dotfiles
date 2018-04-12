@@ -33,6 +33,6 @@ case $1 in
     # Usage: /home/alex/projects/foo:$ dk cde rake test
     shift
     project_folder=${PWD#$HOME/}
-    docker exec -it $container_id /bin/bash -c "source ~/.set_rbenv_path; cd $project_folder && $@"
+    docker exec -it $container_id /bin/bash -c "cd $project_folder && $@"
   ;;
 esac
