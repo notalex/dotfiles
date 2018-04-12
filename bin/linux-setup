@@ -8,16 +8,17 @@ if [[ ! $(dpkg --get-selections | grep git) ]]; then
   git pull origin master
 fi
 
-sudo apt-get install -y vim-gnome curl htop ruby ruby-dev ranger exuberant-ctags keynav xclip i3 terminator imagemagick ubuntu-restricted-extras gimp build-essential libqt5script5 smplayer vlc elinks udiskie rtorrent mosh unclutter gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev exfat-fuse exfat-utils gtk-recordmydesktop
+sudo apt-get install -y vim-gnome curl htop ruby ruby-dev ranger exuberant-ctags keynav xclip i3 terminator imagemagick ubuntu-restricted-extras gimp build-essential libqt5script5 smplayer vlc elinks udiskie rtorrent mosh unclutter gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev exfat-fuse exfat-utils gtk-recordmydesktop apt-transport-https
 
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 
+curl https://dist.crystal-lang.org/apt/setup.sh | sudo bash
 sudo add-apt-repository -y ppa:hluk/copyq
 sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
-sudo apt-get install -y neovim copyq tmux-next
+sudo apt-get install -y neovim copyq tmux-next crystal
 
 sudo ln -s /usr/bin/tmux-next /usr/bin/tmux
 
