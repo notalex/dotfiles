@@ -50,6 +50,8 @@ sed -i '/rvm/d' ~/.profile
 mkdir ~/Softwares
 wget -O ~/Softwares/firefox-43.tar.bz2 http://download.cdn.mozilla.net/pub/firefox/releases/43.0.4/linux-x86_64/en-US/firefox-43.0.4.tar.bz2
 
+$(cd ~/.git_helpers && crystal build git_stats.cr --release)
+
 source ~/.bashrc
 rvm install 2.2.3
 rvm install 2.2.5
