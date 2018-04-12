@@ -47,7 +47,6 @@ echo '[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_
 git checkout ~/.bash_profile
 sed -i '/rvm/d' ~/.profile
 
-mkdir ~/Softwares
 wget -O ~/Softwares/firefox-43.tar.bz2 http://download.cdn.mozilla.net/pub/firefox/releases/43.0.4/linux-x86_64/en-US/firefox-43.0.4.tar.bz2
 
 $(cd ~/.git_helpers && crystal build git_stats.cr --release)
