@@ -17,8 +17,9 @@ curl https://dist.crystal-lang.org/apt/setup.sh | sudo bash
 sudo add-apt-repository -y ppa:hluk/copyq
 sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo add-apt-repository -y ppa:pi-rho/dev
+sudo add-apt-repository -y ppa:nemh/systemback
 sudo apt-get update
-sudo apt-get install -y neovim copyq tmux-next crystal
+sudo apt-get install -y neovim copyq tmux-next crystal systemback
 
 sudo ln -s /usr/bin/tmux-next /usr/bin/tmux
 
