@@ -11,12 +11,14 @@ export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 export TERM=xterm-256color
 
-add_to_path $HOME/.rvm/bin
+add_to_path $HOME/.rbenv/bin
+eval "$(rbenv init -)"
+
 add_to_path $HOME/.git_helpers
 add_to_path /opt/vagrant/bin
 add_to_path ./node_modules/.bin
-prepend_to_path $HOME/.linuxbrew/bin
 add_to_path $HOME/neovim/bin
+prepend_to_path $HOME/.linuxbrew/bin
 
 source ~/.bash_aliases
 source ~/.bash_prompt
