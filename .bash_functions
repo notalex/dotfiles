@@ -85,9 +85,13 @@ rr() {
   fi
 }
 
-set-rvm-gemset() {
-  if [ -e .ruby-version ] && [ -e .ruby-gemset ]; then
-    rvm use $(cat .ruby-version)@$(cat .ruby-gemset) 2> /dev/null
+set-ruby-version() {
+  if [ -e .ruby-version ]; then
+    if rvm &> /dev/null && [ -e .ruby-gemset ]; then
+      rvm use $(cat .ruby-version)@$(cat .ruby-gemset) 2> /dev/null
+    else
+      export RBENV_VERSION=$(cat .ruby-version)
+    fi
   fi
 }
 
