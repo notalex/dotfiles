@@ -23,8 +23,7 @@ sudo apt-get install -y neovim copyq tmux-next crystal systemback
 
 sudo ln -s /usr/bin/tmux-next /usr/bin/tmux
 
-mkdir ~/.fonts
-curl -o ~/.fonts/monaco.ttf http://www.gringod.com/wp-upload/software/Fonts/Monaco_Linux.ttf
+curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
 sudo fc-cache -fv
 
 sed -i '/^# Alias definitions.$/,+8d' ~/.bashrc
