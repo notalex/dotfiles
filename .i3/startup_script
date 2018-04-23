@@ -16,4 +16,4 @@ terminator &
 # bluetooth-applet &
 # gnome-sound-applet &
 # keynav &
-tmux set-option status off
+tmux set-option -g status off
