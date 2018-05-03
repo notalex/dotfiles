@@ -5,10 +5,12 @@ hooks:
   post:
     - <%= link_window 'small', 'finch', 1 %>
     - <%= link_window 'small', 4, 4%>
-    - <%= link_window 'small', 5, 5%>
+    - <%= link_window 'small', 9, 9%>
     - <%= select_window 2 %>
 windows:
-  - panes: rails server
+  - panes:
+      - rails server
+      - rails console
     opt: '-s'
   - panes: nvim
     index: 2

@@ -12,5 +12,5 @@ windows:
     index: 4
     panes: nvim WorkFlow.notes
   - pages: elinks
-    index: 5
+    index: 9
   - index: 7
