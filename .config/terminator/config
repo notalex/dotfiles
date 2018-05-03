@@ -1,7 +1,7 @@
 [global_config]
   borderless = True
   enabled_plugins = ,
-  extra_styling = False
+  handle_size = -3
   inactive_color_offset = 0.917197452229
   tab_position = hidden
   window_state = maximise
@@ -20,8 +20,8 @@
 [plugins]
 [profiles]
   [[default]]
-    cursor_color = "#aaaaaa"
-    font = Monaco 9
+    background_image = None
+    font = DejaVu Sans Mono 8
     foreground_color = "#ffffff"
     scrollback_lines = 1000
     scrollbar_position = hidden
