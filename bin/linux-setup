@@ -36,7 +36,7 @@ cd ~
 mkdir -p ~/.rbenv/plugins
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
-git clone git://github.com/ndbroadbent/scm_breeze.git ~/.scm_breeze
+git clone https://github.com/ndbroadbent/scm_breeze ~/.scm_breeze
 ~/.scm_breeze/install.sh
 git checkout ~/.git.scmbrc
 git checkout ~/.bash_profile
