@@ -13,13 +13,12 @@ sudo apt-get install -y vim-gnome curl htop ruby ruby-dev ranger exuberant-ctags
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 
-curl https://dist.crystal-lang.org/apt/setup.sh | sudo bash
 sudo add-apt-repository -y ppa:hluk/copyq
 sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo add-apt-repository -y ppa:pi-rho/dev
 sudo add-apt-repository -y ppa:nemh/systemback
 sudo apt-get update
-sudo apt-get install -y neovim copyq tmux-next crystal systemback
+sudo apt-get install -y neovim copyq tmux-next systemback
 
 sudo ln -s /usr/bin/tmux-next /usr/bin/tmux
 
@@ -45,8 +44,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 wget -O ~/Softwares/firefox-43.tar.bz2 http://download.cdn.mozilla.net/pub/firefox/releases/43.0.4/linux-x86_64/en-US/firefox-43.0.4.tar.bz2
-
-$(cd ~/.git_helpers && crystal build git_stats.cr --release)
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
