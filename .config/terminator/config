@@ -21,6 +21,7 @@
 [profiles]
   [[default]]
     background_image = None
+    cursor_color = "#147def"
     font = DejaVu Sans Mono 8
     foreground_color = "#ffffff"
     scrollback_lines = 1000
