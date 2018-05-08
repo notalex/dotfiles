@@ -8,7 +8,7 @@ if [[ ! $(dpkg --get-selections | grep git) ]]; then
   git pull origin master
 fi
 
-sudo apt-get install -y vim-gnome curl htop ruby ruby-dev ranger exuberant-ctags keynav xclip i3 terminator imagemagick ubuntu-restricted-extras gimp build-essential libqt5script5 smplayer vlc elinks udiskie rtorrent mosh unclutter gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev exfat-fuse exfat-utils gtk-recordmydesktop apt-transport-https
+sudo apt-get install -y vim-gnome curl htop ruby ruby-dev ranger exuberant-ctags keynav xclip i3 terminator imagemagick gimp build-essential libqt5script5 smplayer vlc elinks udiskie rtorrent mosh unclutter gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev exfat-fuse exfat-utils gtk-recordmydesktop apt-transport-https ubuntu-restricted-addons unrar libavcodec-extra
 
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
