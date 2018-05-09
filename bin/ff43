@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+/usr/local/lib/firefox-43/firefox -p firefox-43 --no-remote

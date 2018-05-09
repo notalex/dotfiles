@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+/usr/local/lib/firefox-56/firefox -p firefox-56
