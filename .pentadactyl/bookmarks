@@ -1,44 +1,44 @@
 " vim: set ft=vim:
 
 " Google Apps
-bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title 'Google feeling lucky search ' -keyword google_lucky
-bmark http://images.google.com/images?q=%s -title 'Google Image search ' -keyword google_image
-bmark https://maps.google.co.in/maps?q=%s -title 'Google Maps' -keyword 'maps'
-bmark https://www.google.co.in/search?tbm=nws&q=%s -title 'Google News' -keyword 'news'
-bmark https://www.google.co.in/search?tbm=nws&tbs=sbd:1&q=%s -title 'Google News' -keyword 'news-sorted'
+bmark https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=%s -title 'Google feeling lucky search ' -keyword google_lucky -tags foo
+bmark http://images.google.com/images?q=%s -title 'Google Image search ' -keyword google_image -tags foo
+bmark https://maps.google.co.in/maps?q=%s -title 'Google Maps' -keyword 'maps' -tags foo
+bmark https://www.google.co.in/search?tbm=nws&q=%s -title 'Google News' -keyword 'news' -tags foo
+bmark https://www.google.co.in/search?tbm=nws&tbs=sbd:1&q=%s -title 'Google News' -keyword 'news-sorted' -tags foo
 
 " Search Engines
-bmark https://duckduckgo.com/?q=%s -title 'DuckDuckGo' -keyword 'duckgo'
+bmark https://duckduckgo.com/?q=%s -title 'DuckDuckGo' -keyword 'duckgo' -tags foo
 
 " Programming
-bmark http://rubygems.org/gems/%s -title 'rubygems' -keyword 'rubygems'
-bmark https://github.com/search?q=%s -title 'Github Search' -keyword 'github-search'
-bmark http://stackoverflow.com/search?q=%s -title 'Stack Overflow' -keyword 'stack-overflow-search'
-bmark http://www.iconfinder.com/search/?q=%s -title 'IconFinder' -keyword 'iconfinder'
+bmark http://rubygems.org/gems/%s -title 'rubygems' -keyword 'rubygems' -tags foo
+bmark https://github.com/search?q=%s -title 'Github Search' -keyword 'github-search' -tags foo
+bmark http://stackoverflow.com/search?q=%s -title 'Stack Overflow' -keyword 'stack-overflow-search' -tags foo
+bmark http://www.iconfinder.com/search/?q=%s -title 'IconFinder' -keyword 'iconfinder' -tags foo
 
 " Information
-bmark http://en.wikipedia.org/wiki/%s -title 'wikipedia' -keyword 'wikipedia-en'
-bmark http://thesaurus.com/browse/%s -title 'thesaurus' -keyword 'thesaurus'
+bmark http://en.wikipedia.org/wiki/%s -title 'wikipedia' -keyword 'wikipedia-en' -tags foo
+bmark http://thesaurus.com/browse/%s -title 'thesaurus' -keyword 'thesaurus' -tags foo
 
 " Torrents
-bmark https://thepiratebay.rocks/search/%s/0/99/0 -title 'Pirate Search' -keyword 'pirate-search'
+bmark https://thepiratebay.rocks/search/%s/0/99/0 -title 'Pirate Search' -keyword 'pirate-search' -tags foo
 
 " Entertainment
-bmark http://www.youtube.com/results?search_query=%s -title 'Youtube' -keyword 'youtube-search'
-bmark http://www.youtube.com/results?search_sort=video_date_uploaded&search_query=%s -title 'Youtube' -keyword 'youtube-searchsorted'
-bmark http://www.dailymotion.com/in/relevance/search/%s -title 'Dailymotion' -keyword 'dailymotion'
-bmark http://putlocker.is/search/search.php?q=%s -title 'Putlocker' -keyword 'putlocker-is'
-bmark http://www.animefushigi.com/?s=%s -title 'Anime Fushigi' -keyword 'fushigi'
-bmark http://www.goodreads.com/search?&q=%s -title 'Good Reads' -keyword 'good-reads-search'
-bmark http://www.lyricsmode.com/search.php?search=%s -title 'Lyrics Search' -keyword 'lyrics-search'
-bmark https://yify-movie.com/search/%s/All/All/0/latest/20/ -title 'YIFY Torrents' -keyword 'yify'
+bmark http://www.youtube.com/results?search_query=%s -title 'Youtube' -keyword 'youtube-search' -tags foo
+bmark http://www.youtube.com/results?search_sort=video_date_uploaded&search_query=%s -title 'Youtube' -keyword 'youtube-searchsorted' -tags foo
+bmark http://www.dailymotion.com/in/relevance/search/%s -title 'Dailymotion' -keyword 'dailymotion' -tags foo
+bmark http://putlocker.is/search/search.php?q=%s -title 'Putlocker' -keyword 'putlocker-is' -tags foo
+bmark http://www.animefushigi.com/?s=%s -title 'Anime Fushigi' -keyword 'fushigi' -tags foo
+bmark http://www.goodreads.com/search?&q=%s -title 'Good Reads' -keyword 'good-reads-search' -tags foo
+bmark http://www.lyricsmode.com/search.php?search=%s -title 'Lyrics Search' -keyword 'lyrics-search' -tags foo
+bmark https://yify-movie.com/search/%s/All/All/0/latest/20/ -title 'YIFY Torrents' -keyword 'yify' -tags foo
 
 " Shopping
-bmark http://www.ebay.in/sch/i.html?_nkw=%s -title 'Ebay India' -keyword 'ebay-search'
-bmark http://www.ebay.in/sch/i.html?_nkw=%s&_sop=15 -title 'Ebay India' -keyword 'ebay-search-lowest-price'
-bmark http://www.flipkart.com/search?p%5B%5D=sort%3Dpopularity&q=%s -title 'Flipkart Search' -keyword 'flipkart-search'
-bmark http://www.amazon.in/s/url=search-alias%3Ddigital-text&field-keywords=%s -title 'Amazon Kindle Search' -keyword 'amazon-kindle-search'
-bmark http://www.amazon.in/s/field-keywords=%s -title 'Amazon India Search' -keyword 'amazon-india'
-bmark https://www.aliexpress.com/wholesale?SearchText=%s -title 'Aliexpress Search' -keyword 'aliexpress-search'
-bmark https://www.loveroms.com/roms/?q=%s -title 'LoveRoms Search' -keyword 'loveroms-search'
-bmark http://store.steampowered.com/search/?term=%s -title 'Steam Search' -keyword 'steam-search'
+bmark http://www.ebay.in/sch/i.html?_nkw=%s -title 'Ebay India' -keyword 'ebay-search' -tags foo
+bmark http://www.ebay.in/sch/i.html?_nkw=%s&_sop=15 -title 'Ebay India' -keyword 'ebay-search-lowest-price' -tags foo
+bmark http://www.flipkart.com/search?p%5B%5D=sort%3Dpopularity&q=%s -title 'Flipkart Search' -keyword 'flipkart-search' -tags foo
+bmark http://www.amazon.in/s/url=search-alias%3Ddigital-text&field-keywords=%s -title 'Amazon Kindle Search' -keyword 'amazon-kindle-search' -tags foo
+bmark http://www.amazon.in/s/field-keywords=%s -title 'Amazon India Search' -keyword 'amazon-india' -tags foo
+bmark https://www.aliexpress.com/wholesale?SearchText=%s -title 'Aliexpress Search' -keyword 'aliexpress-search' -tags foo
+bmark https://www.loveroms.com/roms/?q=%s -title 'LoveRoms Search' -keyword 'loveroms-search' -tags foo
+bmark http://store.steampowered.com/search/?term=%s -title 'Steam Search' -keyword 'steam-search' -tags foo
