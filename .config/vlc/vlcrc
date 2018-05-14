@@ -4284,13 +4284,13 @@ key-nav-right=
 #key-title-next=Shift+b
 
 # Select prev DVD chapter (string)
-#global-key-chapter-prev=
+global-key-chapter-prev=[
 
 # Select prev DVD chapter (string)
 #key-chapter-prev=Shift+p
 
 # Select next DVD chapter (string)
-#global-key-chapter-next=
+global-key-chapter-next=]
 
 # Select next DVD chapter (string)
 #key-chapter-next=Shift+n
