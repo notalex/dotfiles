@@ -7,7 +7,7 @@ i3 floating enable
 bash ~/bin/resize-notes-window
 
 if $(tmux has-session -t notes); then
-  tmx-attach-session notes
+  tmux -u2 attach-session -t notes
 else
   automux notes
 fi
