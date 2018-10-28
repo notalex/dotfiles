@@ -1,0 +1,18 @@
+#!/bin/bash
+
+BATTINFO=`acpi -b`
+
+display-battery-info() {
+  DISPLAY=:0.0 /usr/bin/notify-send "low battery" "$BATTINFO"
+}
+
+if [[ `echo $BATTINFO | grep Discharging` ]]; then
+
+  TIME_LEFT=$(echo $BATTINFO | cut -f 5 -d " ")
+
+  for threshold_time in 00:30:00 00:15:00; do
+    if [[ $TIME_LEFT < $threshold_time ]]; then
+      display-battery-info
+    fi
+  done
+fi
