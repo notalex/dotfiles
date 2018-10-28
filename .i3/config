@@ -168,6 +168,9 @@ bindsym $mod+r mode "resize"
 bar {
   status_command i3status
   position bottom
+  mode hide
+  hidden_state hide
+  modifier mod4
 }
 
 bindsym $mod+Shift+B border normal
