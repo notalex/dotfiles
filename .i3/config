@@ -203,8 +203,8 @@ for_window [class="^.*"] border none
 
 exec --no-startup-id $HOME/.i3/startup_script
 
-# Set black background for all workspaces.
-exec xsetroot -solid black
+# Set background for all workspaces.
+exec xsetroot -solid '#14142C'
 
 bindsym $mod+End exec blank
 

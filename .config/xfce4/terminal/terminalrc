@@ -19,5 +19,5 @@ MiscScrollAlternateScreen=TRUE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 FontName=DejaVu Sans Mono 8
 BackgroundDarkness=1.000000
-ColorBackground=#380b171813f8
+ColorBackground=#234f16843d70
 ColorCursor=#14147d7defef
