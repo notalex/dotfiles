@@ -42,3 +42,5 @@ bmark http://www.amazon.in/s/field-keywords=%s -title 'Amazon India Search' -key
 bmark https://www.aliexpress.com/wholesale?SearchText=%s -title 'Aliexpress Search' -keyword 'aliexpress-search' -tags foo
 bmark https://www.loveroms.com/roms/?q=%s -title 'LoveRoms Search' -keyword 'loveroms-search' -tags foo
 bmark http://store.steampowered.com/search/?term=%s -title 'Steam Search' -keyword 'steam-search' -tags foo
+bmark http://store.steampowered.com/search/?term=%s -title 'Steam Search' -keyword 'steam-search' -tags foo
+bmark https://www.bigbasket.com/ps/?nc=as&q=%s -title 'BigBasket Search' -keyword 'bigbasket-search' -tags foo
