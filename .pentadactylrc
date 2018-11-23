@@ -86,9 +86,6 @@ nmap <C-[> <ESC>
 " Disable easily clickable paste shortcut.
 nmap p <Nop>
 
-" Test internet connection
-nmap <c-s> :tabopen google<CR>
-
 " #----------- stubs
 " C-j/C-k annoyingly opens up google.com
 nmap <C-j> <nop>
@@ -102,3 +99,8 @@ imap <c-b> <Left>
 cmap <c-a> <home>
 cmap <c-f> <Right>
 cmap <c-b> <Left>
+
+" #---- qute compatibility
+nmap -builtin T O
+nmap O :tabopen<Space>
+nmap <c-t> :tabopen google<CR>
