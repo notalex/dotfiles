@@ -19,6 +19,7 @@ sudo add-apt-repository -y ppa:hnakamur/tmux
 sudo add-apt-repository -y ppa:nemh/systemback
 sudo apt-get update
 sudo apt-get install -y neovim copyq tmux systemback
+sudo apt-get install -y tlp acpi-call-dkms tp-smapi-dkms
 
 curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
 sudo fc-cache -fv
