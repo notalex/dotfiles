@@ -2,7 +2,7 @@
 
 # xrandr --output eDP1 --mode 1920x1080
 
-i3 workspace 7
+i3 workspace 3
 
 i3-msg exec 'copyq'
 i3-msg exec 'udiskie'
@@ -11,9 +11,9 @@ i3-msg exec 'xmodmap ~/.Xmodmap'
 i3-msg exec 'unclutter -idle 1'
 nm-applet &
 synclient TouchpadOff=1  # Disable trackpad.
+tmux set-option -g status off
 
 terminator &
 # bluetooth-applet &
 # gnome-sound-applet &
 # keynav &
-tmux set-option -g status off
