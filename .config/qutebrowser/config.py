@@ -57,7 +57,7 @@ c.url.searchengines = {
     'stack-overflow': 'http://stackoverflow.com/search?q={}',
     'wikipedia': 'http://en.wikipedia.org/wiki/{}',
     'thesaurus': 'http://thesaurus.com/browse/{}',
-    'youtube': 'http://www.youtube.com/results?search_query={}',
+    'yt': 'http://www.youtube.com/results?search_query={}',
     'youtube-recent': 'http://www.youtube.com/results?search_sort=video_date_uploaded&search_query={}',
     'dailymotion': 'http://www.dailymotion.com/in/relevance/search/{}',
     'flipkart': 'http://www.flipkart.com/search?p%5B%5D=sort%3Dpopularity&q={}',
