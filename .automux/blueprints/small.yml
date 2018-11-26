@@ -7,10 +7,7 @@ windows:
   - panes:
   - panes: nvim
     index: 2
-  - index: 1
   - root: ~/gitbasket
     index: 4
     panes: nvim WorkFlow.notes
-  - pages: elinks
-    index: 9
   - index: 7
