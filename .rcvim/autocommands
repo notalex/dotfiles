@@ -44,6 +44,7 @@ augroup nonRepeater
  au BufRead,BufNewFile *.pdf.txt set syntax=notes
  au BufRead,BufNewFile *.sbt set filetype=scala
  au BufRead,BufNewFile *.hbs set filetype=html
+ au BufRead,BufNewFile *.pug set filetype=pug
  au BufRead,BufNewFile *.cr set filetype=crystal
  au BufRead,BufNewFile */.bubbles/* set textwidth=98
 
