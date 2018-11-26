@@ -22,6 +22,9 @@ config.bind('<Ctrl-w>', 'rl-backward-kill-word', mode='command')
 
 config.bind('<Ctrl-s>', 'open-editor', mode='insert')
 config.bind('<Ctrl-h>', 'fake-key <Backspace>', mode='insert')
+config.bind('<Ctrl-i>', 'fake-key <Tab>', mode='insert')
+config.bind('<Ctrl-o>', 'fake-key <Shift-Tab>', mode='insert')
+config.bind('<Ctrl-m>', 'fake-key <Enter>', mode='insert')
 # Emacs in INSERT mode.
 config.bind('<Ctrl-a>', 'fake-key <Home>', mode='insert')
 config.bind('<Ctrl-e>', 'fake-key <End>', mode='insert')
