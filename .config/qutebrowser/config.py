@@ -1,4 +1,5 @@
-config.unbind('<Ctrl-v>')
+config.unbind('<Ctrl-v>') # passthrough mode
+config.unbind('<Ctrl-h>') # go to home
 config.unbind('d')
 config.unbind('u')
 
@@ -41,6 +42,7 @@ c.tabs.select_on_remove = 'last-used'
 c.tabs.width = '1%'
 c.tabs.indicator.width = 0
 c.scrolling.bar = 'never'
+c.tabs.new_position.related = 'last'
 
 c.aliases = {
     'cs': 'config-source',
