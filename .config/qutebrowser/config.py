@@ -48,10 +48,10 @@ c.aliases = {
     'cs': 'config-source',
 }
 
+search_engine_path = 'https://www.google.co.in/search?q='
 c.url.searchengines = {
-    'DEFAULT': 'https://duckduckgo.com/?q={}',
-    'g': 'https://www.google.co.in/search?q={}',
-    'cb': 'https://duckduckgo.com/?q=qutebrowser {}',
+    'DEFAULT': search_engine_path + '{}',
+    'cb': search_engine_path + 'qutebrowser {}',
     'gi': 'http://images.google.com/images?q={}',
     'gl': 'https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q={}',
     'maps': 'https://maps.google.co.in/maps?q={}',
