@@ -27,6 +27,8 @@ config.bind('<Ctrl-o>', 'fake-key <Shift-Tab>', mode='insert')
 config.bind('<Ctrl-h>', 'fake-key <Backspace>', mode='insert')
 config.bind('<Ctrl-m>', 'fake-key <Enter>', mode='insert')
 # Emacs in INSERT mode.
+config.bind('<Ctrl-p>', 'fake-key <Up>', mode='insert')
+config.bind('<Ctrl-n>', 'fake-key <Down>', mode='insert')
 config.bind('<Ctrl-e>', 'fake-key <End>', mode='insert')
 config.bind('<Ctrl-a>', 'fake-key <Home>', mode='insert')
 config.bind('<Ctrl-b>', 'fake-key <Left>', mode='insert')
