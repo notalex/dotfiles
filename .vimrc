@@ -85,6 +85,7 @@ cmap <C-v> <Home><Right><Backspace>V<CR>
 cabbrev hv vertical belowright help
 cabbrev fn vertical topleft help function-list
 cabbrev vb vertical sbuffer
+cabbrev rc RuboCop
 
 " #----------- nvim terminal mappings --------------------
 if has('nvim')
