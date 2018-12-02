@@ -11,8 +11,7 @@ cabbreviate src source ~/.pentadactylrc
 cabbreviate srcb source ~/.pentadactyl/bookmarks
 cabbreviate g google
 
-" hide all scrollbars
-set guioptions=Csn
+set guioptions=
 set hintkeys=asdfg;lkjh
 set! browser.tabs.closeWindowWithLastTab=false
 " Do not focus menu when alt is pressed.
@@ -101,6 +100,6 @@ cmap <c-f> <Right>
 cmap <c-b> <Left>
 
 " #---- qute compatibility
-nmap -builtin T O
+nmap -builtin <C-o> O
 nmap O :tabopen<Space>
 nmap <c-t> :tabopen google<CR>
