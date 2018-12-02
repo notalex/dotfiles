@@ -44,8 +44,8 @@ c.tabs.width = '1%'
 c.tabs.position = 'left'
 c.tabs.indicator.width = 0
 c.tabs.background = True
+c.tabs.select_on_remove = 'prev'
 c.tabs.new_position.related = 'last'
-c.tabs.select_on_remove = 'last-used'
 
 c.aliases = {
     'cs': 'config-source',
