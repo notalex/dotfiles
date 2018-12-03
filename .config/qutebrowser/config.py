@@ -35,6 +35,7 @@ config.bind('<Ctrl-b>', 'fake-key <Left>', mode='insert')
 config.bind('<Ctrl-f>', 'fake-key <Right>', mode='insert')
 config.bind('<Ctrl-y>', 'insert-text {primary}', mode='insert')
 config.bind('<Ctrl-u>', 'fake-key <Shift+Home> ;; fake-key <Delete>', mode='insert')
+config.bind('<Ctrl-w>', 'fake-key <Ctrl-Shift-Left> ;; fake-key <Backspace>', mode='insert')
 
 c.statusbar.hide = True
 c.scrolling.bar = 'never'
