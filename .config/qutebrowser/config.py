@@ -61,7 +61,7 @@ c.url.searchengines = {
     'news': 'https://www.google.co.in/search?tbm=nws&q={}',
     'news-sorted': 'https://www.google.co.in/search?tbm=nws&tbs=sbd:1&q={}',
     'rubygems': 'http://rubygems.org/gems/{}',
-    'github': 'https://github.com/search?q={}',
+    'github-search': 'https://github.com/search?q={}',
     'stack-overflow': 'http://stackoverflow.com/search?q={}',
     'wikipedia': 'http://en.wikipedia.org/wiki/{}',
     'thesaurus': 'http://thesaurus.com/browse/{}',
