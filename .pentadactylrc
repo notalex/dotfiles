@@ -100,6 +100,5 @@ cmap <c-f> <Right>
 cmap <c-b> <Left>
 
 " #---- qute compatibility
-nmap -builtin <C-o> O
 nmap O :tabopen<Space>
 nmap <c-t> :tabopen google<CR>
