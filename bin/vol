@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+sink=$(pactl list sinks | grep Sink | sed 's/Sink #//')
+pactl set-sink-volume $sink $1%
