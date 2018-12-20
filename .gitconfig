@@ -1,6 +1,5 @@
 [user]
 	name = Alex Johnson
-	email = notalexjohnson@gmail.com
 [core]
   pager = less -r
   excludesfile = ~/.global_gitignore
