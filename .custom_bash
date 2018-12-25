@@ -8,6 +8,7 @@ stty stop undef
 export EDITOR=vim
 export TERMINAL=xfce4-terminal
 export BROWSER=qutebrowser
+export VMAIL_BROWSER=qutebrowser
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 export GOPATH="$HOME/.go-libs"
