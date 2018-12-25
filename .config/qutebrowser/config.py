@@ -64,6 +64,7 @@ c.url.searchengines = {
     'news': 'https://www.google.co.in/search?tbm=nws&q={}',
     'news-sorted': 'https://www.google.co.in/search?tbm=nws&tbs=sbd:1&q={}',
     'rubygems': 'http://rubygems.org/gems/{}',
+    'npm': 'https://www.npmjs.com/package/{}',
     'github-search': 'https://github.com/search?q={}',
     'stack-overflow': 'http://stackoverflow.com/search?q={}',
     'wikipedia': 'http://en.wikipedia.org/wiki/{}',
@@ -75,5 +76,6 @@ c.url.searchengines = {
     'kindle': 'http://www.amazon.in/s/url=search-alias%3Ddigital-text&field-keywords={}',
     'aliexpress': 'https://www.aliexpress.com/wholesale?SearchText={}',
     'am': 'http://www.amazon.in/s/field-keywords={}',
+    'amo': 'https://www.amazon.in/gp/your-account/order-history?search={}',
     'bb': 'https://www.bigbasket.com/ps/?nc=as&q={}',
 }
