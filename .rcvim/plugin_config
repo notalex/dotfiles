@@ -88,3 +88,13 @@ let g:sparkupNextMapping = '<nop>'
 let g:markdown_fenced_languages = ['ruby', 'vim', 'crystal']
 
 let g:vim_run_tests_prefix = '<F6>'
+
+" ------ undotree -----
+if has("persistent_undo")
+  set undodir=~/.undodir/
+  set undofile
+endif
+
+let g:undotree_ShortIndicators = 1
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_HighlightChangedWithSign = 0

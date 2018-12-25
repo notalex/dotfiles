@@ -26,6 +26,7 @@ map <C-h> <Leader>c<space>
 
 nmap <CR> O<Esc>
 nmap <Space> a<Space><Esc>
+nmap <F6>u :UndotreeToggle<CR>
 nmap <F6>nt :NERDTreeToggle<CR>
 nmap <F6>nf :NERDTreeFind<CR>
 nmap <F6>dt :filetype detect<cr>

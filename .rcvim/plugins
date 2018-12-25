@@ -16,6 +16,7 @@ Plug 'AndrewRadev/id3.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'jelera/vim-javascript-syntax'
+Plug 'mbbill/undotree'
 
 Plug 'xolox/vim-notes'
   Plug 'xolox/vim-misc'
