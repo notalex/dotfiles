@@ -46,6 +46,9 @@ augroup nonRepeater
  au BufRead,BufNewFile *.hbs set filetype=html
  au BufRead,BufNewFile *.pug set filetype=pug
  au BufRead,BufNewFile *.cr set filetype=crystal
+ au BufRead,BufNewFile *.cljs set filetype=clojurescript
+ au BufRead,BufNewFile *.cljs set syntax=clojure
+ au BufRead,BufNewFile *.clj set filetype=clojure
  au BufRead,BufNewFile */.bubbles/* set textwidth=98
 
  au BufNewFile *.rb call s:AddRequireLineInTest()
@@ -62,5 +65,6 @@ augroup nonRepeater
  au FileType scala let b:run_live_command = 'scala'
  au FileType haskell let b:run_live_command = 'runhaskell'
  au FileType crystal let b:run_live_command = 'crystal'
- au FileType clojure let b:run_live_command = 'lumo'
+ au FileType clojurescript let b:run_live_command = 'lumo'
+ au FileType clojure let b:run_live_command = 'java -jar ~/projects/clojure/clojure.jar'
 augroup END
