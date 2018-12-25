@@ -68,6 +68,7 @@ alias rn='rbenv version'
 # tmux
 alias tmx-attach-session='tmux -u2 attach-session -t'
 alias tmx-detach-session='tmux detach-client -s'
+alias tmx-new='tmux new-session -s'
 
 # docker
 alias d='docker'
