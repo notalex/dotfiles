@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+filename=$1
+output="${filename%.*}.${2-mp4}"
+encoding=${3-libx265}
+
+ffmpeg -i "$filename" -c:v $encoding -c:a copy "$output"
