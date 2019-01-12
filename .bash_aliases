@@ -35,7 +35,6 @@ alias disk-usage="du -h --max-depth=1 $@"
 alias xout='xclip -o -selection clipboard'
 alias zzh='sudo pm-hibernate'
 alias u-un-mount="sudo umount /media/usb"
-alias hdmi-connect="xrandr --output HDMI-1 --auto --left-of LVDS-1"
 alias wifi-restart='nmcli radio wifi off && nmcli radio wifi on'
 alias camera-disable='sudo modprobe -r uvcvideo'
 alias udu='udiskie-umount /media/alex/*'
