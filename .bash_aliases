@@ -40,6 +40,7 @@ alias wifi-restart='nmcli radio wifi off && nmcli radio wifi on'
 alias camera-disable='sudo modprobe -r uvcvideo'
 alias udu='udiskie-umount /media/alex/*'
 alias tso='tmux set-option -g status off'
+alias cl='curl -O'
 
 # gems
 alias cux='ntf cucumber --no-source -p run_all features/'
