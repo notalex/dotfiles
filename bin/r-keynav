@@ -1,4 +1,0 @@
-#! /usr/bin/env bash
-
-pskill keynav
-keynav &
