@@ -66,5 +66,5 @@ augroup nonRepeater
  au FileType haskell let b:run_live_command = 'runhaskell'
  au FileType crystal let b:run_live_command = 'crystal'
  au FileType clojurescript let b:run_live_command = 'lumo'
- au FileType clojure let b:run_live_command = 'java -jar ~/projects/clojure/clojure.jar'
+ au FileType clojure let b:run_live_command = 'clj'
 augroup END
