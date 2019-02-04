@@ -22,11 +22,11 @@ git_information() {
 
 machine-indicator() {
   if $(on-vagrant); then
-    echo 'Ⱌ'
+    echo ':V'
   elif $(on-docker); then
-    echo 'D'
+    echo ';D'
   else
-    echo '▶'
+    echo '|>'
   fi
 }
 
@@ -34,6 +34,6 @@ machine-information() {
   echo "\[$c_arrow\]$(machine-indicator)\[$c_reset\] "
 }
 
-directory='\[$c_dir\]\W:'
+directory='\[$c_dir\]\W'
 
 export PS1="$(git_information)$directory$(machine-information)"
