@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
+[ ! -e '.git' ] && exit 1
 
 current_git_head=$(git log -1 --oneline | awk '{print $1}')
 last_pushed_head=$(cat .git/pushed_head 2> /dev/null)
