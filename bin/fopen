@@ -1,17 +1,12 @@
-#! /usr/bin/env ruby
-require 'yaml'
+#! /usr/bin/env bash
 
-config_path = File.expand_path('../config/ext-maps.fopen.yml', __FILE__)
-config = YAML.load(File.read(config_path))
+config=$(cat $HOME/bin/config/fopen-ext-maps)
 
-file_path = ARGV[0]
-extension = File.extname(file_path).downcase
+extension="${1##*.}"
+cmd=$(echo $config | grep -o "[^;]\+${extension}[^;]*" | awk '{print $1}')
 
-command = config.select { |k, v| extension.match(k) }.values.first
-
-if command
-  # Path needs to be in quotes to handle filenames with spaces.
-  system %(#{ command } "#{ file_path }" &> /dev/null &)
+if [[ $cmd ]]; then
+  $cmd $1
 else
-  puts "Could not find a suitable program for the extension *#{ extension }*."
-end
+  echo "Could not find a suitable program for the extension *${extension}*."
+fi

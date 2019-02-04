@@ -1,0 +1,9 @@
+evince pdf;
+loimpress pptx;
+lowriter docx;
+localc csv;
+localc xlsx;
+software-center deb;
+eog png,jpg,jpeg,gif;
+smplayer mp4,mpg,mpeg,avi,mkv,divx,flv;
+firefox html;

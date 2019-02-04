@@ -1,10 +1,7 @@
-#! /usr/bin/env ruby
-require File.expand_path('../git_remote_and_branch', __FILE__)
+#! /usr/bin/env bash
+source $HOME/.git_helpers/remote_and_branch.sh
 
-command = "git push #{ remote_name } #{ local_branch_name }:#{ remote_branch_name } #{ options_string }"
+cmd="git push $(remote_name) $(branch_name):$(remote_branch_name $@) $(force_option $@)"
 
-puts command
-
-if system(command)
-  write_pushed_head
-end
+echo $cmd
+eval $cmd && write_pushed_head
