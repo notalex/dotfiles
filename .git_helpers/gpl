@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 source $HOME/.git_helpers/remote_and_branch.sh
 
-cmd="git pull $(remote_name) $(remote_branch_name)"
+cmd="git pull $(remote_name) $(remote_branch_name $@)"
 
 echo $cmd
 eval $cmd && write_pushed_head
