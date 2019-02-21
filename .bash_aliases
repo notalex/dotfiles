@@ -41,7 +41,9 @@ alias udu='udiskie-umount /media/alex/*'
 alias tso='tmux set-option -g status off'
 alias cl='curl -O'
 alias hh='htop'
+alias px='peerflix --path ~/Videos'
 alias smagnet='peerflix --path ~/Videos --no-quit -g'
+alias ytmusic='youtube-dl -i --extract-audio --prefer-ffmpeg --audio-format mp3'
 
 # gems
 alias cux='ntf cucumber --no-source -p run_all features/'
