@@ -49,6 +49,7 @@ augroup nonRepeater
  au BufRead,BufNewFile *.cljs set filetype=clojurescript
  au BufRead,BufNewFile *.cljs set syntax=clojure
  au BufRead,BufNewFile *.clj set filetype=clojure
+ au BufRead,BufNewFile *.ts,*.tsx set filetype=javascript
  au BufRead,BufNewFile */.bubbles/* set textwidth=98
 
  au BufNewFile *.rb call s:AddRequireLineInTest()
