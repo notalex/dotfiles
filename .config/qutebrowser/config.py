@@ -42,7 +42,8 @@ config.bind('<Ctrl-y>', 'insert-text {primary}', mode='insert')
 config.bind('<Ctrl-u>', 'fake-key <Shift+Home> ;; fake-key <Delete>', mode='insert')
 config.bind('<Ctrl-w>', 'fake-key <Ctrl-Shift-Left> ;; fake-key <Backspace>', mode='insert')
 
-c.statusbar.hide = True
+c.statusbar.padding = { "bottom": 0, "left": 0, "right": 0, "top": 0 }
+c.statusbar.widgets = ["url", "scroll", "tabs", "progress"]
 c.scrolling.bar = 'never'
 c.auto_save.session = True
 
