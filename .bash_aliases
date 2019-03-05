@@ -44,6 +44,8 @@ alias hh='htop'
 alias px='peerflix --path ~/Videos'
 alias smagnet='peerflix --path ~/Videos --no-quit -g'
 alias ytmusic='youtube-dl -i --extract-audio --prefer-ffmpeg --audio-format mp3'
+alias ns='npm start'
+alias vchat='PATH="/usr/bin:$PATH" weechat' # brew python had missing functions in _ssl.so.
 
 # gems
 alias cux='ntf cucumber --no-source -p run_all features/'
