@@ -9,5 +9,8 @@ bash ~/bin/resize-notes-window
 if $(tmux has-session -t notes); then
   tmux -u2 attach-session -t notes
 else
-  automux notes
+  if ! $(automux notes); then
+    automux_bin=$(locate bin/automux | head -1)
+    $automux_bin notes
+  fi
 fi
