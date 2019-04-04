@@ -37,8 +37,7 @@ bmark https://yify-movie.com/search/%s/All/All/0/latest/20/ -title 'YIFY Torrent
 bmark http://www.ebay.in/sch/i.html?_nkw=%s -title 'Ebay India' -keyword 'ebay-search' -tags foo
 bmark http://www.ebay.in/sch/i.html?_nkw=%s&_sop=15 -title 'Ebay India' -keyword 'ebay-search-lowest-price' -tags foo
 bmark http://www.flipkart.com/search?p%5B%5D=sort%3Dpopularity&q=%s -title 'Flipkart Search' -keyword 'flipkart-search' -tags foo
-bmark http://www.amazon.in/s/url=search-alias%3Ddigital-text&field-keywords=%s -title 'Amazon Kindle Search' -keyword 'amazon-kindle-search' -tags foo
-bmark http://www.amazon.in/s/field-keywords=%s -title 'Amazon India Search' -keyword 'amazon-india' -tags foo
+bmark https://www.amazon.in/s?k=%s -title 'Amazon India Search' -keyword 'amazon-india' -tags foo
 bmark https://www.aliexpress.com/wholesale?SearchText=%s -title 'Aliexpress Search' -keyword 'aliexpress-search' -tags foo
 bmark https://www.loveroms.com/roms/?q=%s -title 'LoveRoms Search' -keyword 'loveroms-search' -tags foo
 bmark http://store.steampowered.com/search/?term=%s -title 'Steam Search' -keyword 'steam-search' -tags foo

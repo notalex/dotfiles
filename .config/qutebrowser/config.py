@@ -80,7 +80,7 @@ c.url.searchengines = {
     'flipkart': 'http://www.flipkart.com/search?p%5B%5D=sort%3Dpopularity&q={}',
     'kindle': 'http://www.amazon.in/s/url=search-alias%3Ddigital-text&field-keywords={}',
     'aliexpress': 'https://www.aliexpress.com/wholesale?SearchText={}',
-    'am': 'http://www.amazon.in/s/field-keywords={}',
+    'am': 'https://www.amazon.in/s?k={}',
     'amo': 'https://www.amazon.in/gp/your-account/order-history?search={}',
     'bb': 'https://www.bigbasket.com/ps/?nc=as&q={}',
 }
