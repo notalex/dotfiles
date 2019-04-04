@@ -67,6 +67,6 @@ augroup nonRepeater
  au FileType scala let b:run_live_command = 'scala'
  au FileType haskell let b:run_live_command = 'runhaskell'
  au FileType crystal let b:run_live_command = 'crystal'
- au FileType clojurescript let b:run_live_command = 'lumo'
+ au FileType clojurescript let b:run_live_command = 'clj -m cljs.repl.node'
  au FileType clojure let b:run_live_command = 'clojure'
 augroup END
