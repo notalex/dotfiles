@@ -9,7 +9,7 @@ if [[ ! $(dpkg --get-selections | grep git) ]]; then
 fi
 
 # for postgresql 9.6 see notes.
-sudo apt-get install -y vim-gnome curl htop ruby ruby-dev ranger exuberant-ctags keynav xclip i3 terminator xfce4-terminal imagemagick gimp build-essential libqt5script5 smplayer vlc elinks udiskie rtorrent mosh unclutter gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev exfat-fuse exfat-utils gtk-recordmydesktop apt-transport-https ubuntu-restricted-addons unrar libavcodec-extra libreadline-dev rlwrap
+sudo apt-get install -y vim-gnome curl htop ruby ruby-dev ranger exuberant-ctags keynav xclip i3 terminator xfce4-terminal imagemagick gimp build-essential libqt5script5 smplayer vlc elinks udiskie rtorrent mosh unclutter gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev exfat-fuse exfat-utils gtk-recordmydesktop apt-transport-https ubuntu-restricted-addons unrar libavcodec-extra libreadline-dev rlwrap id3
 
 sudo apt-get install -y vim htop ruby ruby-dev ranger exuberant-ctags imagemagick gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev exfat-fuse exfat-utils gtk-recordmydesktop apt-transport-https ubuntu-restricted-addons unrar libavcodec-extra libreadline-dev rlwrap
 
