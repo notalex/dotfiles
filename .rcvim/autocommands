@@ -18,10 +18,12 @@ function! s:SetupSpacing()
 endfunction
 
 function! s:AddRequireLineInTest()
-  if &ft == 'rspec'
-    call setline('.', "require 'spec_helper'")
-  elseif &ft == 'minitest'
-    call setline('.', "require 'test_helper'")
+  if &ft == 'minitest' || &ft == 'rspec'
+    if expand('%:h') =~ '^spec/'
+      call setline('.', "require 'spec_helper'")
+    else
+      call setline('.', "require 'test_helper'")
+    endif
   endif
 endfunction
 
