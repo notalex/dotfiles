@@ -43,6 +43,7 @@ nmap < <l
 nmap > >l
 nmap <C-z> <nop>
 nmap K <nop>
+nmap <C-W>z <Plug>(zoom-toggle)
 nnoremap ]q :cnext<CR>
 nnoremap [q :cprevious<CR>
 nnoremap / /\v

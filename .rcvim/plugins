@@ -13,6 +13,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mbbill/undotree'
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'dhruvasagar/vim-zoom'
 " Plug 'rhysd/open-pdf.vim'
 " Plug 'AndrewRadev/id3.vim'
 
