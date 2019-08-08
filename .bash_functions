@@ -29,6 +29,7 @@ loc() { locate -b '\'$1; }
 
 # git
 gcm() { git commit -m "$(echo $@)"; }
+gcm-v() { git commit -m "$(echo $@)" --no-verify; }
 ggrp() { cmd="git log --oneline --grep='$@'"; echo $cmd; eval $cmd; }
 gstshow() { git stash show -p stash@{$1} $2; }
 gstapply() { git stash apply stash@{$1} $2; }

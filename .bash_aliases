@@ -9,6 +9,7 @@ alias h-console="heroku run \"echo '$(cat ~/.inputrc)' > .inputrc; rails c\""
 alias gar="git add -A"
 alias gan="ge git add -N"
 alias gcma="git commit --amend"
+alias gcma-v="git commit --amend --no-verify"
 alias gc-am="git commit -a -m"
 alias grl="git reflog"
 alias g-config="git config --list"
@@ -79,6 +80,10 @@ alias tmx-new='tmux -u2 new-session -s'
 
 # docker
 alias d='docker'
+alias d-rmc="sudo docker rm \"\$(sudo docker ps -a | awk '{print \$1}' | tail -n+2)\""
+alias d-rmc-l="sudo docker rm \"\$(sudo docker ps -a | awk '{print \$1}' | head -2 | tail -1)\""
+alias d-st-l="sudo docker start \"\$(sudo docker ps -a | awk '{print \$1}' | head -2 | tail -1)\""
+alias d-ssh-l="sudo docker exec -it \"\$(sudo docker ps -a | awk '{print \$1}' | head -2 | tail -1)\" /bin/bash"
 
 # nixos
 alias nxsearch='nix-env -qaP | less'
