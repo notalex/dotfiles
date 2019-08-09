@@ -126,8 +126,8 @@ set scrolloff=999
 set backspace=indent,eol,start
 " w -> content in non buffer files(like help files) in the same tab. b -> other loaded buffers.
 set complete=.,w,b
-exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
-set list
+" exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
+" set list
 
 " #-----------emacs mode
 imap <c-a> <Home>
