@@ -6,7 +6,13 @@
   tab_position = hidden
   window_state = maximise
 [keybindings]
+  broadcast_all = <Primary>1
+  broadcast_off = <Primary>o
+  hide_window = None
+  insert_number = None
+  insert_padded = None
   next_tab = <Alt>bracketright
+  page_up = None
   prev_tab = <Alt>bracketleft
 [layouts]
   [[default]]
@@ -30,6 +36,7 @@
 [plugins]
 [profiles]
   [[default]]
+    background_image = None
     cursor_color = "#147def"
     font = DejaVu Sans Mono 8
     foreground_color = "#ffffff"
@@ -39,7 +46,7 @@
     use_system_font = False
   [[notes]]
     background_color = "#23163d"
-    cursor_color = "#aaaaaa"
+    background_image = None
     font = DejaVu Sans Mono 8
     foreground_color = "#ffffff"
     icon_bell = False
