@@ -1,5 +1,6 @@
 [user]
 	name = Alex Johnson
+	email = notalexjohnson@gmail.com
 [core]
   pager = less -r
   excludesfile = ~/.global_gitignore
@@ -20,3 +21,5 @@
   showUntrackedFiles = all
 [receive]
 	denyCurrentBranch = ignore
+[url "ssh://git@heroku.com/"]
+	insteadOf = https://git.heroku.com/

@@ -31,7 +31,7 @@
 [profiles]
   [[default]]
     cursor_color = "#147def"
-    font = DejaVu Sans Mono 8
+    font = Monaco Bold 8
     foreground_color = "#ffffff"
     scrollback_lines = 1000
     scrollbar_position = hidden
@@ -40,7 +40,7 @@
   [[notes]]
     background_color = "#23163d"
     cursor_color = "#aaaaaa"
-    font = DejaVu Sans Mono 8
+    font = Monaco Bold 8
     foreground_color = "#ffffff"
     icon_bell = False
     scrollback_lines = 2000
