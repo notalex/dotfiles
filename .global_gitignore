@@ -16,3 +16,5 @@ spec/tmp
 Vagrantfile
 .vagrant/
 coverage/
+.env.local
+.env.test.local
