@@ -81,6 +81,14 @@ vga-connect() {
   xrandr --output HDMI1 --off; xrandr --output VGA1 --auto --$direction-of eDP1; xmodmap ~/.Xmodmap
 }
 
+asd() {
+  if [[ $1 == 'c' ]]; then
+    asdf current
+  elif [[ $1 == 'sr' ]]; then
+    asdf shell ruby $2
+  fi
+}
+
 rr() {
   if [ $@ ]; then
     bundle exec rake routes CONTROLLER=$@
