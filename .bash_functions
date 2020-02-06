@@ -2,7 +2,6 @@
 
 # ruby
 heroku-push() { gps -r heroku $@ m; heroku run rake db:migrate; }
-delayed-emails() { rake jobs:clear; rake jobs:work; }
 
 # bash
 on-mac() { [[ $(uname) == 'Darwin' ]] && echo true; }
@@ -84,9 +83,9 @@ vga-connect() {
 
 rr() {
   if [ $@ ]; then
-    rake routes CONTROLLER=$@
+    bundle exec rake routes CONTROLLER=$@
   else
-    rake routes
+    bundle exec rake routes
   fi
 }
 
