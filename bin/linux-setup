@@ -17,12 +17,13 @@ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/you
 sudo chmod a+rx /usr/local/bin/youtube-dl
 
 sudo add-apt-repository -y ppa:hluk/copyq
-sudo add-apt-repository -y ppa:neovim-ppa/stable
-sudo add-apt-repository -y ppa:hnakamur/tmux
-sudo add-apt-repository -y ppa:nemh/systemback
 sudo apt-get update
-sudo apt-get install -y neovim copyq tmux systemback
-sudo apt-get install -y tlp acpi-call-dkms tp-smapi-dkms
+sudo apt-get install -y copyq
+sudo apt-get install -y tlp acpi-call-dkms tp-smapi-dkms python3-pip
+
+sudo apt-get install linuxbrew-wrapper
+brew install
+brew install tmux neovim
 
 curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
 sudo fc-cache -fv
@@ -50,4 +51,11 @@ eval "$(rbenv init -)"
 rbenv install 2.2.5
 rbenv install 2.2.3
 
+mkdir projects; cd projects
+git clone https://github.com/qutebrowser/qutebrowser.git
+cd qutebrowser
+pip install tox
+tox -e mkvenv-pypi
+
+cd
 vim -c 'PlugInstall'
