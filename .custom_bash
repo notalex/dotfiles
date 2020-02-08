@@ -9,8 +9,8 @@ export EDITOR=vim
 export TERMINAL=xfce4-terminal
 export BROWSER=qutebrowser
 export VMAIL_BROWSER=qutebrowser
-export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
 export GOPATH="$HOME/.go-libs"
 export TERM=xterm-256color
 export HOMEBREW_NO_AUTO_UPDATE=1
@@ -19,7 +19,7 @@ add_to_path $HOME/.git_helpers
 add_to_path /opt/vagrant/bin
 add_to_path ./node_modules/.bin
 add_to_path $HOME/neovim/bin
-prepend_to_path $HOME/.linuxbrew/bin
+prepend_to_path /home/linuxbrew/.linuxbrew/bin
 
 source ~/.bash_aliases
 source ~/.bash_prompt
