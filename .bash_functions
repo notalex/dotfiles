@@ -50,7 +50,7 @@ gaf() {
 
 # misc
 
-mma() { mux medium -ar ~/projects/$1 -n $1; }
+mma() { automux medium -ar ~/projects/$1 -n $1; }
 
 dump-development-db() {
   if [ $1 ]; then

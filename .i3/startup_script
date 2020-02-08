@@ -8,7 +8,7 @@ i3-msg exec 'copyq'
 i3-msg exec 'udiskie'
 # i3-msg exec 'bash ~/.xinput.conf'
 i3-msg exec 'xmodmap ~/.Xmodmap'
-i3-msg exec 'unclutter -idle 1'
+# i3-msg exec 'unclutter -idle 1' # maybe automatically starts.
 nm-applet &
 # synclient TouchpadOff=1  # Disable trackpad.
 tmux set-option -g status off
