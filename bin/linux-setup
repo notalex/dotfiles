@@ -31,31 +31,32 @@ sudo fc-cache -fv
 sed -i '/^# Alias definitions.$/,+8d' ~/.bashrc
 echo 'source ~/.custom_bash' >> ~/.bashrc
 
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-cd ~/.rbenv && src/configure && make -C src
-cd ~
+# Package manager for programming langs.
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+cd ~/.asdf
+git checkout "$(git describe --abbrev=0 --tags)"
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
+cd
+source ~/.bashrc
+asdf plugin add ruby
+asdf install ruby 2.5.3
 
-mkdir -p ~/.rbenv/plugins
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-
+# ScmBreeze
 git clone https://github.com/ndbroadbent/scm_breeze ~/.scm_breeze
 ~/.scm_breeze/install.sh
 git checkout ~/.git.scmbrc
 git checkout ~/.bash_profile
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-rbenv install 2.2.5
-rbenv install 2.2.3
-
+# Qutebrowser
 mkdir projects; cd projects
 git clone https://github.com/qutebrowser/qutebrowser.git
 cd qutebrowser
 pip install tox
 tox -e mkvenv-pypi
-
 cd
+
+# Vim plugins
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim -c 'PlugInstall'
