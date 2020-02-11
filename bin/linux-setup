@@ -9,7 +9,8 @@ if [[ ! $(dpkg --get-selections | grep git) ]]; then
 fi
 
 # for postgresql 9.6 see notes.
-sudo apt-get install -y vim-gnome curl htop ruby ruby-dev ranger exuberant-ctags keynav xclip i3 terminator xfce4-terminal imagemagick gimp build-essential libqt5script5 smplayer vlc elinks udiskie rtorrent mosh unclutter gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev exfat-fuse exfat-utils gtk-recordmydesktop apt-transport-https ubuntu-restricted-addons unrar libavcodec-extra libreadline-dev rlwrap id3
+echo '### Install apt deps'
+sudo apt-get install -y vim-gnome curl htop ruby ruby-dev ranger exuberant-ctags keynav xclip i3 terminator xfce4-terminal imagemagick gimp build-essential libqt5script5 smplayer vlc elinks udiskie rtorrent mosh unclutter gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev exfat-fuse exfat-utils gtk-recordmydesktop apt-transport-https ubuntu-restricted-addons unrar libavcodec-extra libreadline-dev rlwrap id3 python3-venv libssl-dev
 
 sudo apt-get install -y vim htop ruby ruby-dev ranger exuberant-ctags imagemagick gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev exfat-fuse exfat-utils gtk-recordmydesktop apt-transport-https ubuntu-restricted-addons unrar libavcodec-extra libreadline-dev rlwrap
 
@@ -21,7 +22,8 @@ sudo apt-get update
 sudo apt-get install -y copyq
 sudo apt-get install -y tlp acpi-call-dkms tp-smapi-dkms python3-pip
 
-sudo apt-get install linuxbrew-wrapper
+echo '### Install brew -> tmux & nvim'
+sudo apt-get install -y linuxbrew-wrapper
 brew install
 brew install tmux neovim
 
@@ -31,7 +33,7 @@ sudo fc-cache -fv
 sed -i '/^# Alias definitions.$/,+8d' ~/.bashrc
 echo 'source ~/.custom_bash' >> ~/.bashrc
 
-# Package manager for programming langs.
+echo '### Install asdf'
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 cd ~/.asdf
 git checkout "$(git describe --abbrev=0 --tags)"
@@ -42,18 +44,17 @@ source ~/.bashrc
 asdf plugin add ruby
 asdf install ruby 2.5.3
 
-# ScmBreeze
+echo '### Install ScmBreeze'
 git clone https://github.com/ndbroadbent/scm_breeze ~/.scm_breeze
 ~/.scm_breeze/install.sh
 git checkout ~/.git.scmbrc
 git checkout ~/.bash_profile
 
-# Qutebrowser
+echo '### Install Qutebrowser'
 mkdir projects; cd projects
 git clone https://github.com/qutebrowser/qutebrowser.git
 cd qutebrowser
-pip install tox
-tox -e mkvenv-pypi
+python3 scripts/mkvenv.py
 cd
 
 # Vim plugins
