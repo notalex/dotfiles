@@ -78,7 +78,9 @@ alias tmx-detach-session='tmux detach-client -s'
 alias tmx-new='tmux -u2 new-session -s'
 
 # docker
-alias d='docker'
+alias d='sudo docker'
+alias dim='sudo docker images'
+alias dps='sudo docker ps -a'
 alias d-rmc="sudo docker rm \"\$(sudo docker ps -a | awk '{print \$1}' | tail -n+2)\""
 alias d-rmc-l="sudo docker rm \"\$(sudo docker ps -a | awk '{print \$1}' | head -2 | tail -1)\""
 alias d-st-l="sudo docker start \"\$(sudo docker ps -a | awk '{print \$1}' | head -2 | tail -1)\""
