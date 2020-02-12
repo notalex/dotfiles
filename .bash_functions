@@ -115,3 +115,8 @@ else
 fi
 
 ntfs() { $@; mplayer ~/tones/notify-tone.mp3 1> /dev/null; notify-send -t 3000 "Process finished: $@"; }
+
+d_rmc() { c_ids="$(sudo docker ps -a | awk '{print $1}' | tail -n+2)"; sudo docker stop $c_ids && sudo docker rm $c_ids; }
+d_rmc_l() { c_id="$(sudo docker ps -a | awk '{print $1}' | head -2 | tail -1)"; sudo docker stop $c_id && sudo docker rm $c_id; }
+d_st_l() { c_id="$(sudo docker ps -a | awk '{print $1}' | head -2 | tail -1)"; sudo docker start $c_id; }
+d_ssh_l() { c_id="$(sudo docker ps -a | awk '{print $1}' | head -2 | tail -1)"; sudo docker exec -it $c_id /bin/bash ; }

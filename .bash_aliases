@@ -49,6 +49,7 @@ alias ytr='youtube-dl $(copyq read 0)'
 alias ns='npm start'
 alias vchat='PATH="/usr/bin:$PATH" weechat' # brew python had missing functions in _ssl.so.
 alias st-notes='terminator -l notes'
+alias comic-dl='~/projects/comic-dl/comic_dl/__main__.py'
 
 # gems
 alias cux='ntf cucumber --no-source -p run_all features/'
@@ -81,10 +82,6 @@ alias tmx-new='tmux -u2 new-session -s'
 alias d='sudo docker'
 alias dim='sudo docker images'
 alias dps='sudo docker ps -a'
-alias d-rmc="sudo docker rm \"\$(sudo docker ps -a | awk '{print \$1}' | tail -n+2)\""
-alias d-rmc-l="sudo docker rm \"\$(sudo docker ps -a | awk '{print \$1}' | head -2 | tail -1)\""
-alias d-st-l="sudo docker start \"\$(sudo docker ps -a | awk '{print \$1}' | head -2 | tail -1)\""
-alias d-ssh-l="sudo docker exec -it \"\$(sudo docker ps -a | awk '{print \$1}' | head -2 | tail -1)\" /bin/bash"
 
 # nixos
 alias nxsearch='nix-env -qaP | less'
