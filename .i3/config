@@ -178,8 +178,8 @@ bindsym $mod+Shift+B border normal
 # i3 commandline
 bindsym $mod+Shift+colon exec i3-input
 
-bindsym $mod+Shift+m exec script-touchpad-toggle
-bindsym $mod+n exec script-toggle-notes-window
+bindsym $mod+Shift+m exec ~/bin/script-touchpad-toggle
+bindsym $mod+n exec ~/bin/script-toggle-notes-window
 
 # Helps to focus out of flash windows.
 # bindsym $mod+g exec click-at-edge
@@ -206,6 +206,6 @@ exec --no-startup-id $HOME/.i3/startup_script
 # Set background for all workspaces.
 exec xsetroot -solid '#14142C'
 
-bindsym $mod+End exec blank
+bindsym $mod+End exec ~/bin/blank
 
 focus_follows_mouse no
