@@ -1,3 +1,12 @@
 #! /usr/bin/env bash
 
-xrandr --output HDMI-1 --auto --left-of LVDS-1 # or DP-3
+CURRENT_DISPLAY=$(xrandr | head -2 | tail -1 | sed 's/ connected.\+$//')
+
+if [[ $1 == 'r' ]]; then
+  rotate='--rotate right'
+else
+  rotate='--rotate normal'
+fi
+
+echo "xrandr --output HDMI-1 --auto --left-of $CURRENT_DISPLAY $rotate"
+xrandr --output HDMI-1 --auto --left-of $CURRENT_DISPLAY $rotate
