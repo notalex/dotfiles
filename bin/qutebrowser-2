@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+qutebrowser --basedir ~/.qutebrowser/profile2 --config-py ~/.config/qutebrowser/config.py
