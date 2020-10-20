@@ -47,6 +47,8 @@ alias smagnet='peerflix --path ~/Videos --no-quit -g'
 alias ytmusic='youtube-dl -i --extract-audio --prefer-ffmpeg --audio-format mp3'
 alias ytr='youtube-dl $(copyq read 0)'
 alias ns='npm start'
+alias ni='npm install'
+alias ya='yarn add'
 alias vchat='PATH="/usr/bin:$PATH" weechat' # brew python had missing functions in _ssl.so.
 alias st-notes='terminator -l notes'
 alias comic-dl='~/projects/comic-dl/comic_dl/__main__.py'
