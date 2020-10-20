@@ -4,6 +4,8 @@ CURRENT_DISPLAY=$(xrandr | head -2 | tail -1 | sed 's/ connected.\+$//')
 
 if [[ $1 == 'r' ]]; then
   rotate='--rotate right'
+elif [[ $1 == '0' ]]; then
+  rotate='--off'
 else
   rotate='--rotate normal'
 fi
