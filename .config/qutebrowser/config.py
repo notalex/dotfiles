@@ -1,5 +1,6 @@
 config.unbind('<Ctrl-v>') # passthrough mode
 config.unbind('<Ctrl-h>') # go to home
+config.unbind('<Ctrl-w>') # accidental tab close while working with vim in split.
 config.unbind('d')
 config.unbind('u')
 
