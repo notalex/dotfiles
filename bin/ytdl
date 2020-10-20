@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+for url in $(copyq read {0..10} copyq separator "," read {0..10}); do
+  if [[ $url =~ ^https:.+ewkey ]]; then
+    youtube-dl $url
+  fi
+done
