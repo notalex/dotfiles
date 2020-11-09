@@ -42,6 +42,7 @@ config.bind('<Ctrl-f>', 'fake-key <Right>', mode='insert')
 config.bind('<Ctrl-y>', 'insert-text {primary}', mode='insert')
 config.bind('<Ctrl-u>', 'fake-key <Shift+Home> ;; fake-key <Delete>', mode='insert')
 config.bind('<Ctrl-w>', 'fake-key <Ctrl-Shift-Left> ;; fake-key <Backspace>', mode='insert')
+config.load_autoconfig()
 
 c.statusbar.padding = { "bottom": 0, "left": 0, "right": 0, "top": 0 }
 c.statusbar.widgets = ["url", "scroll", "tabs", "progress"]
@@ -65,7 +66,6 @@ search_engine_path = 'https://www.google.co.in/search?q='
 c.url.searchengines = {
     'DEFAULT': search_engine_path + '{}',
     'cb': search_engine_path + 'qutebrowser {}',
-    'dq': search_engine_path + 'dragon quest builders 2 {}',
     'gi': 'http://images.google.com/images?q={}',
     'gl': 'https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q={}',
     'maps': 'https://maps.google.co.in/maps?q={}',
