@@ -1,3 +1,5 @@
+config.load_autoconfig(False)
+
 config.unbind('<Ctrl-v>') # passthrough mode
 config.unbind('<Ctrl-h>') # go to home
 config.unbind('<Ctrl-w>') # accidental tab close while working with vim in split.
@@ -42,7 +44,6 @@ config.bind('<Ctrl-f>', 'fake-key <Right>', mode='insert')
 config.bind('<Ctrl-y>', 'insert-text {primary}', mode='insert')
 config.bind('<Ctrl-u>', 'fake-key <Shift+Home> ;; fake-key <Delete>', mode='insert')
 config.bind('<Ctrl-w>', 'fake-key <Ctrl-Shift-Left> ;; fake-key <Backspace>', mode='insert')
-config.load_autoconfig()
 
 c.statusbar.padding = { "bottom": 0, "left": 0, "right": 0, "top": 0 }
 c.statusbar.widgets = ["url", "scroll", "tabs", "progress"]
