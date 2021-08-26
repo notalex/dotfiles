@@ -1,3 +1,5 @@
+config.load_autoconfig(False)
+
 config.unbind('<Ctrl-v>') # passthrough mode
 config.unbind('<Ctrl-h>') # go to home
 config.unbind('<Ctrl-w>') # accidental tab close while working with vim in split.
@@ -47,7 +49,7 @@ c.statusbar.padding = { "bottom": 0, "left": 0, "right": 0, "top": 0 }
 c.statusbar.widgets = ["url", "scroll", "tabs", "progress"]
 c.scrolling.bar = 'never'
 c.auto_save.session = True
-c.content.headers.user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
+#  c.content.headers.user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
 
 c.tabs.width = '1%'
 c.tabs.position = 'left'
