@@ -114,6 +114,18 @@ else
   ntf() { $@; notify-send -u critical "Process finished: $@"; }
 fi
 
+# kubernetes
+k-pod() {
+  cmd=${2-bash}
+  pod_name=$(kubectl get po -n $1 | head -2 | tail -1 | cut -d ' ' -f -1)
+  kubectl exec -ti -n $1 $pod_name /bin/$cmd
+}
+
+k-del-pod() {
+  pod_name=$(kubectl get po -n $1 | head -2 | tail -1 | cut -d ' ' -f -1)
+  kubectl delete pod -n $1 $pod_name
+}
+
 ntfs() { $@; mplayer ~/tones/notify-tone.mp3 1> /dev/null; notify-send -t 3000 "Process finished: $@"; }
 
 d_rmc() { c_ids="$(sudo docker ps -a | awk '{print $1}' | tail -n+2)"; sudo docker stop $c_ids && sudo docker rm $c_ids; }
