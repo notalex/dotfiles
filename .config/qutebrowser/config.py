@@ -65,7 +65,6 @@ search_engine_path = 'https://www.google.co.in/search?q='
 c.url.searchengines = {
     'DEFAULT': search_engine_path + '{}',
     'cb': search_engine_path + 'qutebrowser {}',
-    'dq': search_engine_path + 'dragon quest builders 2 {}',
     'gi': 'http://images.google.com/images?q={}',
     'gl': 'https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q={}',
     'maps': 'https://maps.google.co.in/maps?q={}',
