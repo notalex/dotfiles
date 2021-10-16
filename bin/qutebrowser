@@ -1,4 +1,0 @@
-#! /usr/bin/env bash
-
-export LD_LIBRARY_PATH=~/projects/qutebrowser/libssl
-~/projects/qutebrowser/.venv/bin/python3 -m qutebrowser "$@"
