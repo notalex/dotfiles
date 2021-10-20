@@ -1,0 +1,15 @@
+#! /usr/bin/env bash
+
+length=$(cat ~/bin/pass-length)
+
+lesspass $1 $2 -C ${3-1} -L $length -c --no-fingerprint > /dev/null
+passwd1=$(xclip -o -selection clipboard)
+
+lesspass $1 $2 -C ${3-1} -L $length -c --no-fingerprint > /dev/null
+passwd2=$(xclip -o -selection clipboard)
+
+if [[ "$passwd1" = "$passwd2" ]]; then
+  echo 'All good!'
+else
+  echo 'mismatch!'
+fi
