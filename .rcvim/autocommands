@@ -52,7 +52,6 @@ augroup nonRepeater
  au BufRead,BufNewFile *.cljs set syntax=clojure
  au BufRead,BufNewFile *.clj set filetype=clojure
  au BufRead,BufNewFile *.ts,*.tsx set filetype=javascript
- au BufRead,BufNewFile *.sol set filetype=cs
  au BufRead,BufNewFile */.bubbles/* set textwidth=98
 
  au BufNewFile *.rb call s:AddRequireLineInTest()
@@ -64,10 +63,12 @@ augroup nonRepeater
  au FilterWritePre * call s:SetupDiffWindow()
  au FileType notes call s:SetupSpacing()
  au FileType lisp,clojure,clojurescript,scheme RainbowParentheses
+ au FileType python call s:SetupSpacing()
 
  au FileType elixir let b:run_live_command = 'elixir'
  au FileType ruby let b:run_live_command = 'ruby'
  au FileType scala let b:run_live_command = 'scala'
+ au FileType python let b:run_live_command = 'python'
  au FileType haskell let b:run_live_command = 'runhaskell'
  au FileType crystal let b:run_live_command = 'crystal'
  au FileType clojurescript let b:run_live_command = 'clj -m cljs.repl.node'
