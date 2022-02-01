@@ -85,6 +85,10 @@ alias d='sudo docker'
 alias dim='sudo docker images'
 alias dps='sudo docker ps -a'
 
+# misc
+alias k='kubectl'
+alias kpo='kubectl get po -n'
+
 # nixos
 alias nxsearch='nix-env -qaP | less'
 alias nxinstall='nix-env -i'

@@ -115,14 +115,15 @@ else
 fi
 
 # kubernetes
+# k-pod namespace worker-3 bin_cmd*
 k-pod() {
-  cmd=${2-bash}
-  pod_name=$(kubectl get po -n $1 | head -2 | tail -1 | cut -d ' ' -f -1)
-  kubectl exec -ti -n $1 $pod_name /bin/$cmd
+  cmd=${3-bash}
+  pod_name=$(kubectl get po -n $1 | grep "$2" | head -2 | tail -1 | cut -d ' ' -f -1)
+  kubectl exec -ti -n $1 $pod_name -- /bin/$cmd
 }
 
 k-del-pod() {
-  pod_name=$(kubectl get po -n $1 | head -2 | tail -1 | cut -d ' ' -f -1)
+  pod_name=$(kubectl get po -n $1 | grep "$2" | head -2 | tail -1 | cut -d ' ' -f -1)
   kubectl delete pod -n $1 $pod_name
 }
 
