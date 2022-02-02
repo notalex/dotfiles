@@ -93,4 +93,7 @@ alias kpo='kubectl get po -n'
 alias nxsearch='nix-env -qaP | less'
 alias nxinstall='nix-env -i'
 
+alias t='harsh'
+alias c-undo='rm -rf ~/.undodir/*'
+
 $(on-mac) && alias quarantine='xattr -d com.apple.quarantine'
