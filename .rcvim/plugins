@@ -9,7 +9,6 @@ Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ciaranm/securemodelines'
-Plug 'justinmk/vim-sneak'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mbbill/undotree'
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -20,6 +19,12 @@ Plug 'rstacruz/sparkup'
 " Plug 'aklt/plantuml-syntax'
 " Plug 'rhysd/open-pdf.vim'
 " Plug 'AndrewRadev/id3.vim'
+
+if has('nvim')
+  Plug 'ggandor/lightspeed.nvim'
+else
+  Plug 'justinmk/vim-sneak'
+endif
 
 Plug 'xolox/vim-notes'
   Plug 'xolox/vim-misc'
