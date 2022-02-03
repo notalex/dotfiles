@@ -1,10 +1,9 @@
-config.load_autoconfig(False)
-
 config.unbind('<Ctrl-v>') # passthrough mode
 config.unbind('<Ctrl-h>') # go to home
 config.unbind('<Ctrl-w>') # accidental tab close while working with vim in split.
 config.unbind('d')
 config.unbind('u')
+config.unbind('r')
 
 config.bind('dd', 'tab-close')
 config.bind('uu', 'undo')
@@ -44,11 +43,13 @@ config.bind('<Ctrl-f>', 'fake-key <Right>', mode='insert')
 config.bind('<Ctrl-y>', 'insert-text {primary}', mode='insert')
 config.bind('<Ctrl-u>', 'fake-key <Shift+Home> ;; fake-key <Delete>', mode='insert')
 config.bind('<Ctrl-w>', 'fake-key <Ctrl-Shift-Left> ;; fake-key <Backspace>', mode='insert')
+config.load_autoconfig(False)
 
 c.statusbar.padding = { "bottom": 0, "left": 0, "right": 0, "top": 0 }
 c.statusbar.widgets = ["url", "scroll", "tabs", "progress"]
 c.scrolling.bar = 'never'
 c.auto_save.session = True
+c.session.lazy_restore = True
 #  c.content.headers.user_agent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
 
 c.tabs.width = '1%'
@@ -57,7 +58,7 @@ c.tabs.indicator.width = 0
 c.tabs.background = True
 c.tabs.select_on_remove = 'prev'
 c.tabs.new_position.related = 'last'
-c.content.notifications = False
+#  c.content.notifications = False
 
 c.aliases = {
     'cs': 'config-source',
@@ -67,6 +68,8 @@ search_engine_path = 'https://www.google.co.in/search?q='
 c.url.searchengines = {
     'DEFAULT': search_engine_path + '{}',
     'cb': search_engine_path + 'qutebrowser {}',
+    'st': search_engine_path + 'stackexchange {}',
+    'kt': search_engine_path + 'site:reddit.com/r/keto {}',
     'gi': 'http://images.google.com/images?q={}',
     'gl': 'https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q={}',
     'maps': 'https://maps.google.co.in/maps?q={}',
@@ -87,5 +90,6 @@ c.url.searchengines = {
     'am': 'https://www.amazon.in/s?k={}',
     'amo': 'https://www.amazon.in/gp/your-account/order-history?search={}',
     'bb': 'https://www.bigbasket.com/ps/?nc=as&q={}',
-    'nu': 'https://www.nutritionvalue.org/search.php?food_query={}',
+    'nu': 'https://nutritiondata.self.com/foods-{}000000000000000000000.html',
+    'dk': 'https://www.dekudeals.com/search?q={}',
 }
