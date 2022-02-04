@@ -12,8 +12,9 @@ config.bind('gt', 'tab-focus')
 config.bind('gl', 'tab-focus last')
 config.bind('cm', 'spawn mpv {url}')
 config.bind('sx', 'config-cycle statusbar.hide')
-config.bind('b', 'set-cmd-text -s :buffer')
+config.bind('b', 'set-cmd-text -s :tab-focus')
 config.bind('t', 'set-cmd-text -s :open -t')
+config.bind('gm', 'set-cmd-text :tab-move -1')
 config.bind('go', 'set-cmd-text -s :open -t gl')
 config.bind('<ctrl-r>', 'reload')
 config.bind('<ctrl-y>', 'scroll up')
@@ -28,7 +29,7 @@ config.bind('<Ctrl-w>', 'rl-backward-kill-word', mode='command')
 config.bind('<Ctrl-i>', 'completion-item-focus next', mode='command')
 config.bind('<Ctrl-o>', 'completion-item-focus prev', mode='command')
 
-config.bind('<Ctrl-s>', 'open-editor', mode='insert')
+config.bind('<Ctrl-s>', 'edit-text', mode='insert')
 config.bind('<Ctrl-i>', 'fake-key <Tab>', mode='insert')
 config.bind('<Ctrl-o>', 'fake-key <Shift-Tab>', mode='insert')
 config.bind('<Ctrl-h>', 'fake-key <Backspace>', mode='insert')
@@ -70,6 +71,7 @@ c.url.searchengines = {
     'cb': search_engine_path + 'qutebrowser {}',
     'st': search_engine_path + 'stackexchange {}',
     'kt': search_engine_path + 'site:reddit.com/r/keto {}',
+    'g': search_engine_path + '{}',
     'gi': 'http://images.google.com/images?q={}',
     'gl': 'https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q={}',
     'maps': 'https://maps.google.co.in/maps?q={}',
