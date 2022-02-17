@@ -8,31 +8,21 @@ if [[ ! $(dpkg --get-selections | grep git) ]]; then
   git pull origin master
 fi
 
-# for postgresql 9.6 see notes.
 echo '### Install apt deps'
-sudo apt-get install -y vim curl htop ruby ruby-dev ranger keynav xclip i3 terminator xfce4-terminal gimp build-essential libqt5script5 udiskie mosh unclutter unrar libreadline-dev rlwrap id3 python3-venv ranger libssl-dev exuberant-ctags tmux
+sudo apt-get install -y vim curl htop ranger keynav xclip i3 terminator gimp build-essential udiskie tmux copyq \
+                        unclutter unrar libreadline-dev rlwrap libssl-dev exuberant-ctags python3-venv
 
 # For GUI machines only.
 sudo apt-get install -y smplayer ubuntu-restricted-addons libavcodec-extra rtorrent gthumb pcmanfm ffmpegthumbnailer gtk-recordmydesktop
 
 # sudo apt-get install -y imagemagick gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev exfat-fuse exfat-utils apt-transport-https
 
-sudo add-apt-repository -y ppa:hluk/copyq
-sudo apt-get update
-sudo apt-get install -y copyq
-sudo apt-get install -y tlp acpi-call-dkms tp-smapi-dkms python3-pip
-
-#echo '### Install brew -> tmux & nvim' # ONLY works in 18.04.
-#sudo apt-get install -y linuxbrew-wrapper
-#brew install
-#brew install tmux neovim
-
 # Install latest neovim
 curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o ~/bin/nvim.appimage
 chmod u+x ~/bin/nvim.appimage
 
-curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
-sudo fc-cache -fv
+# curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
+# sudo fc-cache -fv
 
 sed -i '/^# Alias definitions.$/,+8d' ~/.bashrc
 echo 'source ~/.custom_bash' >> ~/.bashrc
@@ -45,8 +35,8 @@ echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
 cd
 source ~/.bashrc
-asdf plugin add ruby
-asdf install ruby 2
+~/.asdf/bin/asdf plugin add ruby
+~/.asdf/bin/asdf install ruby 2
 
 echo '### Install ScmBreeze'
 git clone https://github.com/ndbroadbent/scm_breeze ~/.scm_breeze
@@ -54,7 +44,13 @@ git clone https://github.com/ndbroadbent/scm_breeze ~/.scm_breeze
 git checkout ~/.git.scmbrc
 git checkout ~/.bash_profile
 
+echo '### Setup ranger file manager'
+ranger --copy-config=rc
+sed -i 's/set preview_images false/set preview_images true/' .config/ranger/rc.conf
+
 # Vim plugins
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim -c 'PlugInstall'
+
+# https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc#tox
