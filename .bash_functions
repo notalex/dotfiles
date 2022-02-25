@@ -115,11 +115,20 @@ else
 fi
 
 # kubernetes
-# k-pod namespace worker-3 bin_cmd*
+## kpo oh|fi|oa
+kpo() {
+  declare -A mapp=( [oh]=openhub [fi]=fisbot [oa]=ohloh-analytics )
+  kubectl get po -n ${mapp[$1]}
+}
+
+## k-pod fi worker-3 bin_cmd # only 1st arg is mandatory.
 k-pod() {
-  cmd=${3-bash}
-  pod_name=$(kubectl get po -n $1 | grep "$2" | head -2 | tail -1 | cut -d ' ' -f -1)
-  kubectl exec -ti -n $1 $pod_name -- /bin/$cmd
+  declare -A mapp=( [oh]=openhub [fi]=fisbot [oa]=ohloh-analytics )
+  namespace=${mapp[$1]}
+  pod_name_pattern=$2
+  run_cmd=${3-bash}
+  pod_name=$(kubectl get po -n $namespace | grep "$pod_name_pattern" | head -2 | tail -1 | cut -d ' ' -f -1)
+  kubectl exec -ti -n $namespace $pod_name -- /bin/$run_cmd
 }
 
 k-del-pod() {

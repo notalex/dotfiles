@@ -87,7 +87,6 @@ alias dps='sudo docker ps -a'
 
 # misc
 alias k='kubectl'
-alias kpo='kubectl get po -n'
 
 # nixos
 alias nxsearch='nix-env -qaP | less'
