@@ -115,20 +115,33 @@ else
 fi
 
 # kubernetes
-## kpo oh|fi|oa
+## kpo oh|fi|oa|er
 kpo() {
-  declare -A mapp=( [oh]=openhub [fi]=fisbot [oa]=ohloh-analytics )
-  kubectl get po -n ${mapp[$1]}
+  declare -A mapp=( [oh]=openhub [fi]=fisbot [oa]=ohloh-analytics [er]=errbit )
+  namespace=${mapp[$1]}
+  [ $namespace ] || namespace=$1
+  kubectl get po -n $namespace
 }
 
 ## k-pod fi worker-3 bin_cmd # only 1st arg is mandatory.
 k-pod() {
-  declare -A mapp=( [oh]=openhub [fi]=fisbot [oa]=ohloh-analytics )
+  declare -A mapp=( [oh]=openhub [fi]=fisbot [oa]=ohloh-analytics [er]=errbit )
   namespace=${mapp[$1]}
+  [ $namespace ] || namespace=$1
   pod_name_pattern=$2
   run_cmd=${3-bash}
   pod_name=$(kubectl get po -n $namespace | grep "$pod_name_pattern" | head -2 | tail -1 | cut -d ' ' -f -1)
   kubectl exec -ti -n $namespace $pod_name -- /bin/$run_cmd
+}
+
+k-context() {
+  stg_name=$(cat ~/.config/private/oh-stg-context)
+  if [ $1 == 'p' ]; then
+    prd_name=$(echo $stg_name | sed 's/stg/prd/g')
+    kubectl config use-context $prd_name
+  else
+    kubectl config use-context $stg_name
+  fi
 }
 
 k-del-pod() {
