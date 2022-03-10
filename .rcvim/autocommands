@@ -65,6 +65,7 @@ augroup nonRepeater
  au FileType lisp,clojure,clojurescript,scheme RainbowParentheses
  au FileType python call s:SetupSpacing()
 
+ au FileType sh let b:run_live_command = 'bash'
  au FileType elixir let b:run_live_command = 'elixir'
  au FileType ruby let b:run_live_command = 'ruby'
  au FileType scala let b:run_live_command = 'scala'
