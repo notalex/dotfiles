@@ -136,9 +136,12 @@ k-pod() {
 
 k-context() {
   stg_name=$(cat ~/.config/private/oh-stg-context)
+  stg_sc_name=$(cat ~/.config/private/sc-stg-context)
   if [ $1 == 'p' ]; then
     prd_name=$(echo $stg_name | sed 's/stg/prd/g')
     kubectl config use-context $prd_name
+  elif [ $1 == 'sc' ]; then
+    kubectl config use-context $stg_sc_name
   else
     kubectl config use-context $stg_name
   fi
