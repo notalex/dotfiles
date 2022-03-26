@@ -13,3 +13,6 @@ if [[ "$passwd1" = "$passwd2" ]]; then
 else
   echo 'mismatch!'
 fi
+
+trap "echo '' | xclip -sel clipboard" EXIT TERM
+sleep 60
