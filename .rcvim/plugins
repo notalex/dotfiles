@@ -1,7 +1,6 @@
 " vim: set ft=vim:
 
 call plug#begin('~/.vim/plugged')
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-rails'
@@ -22,8 +21,13 @@ Plug 'rstacruz/sparkup'
 
 if has('nvim')
   Plug 'ggandor/lightspeed.nvim'
+
+  Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter'
 else
   Plug 'justinmk/vim-sneak'
+  Plug 'ctrlpvim/ctrlp.vim'
 endif
 
 Plug 'xolox/vim-notes'

@@ -4,6 +4,8 @@ let g:plug_url_format = 'git@github.com:%s.git'
 
 " -------------- ctrlp mappings
 
+if !has('nvim')
+
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_use_caching = 400
@@ -27,6 +29,7 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtSelectMove("k")':   ['<c-o>', '<up>'],
   \ 'PrtExpandDir()':       ['<c-k>'],
   \ }
+endif
 
 " -------------- NERDTree mappings
 let g:NERDTreeMapOpenSplit = '<C-s>'
