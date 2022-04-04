@@ -59,7 +59,7 @@ c.tabs.indicator.width = 0
 c.tabs.background = True
 c.tabs.select_on_remove = 'prev'
 c.tabs.new_position.related = 'last'
-#  c.content.notifications = False
+c.content.notifications.enabled = False
 
 c.aliases = {
     'cs': 'config-source',
