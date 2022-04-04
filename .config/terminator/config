@@ -1,19 +1,43 @@
 [global_config]
-  borderless = True
-  enabled_plugins = ,
   handle_size = -3
-  inactive_color_offset = 0.917197452229
-  tab_position = hidden
   window_state = maximise
+  borderless = True
+  tab_position = hidden
+  inactive_color_offset = 0.917197452229
+  enabled_plugins = ,
 [keybindings]
-  broadcast_all = <Primary>1
-  broadcast_off = <Primary>o
+  page_up = None
+  next_tab = <Alt>bracketright
+  prev_tab = <Alt>bracketleft
   hide_window = None
+  broadcast_off = <Primary><Shift>o
+  broadcast_all = <Primary>1
   insert_number = None
   insert_padded = None
-  next_tab = <Alt>bracketright
-  page_up = None
-  prev_tab = <Alt>bracketleft
+[profiles]
+  [[default]]
+    cursor_color = "#147def"
+    font = DejaVu Sans Mono 8
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 1000
+    use_system_font = False
+  [[notes]]
+    icon_bell = False
+    background_color = "#23163d"
+    cursor_color = "#ffffff"
+    font = DejaVu Sans Mono 8
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scrollback_lines = 2000
+    use_system_font = False
+  [[operator]]
+    cursor_color = "#aaaaaa"
+    font = Operator Mono Lig weight=330 8
+    foreground_color = "#ffffff"
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child1]]]
@@ -34,23 +58,3 @@
       profile = notes
       type = Terminal
 [plugins]
-[profiles]
-  [[default]]
-    background_image = None
-    cursor_color = "#147def"
-    font = DejaVu Sans Mono 8
-    foreground_color = "#ffffff"
-    scrollback_lines = 1000
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
-  [[notes]]
-    background_color = "#23163d"
-    background_image = None
-    font = DejaVu Sans Mono 8
-    foreground_color = "#ffffff"
-    icon_bell = False
-    scrollback_lines = 2000
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
