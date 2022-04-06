@@ -6,6 +6,7 @@ lua << EOF
   local actions = require("telescope.actions")
   require("telescope").setup {
     defaults = {
+      preview = false,
       mappings = {
         i = {
           ["<C-i>"]  = actions.move_selection_next,
