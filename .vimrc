@@ -52,6 +52,7 @@ nnoremap <F6>g <C-w>wG<C-w>p
 " Avoid Ex mode
 nmap Q <nop>
 nnoremap <F6>cd :lcd %:h<CR>:pwd<CR>
+nnoremap <F6>p :CtrlPMRUFiles<CR>
 
 " ` is harder to reach than '
 nnoremap ` '
