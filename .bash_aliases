@@ -52,6 +52,7 @@ alias ya='yarn add'
 alias vchat='PATH="/usr/bin:$PATH" weechat' # brew python had missing functions in _ssl.so.
 alias st-notes='terminator -l notes'
 alias comic-dl='~/projects/comic-dl/comic_dl/__main__.py'
+alias fd='/usr/bin/fdfind -I'
 
 # gems
 alias cux='ntf cucumber --no-source -p run_all features/'
