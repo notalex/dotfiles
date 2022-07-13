@@ -41,7 +41,7 @@ let g:notes_smart_quotes = 0
 
 let g:run_live_results_window_skip_threshold = 2
 let g:run_mode_map = '<F6>rr'
-let g:rspec_projects_pattern = '\v(ak....web|sc..-da..)'
+let g:rspec_projects_pattern = '\v(ak....web|sc..-da..|acq....t|fro..e)'
 
 " #-------------- Taglist config -------------
 " Explicit path is required when both ctags & exuberant ctags are in load path.
