@@ -10,5 +10,9 @@ else
   rotate='--rotate normal'
 fi
 
-echo "xrandr --output HDMI-1 --auto --left-of $CURRENT_DISPLAY $rotate"
-xrandr --output HDMI-1 --auto --left-of $CURRENT_DISPLAY $rotate
+mode='--auto'
+[[ $1 == 'u' ]] && mode='--mode 3440x1440'
+
+cmd="xrandr --output HDMI-1 $mode --right-of $CURRENT_DISPLAY $rotate"
+echo $cmd
+eval $cmd
