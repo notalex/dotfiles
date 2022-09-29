@@ -50,6 +50,8 @@ gaf() {
 
 # misc
 
+wat() { eval "watch -x -n 5 bash -ic '"$@"'"; }
+
 mma() { automux medium -ar ~/projects/$1 -n $1; }
 
 dump-development-db() {
@@ -130,7 +132,7 @@ k-pod() {
   [ $namespace ] || namespace=$1
   pod_name_pattern=$2
   run_cmd=${3-bash}
-  pod_name=$(kubectl get po -n $namespace | grep "$pod_name_pattern" | head -2 | tail -1 | cut -d ' ' -f -1)
+  pod_name=$(kubectl get po -n $namespace | grep "$pod_name_pattern" | grep -v '^NAME' | head -1 | cut -d ' ' -f -1)
   kubectl exec -ti -n $namespace $pod_name -- /bin/$run_cmd
 }
 
