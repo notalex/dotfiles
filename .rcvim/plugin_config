@@ -3,6 +3,7 @@
 let g:plug_url_format = 'git@github.com:%s.git'
 
 " -------------- ctrlp mappings
+nnoremap <F6>p :CtrlPMRUFiles<CR>
 
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_show_hidden = 1
@@ -23,7 +24,7 @@ if getcwd() == $HOME
 endif
 
 let g:ctrlp_prompt_mappings = {
-  \ 'PrtSelectMove("j")':   ['<c-i>', '<down>'],
+  \ 'PrtSelectMove("j")':   ['<tab>', '<down>'],
   \ 'PrtSelectMove("k")':   ['<c-o>', '<up>'],
   \ 'PrtExpandDir()':       ['<c-k>'],
   \ }
