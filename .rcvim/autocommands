@@ -53,6 +53,7 @@ augroup nonRepeater
  au BufRead,BufNewFile *.clj set filetype=clojure
  au BufRead,BufNewFile *.ts,*.tsx set filetype=javascript
  au BufRead,BufNewFile */.bubbles/* set textwidth=98
+ au BufRead,BufNewFile Dockerfile.* set filetype=dockerfile
 
  au BufNewFile *.rb call s:AddRequireLineInTest()
  au BufNewFile *.cpp call <SID>AddDefaultCppDirectives()
