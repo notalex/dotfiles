@@ -63,7 +63,7 @@ c.content.notifications.enabled = False
 
 c.aliases = {
     'cs': 'config-source',
-    'tm': 'tab-move'
+    'tt': 'tab-move'
 }
 
 search_engine_path = 'https://www.google.co.in/search?q='
