@@ -37,6 +37,7 @@ alias xout='xclip -o -selection clipboard'
 alias zzh='sudo pm-hibernate'
 alias u-un-mount="sudo umount /media/usb"
 alias wifi-restart='nmcli radio wifi off && nmcli radio wifi on'
+alias wifi-list='nmcli device wifi list'
 alias camera-disable='sudo modprobe -r uvcvideo'
 alias udu='udiskie-umount /media/alex/*'
 alias tso='tmux set-option -g status off'
