@@ -19,6 +19,7 @@ alias g-save="git stash; git stash apply"
 alias gpl-src='git pull src master'
 alias gbo='git checkout --orphan'
 alias gpo='git pull origin'
+alias grsh9='git reset --hard HEAD~9'
 
 # bash
 alias s='sudo'
