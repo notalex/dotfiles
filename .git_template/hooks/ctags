@@ -5,5 +5,5 @@ set -e
 
 trap "rm -f .git/tags.tmp" EXIT
 [ -e ./shard.yml ] && custom_exclude="--exclude=lib"
-ctags-exuberant --tag-relative -Rf .git/tags.tmp --exclude=.git --exclude=node_modules --exclude=public --exclude=coverage --languages=-sql --exclude=*min.js $custom_exclude
+ctags-exuberant --tag-relative -Rf .git/tags.tmp --exclude=@$HOME/.ctagsignore $custom_exclude --languages=-sql
 mv .git/tags.tmp .git/tags

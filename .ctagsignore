@@ -1,0 +1,15 @@
+db
+doc
+tmp
+.git
+spec
+test
+log
+*.min.js
+vendor
+config
+public
+coverage
+app/assets
+app/views
+node_modules
