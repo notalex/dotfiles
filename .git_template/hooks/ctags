@@ -1,9 +1,13 @@
 #! /usr/bin/env bash
 
-# Exit if a subprocess fails.
-set -e
+hours_ago_secs=$(date -d 'now - 6 hours' +%s)
+file_time_secs=$(date -r .git/tags +%s 2> /dev/null)
 
-trap "rm -f .git/tags.tmp" EXIT
-[ -e ./shard.yml ] && custom_exclude="--exclude=lib"
-ctags-exuberant --tag-relative -Rf .git/tags.tmp --exclude=@$HOME/.ctagsignore $custom_exclude --languages=-sql
-mv .git/tags.tmp .git/tags
+if [[ -z $file_time_secs ]] || (( "$file_time_secs" <= $hours_ago_secs )); then
+  trap "rm -f .git/tags.tmp" EXIT
+
+  [ -e ./shard.yml ] && custom_exclude="--exclude=lib"
+  ctags-exuberant --tag-relative -Rf .git/tags.tmp --exclude=@$HOME/.ctagsignore $custom_exclude --languages=-sql
+
+  mv .git/tags.tmp .git/tags
+fi
