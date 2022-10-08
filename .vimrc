@@ -87,6 +87,7 @@ cabbrev hv vertical belowright help
 cabbrev fn vertical topleft help function-list
 cabbrev vb vertical sbuffer
 cabbrev rc RuboCop
+cabbrev tt tabmove
 
 " #----------- nvim terminal mappings --------------------
 if has('nvim')
