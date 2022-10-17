@@ -22,6 +22,8 @@ config.bind('<ctrl-e>', 'scroll down')
 config.bind('<Ctrl-n>', 'tab-next')
 config.bind('<Ctrl-p>', 'tab-prev')
 config.bind('<Ctrl-t>', 'open -t youtube.com')
+config.bind('<Ctrl-0>', 'set zoom.default 100%')
+config.bind('<Ctrl-=>', 'set zoom.default 150%')
 config.bind('O', 'set-cmd-text :open {url:pretty}')
 config.bind('T', 'set-cmd-text :open -t {url:pretty}')
 
