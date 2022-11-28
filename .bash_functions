@@ -32,6 +32,7 @@ gcm-v() { git commit -m "$(echo $@)" --no-verify; }
 ggrp() { cmd="git log --oneline --grep='$@'"; echo $cmd; eval $cmd; }
 gstshow() { git stash show -p stash@{$1} $2; }
 gstapply() { git stash apply stash@{$1} $2; }
+grshn() { git reset --hard HEAD~$1; }
 gcr() { git branch $1 origin/$1; }
 g-clone() { git clone git://github.com/$1.git; }
 g-author() { git commit --amend --reset-author; }
@@ -154,6 +155,8 @@ k-del-pod() {
   pod_name=$(kubectl get po -n $1 | grep "$2" | head -2 | tail -1 | cut -d ' ' -f -1)
   kubectl delete pod -n $1 $pod_name
 }
+
+rc-match() { recordmydesktop --windowid=$(xdotool search --name "$1" | tail -1) --no-sound; }
 
 ntfs() { $@; mplayer ~/tones/notify-tone.mp3 1> /dev/null; notify-send -t 3000 "Process finished: $@"; }
 
