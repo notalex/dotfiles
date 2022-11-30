@@ -37,7 +37,7 @@ gcr() { git branch $1 origin/$1; }
 g-clone() { git clone git://github.com/$1.git; }
 g-author() { git commit --amend --reset-author; }
 g-set-upstream() { git branch --set-upstream $1 origin/$1; }
-gbc() { git remote update && git branch -f $1 origin/$1 && git checkout $1; }
+gbc() { git remote update && git branch -f $1 origin/$1; git checkout $1; }
 
 gaf() {
   git add -f $@
