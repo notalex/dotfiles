@@ -20,6 +20,10 @@ alias gpl-src='git pull src master'
 alias gbo='git checkout --orphan'
 alias gpo='git pull origin'
 alias grsh9='git reset --hard HEAD~9'
+alias gst='git stash'
+alias gsta='git stash apply'
+alias gstp='git stash pop'
+alias gdel='ge git del'
 
 # bash
 alias s='sudo'
