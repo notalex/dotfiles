@@ -6,7 +6,9 @@
   inactive_color_offset = 0.917197452229
   enabled_plugins = ,
 [keybindings]
+  close_term = <Primary><Shift>Page_Down
   page_up = None
+  close_window = <Primary><Shift>Page_Up
   next_tab = <Alt>bracketright
   prev_tab = <Alt>bracketleft
   hide_window = None
