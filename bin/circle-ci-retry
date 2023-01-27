@@ -1,0 +1,56 @@
+#! /usr/bin/env bash
+
+# Paste your api token here to set it permanently.
+# export TOKEN=''
+
+[ -z $INTERVAL ] && INTERVAL=15
+retry_count=0
+
+if [ -z $TOKEN ]; then
+  echo 'Missing TOKEN. Please visit https://app.circleci.com/settings/user/tokens to generate the token.'
+  echo 'Usage: TOKEN=xxxxxxxxx bash circle-ci-retry'
+  exit 1
+fi
+
+if [ -z $ID ]; then
+  echo 'Missing ID. Get the large alphanumeric value from the circle ci web url.'
+  echo 'e.g. Workflow ID is 50c52262-be7a-5bd1-87f8-0b3131352a0c for the following url'
+  echo 'https://app.circleci.com/pipelines/github/xxx/xxx/58271/workflows/50c52262-be7a-5bd1-87f8-0b3131352a0c/jobs/397364'
+  echo 'Usage: ID=xxx-xxx-xxx TOKEN=xxxxxxxxx bash circle-ci-retry'
+  exit 1
+fi
+
+rerun_workflow() {
+  response=$(curl -s --request POST --url https://circleci.com/api/v2/workflow/$ID/rerun --header "Circle-Token: ${TOKEN}")
+  ID=$(echo $response | sed 's/.\+workflow_id".\+"\(.\+\)".\+/\1/')
+  echo "New Workflow ID: $ID"
+}
+
+poll_ci() {
+  echo "$(date) => Workflow ID: $ID"
+  status_string=$(curl -s --request GET --url https://circleci.com/api/v2/workflow/$ID --header "Circle-Token: ${TOKEN}" | grep status)
+  retry_count=$((retry_count + 1))
+
+  case $status_string in
+    *running*)
+      echo "Build is still running. Sleep for $INTERVAL mins."
+      sleep "${INTERVAL}m"
+      poll_ci
+    ;;
+    *failed*)
+      echo "Build failed. Retry and sleep for $((INTERVAL * 2)) mins. Retry count: $retry_count"
+      rerun_workflow
+      sleep "$((INTERVAL * 2))m"
+      poll_ci
+    ;;
+    *success*)
+      echo "Build was SUCCESSful. Exiting."
+    ;;
+    *)
+      echo "ERROR: status doesn't match"
+      exit 1
+    ;;
+  esac
+}
+
+poll_ci
