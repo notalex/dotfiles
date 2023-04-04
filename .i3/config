@@ -37,20 +37,14 @@ bindsym Ctrl+Mod1+p exec copyq menu
 bindsym Ctrl+Mod1+y exec copyq toggle
 
 # Move to other monitor.
-bindsym $mod+F5 move workspace to output left
-bindsym $mod+F8 move workspace to output right
+bindsym $mod+Left  move workspace to output left
+bindsym $mod+Right move workspace to output right
 
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+H move left
@@ -171,6 +165,10 @@ bar {
   mode dock
   hidden_state hide
   modifier mod4
+  bindsym button4 nop
+  bindsym button5 nop
+  bindsym button6 nop
+  bindsym button7 nop
 }
 
 bindsym $mod+Shift+B border normal
