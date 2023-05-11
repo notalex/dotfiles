@@ -1,3 +1,3 @@
 #! /usr/bin/env bash
 
-/home/alex/.asdf/shims/automux $@
+~/.asdf/shims/automux $@
