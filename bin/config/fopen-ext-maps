@@ -5,5 +5,5 @@ localc csv;
 localc xlsx;
 software-center deb;
 eog png,jpg,jpeg,gif;
-smplayer mp4,mpg,mpeg,avi,mkv,divx,flv;
+smplayer mp4,mpg,mpeg,avi,mkv,divx,flv,ogv;
 qutebrowser html;
