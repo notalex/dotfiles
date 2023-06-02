@@ -39,6 +39,7 @@ bindsym Ctrl+Mod1+y exec copyq toggle
 # Move to other monitor.
 bindsym $mod+Left  move workspace to output left
 bindsym $mod+Right move workspace to output right
+bindsym $mod+Down exec bash ~/bin/i3-move-workspaces.sh
 
 # change focus
 bindsym $mod+h focus left
