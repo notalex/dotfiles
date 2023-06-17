@@ -12,19 +12,14 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'mbbill/undotree'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'dhruvasagar/vim-zoom'
-Plug 'dhruvasagar/vim-table-mode'
-Plug 'rstacruz/sparkup'
+" Plug 'dhruvasagar/vim-table-mode'
+" Plug 'rstacruz/sparkup'
 Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'scrooloose/vim-slumlord' " plantUML
 " Plug 'aklt/plantuml-syntax'
 " Plug 'rhysd/open-pdf.vim'
 " Plug 'AndrewRadev/id3.vim'
-
-if has('nvim')
-  Plug 'ggandor/lightspeed.nvim'
-else
-  Plug 'justinmk/vim-sneak'
-endif
+Plug 'justinmk/vim-sneak'
 
 Plug 'xolox/vim-notes'
   Plug 'xolox/vim-misc'
