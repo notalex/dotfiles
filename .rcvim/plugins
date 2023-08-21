@@ -19,6 +19,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'aklt/plantuml-syntax'
 " Plug 'rhysd/open-pdf.vim'
 " Plug 'AndrewRadev/id3.vim'
+" Plug 'slim-template/vim-slim'
 Plug 'justinmk/vim-sneak'
 
 Plug 'xolox/vim-notes'
