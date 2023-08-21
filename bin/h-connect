@@ -11,7 +11,7 @@ else
 fi
 
 mode_direction='--auto --right-of'
-[[ $1 == 'u' ]] && mode_direction='--mode 3440x1440 --left-of'
+[[ $1 == 'u' ]] && mode_direction='--mode 3440x1440 --right-of'
 
 cmd="xrandr --output HDMI-1 $mode_direction $CURRENT_DISPLAY $rotate"
 echo $cmd
