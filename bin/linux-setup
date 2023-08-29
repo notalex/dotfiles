@@ -12,8 +12,11 @@ echo '### Install apt deps'
 sudo apt-get install -y vim curl htop ranger keynav xclip i3 terminator gimp build-essential udiskie tmux copyq \
                         unclutter unrar libreadline-dev rlwrap libssl-dev exuberant-ctags python3-venv fd-find
 
+# For UTM with ARM-64 Ubuntu server
+# sudo apt-get install -y nvim libyaml-dev zlib1g-dev xorg xinit xorg xinit spice-vdagent qemu-guest-agent
+
 # For GUI machines only.
-sudo apt-get install -y smplayer ubuntu-restricted-addons libavcodec-extra rtorrent gthumb pcmanfm ffmpegthumbnailer gtk-recordmydesktop
+# sudo apt-get install -y smplayer ubuntu-restricted-addons libavcodec-extra rtorrent gthumb pcmanfm ffmpegthumbnailer gtk-recordmydesktop
 
 # sudo apt-get install -y imagemagick gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev exfat-fuse exfat-utils apt-transport-https
 
