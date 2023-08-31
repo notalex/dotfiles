@@ -89,6 +89,8 @@ cabbrev fn vertical topleft help function-list
 cabbrev vb vertical sbuffer
 cabbrev rc RuboCop
 cabbrev tt tabmove
+cabbrev cpcc CtrlPClearCache
+cabbrev cs source ~/.vimrc
 
 " #----------- nvim terminal mappings --------------------
 if has('nvim')
