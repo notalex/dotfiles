@@ -18,5 +18,4 @@ nnoremap <F6>q /:\w* =><cr>xelvec:<Esc>:w<cr>
 nmap <F6>O :echom OpenLinkInBrowser()<cr>
 nmap <F6>o I<C-m><C-m><Esc>2ka
 nmap <F6>dg Orequire 'debugger'; debugger; true<Esc>:w<CR>
-nmap <F6>db Orequire 'byebug'; byebug<Esc>:w<CR>
 nmap <F6>' cs"'
