@@ -1,15 +1,16 @@
 #! /usr/bin/env bash
 
 name=$1
-library_path=$(gem which $name 2> /dev/null)
+gem='bundle exec gem'
+library_path=$($gem which $name 2> /dev/null)
 
 if [ $? -ne 0 ]; then
   # Find matching gems and choose the first match.
-  matches=($(gem list --no-versions -l $name))
-  library_path=$(gem which ${matches[0]})
+  matches=($($gem list --no-versions -l $name))
+  library_path=$($gem which ${matches[0]})
 fi
 
-if [ $? == 0 ]; then
+if [ $? == 0 ] && [ -n "$library_path" ]; then
   gem_path=$(expr match $library_path '\(.\+\)/lib/[^\/]\+$')
 
   # Ruby libraries will follow a pattern like `...ruby-2.1.5/lib/ruby/2.1.0/yaml.rb`
@@ -19,7 +20,8 @@ if [ $? == 0 ]; then
 
   vim $gem_path -c ':4' -c ':normal cd'
 else
-  gem list
+  cmd="$gem list | grep $name"
+  echo $cmd; eval $cmd
   printf "\033[1;31m"
   echo "No match library found for '$name'"
   printf "\033[0m"
