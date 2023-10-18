@@ -56,7 +56,7 @@ gaf() {
 
 wat() { eval "watch -x -n 5 bash -ic '"$@"'"; }
 
-mma() { automux medium -ar ~/projects/$1 -n $1; }
+mma() { automux medium -asr ~/projects/$1 -n $1; }
 
 dump-development-db() {
   if [ $1 ]; then
@@ -126,7 +126,7 @@ kpo() {
   declare -A mapp=( [oh]=openhub [fi]=fisbot [oa]=ohloh-analytics [er]=errbit [s]=scan )
   namespace=${mapp[$1]}
   [ $namespace ] || namespace=$1
-  kubectl get po -n $namespace
+  kubectl get po -n $namespace | grep -v migration
 }
 
 ## k-pod fi worker-3 bin_cmd # only 1st arg is mandatory.
