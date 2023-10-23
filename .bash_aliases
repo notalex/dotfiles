@@ -96,6 +96,7 @@ alias dps='sudo docker ps -a'
 
 # misc
 alias k='kubectl'
+alias screensaver-off='xset s off -dpms'
 
 # nixos
 alias nxsearch='nix-env -qaP | less'
