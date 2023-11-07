@@ -62,6 +62,17 @@ c.tabs.background = True
 c.tabs.select_on_remove = 'prev'
 c.tabs.new_position.related = 'last'
 c.content.notifications.enabled = False
+c.completion.web_history.exclude = [
+  'https://*/login*',
+  'https://*/servicedesk/customer/portal/6/user/login*',
+  'https://*.okta.com/app/*',
+  'https://*/SAML2/POST*',
+  'https://login.microsoftonline.com/*',
+  'https://www.google.co.in/search*',
+  'https://www.thesaurus.com/*',
+  'https://www.w3schools.com/*',
+  'https://*.atlassian.net/wiki/spaces/*/pages/edit*',
+]
 
 c.aliases = {
     'cs': 'config-source',
