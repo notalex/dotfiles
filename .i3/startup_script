@@ -6,6 +6,7 @@ i3 workspace 3
 
 i3-msg exec 'copyq'
 i3-msg exec 'copyq disable'
+i3-msg exec 'xset s off -dpms'
 i3-msg exec 'udiskie'
 # i3-msg exec 'bash ~/.xinput.conf'
 i3-msg exec 'xmodmap ~/.Xmodmap'
