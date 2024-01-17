@@ -4,7 +4,7 @@ flags: -u2
 hooks:
   post:
     - <%= link_window 'small', 4, 4 %>
-    - <%= select_window 1 %>
+    - <%= select_window 7 %>
 windows:
   - name: fis-workers
     index: 0
@@ -13,26 +13,29 @@ windows:
       -
       -
       -
+  - name: source
+    index: 2
+    root: ~/projects
+  - name: prd1
+    index: 6
+    panes:
+      -
+      -
+  - name: prd2
+    index: 7
+    panes:
+      -
+      -
   - name: stg
-    index: 1
+    index: 8
     panes:
       -
       -
     hooks:
       post:
         - tmux next-layout
-  - name: prd1
-    index: 2
-    panes:
-      -
-      -
-  - name: prd2
-    index: 3
-    panes:
-      -
-      -
   - name: oa-workers
-    index: 6
+    index: 9
     panes:
       -
       -
