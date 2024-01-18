@@ -2,7 +2,7 @@ name: notes
 flags: -u2
 hooks:
   post:
-    - <%= select_window 2 %>
+    - <%= select_window 3 %>
 windows:
   - index: 2
     panes:
