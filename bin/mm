@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+project_names=(foo bar)
+
+for folder in ${project_names[@]}; do
+  open_tmux_sessions=$(tmux ls | awk '{print $1}' | sed 's/://')
+  if ! [[ "${open_tmux_sessions}" =~ "$folder" ]]; then
+    automux medium -asr ~/projects/$folder -n $folder
+    exit
+  fi
+done
