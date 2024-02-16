@@ -83,6 +83,7 @@ alias rd-rollback='bundle exec rake db:rollback'
 alias rd-rollback-t='bundle exec rake db:rollback; bundle exec rake db:rollback RAILS_ENV=test'
 alias nuke-test-db='bundle exec rake db:drop RAILS_ENV=test; bundle exec rake db:create RAILS_ENV=test; bundle exec rake db:migrate RAILS_ENV=test; bundle exec rake db:seed RAILS_ENV=test'
 alias be='bundle exec'
+alias se='source .env'
 
 # tmux
 alias tmx-attach-session='tmux -u2 attach-session -t'
