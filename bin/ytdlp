@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+~/Softwares/yt-dlp/yt-dlp_linux "$@"
