@@ -1,42 +1,52 @@
 " vim: set ft=vim:
 
 call plug#begin('~/.vim/plugged')
+
+function! s:InsideDir(dir_name)
+  return strlen(matchstr(getcwd(), a:dir_name))
+endfunction
+
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rails'
-Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ciaranm/securemodelines'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'mbbill/undotree'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'dhruvasagar/vim-zoom'
-" Plug 'dhruvasagar/vim-table-mode'
-" Plug 'rstacruz/sparkup'
 Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'scrooloose/vim-slumlord' " plantUML
-" Plug 'aklt/plantuml-syntax'
+Plug 'justinmk/vim-sneak'
+" Plug 'rstacruz/sparkup'
 " Plug 'rhysd/open-pdf.vim'
 " Plug 'AndrewRadev/id3.vim'
-" Plug 'slim-template/vim-slim'
-Plug 'justinmk/vim-sneak'
 
-Plug 'xolox/vim-notes'
-  Plug 'xolox/vim-misc'
+if s:InsideDir('projects')
+  Plug 'tpope/vim-rails'
+  Plug 'slim-template/vim-slim'
+  Plug 'notalex/vim-run-tests'
+  Plug 'notalex/vim-style-police'
+  Plug 'notalex/vim-alternate'
+endif
 
-" Plug 'notalex/DrawIt'
+if s:InsideDir('gitbasket')
+  Plug 'xolox/vim-notes'
+    Plug 'xolox/vim-misc'
+  " Plug 'notalex/DrawIt'
+  " Plug 'dhruvasagar/vim-table-mode'
+  " Plug 'scrooloose/vim-slumlord' " plantUML
+  " Plug 'aklt/plantuml-syntax'
+endif
+
 Plug 'notalex/vim-potent-motion'
 Plug 'notalex/snipmate.vim'
 Plug 'notalex/vim-run-live'
 Plug 'notalex/vim-strip-trailers'
 Plug 'notalex/vim-git-helpers'
-Plug 'notalex/vim-run-tests'
 Plug 'notalex/vim-syntax-highlighter'
 Plug 'notalex/vim-buff-killer'
-Plug 'notalex/vim-style-police'
 Plug 'notalex/vim_common_functions'
-Plug 'notalex/vim-alternate'
 
 call plug#end()
 
