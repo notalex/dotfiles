@@ -3,11 +3,11 @@
 notes_window_stashed=/tmp/notes-window-stashed
 
 if [ -e $notes_window_stashed ]; then
-  i3 [con_mark="notes-window"] scratchpad show
+  i3 '[con_mark="notes-window"]' scratchpad show
 
   rm $notes_window_stashed
 else
-  i3 [con_mark="notes-window"] move scratchpad
+  i3 '[con_mark="notes-window"]' move scratchpad
 
   touch $notes_window_stashed
 fi
