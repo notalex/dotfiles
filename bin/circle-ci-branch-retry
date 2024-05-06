@@ -1,0 +1,75 @@
+#! /usr/bin/env bash
+
+# Paste your api token here to set it permanently.
+export TOKEN=''
+
+[ -z $INTERVAL ] && INTERVAL=15
+retry_count=0
+full_ci_check=true
+BRANCH=${BRANCH-${branch-${br:-master}}}
+
+if [ -z $TOKEN ]; then
+  echo 'Missing TOKEN. Please visit https://app.circleci.com/settings/user/tokens to generate the token.'
+  echo 'Usage: TOKEN=xxxxxxxxx bash circle-ci-retry'
+  exit 1
+fi
+
+tempfile=$(mktemp /tmp/circle-ci-api-response.XXXXXX)
+
+rerun_workflow() {
+  curl -s --request POST --url https://circleci.com/api/v2/workflow/$1/rerun --header "Circle-Token: ${TOKEN}" > /dev/null
+}
+
+parse_id() {
+  curl -s --request GET --url $1 --header "Circle-Token: ${TOKEN}" > $tempfile
+
+  uuid=$(cat $tempfile | grep '"id" :' | head -1 | sed 's/.\+: "\(.\+\)",/\1/')
+  [ ${#uuid} != 36 ] && echo "ERROR: invalid UUID from $1" && exit 1
+
+  echo $uuid
+}
+
+workflow_state() {
+  if [ $full_ci_check == true ]; then
+    echo $(cat $tempfile | grep "status" | head -1)
+  else
+    curl -s --request GET --url https://circleci.com/api/v2/workflow/$1/job --header "Circle-Token: ${TOKEN}" > $tempfile
+    echo $(cat $tempfile | grep -E '"(name|status)" :' | grep rspec -A 1 | tail -1)
+  fi
+}
+
+poll_ci() {
+  retry_count=$((retry_count + 1))
+
+  echo "Branch: $BRANCH"
+  url="https://circleci.com/api/v2/project/github/springleaf/frontend/pipeline?branch=$BRANCH"
+  pipeline_id=$(parse_id $url)
+  echo "pipeline_id: $pipeline_id"
+  workflow_id=$(parse_id https://circleci.com/api/v2/pipeline/$pipeline_id/workflow)
+  last_workflow_state=$(workflow_state $workflow_id)
+
+  echo "$(date) => Workflow ID: $workflow_id ($last_workflow_state)"
+
+  case $last_workflow_state in
+    *running*)
+      echo "Build is still running. Sleep for $INTERVAL mins."
+      sleep "${INTERVAL}m"
+      poll_ci
+    ;;
+    *failed*)
+      echo "Build failed. Retry and sleep for $((INTERVAL * 2)) mins. Retry count: $retry_count"
+      rerun_workflow $workflow_id
+      sleep "$((INTERVAL * 3))m"
+      poll_ci
+    ;;
+    *success*)
+      echo "Build was SUCCESSful. Exiting."
+    ;;
+    *)
+      echo "ERROR: status doesn't match"
+      exit 1
+    ;;
+  esac
+}
+
+poll_ci
