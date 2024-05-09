@@ -5,7 +5,7 @@ export TOKEN=''
 
 [ -z $INTERVAL ] && INTERVAL=15
 retry_count=0
-full_ci_check=true
+check_rspec_only=false
 BRANCH=${BRANCH-${branch-${br:-master}}}
 
 if [ -z $TOKEN ]; then
@@ -30,11 +30,11 @@ parse_id() {
 }
 
 workflow_state() {
-  if [ $full_ci_check == true ]; then
-    echo $(cat $tempfile | grep "status" | head -1)
-  else
+  if [ $check_rspec_only == true ]; then
     curl -s --request GET --url https://circleci.com/api/v2/workflow/$1/job --header "Circle-Token: ${TOKEN}" > $tempfile
     echo $(cat $tempfile | grep -E '"(name|status)" :' | grep rspec -A 1 | tail -1)
+  else
+    echo $(cat $tempfile | grep "status" | head -1)
   fi
 }
 
