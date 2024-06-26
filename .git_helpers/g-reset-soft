@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-read -r -p "Are you sure? [Yes/n] " response
+read -r -p "Are you sure? [y/n] " response
 
 if [ "$1" != "" ]; then
   head=$1
@@ -9,7 +9,7 @@ else
 fi
 
 case $response in
-  [yY]es)
+  y)
     eval "git reset --soft HEAD~$head"
   ;;
   *)
