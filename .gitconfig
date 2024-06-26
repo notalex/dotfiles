@@ -1,6 +1,6 @@
 [user]
 	name = Alex Johnson
-  email = 'alex@example.com'
+  email = 'notalexjohnson@gmail.com'
 [core]
   pager = perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
   excludesfile = ~/.global_gitignore
