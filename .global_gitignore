@@ -19,3 +19,4 @@ coverage/
 .env.local
 .env.test.local
 node_modules
+bin
