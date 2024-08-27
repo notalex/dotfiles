@@ -98,3 +98,11 @@ endif
 let g:undotree_ShortIndicators = 1
 let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_HighlightChangedWithSign = 0
+
+" ------ copilot -----
+" imap <F6>[ <Plug>(copilot-dismiss)
+" imap <F6>i <Plug>(copilot-next)
+" imap <F6>o <Plug>(copilot-previous)
+" imap <F6>\ <Plug>(copilot-suggest)
+" imap <F6>n <Plug>(copilot-accept-word)
+" imap <F6>m <Plug>(copilot-accept-line)
