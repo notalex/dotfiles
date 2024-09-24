@@ -19,7 +19,7 @@
 [profiles]
   [[default]]
     cursor_color = "#147def"
-    font = DejaVu Sans Mono 8
+    font = Cascadia Code 10
     foreground_color = "#ffffff"
     show_titlebar = False
     scrollbar_position = hidden
@@ -29,7 +29,7 @@
     icon_bell = False
     background_color = "#23163d"
     cursor_color = "#ffffff"
-    font = DejaVu Sans Mono 8
+    font = Cascadia Code 7
     foreground_color = "#ffffff"
     show_titlebar = False
     scrollbar_position = hidden
