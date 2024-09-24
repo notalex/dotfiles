@@ -20,3 +20,4 @@ coverage/
 .env.test.local
 node_modules
 bin
+.nfs*
