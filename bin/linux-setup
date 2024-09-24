@@ -1,7 +1,5 @@
 #! /usr/bin/env bash
 
-set -e
-
 if [[ ! $(dpkg --get-selections | grep git) ]]; then
   # Get the dotfiles.
   sudo apt-get install -y git
@@ -11,23 +9,22 @@ if [[ ! $(dpkg --get-selections | grep git) ]]; then
 fi
 
 echo '### Install apt deps'
-sudo apt-get install -y vim-gtk3 curl htop ranger keynav xclip i3 terminator gimp udiskie tmux copyq fd-find \
-                        unclutter unrar rlwrap libreadline-dev zlib1g-dev libssl-dev python3-venv python3-pip \
-                        exuberant-ctags build-essential software-properties-common nodejs \
-                        postgresql postgresql-client postgresql-client-common libpq-dev
+sudo apt-get install -y vim curl htop ranger keynav xclip i3 terminator gimp build-essential udiskie tmux copyq \
+                        unclutter unrar rlwrap exuberant-ctags python3-venv fd-find libreadline-dev \
+                        libyaml-dev zlib1g-dev libbz2-dev libssl-dev libsqlite3-dev libffi-dev libbson-dev libsodium-dev
 
 # For UTM with ARM-64 Ubuntu server
-# sudo apt-get install -y nvim libyaml-dev zlib1g-dev xorg xinit xorg xinit spice-vdagent qemu-guest-agent qutebrowser
+# sudo apt-get install -y spice-vdagent qemu-guest-agent xorg xinit firefox nvim qutebrowser ntp
+
+# Common programming libs
+# sudo apt-get install -y imagemagick gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev apt-transport-https
 
 # For GUI machines only.
-# sudo apt-get install -y smplayer ubuntu-restricted-addons libavcodec-extra gthumb pcmanfm ffmpegthumbnailer gtk-recordmydesktop
+# sudo apt-get install -y smplayer ubuntu-restricted-addons libavcodec-extra rtorrent gthumb pcmanfm ffmpegthumbnailer gtk-recordmydesktop exfat-fuse exfat-utils
 
-# For work
-# sudo apt-get install -y imagemagick gperf ragel libmagic-dev swig vpnc libmagickwand-dev exfat-fuse exfat-utils apt-transport-https
-
-# Install latest neovim
-curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o ~/bin/nvim.appimage
-chmod u+x ~/bin/nvim.appimage
+# Install latest neovim # only for x86.
+# curl -L https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o ~/bin/nvim.appimage
+# chmod u+x ~/bin/nvim.appimage
 
 # curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
 # sudo fc-cache -fv
