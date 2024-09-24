@@ -19,6 +19,7 @@ config.bind('go', 'set-cmd-text -s :open -t gl')
 config.bind('<ctrl-r>', 'reload')
 config.bind('<ctrl-y>', 'scroll up')
 config.bind('<ctrl-e>', 'scroll down')
+config.bind('<Ctrl-a>', 'mode-enter insert') # avoid accidental tab refresh or the default select-all.
 config.bind('<Ctrl-n>', 'tab-next')
 config.bind('<Ctrl-p>', 'tab-prev')
 config.bind('<Ctrl-t>', 'set-cmd-text -s :undo')
