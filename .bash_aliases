@@ -60,6 +60,8 @@ alias vchat='PATH="/usr/bin:$PATH" weechat' # brew python had missing functions 
 alias st-notes='terminator -l notes'
 alias comic-dl='~/projects/comic-dl/comic_dl/__main__.py'
 alias fd='/usr/bin/fdfind -I'
+alias caps-enable='setxkbmap -layout us -option caps:enable'
+alias caps-none='setxkbmap -layout us -option caps:none'
 
 # gems
 alias cux='ntf cucumber --no-source -p run_all features/'
