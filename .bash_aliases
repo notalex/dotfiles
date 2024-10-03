@@ -24,6 +24,7 @@ alias gst='git stash'
 alias gsta='git stash apply'
 alias gstp='git stash pop'
 alias gdel='ge git del'
+alias gre='git reset --soft HEAD~1; git reset'
 
 # bash
 alias s='sudo'
