@@ -102,7 +102,7 @@ alias dps='sudo docker ps -a'
 alias k='kubectl'
 alias screensaver-off='xset s off -dpms'
 alias ra='ranger'
-alias c-opyq-disable='copyq enable; copyq disable'
+alias c-opyq-disable='copyq enable; sleep 2; copyq disable'
 
 # nixos
 alias nxsearch='nix-env -qaP | less'
