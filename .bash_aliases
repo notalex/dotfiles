@@ -63,6 +63,7 @@ alias comic-dl='~/projects/comic-dl/comic_dl/__main__.py'
 alias fd='/usr/bin/fdfind -I'
 alias caps-enable='setxkbmap -layout us -option caps:enable'
 alias caps-none='setxkbmap -layout us -option caps:none'
+alias bri='brew install'
 
 # gems
 alias cux='ntf cucumber --no-source -p run_all features/'
@@ -111,4 +112,9 @@ alias nxinstall='nix-env -i'
 alias t='harsh'
 alias c-undo='rm -rf ~/.undodir/*'
 
-$(on-mac) && alias quarantine='xattr -d com.apple.quarantine'
+if $(on-mac); then
+  alias nvim='/opt/homebrew/bin/nvim -u ~/.vimrc $@'
+  alias tfix='sudo sntp -sS time.apple.com'
+  alias quarantine='xattr -d com.apple.quarantine'
+  alias brstart-services='brew services start postgresql@14'
+fi

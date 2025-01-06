@@ -122,17 +122,17 @@ else
 fi
 
 # kubernetes
-## kpo oh|fi|oa|er
+## kpo oh|fs|oa|er
 kpo() {
-  declare -A mapp=( [oh]=openhub [fi]=fisbot [oa]=ohloh-analytics [er]=errbit [s]=scan )
+  declare -A mapp=( [oh]=openhub [fs]=fisbot [oa]=ohloh-analytics [er]=errbit [sc]=scan )
   namespace=${mapp[$1]}
   [ $namespace ] || namespace=$1
   kubectl get po -n $namespace | grep -v migration
 }
 
-## k-pod fi worker-3 bin_cmd # only 1st arg is mandatory.
+## k-pod fs worker-3 bin_cmd # only 1st arg is mandatory.
 k-pod() {
-  declare -A mapp=( [oh]=openhub [fi]=fisbot [oa]=ohloh-analytics [er]=errbit [s]=scan )
+  declare -A mapp=( [oh]=openhub [fs]=fisbot [oa]=ohloh-analytics [er]=errbit [sc]=scan )
   namespace=${mapp[$1]}
   [ $namespace ] || namespace=$1
   pod_name_pattern=$2

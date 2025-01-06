@@ -7,7 +7,6 @@ stty stop undef
 
 export EDITOR=vim
 export TERMINAL=xfce4-terminal
-export BROWSER=qutebrowser
 export VMAIL_BROWSER=qutebrowser
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"
@@ -18,10 +17,20 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 add_to_path $HOME/.git_helpers
 add_to_path /opt/vagrant/bin
 add_to_path ./node_modules/.bin
-add_to_path $HOME/neovim/bin
+add_to_path $HOME/bin
 add_to_path $PWD/bin
-add_to_path /home/linuxbrew/.linuxbrew/Cellar/postgresql@10/10.20_1/bin/
-prepend_to_path /home/linuxbrew/.linuxbrew/bin
+
+if $(on-mac); then
+  export BROWSER=/Applications/qutebrowser.app/Contents/MacOS/qutebrowser
+
+  prepend_to_path /opt/homebrew/opt/grep/libexec/gnubin
+else
+  export BROWSER=qutebrowser
+
+  add_to_path $HOME/neovim/bin
+  add_to_path /home/linuxbrew/.linuxbrew/Cellar/postgresql@10/10.20_1/bin/
+  prepend_to_path /home/linuxbrew/.linuxbrew/bin
+fi
 
 source ~/.bash_aliases
 source ~/.bash_prompt
