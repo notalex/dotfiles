@@ -26,11 +26,22 @@ function! s:CustomGrep(folder_path)
     let options = pattern_and_options[3]
 
     " grep -r pattern app --include=*.{rb,}
-    silent execute "grep -Pr " . escaped_pattern . " " . folder .
+    let cmd = "grep -Pnr " . escaped_pattern . " " . folder .
       \' --exclude-dir=' . exclude_dirs .
       \' --include=' . type .
       \' --exclude-from=' . $HOME . '/.better-grep-exclusions' . options
-    cw
+
+    call s:ExecuteCmd(cmd)
+  endif
+endfunction
+
+function! s:ExecuteCmd(cmd)
+  if has('mac')
+    cgetexpr system(a:cmd)
+    copen
+  else
+    silent execute a:cmd
+    cwindow
     redraw!
   endif
 endfunction
