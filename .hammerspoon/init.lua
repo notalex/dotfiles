@@ -3,8 +3,9 @@ local windowManager = require("windowManager")
 
 local keyMappings = {
     {key = "1", title = "Hammerspoon Console", app = "Hammerspoon"},
-    {key = "2", title = "", app = "Google Chrome"},
+    {key = "2", title = "", app = "Cisco AnyConnect Secure Mobility Client"},
     {key = "3", title = "small", app = "iTerm2"},
+    {key = "5", title = "", app = "Google Chrome"},
     {key = "6", title = "Teams", app = "Microsoft Teams"},
     {key = "7", title = "ohloh", app = "iTerm2"},
     {key = "8", title = "servers", app = "iTerm2"},

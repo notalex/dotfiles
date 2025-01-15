@@ -1,8 +1,16 @@
 local module = {}
 
-local notesWindowFocused = false
+local stateFilePath = "/tmp/notesWindowState"
 local targetWindowTitle = "notes"
 local targetAppName = "iTerm2"
+
+local function isNotesWindowFocused()
+    return io.open(stateFilePath, "r") and true or false
+end
+
+local function touchNotesWindowState()
+    io.open(stateFilePath, "w"):close()
+end
 
 function module.toggleNotesWindow()
     local app = hs.application.find(targetAppName)
@@ -16,12 +24,12 @@ function module.toggleNotesWindow()
         end
 
         if targetWindow then
-            if not notesWindowFocused then
+            if not isNotesWindowFocused() then
                 targetWindow:focus()
-                notesWindowFocused = true
+                touchNotesWindowState()
             else
                 hs.eventtap.keyStroke({"alt"}, "tab")
-                notesWindowFocused = false
+                os.remove(stateFilePath)
             end
         else
             hs.alert.show("Window with title 'notes' not found in " .. targetAppName)

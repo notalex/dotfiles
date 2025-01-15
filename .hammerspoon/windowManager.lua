@@ -1,10 +1,13 @@
 local module = {}
 
+local stateFilePath = "/tmp/notesWindowState"
+
 function module.focusWindow(targetWindowTitle, targetAppName)
     local app = hs.application.find(targetAppName)
     if app then
         for _, win in ipairs(app:allWindows()) do
             if win:title():find(targetWindowTitle) then
+                os.remove(stateFilePath)
                 win:focus()
                 return
             end
