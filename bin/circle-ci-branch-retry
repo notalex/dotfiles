@@ -6,7 +6,7 @@ export TOKEN=''
 [ -z $INTERVAL ] && INTERVAL=15
 retry_count=0
 check_rspec_only=false
-BRANCH=${BRANCH-${branch-${br:-master}}}
+BRANCH=${BRANCH-${branch-${br-${1:-master}}}}
 
 if [ -z $TOKEN ]; then
   echo 'Missing TOKEN. Please visit https://app.circleci.com/settings/user/tokens to generate the token.'
@@ -59,7 +59,7 @@ poll_ci() {
     *failed*)
       echo "Build failed. Retry and sleep for $((INTERVAL * 2)) mins. Retry count: $retry_count"
       rerun_workflow $workflow_id
-      sleep "$((INTERVAL * 3))m"
+      sleep "$((INTERVAL * 2))m"
       poll_ci
     ;;
     *success*)
