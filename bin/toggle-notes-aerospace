@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+
+NOTES_WINDOW_ID=$(aerospace list-windows --all --format "%{app-bundle-id} %{window-title} %{window-id}" | grep -E "com.googlecode.iterm2.+notes" | awk '{print $NF}')
+
+if [ -n "$NOTES_WINDOW_ID" ]; then
+  aerospace focus --window-id $NOTES_WINDOW_ID
+else
+  echo "No iTerm windows found."
+fi
