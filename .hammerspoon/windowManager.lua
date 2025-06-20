@@ -19,11 +19,14 @@ function module.focusWindow(targetWindowTitle, targetAppName)
 end
 
 function module.bindKeyMappings(keyMappings)
-    for _, mapping in ipairs(keyMappings) do
-        hs.hotkey.bind({"alt"}, mapping.key, function()
-            module.focusWindow(mapping.title, mapping.app)
-        end)
-    end
+  for _, mapping in ipairs(keyMappings) do
+      hs.hotkey.bind({"alt"}, mapping.key, function()
+          if mapping.app == 'iTerm2' then
+              module.focusWindow('qutebrowser', 'Qutebrowser')
+          end
+          module.focusWindow(mapping.title, mapping.app)
+      end)
+  end
 end
 
 return module
