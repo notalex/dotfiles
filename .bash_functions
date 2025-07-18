@@ -10,8 +10,8 @@ on-vagrant() { [ $HOME == '/home/vagrant' ] && echo true; }
 add_to_path() { [[ $PATH != *$1* ]] && PATH=$PATH:$1; }
 prepend_to_path() { [[ $PATH != *$1* ]] && PATH=$1:$PATH; }
 dpks() { cmd="dpkg --get-selections | grep $1"; echo $cmd; eval $cmd; }
-pag() { cmd="ps aux | grep $1 | grep -v grep"; echo $cmd; eval $cmd; }
-pagt() { cmd="ps auxf | grep $1 | grep -v grep"; echo $cmd; eval $cmd; }
+pag() { cmd="ps aux | grep -i $1 | grep -v grep"; echo $cmd; eval $cmd; }
+pagt() { cmd="ps auxf | grep -i $1 | grep -v grep"; echo $cmd; eval $cmd; }
 pagm() { cmd="ps aux --sort -rss | less"; echo $cmd; eval $cmd; }
 les() { $@ | less; }
 hel() { $@ --help; }
