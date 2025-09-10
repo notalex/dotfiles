@@ -51,7 +51,7 @@
                         ]
                     },
                     {
-                        "description": "Map Cmd + J to Cmd + Tab",
+                        "description": "Map Cmd + J to Alt + Tab",
                         "manipulators": [
                             {
                                 "from": {
@@ -64,7 +64,7 @@
                                 "to": [
                                     {
                                         "key_code": "tab",
-                                        "modifiers": ["left_command"]
+                                        "modifiers": ["left_option"]
                                     }
                                 ],
                                 "type": "basic"
