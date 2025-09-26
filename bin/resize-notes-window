@@ -1,4 +1,19 @@
-i3 resize grow right 705px
-i3 resize shrink left 360px
-i3 resize grow up 345px
-i3 resize shrink down 415px
+#!/bin/bash
+source ~/.bash_functions
+
+if on-mac; then
+  screen_width=$(osascript -e 'tell application "Finder" to get bounds of window of desktop' | cut -d',' -f3)
+
+  if (( screen_width < 1900 )); then
+    bounds="{800, 60, 1500, 350}"
+  else
+    bounds="{1100, 60, 1800, 350}"
+  fi
+
+  osascript -e "tell application \"iTerm2\" to set bounds of front window to $bounds"
+else
+  i3 resize grow right 705px
+  i3 resize shrink left 360px
+  i3 resize grow up 345px
+  i3 resize shrink down 415px
+fi
