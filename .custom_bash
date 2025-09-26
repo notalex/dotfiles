@@ -20,7 +20,7 @@ add_to_path ./node_modules/.bin
 add_to_path $HOME/bin
 add_to_path $PWD/bin
 
-if $(on-mac); then
+if on-mac; then
   export BROWSER=/Applications/qutebrowser.app/Contents/MacOS/qutebrowser
 
   export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"

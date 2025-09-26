@@ -4,7 +4,7 @@
 heroku-push() { gps -r heroku $@ m; heroku run rake db:migrate; }
 
 # bash
-on-mac() { [[ $(uname) == 'Darwin' ]] && echo true; }
+on-mac() { [[ $(uname) == 'Darwin' ]]; }
 on-docker() { [ $HOME == '/home/docker' ] && echo true; }
 on-vagrant() { [ $HOME == '/home/vagrant' ] && echo true; }
 add_to_path() { [[ $PATH != *$1* ]] && PATH=$PATH:$1; }
@@ -114,8 +114,7 @@ set-ruby-version() {
   fi
 }
 
-if $(on-mac)
-then
+if on-mac; then
   ntf() { $@; terminal-notifier-notify -message 'Process finished...'; tmux display-message 'Process finished...'; }
 else
   ntf() { $@; notify-send -u critical "Process finished: $@"; }

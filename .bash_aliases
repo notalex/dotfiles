@@ -112,7 +112,7 @@ alias nxinstall='nix-env -i'
 alias t='harsh'
 alias c-undo='rm -rf ~/.undodir/*'
 
-if $(on-mac); then
+if on-mac; then
   alias nvim='/opt/homebrew/bin/nvim -u ~/.vimrc $@'
   alias tfix='sudo sntp -sS time.apple.com'
   alias quarantine='xattr -d com.apple.quarantine'
