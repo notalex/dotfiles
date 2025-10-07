@@ -48,6 +48,7 @@ alias camera-disable='sudo modprobe -r uvcvideo'
 alias udu="udiskie-umount /media/$USER/*"
 alias tso='tmux set-option -g status off'
 alias cl='claude'
+alias cr='crush'
 alias hh='htop'
 alias px='peerflix --path ~/Videos'
 alias smagnet='peerflix --path ~/Videos --no-quit -g'
