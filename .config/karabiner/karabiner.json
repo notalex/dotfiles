@@ -4,6 +4,47 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Ctrl+U → delete line everywhere except Citrix and iTerm2 (safe)",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.citrix\\.receiver\\.icaviewer$",
+                                            "^com\\.citrix\\.workspace\\.mac$",
+                                            "^com\\.googlecode\\.iterm2$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "u",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Map Ctrl+H to Backspace (for all apps, including Citrix PVM)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [{ "key_code": "delete_or_backspace" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Vim-style hjkl navigation in Preview.app",
                         "manipulators": [
                             {
@@ -61,9 +102,19 @@
                         ]
                     },
                     {
-                        "description": "Map Ctrl+I/O to Tab/Shift+Tab (Global)",
+                        "description": "Map Ctrl+I/O to Tab/Shift+Tab in browsers (Firefox, Chrome, Safari)",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "org.mozilla.firefox",
+                                            "com.google.Chrome",
+                                            "com.apple.Safari"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": { "mandatory": ["control"] }
@@ -72,6 +123,16 @@
                                 "type": "basic"
                             },
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "org.mozilla.firefox",
+                                            "com.google.Chrome",
+                                            "com.apple.Safari"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": { "mandatory": ["control"] }
