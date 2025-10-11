@@ -66,6 +66,15 @@ alias caps-enable='setxkbmap -layout us -option caps:enable'
 alias caps-none='setxkbmap -layout us -option caps:none'
 alias bri='brew install'
 
+# python
+alias py='python3'
+alias pi='pip3 install'
+alias pl='pip3 list'
+alias pir='pip3 install -r requirements.txt'
+alias venv='rm -rf venv; python3 -m venv venv'
+alias va='source venv/bin/activate'
+alias vd='deactivate'
+
 # gems
 alias cux='ntf cucumber --no-source -p run_all features/'
 alias mnt='ruby -Itest test/'
@@ -96,9 +105,10 @@ alias tmx-detach-session='tmux detach-client -s'
 alias tmx-new='tmux -u2 new-session -s'
 
 # docker
-alias d='sudo docker'
-alias dim='sudo docker images'
-alias dps='sudo docker ps -a'
+alias d='docker'
+alias dim='docker images'
+alias dps='docker ps -a'
+alias dc='docker-compose'
 
 # misc
 alias k='kubectl'
