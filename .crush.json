@@ -1,4 +1,7 @@
 {
+  "_install_deps": "pip install uv python-language-server",
+  "_setup_API_keys": "Create API key matching each $ variable here. Set them in ~/.zshrc",
+
   "$schema": "https://charm.land/crush.json",
   "providers": {
     "openrouter": {
@@ -15,21 +18,47 @@
       ]
     }
   },
+
+  "options": {
+    "context_paths": [
+      "~/.config/crush/rules/"
+    ]
+  },
+
   "mcp": {
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN"
+      }
+    },
+
     "context7": {
       "type": "http",
       "url": "https://mcp.context7.com/mcp",
       "headers": {
         "CONTEXT7_API_KEY": "$CONTEXT7_API_KEY"
       }
+    },
+
+    "Serena": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/oraios/serena",
+        "serena", "start-mcp-server",
+        "--enable-web-dashboard", "False"
+      ]
     }
   },
+
   "permissions": {
     "allowed_tools": [
       "ls",
       "grep",
       "find",
       "fetch",
+      "mcp_context7_resolve-library-id",
       "mcp_context7_get-library-doc"
     ]
   }
