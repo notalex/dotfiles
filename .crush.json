@@ -1,0 +1,36 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "providers": {
+    "openrouter": {
+      "type": "openai",
+      "base_url": "https://openrouter.ai/api/v1",
+      "api_key": "$OPENROUTER_API_KEY",
+      "models": [
+        {
+          "id": "moonshotai/kimi-dev-72b:free",
+          "name": "Kimi K2 Free",
+          "context_window": 128000,
+          "default_max_tokens": 8192
+        }
+      ]
+    }
+  },
+  "mcp": {
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "$CONTEXT7_API_KEY"
+      }
+    }
+  },
+  "permissions": {
+    "allowed_tools": [
+      "ls",
+      "grep",
+      "find",
+      "fetch",
+      "mcp_context7_get-library-doc"
+    ]
+  }
+}
