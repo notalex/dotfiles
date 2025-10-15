@@ -20,10 +20,10 @@ end
 
 function module.bindKeyMappings(keyMappings)
   for _, mapping in ipairs(keyMappings) do
-      hs.hotkey.bind({"alt"}, mapping.key, function()
-          if mapping.app == 'iTerm2' then
-              module.focusWindow('qutebrowser', 'Qutebrowser')
-          end
+      hs.hotkey.bind({"cmd"}, mapping.key, function()
+          -- if mapping.app == 'iTerm2' then
+              -- module.focusWindow('qutebrowser', 'Qutebrowser')
+          -- end
           module.focusWindow(mapping.title, mapping.app)
       end)
   end

@@ -1,16 +1,16 @@
+require("hs.ipc")
+hs.ipc.cliInstall()
+
 local notesWindow = require("notesWindow")
 local windowMover = require("windowMover")
 local windowManager = require("windowManager")
 
 local keyMappings = {
     {key = "1", title = "Hammerspoon Console", app = "Hammerspoon"},
-    {key = "2", title = "", app = "Cisco Secure Client"},
     {key = "3", title = "small", app = "iTerm2"},
-    {key = "4", title = "", app = "Code"},
-    {key = "5", title = "", app = "Google Chrome"},
-    {key = "6", title = "Teams", app = "Microsoft Teams"},
-    {key = "7", title = "ohloh", app = "iTerm2"},
-    {key = "8", title = "servers", app = "iTerm2"},
+    {key = "6", title = "", app = "Chrome"},
+    {key = "7", title = "neosonic", app = "iTerm2"},
+    {key = "8", title = "", app = "Firefox"},
     {key = "9", title = "qutebrowser", app = "Qutebrowser"}
 }
 
