@@ -7,8 +7,8 @@ hooks:
     - <%= select_window 2 %>
 windows:
   - panes:
-      - rails server
-      - rails console
+      -
+      -
     opt: '-s'
   - panes: nvim
     index: 2
