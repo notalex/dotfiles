@@ -3,10 +3,10 @@
 length=$(cat ~/bin/pass-length)
 
 lesspass $1 $2 -C ${3-1} -L $length -c --no-fingerprint > /dev/null
-passwd1=$(xclip -o -selection clipboard)
+passwd1=$(OS_paste)
 
 lesspass $1 $2 -C ${3-1} -L $length -c --no-fingerprint > /dev/null
-passwd2=$(xclip -o -selection clipboard)
+passwd2=$(OS_paste)
 
 if [[ "$passwd1" = "$passwd2" ]]; then
   echo 'All good!'
@@ -14,5 +14,5 @@ else
   echo 'mismatch!'
 fi
 
-trap "echo '' | xclip -sel clipboard" EXIT TERM
+trap "echo '' | OS_copy" EXIT TERM
 sleep 60
