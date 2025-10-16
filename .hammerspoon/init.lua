@@ -8,7 +8,7 @@ local windowManager = require("windowManager")
 local keyMappings = {
     {key = "1", title = "Hammerspoon Console", app = "Hammerspoon"},
     {key = "3", title = "small", app = "iTerm2"},
-    {key = "6", title = "", app = "Chrome"},
+    {key = "4", title = "", app = "Chrome"},
     {key = "7", title = "neosonic", app = "iTerm2"},
     {key = "8", title = "", app = "Firefox"},
     {key = "9", title = "qutebrowser", app = "Qutebrowser"}
