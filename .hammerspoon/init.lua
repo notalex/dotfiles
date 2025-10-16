@@ -15,7 +15,7 @@ local keyMappings = {
 }
 
 windowManager.bindKeyMappings(keyMappings)
-hs.hotkey.bind({"alt"}, "n", notesWindow.toggleNotesWindow)
-hs.hotkey.bind({"alt"}, "b", function() hs.eventtap.keyStroke({"alt"}, "tab") end)
-hs.hotkey.bind({"alt"}, "right", function() windowMover.moveWindowBetweenDisplays() end)
-hs.hotkey.bind({"alt"}, "left", function() windowMover.moveWindowBetweenDisplays() end)
+hs.hotkey.bind({"cmd"}, "n", notesWindow.toggleNotesWindow)
+hs.hotkey.bind({"cmd"}, "b", function() hs.eventtap.keyStroke({"alt"}, "tab") end)
+hs.hotkey.bind({"cmd"}, "right", function() windowMover.moveWindowBetweenDisplays() end)
+hs.hotkey.bind({"cmd"}, "left", function() windowMover.moveWindowBetweenDisplays() end)
