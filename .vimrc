@@ -4,18 +4,17 @@ if has('nvim')
   let &runtimepath.=',' . $HOME . '/.vim'
   set winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
   set guicursor=
-  set statusline=-
+  set statusline="%f\\ %l"
   set fillchars=stl:-,stlnc:-,vert:\|
-  set laststatus=0
 endif
 
 source ~/.rcvim/plugins
 source ~/.rcvim/scripts.vim
 source ~/.rcvim/autocommands
-colorscheme lotus
+colorscheme monokai
 syntax on
 source ~/.rcvim/custom_highlighting
-source $VIMRUNTIME/macros/matchit.vim
+" source $VIMRUNTIME/macros/matchit.vim
 
 " #-----------------maps------------------
 
@@ -100,6 +99,7 @@ endif
 
 " ------------------set------------------------------
 
+set number
 set t_Co=256
 set modelines=1
 set cursorline
