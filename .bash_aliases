@@ -104,10 +104,10 @@ alias tmx-attach-session='tmux -u2 attach-session -t'
 alias tmx-detach-session='tmux detach-client -s'
 alias tmx-new='tmux -u2 new-session -s'
 
-# docker
-alias d='docker'
-alias dim='docker images'
-alias dps='docker ps -a'
+# docket
+alias d='docket'
+alias dim='docket images'
+alias dps='docket ps -a'
 alias dc='docker-compose'
 
 # misc
