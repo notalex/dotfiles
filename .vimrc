@@ -11,7 +11,7 @@ endif
 source ~/.rcvim/plugins
 source ~/.rcvim/scripts.vim
 source ~/.rcvim/autocommands
-colorscheme monokai
+colorscheme lotus
 syntax on
 source ~/.rcvim/custom_highlighting
 " source $VIMRUNTIME/macros/matchit.vim
