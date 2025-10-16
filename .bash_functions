@@ -18,7 +18,7 @@ hel() { $@ --help; }
 xin() { $@ | xclip -selection clipboard; }
 hss() { ssh $1@192.168.6.$2; }
 vnc() { vncviewer 192.168.6.$1 ; }
-rmt() { mv $1 ~/.trash; }
+rmt() { mv $1 ~/_trash; }
 brk() { sleep $@; notify-send -u critical 'Break!!'; }
 automux_installed() { gem list | grep automux 1> /dev/null; }
 pskill() { ps aux | grep $1 | grep -v grep | awk '{print $2}' | xargs kill -9 ; }
