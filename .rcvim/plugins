@@ -21,6 +21,7 @@ Plug 'justinmk/vim-sneak'
 " Plug 'rstacruz/sparkup'
 " Plug 'rhysd/open-pdf.vim'
 " Plug 'AndrewRadev/id3.vim'
+Plug 'ku1ik/vim-monokai'
 
 if s:InsideDir('projects')
   Plug 'tpope/vim-rails'
