@@ -2,7 +2,6 @@
 	name = Alex Johnson
   email = 'notalexjohnson@gmail.com'
 [core]
-  pager = perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
   excludesfile = ~/.global_gitignore
 [color]
   diff = true
@@ -21,5 +20,3 @@
   showUntrackedFiles = all
 [receive]
 	denyCurrentBranch = ignore
-[interactive]
-  difffilter = perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight
