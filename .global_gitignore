@@ -21,3 +21,5 @@ coverage/
 node_modules
 bin
 .nfs*
+.claude/settings.local.json
+asterisk-logs
