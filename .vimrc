@@ -4,7 +4,12 @@ if has('nvim')
   let &runtimepath.=',' . $HOME . '/.vim'
   set winhighlight=Normal:ActiveWindow,NormalNC:InactiveWindow
   set guicursor=
-  set statusline="%f\\ %l"
+  if getcwd() =~ $HOME . '/projects'
+    set statusline="%f\\ %l"
+  else
+    set statusline=-
+    set laststatus=0
+  endif
   set fillchars=stl:-,stlnc:-,vert:\|
 endif
 
@@ -99,7 +104,6 @@ endif
 
 " ------------------set------------------------------
 
-set number
 set t_Co=256
 set modelines=1
 set cursorline
@@ -132,6 +136,10 @@ set backspace=indent,eol,start
 set complete=.,w,b
 " exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
 " set list
+
+if getcwd() =~ $HOME . '/projects'
+  set number
+endif
 
 " #-----------emacs mode
 imap <c-a> <Home>
