@@ -13,9 +13,6 @@ sudo apt-get install -y vim curl htop ranger keynav xclip i3 terminator gimp bui
                         unclutter unrar rlwrap exuberant-ctags python3-venv python3-pip fd-find libreadline-dev \
                         libyaml-dev zlib1g-dev libbz2-dev libssl-dev libsqlite3-dev libffi-dev libbson-dev libsodium-dev
 
-# For UTM with ARM-64 Ubuntu server
-# sudo apt-get install -y spice-vdagent qemu-guest-agent xorg xinit firefox nvim qutebrowser ntp
-
 # Common programming libs
 sudo apt-get install -y imagemagick gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev apt-transport-https
 
@@ -26,23 +23,14 @@ sudo apt-get install -y smplayer ubuntu-restricted-addons libavcodec-extra rtorr
 curl -L https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.appimage -o ~/bin/nvim.appimage
 chmod u+x ~/bin/nvim.appimage
 
+# For UTM with ARM-64 Ubuntu server
+# sudo apt-get install -y spice-vdagent qemu-guest-agent xorg xinit firefox nvim qutebrowser ntp
+
 # curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
 sudo fc-cache -fv
 
 sed -i '/^# Alias definitions.$/,+8d' ~/.bashrc
 echo 'source ~/.custom_bash' >> ~/.bashrc
-
-echo '### Install asdf'
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-cd ~/.asdf
-git checkout "$(git describe --abbrev=0 --tags)"
-echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
-echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
-cd
-source ~/.bashrc
-~/.asdf/bin/asdf plugin add ruby
-~/.asdf/bin/asdf install ruby 3.4.7
-~/.asdf/bin/asdf global ruby 3.4.7
 
 echo '### Install ScmBreeze'
 git clone https://github.com/ndbroadbent/scm_breeze ~/.scm_breeze
@@ -53,6 +41,21 @@ git checkout ~/.bash_profile
 echo '### Setup ranger file manager'
 ranger --copy-config=rc
 sed -i 's/set preview_images false/set preview_images true/' .config/ranger/rc.conf
+
+echo '### Install homebrew'
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/alex/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+echo '### Install asdf & ruby'
+brew install asdf
+asdf plugin add ruby
+asdf install ruby 3.4.7
+asdf global ruby 3.4.7
+
+echo '### Install utilites'
+gem install automux
+pip install --break-system-packages lesspass
 
 # Vim plugins
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
