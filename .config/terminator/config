@@ -19,7 +19,7 @@
 [profiles]
   [[default]]
     cursor_color = "#147def"
-    font = Cascadia Code 10
+    font = Ubuntu Sans Mono Medium 10
     foreground_color = "#ffffff"
     show_titlebar = False
     scrollbar_position = hidden
