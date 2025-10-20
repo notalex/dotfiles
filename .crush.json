@@ -25,6 +25,12 @@
     ]
   },
 
+  "lsp": {
+    "python": {
+      "command": "pyls"
+    }
+  },
+
   "mcp": {
     "github": {
       "type": "http",
@@ -55,11 +61,48 @@
   "permissions": {
     "allowed_tools": [
       "ls",
+      "pip",
+      "bash",
+      "view",
       "grep",
       "find",
       "fetch",
       "mcp_context7_resolve-library-id",
-      "mcp_context7_get-library-doc"
+      "mcp_context7_get-library-docs",
+      "mcp_github_list_issues",
+      "mcp_github_list_sub_issues",
+      "mcp_github_list_releases",
+      "mcp_github_search_code",
+      "mcp_github_search_issues",
+      "mcp_github_search_pull_requests",
+      "mcp_github_search_repositories",
+      "mcp_github_get_latest_release",
+      "mcp_github_get_release_by_tag",
+      "mcp_github_get_file_contents",
+      "mcp_Serena_activate_project",
+      "mcp_Serena_check_onboarding_performed",
+      "mcp_Serena_prepare_for_new_conversation",
+      "mcp_Serena_create_text_file",
+      "mcp_Serena_read_file",
+      "mcp_Serena_replace_regex",
+      "mcp_Serena_replace_symbol_body",
+      "mcp_Serena_write_memory",
+      "mcp_Serena_search_for_pattern",
+      "mcp_Serena_find_symbol",
+      "mcp_Serena_find_referencing_symbols",
+      "mcp_Serena_get_symbols_overview",
+      "mcp_Serena_find_file",
+      "mcp_Serena_insert_after_symbol",
+      "mcp_Serena_insert_before_symbol",
+      "mcp_Serena_list_dir",
+      "mcp_Serena_list_memories",
+      "mcp_Serena_execute_shell_command",
+      "mcp_Serena_think_about_task_adherence",
+      "mcp_Serena_think_about_collected_information",
+      "mcp_Serena_think_about_whether_you_are_done",
+      "mcp_Serena_get_current_config",
+      "mcp_Serena_switch_modes",
+      "mcp_Serena_read_memory"
     ]
   }
 }
