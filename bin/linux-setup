@@ -55,7 +55,8 @@ asdf global ruby 3.4.7
 
 echo '### Install utilites'
 gem install automux
-pip install --break-system-packages lesspass
+pip install --break-system-packages lesspass uv
+brew install charmbracelet/tap/crush
 
 # Vim plugins
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
