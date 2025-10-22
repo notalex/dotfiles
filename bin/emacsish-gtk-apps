@@ -1,0 +1,44 @@
+#!/bin/bash
+
+gsettings set org.gnome.desktop.interface gtk-key-theme 'Emacs'
+
+KEYBOARD_IDS=($(cat "$HOME/bin/keyboard_ids"))
+
+# Keycodes (US layout)
+KEY_M=58
+KEY_LBRACK=34
+KEY_I=31
+KEY_O=32
+CTRL_L=37
+
+for DEVICE_ID in "${KEYBOARD_IDS[@]}"; do
+  xinput test "$DEVICE_ID" | while read -r line; do
+
+    CTRL_STATE=$(xinput query-state "$DEVICE_ID" | grep -E "key\[$CTRL_L\]=down")
+    if [[ -n "$CTRL_STATE" ]]; then
+      WIN_PID=$(xdotool getwindowfocus getwindowpid)
+      PROC_NAME=$(ps -p $WIN_PID -o comm=)
+      if [[ "$PROC_NAME" =~ vivaldi|chrome|brave ]]; then
+        # Ctrl+M -> Enter
+        if [[ "$line" == *"key press   $KEY_M"* ]]; then
+          xdotool key --clearmodifiers Return
+        fi
+
+        # Ctrl+[ -> Escape
+        if [[ "$line" == *"key press   $KEY_LBRACK"* ]]; then
+          xdotool key --clearmodifiers Escape
+        fi
+
+        # Ctrl+I -> Tab
+        if [[ "$line" == *"key press   $KEY_I"* ]]; then
+          xdotool key --clearmodifiers Tab
+        fi
+
+        # Ctrl+O -> Shift+Tab
+        if [[ "$line" == *"key press   $KEY_O"* ]]; then
+          xdotool key --clearmodifiers Shift+Tab
+        fi
+      fi
+    fi
+  done &
+done
