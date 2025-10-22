@@ -58,6 +58,9 @@ nnoremap <F6>g <C-w>wG<C-w>p
 nmap Q <nop>
 nnoremap <F6>cd :lcd %:h<CR>:pwd<CR>
 nnoremap <F6>p :CtrlPMRUFiles<CR>
+" make n/N consistent.
+noremap <expr> n 'Nn'[v:searchforward]
+noremap <expr> N 'nN'[v:searchforward]
 
 " ` is harder to reach than '
 nnoremap ` '
