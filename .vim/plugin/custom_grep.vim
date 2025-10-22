@@ -19,7 +19,7 @@ function! s:CustomGrep(folder_path)
     endif
 
     let folder = grep_options[0]
-    let exclude_dirs = '{' . grep_options[2] . s:LangExcludes() . '.shards,locales,.git,tmp,log,deps,node_modules}'
+    let exclude_dirs = '{' . grep_options[2] . s:LangExcludes() . '.shards,locales,.git,tmp,log,deps,node_modules,.serena,.venv,asterisk-logs}'
 
     let pattern = pattern_and_options[2]
     let escaped_pattern = shellescape(pattern)
