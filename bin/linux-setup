@@ -27,6 +27,9 @@ chmod u+x ~/bin/nvim.appimage
 # sudo apt-get install -y spice-vdagent qemu-guest-agent xorg xinit firefox nvim qutebrowser ntp
 
 # curl -L https://github.com/hbin/top-programming-fonts/raw/master/install.sh | bash
+mkdir ~/.fonts
+git clone https://github.com/probil/Monaco-IDE-font /tmp/monaco
+cp /tmp/monaco/dist/Monaco.ttf ~/.fonts/
 sudo fc-cache -fv
 
 sed -i '/^# Alias definitions.$/,+8d' ~/.bashrc
