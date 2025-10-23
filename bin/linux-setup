@@ -9,7 +9,7 @@ if [[ ! $(dpkg --get-selections | grep git) ]]; then
 fi
 
 echo '### Install apt deps'
-sudo apt-get install -y vim curl htop ranger keynav xclip i3 terminator gimp build-essential udiskie tmux copyq \
+sudo apt-get install -y vim curl ranger keynav xclip i3 terminator gimp build-essential udiskie tmux copyq \
                         unclutter unrar rlwrap exuberant-ctags python3-venv python3-pip fd-find libreadline-dev \
                         libyaml-dev zlib1g-dev libbz2-dev libssl-dev libsqlite3-dev libffi-dev libbson-dev libsodium-dev
 
@@ -63,7 +63,14 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim -c 'PlugInstall'
 
+echo '### Install htop-vim'
+git clone https://github.com/KoffeinFlummi/htop-vim /tmp/htop
+cd /tmp/htop
+./autogen.sh && ./configure && make
+sudo make install
+
 # https://github.com/qutebrowser/qutebrowser/blob/master/doc/install.asciidoc#tox
+echo '### Compile Qutebrowser'
 mkdir ~/projects && cd ~/projects
 git clone https://github.com/qutebrowser/qutebrowser/
 cd qutebrowser && python3 scripts/mkvenv.py
