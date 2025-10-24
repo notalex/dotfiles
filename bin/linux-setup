@@ -32,6 +32,11 @@ git clone https://github.com/probil/Monaco-IDE-font /tmp/monaco
 cp /tmp/monaco/dist/Monaco.ttf ~/.fonts/
 sudo fc-cache -fv
 
+git clone https://github.com/rvaiya/warpd.git /tmp/warpd
+cd /tmp/warpd
+sudo apt-get install -y libxi-dev libxinerama-dev libxft-dev libxfixes-dev libxtst-dev libx11-dev libcairo2-dev libxkbcommon-dev libwayland-dev
+make && sudo make install
+
 sed -i '/^# Alias definitions.$/,+8d' ~/.bashrc
 echo 'source ~/.custom_bash' >> ~/.bashrc
 
