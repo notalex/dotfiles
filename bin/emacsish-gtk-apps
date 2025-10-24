@@ -18,7 +18,7 @@ for DEVICE_ID in "${KEYBOARD_IDS[@]}"; do
     if [[ -n "$CTRL_STATE" ]]; then
       WIN_PID=$(xdotool getwindowfocus getwindowpid)
       PROC_NAME=$(ps -p $WIN_PID -o comm=)
-      if [[ "$PROC_NAME" =~ vivaldi|chrome|brave ]]; then
+      if [[ "$PROC_NAME" =~ vivaldi|chrome|brave|firefox ]]; then
         # Ctrl+M -> Enter
         if [[ "$line" == *"key press   $KEY_M"* ]]; then
           xdotool key --clearmodifiers Return
@@ -31,12 +31,12 @@ for DEVICE_ID in "${KEYBOARD_IDS[@]}"; do
 
         # Ctrl+I -> Tab
         if [[ "$line" == *"key press   $KEY_I"* ]]; then
-          xdotool key --clearmodifiers Tab
+          xdotool key --clearmodifiers Down
         fi
 
         # Ctrl+O -> Shift+Tab
         if [[ "$line" == *"key press   $KEY_O"* ]]; then
-          xdotool key --clearmodifiers Shift+Tab
+          xdotool key --clearmodifiers Up
         fi
       fi
     fi
