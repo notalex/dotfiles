@@ -108,7 +108,7 @@ alias tmx-new='tmux -u2 new-session -s'
 alias d='docket'
 alias dim='docket images'
 alias dps='docket ps -a'
-alias dc='docker-compose'
+alias dc='sudo docker-compose'
 
 # misc
 alias k='kubectl'
