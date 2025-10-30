@@ -17,7 +17,7 @@ sudo apt-get install -y vim curl ranger keynav xclip i3 terminator gimp build-es
 sudo apt-get install -y imagemagick gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev apt-transport-https
 
 # For GUI machines only.
-sudo apt-get install -y smplayer ubuntu-restricted-addons libavcodec-extra rtorrent gthumb pcmanfm ffmpegthumbnailer gtk-recordmydesktop exfat-fuse exfat-utils
+sudo apt-get install -y smplayer ubuntu-restricted-addons libavcodec-extra rtorrent gthumb pcmanfm ffmpegthumbnailer gtk-recordmydesktop exfat-fuse exfat-utils gnome-screenshot
 
 # Install latest neovim # only for x86.
 curl -L https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.appimage -o ~/bin/nvim.appimage
