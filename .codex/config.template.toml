@@ -1,0 +1,15 @@
+# FIXME: Replace all $ variables with actual values & copy to ~/.codex/config.toml
+
+approval_policy = "untrusted"
+
+[mcp_servers.context7]
+url = "https://mcp.context7.com/mcp"
+http_headers = { "CONTEXT7_API_KEY" = "$CONTEXT7_API_KEY" }
+
+[mcp_servers.github]
+url = "https://api.githubcopilot.com/mcp"
+http_headers = { "Authorization" = "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN" }
+
+[mcp_servers.serena]
+command = "uvx"
+args = ["--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--context", "codex"]
