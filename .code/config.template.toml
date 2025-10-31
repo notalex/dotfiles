@@ -1,6 +1,40 @@
 approval_policy = "untrusted"
 
-tui = { theme.colors.primary = "#66D9EF", theme.colors.secondary = "#FD971F", theme.colors.background = "#272822", theme.colors.foreground = "#F8F8F2", theme.colors.border = "#3E3D32", theme.colors.border_focused = "#75715E", theme.colors.selection = "#49483E", theme.colors.cursor = "#F8F8F0", theme.colors.success = "#A6E22E", theme.colors.warning = "#FD971F", theme.colors.error = "#F92672", theme.colors.info = "#66D9EF", theme.colors.text = "#F8F8F2", theme.colors.text_dim = "#A6A28C", theme.colors.text_bright = "#FFFFFF", theme.colors.keyword = "#F92672", theme.colors.string = "#E6DB74", theme.colors.comment = "#75715E", theme.colors.function = "#A6E22E", theme.colors.spinner = "#66D9EF", theme.colors.progress = "#A6E22E" , theme.name = "custom" }
+[tui]
+theme.name = "custom"
+theme.colors.primary = "#66D9EF"
+theme.colors.secondary = "#FD971F"
+theme.colors.background = "#272822"
+theme.colors.foreground = "#F8F8F2"
+theme.colors.border = "#3E3D32"
+theme.colors.border_focused = "#75715E"
+theme.colors.selection = "#49483E"
+theme.colors.cursor = "#F8F8F0"
+theme.colors.success = "#A6E22E"
+theme.colors.warning = "#FD971F"
+theme.colors.error = "#F92672"
+theme.colors.info = "#66D9EF"
+theme.colors.text = "#F8F8F2"
+theme.colors.text_dim = "#A6A28C"
+theme.colors.text_bright = "#FFFFFF"
+theme.colors.keyword = "#F92672"
+theme.colors.string = "#E6DB74"
+theme.colors.comment = "#75715E"
+theme.colors.function = "#A6E22E"
+theme.colors.spinner = "#66D9EF"
+theme.colors.progress = "#A6E22E"
+
+[tui.shortcuts]
+help = "f5"
+toggle_browser_hud = "f6"
+toggle_agents_hud = "f7"
+transcript_page_up = "ctrl+p"
+transcript_page_down = "ctrl+n"
+transcript_to_top = "ctrl+g"
+transcript_to_bottom = "shift+g"
+
+model = "gpt-5-codex"
+model_reasoning_effort = "medium"
 
 [mcp_servers.context7]
 url = "https://mcp.context7.com/mcp"
