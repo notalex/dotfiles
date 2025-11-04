@@ -1,4 +1,9 @@
-approval_policy = "untrusted"
+sandbox = "workspace-write"
+network = "enabled"
+
+[approval]
+policy = "untrusted"
+auto_allow = ["ls", "pwd", "curl", "git", "rg"]
 
 [tui]
 theme.name = "custom"

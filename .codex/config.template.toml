@@ -1,6 +1,11 @@
 # FIXME: Replace all $ variables with actual values & copy to ~/.codex/config.toml
 
-approval_policy = "untrusted"
+sandbox = "workspace-write"
+network = "enabled"
+
+[approval]
+policy = "untrusted"
+auto_allow = ["ls", "pwd", "curl", "git", "rg"]
 
 [mcp_servers.context7]
 url = "https://mcp.context7.com/mcp"
