@@ -1,0 +1,27 @@
+#!/bin/bash
+
+source ~/bin/lib/keyboard-utils.sh
+
+apply_xmodmap() {
+  xmodmap ~/.Xmodmap
+  echo "$(date): Xmodmap settings applied."
+}
+
+PREVIOUS_KEYBOARDS=$(get_keyboard_ids)
+
+apply_xmodmap
+
+check_keyboards() {
+  CURRENT_KEYBOARDS=$(get_keyboard_ids)
+
+  if [ "$PREVIOUS_KEYBOARDS" != "$CURRENT_KEYBOARDS" ]; then
+    echo "$(date): Keyboard state changed. Applying Xmodmap..."
+    apply_xmodmap
+    PREVIOUS_KEYBOARDS="$CURRENT_KEYBOARDS"
+  fi
+}
+
+while true; do
+  sleep 2
+  check_keyboards
+done &

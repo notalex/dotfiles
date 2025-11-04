@@ -1,14 +1,8 @@
 #!/bin/bash
 
-gsettings set org.gnome.desktop.interface gtk-key-theme 'Emacs'
+source ~/bin/lib/keyboard-utils.sh
 
-# Discover attached keyboard IDs dynamically.
-mapfile -t KEYBOARD_IDS < <(
-  xinput list --short |
-    awk '/slave[[:space:]]*keyboard/ {
-      if (match($0, /id=[0-9]+/)) print substr($0, RSTART+3, RLENGTH-3)
-    }'
-)
+gsettings set org.gnome.desktop.interface gtk-key-theme 'Emacs'
 
 # Keycodes (US layout)
 KEY_M=58
@@ -16,6 +10,8 @@ KEY_LBRACK=34
 KEY_I=31
 KEY_O=32
 CTRL_L=37
+
+mapfile -t KEYBOARD_IDS < <(get_keyboard_ids)
 
 for DEVICE_ID in "${KEYBOARD_IDS[@]}"; do
   xinput test "$DEVICE_ID" | while read -r line; do
