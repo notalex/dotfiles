@@ -40,11 +40,29 @@
       }
     },
 
+    "octocode": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["octocode-mcp@latest"],
+      "env": {
+        "GITHUB_TOKEN": "$GITHUB_PERSONAL_ACCESS_TOKEN"
+      }
+    },
+
     "context7": {
       "type": "http",
       "url": "https://mcp.context7.com/mcp",
       "headers": {
         "CONTEXT7_API_KEY": "$CONTEXT7_API_KEY"
+      }
+    },
+
+    "perplexity": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@perplexity-ai/mcp-server"],
+      "env": {
+        "PERPLEXITY_API_KEY": "$PERPLEXITY_API_KEY"
       }
     },
 
@@ -79,6 +97,12 @@
       "mcp_github_get_latest_release",
       "mcp_github_get_release_by_tag",
       "mcp_github_get_file_contents",
+      "mcp_octocode_githubSearchCode",
+      "mcp_octocode_githubGetFileContent",
+      "mcp_perplexity_perplexity_ask",
+      "mcp_perplexity_perplexity_reason",
+      "mcp_perplexity_perplexity_search",
+      "mcp_perplexity_perplexity_research",
       "mcp_Serena_activate_project",
       "mcp_Serena_check_onboarding_performed",
       "mcp_Serena_prepare_for_new_conversation",
