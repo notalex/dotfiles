@@ -1,0 +1,31 @@
+---
+alwaysApply: true
+---
+
+## Code Formatting Rules
+
+### General Rules
+- Follow the existing indentation style of the codebase being modified
+- If the codebase uses 4-space indentation, continue using 4 spaces
+- If the codebase uses 2-space indentation, continue using 2 spaces
+- Never mix tabs and spaces
+- **ALWAYS remove all trailing whitespace from lines**
+- **ALWAYS ensure files end with exactly one newline (no missing or extra newlines)**
+- No trailing spaces on blank lines
+- No double empty lines (max 1 consecutive blank line)
+
+### Shell Scripts Specific
+- Always use exactly 2 spaces for indentation in shell scripts
+- No tabs allowed in shell scripts
+- Configure editor to use spaces instead of tabs for .sh files
+
+### Language-Specific
+- Follow language-specific conventions in existing codebases
+- When in doubt, match the surrounding code style exactly
+
+### File Editing Standards
+- When using Edit/Write tools, **ALWAYS** preserve final newlines
+- When adding content, **ALWAYS** ensure final newline exists
+- **ALWAYS** remove any trailing whitespace from edited content
+- Collapse multiple consecutive blank lines into single blank lines
+- **CRITICAL**: Trailing whitespace removal is mandatory, not optional
