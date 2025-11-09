@@ -30,7 +30,7 @@ bindsym $mod+Shift+Q kill
 bindsym $mod+d exec dmenu_run
 bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
 
-bindsym Ctrl+Shift+Home exec bash ~/bin/xmodmap.sh
+bindsym $mod+z exec bash ~/bin/zoiper-call
 
 # Copyq shortcuts
 bindsym Ctrl+Mod1+p exec copyq menu
