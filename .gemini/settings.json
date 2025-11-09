@@ -12,12 +12,30 @@
         "Accept": "application/json, text/event-stream"
       }
     },
+
+    "octocode": {
+      "command": "npx",
+      "args": ["octocode-mcp@latest"],
+      "env": {
+        "GITHUB_TOKEN": "$GITHUB_PERSONAL_ACCESS_TOKEN"
+      }
+    },
+
     "github": {
       "httpUrl": "https://api.githubcopilot.com/mcp",
       "headers": {
         "Authorization": "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN"
       }
     },
+
+    "perplexity": {
+      "command": "npx",
+      "args": ["-y", "@perplexity-ai/mcp-server"],
+      "env": {
+        "PERPLEXITY_API_KEY": "$PERPLEXITY_API_KEY"
+      }
+    },
+
     "serena": {
       "command": "uvx",
       "args": ["--from", "git+https://github.com/oraios/serena", "serena",
