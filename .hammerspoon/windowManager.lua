@@ -18,9 +18,9 @@ function module.focusWindow(targetWindowTitle, targetAppName)
     end
 end
 
-function module.bindKeyMappings(keyMappings)
+function module.bindKeyMappings(mod, keyMappings)
   for _, mapping in ipairs(keyMappings) do
-      hs.hotkey.bind({"cmd"}, mapping.key, function()
+      hs.hotkey.bind({mod}, mapping.key, function()
           -- if mapping.app == 'iTerm2' then
               -- module.focusWindow('qutebrowser', 'Qutebrowser')
           -- end

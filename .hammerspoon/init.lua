@@ -1,6 +1,7 @@
 require("hs.ipc")
 hs.ipc.cliInstall()
 
+local mod = "alt"
 local notesWindow = require("notesWindow")
 local windowMover = require("windowMover")
 local windowManager = require("windowManager")
@@ -16,8 +17,8 @@ local keyMappings = {
     {key = "9", title = "qutebrowser", app = "Qutebrowser"}
 }
 
-windowManager.bindKeyMappings(keyMappings)
-hs.hotkey.bind({"cmd"}, "n", notesWindow.toggleNotesWindow)
-hs.hotkey.bind({"cmd"}, "b", function() hs.eventtap.keyStroke({"alt"}, "tab") end)
-hs.hotkey.bind({"cmd"}, "right", function() windowMover.moveWindowBetweenDisplays() end)
-hs.hotkey.bind({"cmd"}, "left", function() windowMover.moveWindowBetweenDisplays() end)
+windowManager.bindKeyMappings(mod, keyMappings)
+hs.hotkey.bind({mod}, "n", notesWindow.toggleNotesWindow)
+hs.hotkey.bind({mod}, "b", function() hs.eventtap.keyStroke({"alt"}, "tab") end)
+hs.hotkey.bind({mod}, "right", function() windowMover.moveWindowBetweenDisplays() end)
+hs.hotkey.bind({mod}, "left", function() windowMover.moveWindowBetweenDisplays() end)
