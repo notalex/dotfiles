@@ -43,5 +43,11 @@
         "--enable-web-dashboard", "False"
       ]
     }
+  },
+  "general": {
+    "previewFeatures": true
+  },
+  "tools": {
+    "allowed": ["run_shell_command"]
   }
 }
