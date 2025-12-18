@@ -12,8 +12,8 @@ if on-mac; then
 
   osascript -e "tell application \"iTerm2\" to set bounds of front window to $bounds"
 else
-  i3 resize grow right 705px
-  i3 resize shrink left 360px
-  i3 resize grow up 345px
+  i3 resize grow right 540px
+  i3 resize shrink left 450px
+  i3 resize grow up 300px
   i3 resize shrink down 415px
 fi
