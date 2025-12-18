@@ -64,7 +64,8 @@ asdf global ruby 3.4.7
 echo '### Install utilites'
 gem install automux
 pip install --break-system-packages lesspass uv
-brew install gemini-cli qwen-code charmbracelet/tap/crush
+brew install qwen-code charmbracelet/tap/crush pyenv
+npm install -g @google/gemini-cli
 curl https://cursor.com/install -fsS | bash
 
 # Vim plugins
