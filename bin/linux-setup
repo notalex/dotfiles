@@ -9,7 +9,7 @@ if [[ ! $(dpkg --get-selections | grep git) ]]; then
 fi
 
 echo '### Install apt deps'
-sudo apt-get install -y vim curl ranger keynav xclip xkbset i3 terminator gimp build-essential udiskie tmux copyq bat \
+sudo apt-get install -y vim curl ranger keynav xclip xkbset xdotool i3 terminator gimp build-essential udiskie tmux copyq bat \
                         unclutter unrar rlwrap exuberant-ctags python3-venv python3-pip fd-find libreadline-dev \
                         libyaml-dev zlib1g-dev libbz2-dev libssl-dev libsqlite3-dev libffi-dev libbson-dev libsodium-dev
 
@@ -17,7 +17,7 @@ sudo apt-get install -y vim curl ranger keynav xclip xkbset i3 terminator gimp b
 sudo apt-get install -y imagemagick gperf ragel libmagic-dev swig postgresql postgresql-client libpq-dev software-properties-common vpnc libmagickwand-dev apt-transport-https
 
 # For GUI machines only.
-sudo apt-get install -y smplayer ubuntu-restricted-addons libavcodec-extra rtorrent gthumb pcmanfm ffmpegthumbnailer gtk-recordmydesktop exfat-fuse exfat-utils gnome-screenshot
+sudo apt-get install -y smplayer ubuntu-restricted-addons libavcodec-extra rtorrent gthumb pcmanfm ffmpegthumbnailer recordmydesktop exfat-fuse exfatprogs gnome-screenshot
 
 # Install latest neovim # only for x86.
 curl -L https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.appimage -o ~/bin/nvim.appimage
@@ -59,7 +59,7 @@ echo '### Install asdf & ruby'
 brew install asdf
 asdf plugin add ruby
 asdf install ruby 3.4.7
-asdf global ruby 3.4.7
+asdf set ruby 3.4.7
 
 echo '### Install utilites'
 gem install automux
