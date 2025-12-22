@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ ! -f /tmp/zoiper-call-started ]; then
-  xdotool mousemove 3650 100 click 1
+  xdotool mousemove 1750 100 click 1
   touch /tmp/zoiper-call-started
 else
-  xdotool mousemove 4000 1040 click 1
+  xdotool mousemove 2450 1040 click 1
   rm /tmp/zoiper-call-started
 fi
