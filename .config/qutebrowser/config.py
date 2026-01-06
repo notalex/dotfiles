@@ -12,21 +12,21 @@ config.bind('gt', 'tab-focus')
 config.bind('gl', 'tab-focus last')
 config.bind('cm', 'spawn mpv {url}')
 config.bind('sx', 'config-cycle statusbar.hide')
-config.bind('b', 'set-cmd-text -s :tab-focus')
-config.bind('t', 'set-cmd-text -s :open -t')
-config.bind('gm', 'set-cmd-text :tab-move -1')
-config.bind('go', 'set-cmd-text -s :open -t gl')
+config.bind('b', 'cmd-set-text -s :tab-focus')
+config.bind('t', 'cmd-set-text -s :open -t')
+config.bind('gm', 'cmd-set-text :tab-move -1')
+config.bind('go', 'cmd-set-text -s :open -t gl')
 config.bind('<ctrl-r>', 'reload')
 config.bind('<ctrl-y>', 'scroll up')
 config.bind('<ctrl-e>', 'scroll down')
 config.bind('<Ctrl-a>', 'mode-enter insert') # avoid accidental tab refresh or the default select-all.
 config.bind('<Ctrl-n>', 'tab-next')
 config.bind('<Ctrl-p>', 'tab-prev')
-config.bind('<Ctrl-t>', 'set-cmd-text -s :undo')
+config.bind('<Ctrl-t>', 'cmd-set-text -s :undo')
 config.bind('<Ctrl-0>', 'set zoom.default 100%')
 config.bind('<Ctrl-=>', 'set zoom.default 150%')
-config.bind('O', 'set-cmd-text :open {url:pretty}')
-config.bind('T', 'set-cmd-text :open -t {url:pretty}')
+config.bind('O', 'cmd-set-text :open {url:pretty}')
+config.bind('T', 'cmd-set-text :open -t {url:pretty}')
 
 config.bind('<Ctrl-w>', 'rl-backward-kill-word', mode='command')
 config.bind('<Ctrl-i>', 'completion-item-focus next', mode='command')
@@ -79,6 +79,8 @@ c.aliases = {
     'cs': 'config-source',
     'tt': 'tab-move'
 }
+
+c.content.javascript.clipboard = 'access'
 
 search_engine_path = 'https://www.google.co.in/search?q='
 c.url.searchengines = {
