@@ -18,7 +18,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Shift+Return exec terminator
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -37,8 +37,8 @@ bindsym Ctrl+Mod1+p exec copyq menu
 bindsym Ctrl+Mod1+y exec copyq toggle
 
 # Move to other monitor.
-bindsym $mod+Left  move workspace to output left
-bindsym $mod+Right move workspace to output right
+bindsym $mod+semicolon  move workspace to output left
+# bindsym $mod+Right move workspace to output right
 bindsym $mod+Down exec bash ~/bin/i3-move-workspaces.sh
 
 # change focus
@@ -210,3 +210,6 @@ exec xsetroot -solid '#14142C'
 bindsym $mod+End exec ~/bin/blank
 
 focus_follows_mouse no
+
+# Start picom compositor to fix flickering
+exec_always --no-startup-id picom --backend glx --vsync -b
