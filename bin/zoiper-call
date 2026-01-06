@@ -1,9 +1,14 @@
 #!/bin/bash
 
+~/bin/script-toggle-notes-window
+i3 workspace 6
+
 if [ ! -f /tmp/zoiper-call-started ]; then
-  xdotool mousemove 1750 100 click 1
+  xdotool mousemove 2450 70 click 1
   touch /tmp/zoiper-call-started
 else
-  xdotool mousemove 2450 1040 click 1
+  xdotool mousemove 2800 1020 click 1
   rm /tmp/zoiper-call-started
 fi
+
+i3 workspace back_and_forth
