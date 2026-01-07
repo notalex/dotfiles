@@ -26,7 +26,7 @@ aptversion() { apt-cache show $1 | grep Version: ; }
 pd() { pushd $1 > /dev/null; }
 fnd() { find $1 -iname "*$2*"; }
 loc() { locate -b '\'$1; }
-pms() {
+pm() {
   if [[ "$1" =~ ^[0-9]+$ ]]; then
     pomodoro_rs start -d "$1" -t "$(echo "${@:2}")"
   else

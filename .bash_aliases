@@ -80,7 +80,6 @@ alias comic-dl='~/projects/comic-dl/comic_dl/__main__.py'
 alias fd='/usr/bin/fdfind -I'
 alias caps-enable='setxkbmap -layout us -option caps:enable'
 alias caps-none='setxkbmap -layout us -option caps:none'
-alias pm='pomodoro_rs'
 alias pmb='pomodoro_rs break -d 30 -l'
 alias bri='brew install'
 alias llm-upgrade='brew update && brew upgrade crush qwen-code' # Gemini is auto-updated with npm.
