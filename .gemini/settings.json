@@ -12,35 +12,42 @@
         "Accept": "application/json, text/event-stream"
       }
     },
-
     "octocode": {
       "command": "npx",
-      "args": ["octocode-mcp@latest"],
+      "args": [
+        "octocode-mcp@latest"
+      ],
       "env": {
         "GITHUB_TOKEN": "$GITHUB_PERSONAL_ACCESS_TOKEN"
       }
     },
-
     "github": {
       "httpUrl": "https://api.githubcopilot.com/mcp",
       "headers": {
         "Authorization": "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN"
       }
     },
-
     "perplexity": {
       "command": "npx",
-      "args": ["-y", "@perplexity-ai/mcp-server"],
+      "args": [
+        "-y",
+        "@perplexity-ai/mcp-server"
+      ],
       "env": {
         "PERPLEXITY_API_KEY": "$PERPLEXITY_API_KEY"
       }
     },
-
     "serena": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/oraios/serena", "serena",
-        "start-mcp-server", "--context", "codex",
-        "--enable-web-dashboard", "False"
+      "args": [
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "codex",
+        "--enable-web-dashboard",
+        "False"
       ]
     }
   },
@@ -48,6 +55,19 @@
     "previewFeatures": true
   },
   "tools": {
-    "allowed": ["run_shell_command"]
+    "allowed": [
+      "run_shell_command",
+      "initial_instructions",
+      "activate_project",
+      "check_onboarding_performed",
+      "search_for_pattern",
+      "list_dir",
+      "list_memories",
+      "read_memory",
+      "read_file",
+      "find_file",
+      "find_symbol",
+      "think_about_whether_you_are_done"
+    ]
   }
 }
