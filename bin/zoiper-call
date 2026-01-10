@@ -1,7 +1,7 @@
 #!/bin/bash
 
-~/bin/script-toggle-notes-window
-i3 workspace 6
+~/bin/script-toggle-notes-window > /dev/null
+i3 workspace 6 > /dev/null
 
 if [ ! -f /tmp/zoiper-call-started ]; then
   xdotool mousemove 2450 70 click 1
@@ -11,4 +11,4 @@ else
   rm /tmp/zoiper-call-started
 fi
 
-i3 workspace back_and_forth
+i3 workspace back_and_forth > /dev/null
