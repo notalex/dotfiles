@@ -123,11 +123,11 @@ alias tmx-attach-session='tmux -u2 attach-session -t'
 alias tmx-detach-session='tmux detach-client -s'
 alias tmx-new='tmux -u2 new-session -s'
 
-# docket
-alias d='docket'
-alias dim='docket images'
-alias dps='docket ps -a'
-alias dc='sudo docker-compose'
+# docker
+alias d='docker'
+alias dim='docker images'
+alias dps='docker ps -a'
+alias dc='docker-compose'
 
 # misc
 alias k='kubectl'
@@ -148,3 +148,5 @@ if on-mac; then
   alias quarantine='xattr -d com.apple.quarantine'
   alias brstart-services='brew services start postgresql@14'
 fi
+
+source ~/.config/temp_aliases.sh

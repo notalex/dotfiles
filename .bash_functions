@@ -172,8 +172,8 @@ rc-match() { recordmydesktop --windowid=$(xdotool search --name "$1" | tail -1) 
 
 ntfs() { $@; mplayer ~/tones/notify-tone.mp3 1> /dev/null; notify-send -t 3000 "Process finished: $@"; }
 
-d-rmc() { c_ids="$(docket ps -a | awk '{print $1}' | tail -n+2)"; docket stop $c_ids && docket rm $c_ids; }
-d-rmc-l() { c_id="$(docket ps -a | awk '{print $1}' | head -2 | tail -1)"; docket stop $c_id && docket rm $c_id; }
-d-st-l() { c_id="$(docket ps -a | awk '{print $1}' | head -2 | tail -1)"; docket start $c_id; }
-d-exec-l() { c_id="$(docket ps -a | awk '{print $1}' | head -2 | tail -1)"; docket exec -it $c_id /bin/bash ; }
-d-exec-lc() { c_id="$(docket ps -a | awk '{print $1}' | head -2 | tail -1)"; docket exec -it $c_id "$*" ; }
+d-rmc() { c_ids="$(docker ps -a | awk '{print $1}' | tail -n+2)"; docker stop $c_ids && docker rm $c_ids; }
+d-rmc-l() { c_id="$(docker ps -a | awk '{print $1}' | head -2 | tail -1)"; docker stop $c_id && docker rm $c_id; }
+d-st-l() { c_id="$(docker ps -a | awk '{print $1}' | head -2 | tail -1)"; docker start $c_id; }
+d-exec-l() { c_id="$(docker ps -a | awk '{print $1}' | head -2 | tail -1)"; docker exec -it $c_id /bin/bash ; }
+d-exec-lc() { c_id="$(docker ps -a | awk '{print $1}' | head -2 | tail -1)"; docker exec -it $c_id "$*" ; }
