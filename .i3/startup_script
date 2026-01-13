@@ -16,7 +16,6 @@ nm-applet &
 # synclient TouchpadOff=1  # Disable trackpad.
 tmux set-option -g status off
 
-xkbset bo 50
 copyq enable; sleep 2; copyq disable
 terminator &
 # bluetooth-applet &
