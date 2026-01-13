@@ -1,0 +1,90 @@
+{
+  "plugin": ["opencode-antigravity-auth@beta"],
+  "$schema": "https://opencode.ai/config.json",
+  "keybinds": {
+    "command_list": "<leader>p",
+    "editor_open": "ctrl+o",
+    "messages_page_up": "ctrl+p",
+    "messages_page_down": "ctrl+n",
+    "messages_first": "ctrl+g,home",
+    "messages_last": "shift+g,end",
+    "messages_next": "<leader>j",
+    "messages_previous": "<leader>k",
+    "sidebar_toggle": "<leader>d",
+    "variant_cycle": "ctrl+t"
+  },
+  "mcp": {
+    "github": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN"
+      }
+    },
+
+    "octocode": {
+      "enabled": true,
+      "type": "local",
+      "command": ["npx", "octocode-mcp@latest"],
+      "environment": {
+        "GITHUB_TOKEN": "$GITHUB_PERSONAL_ACCESS_TOKEN"
+      }
+    },
+
+    "context7": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "$CONTEXT7_API_KEY"
+      }
+    },
+
+    "perplexity": {
+      "enabled": true,
+      "type": "local",
+      "command": ["npx", "-y", "@perplexity-ai/mcp-server"],
+      "environment": {
+        "PERPLEXITY_API_KEY": "$PERPLEXITY_API_KEY"
+      }
+    },
+
+    "Serena": {
+      "enabled": true,
+      "type": "local",
+      "command": ["uvx", "--from", "git+https://github.com/oraios/serena",
+        "serena", "start-mcp-server",
+        "--enable-web-dashboard", "False"]
+    }
+  },
+  "provider": {
+    "google": {
+      "models": {
+        "antigravity-claude-sonnet-4-5": {
+          "name": "Claude Sonnet 4.5 (Antigravity)",
+          "limit": { "context": 200000, "output": 64000 },
+          "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] }
+        },
+        "antigravity-claude-sonnet-4-5-thinking": {
+          "name": "Claude Sonnet 4.5 Thinking (Antigravity)",
+          "limit": { "context": 200000, "output": 64000 },
+          "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] },
+          "variants": {
+            "low": { "thinkingConfig": { "thinkingBudget": 8192 } },
+            "max": { "thinkingConfig": { "thinkingBudget": 32768 } }
+          }
+        },
+        "antigravity-claude-opus-4-5-thinking": {
+          "name": "Claude Opus 4.5 Thinking (Antigravity)",
+          "limit": { "context": 200000, "output": 64000 },
+          "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] },
+          "variants": {
+            "low": { "thinkingConfig": { "thinkingBudget": 8192 } },
+            "max": { "thinkingConfig": { "thinkingBudget": 32768 } }
+          }
+        }
+      }
+    }
+  }
+}
