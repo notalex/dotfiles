@@ -6,7 +6,7 @@ hooks:
 windows:
   - index: 2
     panes:
-      - vim home_work.notes
+      - vim home_work.notes -c 'colorscheme peachpuff'
     hooks:
       pre: cd ~/gitbasket
   - index: 3
