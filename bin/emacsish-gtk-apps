@@ -9,6 +9,7 @@ KEY_M=58
 KEY_LBRACK=34
 KEY_I=31
 KEY_O=32
+KEY_H=43
 CTRL_L=37
 
 mapfile -t KEYBOARD_IDS < <(get_keyboard_ids)
@@ -39,6 +40,11 @@ for DEVICE_ID in "${KEYBOARD_IDS[@]}"; do
         # Ctrl+O -> Shift+Tab
         if [[ "$line" == *"key press   $KEY_O"* ]]; then
           xdotool key --clearmodifiers Up
+        fi
+
+        # Ctrl+H -> Backspace
+        if [[ "$line" == *"key press   $KEY_H"* ]]; then
+          xdotool key --clearmodifiers BackSpace
         fi
       fi
     fi
