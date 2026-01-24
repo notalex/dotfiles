@@ -151,4 +151,6 @@ if on-mac; then
   alias brstart-services='brew services start postgresql@14'
 fi
 
+alias pomo='tmux -u2 new -s pomo'
+
 source ~/.config/temp_aliases.sh
