@@ -13,7 +13,8 @@ from evdev import InputDevice, UInput, ecodes, categorize, list_devices
 
 # Configuration
 DEBOUNCE_DELAY_MS = 100
-DEBOUNCE_KEYS = ["t"]  # Keys to debounce
+
+DEBOUNCE_KEYS = ["t", "e"]  # Keys to debounce
 
 
 class KeyboardDebouncer:
@@ -27,8 +28,6 @@ class KeyboardDebouncer:
         self.input_device = None
         self.output_device = None
 
-        self.setup_devices()
-
     def setup_devices(self):
         """Find keyboard device and create virtual output device"""
         # Find keyboard devices
@@ -40,11 +39,7 @@ class KeyboardDebouncer:
             keyboards = [d for d in devices if ecodes.EV_KEY in d.capabilities()]
 
         if not keyboards:
-            print("No keyboard devices found!")
-            print("Available devices:")
-            for d in devices:
-                print(f"  - {d.name} ({d.path})")
-            sys.exit(1)
+            return False
 
         # Use the first keyboard found
         self.input_device = keyboards[0]
@@ -58,6 +53,7 @@ class KeyboardDebouncer:
             self.input_device, name="debounced-keyboard"
         )
         print("Virtual keyboard created: debounced-keyboard")
+        return True
 
     def key_name(self, code):
         """Convert event code to key name"""
@@ -92,7 +88,11 @@ class KeyboardDebouncer:
             return False
 
     def run(self):
-        """Main event loop"""
+        """Main event loop - exits on disconnect"""
+        if not self.setup_devices():
+            print("No keyboard found!")
+            sys.exit(1)
+
         print("Starting keyboard debouncer...")
         print(
             f"Debouncing keys: {', '.join(self.keys_to_debounce)} with {self.debounce_delay}ms delay"
@@ -112,13 +112,26 @@ class KeyboardDebouncer:
         except KeyboardInterrupt:
             print("\nStopping debouncer...")
             self.cleanup()
+            raise  # Let wrapper know we're stopping intentionally
+        except (OSError, IOError) as e:
+            print(f"\nKeyboard disconnected: {e}")
+            self.cleanup()
+            sys.exit(1)  # Exit so wrapper can restart us
 
     def cleanup(self):
         """Release devices"""
-        if self.input_device:
-            self.input_device.ungrab()
-        if self.output_device:
-            self.output_device.close()
+        try:
+            if self.input_device:
+                self.input_device.ungrab()
+        except:
+            pass
+        try:
+            if self.output_device:
+                self.output_device.close()
+        except:
+            pass
+        self.input_device = None
+        self.output_device = None
 
 
 def main():
