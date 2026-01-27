@@ -36,14 +36,9 @@ function! s:CustomGrep(folder_path)
 endfunction
 
 function! s:ExecuteCmd(cmd)
-  if has('mac')
-    cgetexpr system(a:cmd)
-    copen
-  else
-    silent execute a:cmd
-    cwindow
-    redraw!
-  endif
+  cgetexpr system(a:cmd)
+  copen
+  redraw!
 endfunction
 
 function! s:LangExcludes()
