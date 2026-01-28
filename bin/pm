@@ -1,0 +1,40 @@
+#!/bin/bash
+
+M="\e[36m"; G="\e[32m"; B="\e[34m"; RT="\e[0m";
+
+if [[ "$1" =~ ^[0-9]+$ ]]; then
+  MINUTES=$1
+  shift
+  TASK="$*"
+else
+  MINUTES=30
+  TASK="$*"
+fi
+
+DURATION=$((MINUTES * 60))
+TIME=$(date -d "+${MINUTES} minutes" "+%H:%M")
+
+for ((i=DURATION; i>=0; i--)); do
+  MINS=$((i / 60))
+  SECS=$((i % 60))
+
+  printf "\r${B}%s${RT} | ${G}%02d:%02d${RT} | ${M}%s${RT}" "$TIME" "$MINS" "$SECS" "$TASK"
+
+  sleep 1
+done
+
+echo ""
+
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  osascript -e "display notification \"Completed: $TASK\" with title \"Pomodoro\"" 2>/dev/null
+else
+  notify-send "Pomodoro" "Completed: $TASK" 2>/dev/null
+fi
+
+COMPLETED_DIR="$HOME/.completed_tasks"
+mkdir -p "$COMPLETED_DIR"
+
+DATE_FILE=$(date "+%Y%m%d")
+COMPLETION_TIME=$(date "+%H:%M:%S")
+
+echo "$COMPLETION_TIME | $TASK" >> "$COMPLETED_DIR/$DATE_FILE"
