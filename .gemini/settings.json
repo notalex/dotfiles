@@ -54,6 +54,9 @@
   "general": {
     "previewFeatures": true
   },
+  "ui": {
+    "showHomeDirectoryWarning": false
+  },
   "tools": {
     "allowed": [
       "run_shell_command",
