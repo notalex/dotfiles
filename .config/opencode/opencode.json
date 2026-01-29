@@ -4,8 +4,10 @@
   "keybinds": {
     "command_list": "<leader>p",
     "editor_open": "ctrl+o",
-    "messages_page_up": "ctrl+p",
-    "messages_page_down": "ctrl+n",
+    "input_move_up": "none",
+    "input_move_down": "none",
+    "messages_page_up": "up",
+    "messages_page_down": "down",
     "messages_first": "ctrl+g,home",
     "messages_last": "shift+g,end",
     "messages_next": "<leader>j",
@@ -60,7 +62,18 @@
   },
   "provider": {
     "google": {
+      "npm": "@ai-sdk/google",
       "models": {
+        "antigravity-gemini-3-pro": {
+          "name": "Gemini 3 Pro (Antigravity)",
+          "limit": { "context": 1048576, "output": 65535 },
+          "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] },
+          "variants": {
+            "low": { "thinkingLevel": "low" },
+            "high": { "thinkingLevel": "high" }
+          }
+        },
+
         "antigravity-claude-sonnet-4-5": {
           "name": "Claude Sonnet 4.5 (Antigravity)",
           "limit": { "context": 200000, "output": 64000 },
