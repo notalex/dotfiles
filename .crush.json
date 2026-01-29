@@ -25,12 +25,6 @@
     ]
   },
 
-  "lsp": {
-    "python": {
-      "command": "pyls"
-    }
-  },
-
   "mcp": {
     "github": {
       "type": "http",
