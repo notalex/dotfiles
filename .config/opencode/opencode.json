@@ -1,5 +1,5 @@
 {
-  "plugin": ["opencode-antigravity-auth@beta"],
+  "plugin": ["opencode-antigravity-auth@latest"],
   "$schema": "https://opencode.ai/config.json",
   "keybinds": {
     "command_list": "<leader>p",
