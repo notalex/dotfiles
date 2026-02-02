@@ -1,10 +1,5 @@
 # vim: set ft=sh:
 
-# Heroku
-alias h-tail='heroku logs --tail'
-alias h-pg-info='heroku pg:info'
-alias h-console="heroku run \"echo '$(cat ~/.inputrc)' > .inputrc; rails c\""
-
 # git
 alias gar="git add -A"
 alias gan="ge git add -N"
@@ -19,7 +14,6 @@ alias g-save="git stash; git stash apply"
 alias gpl-src='git pull src master'
 alias gbo='git checkout --orphan'
 alias gpo='git pull origin'
-alias grsh9='git reset --hard HEAD~9'
 alias gst='git stash'
 alias gsta='git stash apply'
 alias gstp='git stash pop'
@@ -28,7 +22,6 @@ alias gre='git reset --soft HEAD~1; git reset'
 
 # bash
 alias s='sudo'
-alias v='vagrant'
 alias src='source ~/.bash_profile'
 alias appa='sudo add-apt-repository -y'
 alias apti='sudo apt-get install -y --force-yes'
@@ -50,11 +43,11 @@ alias tso='tmux set-option -g status off'
 alias oc='opencode'
 alias ocl='opencode -c'
 alias cr='crush'
-alias cu='cursor-agent'
-alias cur='cursor-agent ls'
-alias cul='cursor-agent resume'
-alias cl='claude'
-alias clr='claude -r'
+# alias cu='cursor-agent'
+# alias cur='cursor-agent ls'
+# alias cul='cursor-agent resume'
+# alias cl='claude'
+# alias clr='claude -r'
 # alias cx='codex'
 # alias cxr='codex resume'
 # alias cxl='codex resume --last'
@@ -63,12 +56,12 @@ alias clr='claude -r'
 alias gm='gemini'
 alias gml='gemini -r'
 alias gmr='gemini --list-sessions'
-alias we='qwen'
-alias ko='~/projects/code-keen99/codex-rs/target/dev-fast/code'
-alias kol='~/projects/code-keen99/codex-rs/target/dev-fast/code resume --last'
+# alias we='qwen'
+# alias ko='~/projects/code-keen99/codex-rs/target/dev-fast/code'
+# alias kol='~/projects/code-keen99/codex-rs/target/dev-fast/code resume --last'
 alias hh='htop'
-alias px='peerflix --path ~/Videos'
-alias smagnet='peerflix --path ~/Videos --no-quit -g'
+# alias px='peerflix --path ~/Videos'
+# alias smagnet='peerflix --path ~/Videos --no-quit -g'
 alias ytmusic='ytdlp -i --extract-audio --prefer-ffmpeg --audio-format mp3'
 alias ytr='ytdlp $(copyq read 0)'
 alias ns='npm start'
@@ -76,12 +69,9 @@ alias ni='npm install'
 alias niv='npm install --loglevel verbose'
 alias ya='yarn add'
 alias ct='batcat'
-alias vchat='PATH="/usr/bin:$PATH" weechat' # brew python had missing functions in _ssl.so.
-alias st-notes='terminator -l notes'
-alias comic-dl='~/projects/comic-dl/comic_dl/__main__.py'
+# alias vchat='PATH="/usr/bin:$PATH" weechat' # brew python had missing functions in _ssl.so.
+# alias comic-dl='~/projects/comic-dl/comic_dl/__main__.py'
 alias fd='/usr/bin/fdfind -I'
-alias caps-enable='setxkbmap -layout us -option caps:enable'
-alias caps-none='setxkbmap -layout us -option caps:none'
 alias bri='brew install'
 alias llm-upgrade='brew update && brew upgrade crush qwen-code' # Gemini is auto-updated with npm.
 alias orouter-credits='curl -H "Authorization: Bearer $OPENROUTER_API_KEY" https://openrouter.ai/api/v1/credits'
@@ -96,16 +86,11 @@ alias va='source venv/bin/activate'
 alias vd='deactivate'
 
 # gems
-alias cux='ntf cucumber --no-source -p run_all features/'
 alias mnt='ruby -Itest test/'
-alias mns='ntf ruby -Ispec spec/'
-alias mnr='ntf rspec spec/'
-alias rjw='rake jobs:work'
 alias bi='bundle install'
 alias gi='gem install'
 
 # rails
-alias rgm='bundle exec rails generate migration'
 alias rdm='bundle exec rake db:migrate'
 alias rdmt='RAILS_ENV=test bundle exec rake db:migrate'
 alias rdst='RAILS_ENV=test rake db:drop && rake db:create && rake db:structure:load'
@@ -122,7 +107,7 @@ alias se='source .env'
 # tmux
 alias tmx-attach-session='tmux -u2 attach-session -t'
 alias tmx-detach-session='tmux detach-client -s'
-alias tmx-new='tmux -u2 new-session -s'
+alias pomo='tmux -u2 new -s pomo'
 
 # docker
 alias d='docker'
@@ -135,12 +120,6 @@ alias k='kubectl'
 alias screensaver-off='xset s off -dpms'
 alias ra='ranger'
 alias c-opyq-disable='copyq enable; sleep 2; copyq disable'
-
-# nixos
-alias nxsearch='nix-env -qaP | less'
-alias nxinstall='nix-env -i'
-
-alias t='harsh'
 alias c-undo='rm -rf ~/.undodir/*'
 
 if on-mac; then
@@ -149,7 +128,5 @@ if on-mac; then
   alias quarantine='xattr -d com.apple.quarantine'
   alias brstart-services='brew services start postgresql@14'
 fi
-
-alias pomo='tmux -u2 new -s pomo'
 
 source ~/.config/temp_aliases.sh
