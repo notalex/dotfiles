@@ -3,19 +3,19 @@
 # ----------------------------------------------
 # - Set your preferred prefix for env variable file shortcuts.
 #   (I chose 'e' because it is easy to slide your finger to it from '$'.)
-export git_env_char="e"
+export GIT_ENV_CHAR="e"
 # - Max changed files before reverting to 'git status'. git_status_shortcuts() will be slower for lots of changed files.
-export gs_max_changes="800"
-# - When using the git_add_shorcuts() command, automatically invoke 'git rm' to remove deleted files?
-export ga_auto_remove="yes"
+export GS_MAX_CHANGES="800"
+# - When using the git_add_shortcuts() command, automatically invoke 'git rm' to remove deleted files?
+export GA_AUTO_REMOVE="yes"
 
 # - Set the following option to 'no' if you want to use your existing git aliases
 #   instead of overwriting them.
 #   Note: Bash tab completion will not be automatically set up for your aliases if you disable this option.
-export git_setup_aliases="yes"
+export GIT_SETUP_ALIASES="yes"
 
 # - Set the following option to 'yes' if you want to turn off shell completion setup
-# export git_skip_shell_completion="yes"
+# export GIT_SKIP_SHELL_COMPLETION="yes"
 
 # Git Index Config
 # ----------------------------------------------
@@ -24,9 +24,9 @@ export GIT_REPO_DIR="$HOME/code"
 # Add the full paths of any extra repos to GIT_REPOS, separated with ':'
 # e.g. "/opt/rails/project:/opt/rails/another project:$HOME/other/repo"
 export GIT_REPOS=""
-export git_status_command="git_status_shortcuts"
+export GIT_STATUS_COMMAND="git_status_shortcuts"
 # Alias
-git_index_alias="c"    # Switch to a repo in the (c)ode directory
+git_index_alias="cindex"    # Switch to a repo in the (c)ode directory
 
 
 # Git Aliases
@@ -36,7 +36,6 @@ git_alias="g"
 # 1. 'SCM Breeze' functions
 git_status_shortcuts_alias="gs"
 git_add_shortcuts_alias="ga"
-git_add_patch_alias="gap"
 exec_scmb_expand_args_alias="ge"
 git_show_files_alias="gsf"
 git_commit_all_alias="gca"
@@ -62,9 +61,9 @@ git_clone_alias="gcl"
 git_fetch_alias="gf"
 git_fetch_all_alias="gfa"
 git_fetch_and_rebase_alias="gfr"
-git_pull_alias="gpl"
+# git_pull_alias="gpl"
 git_pull_rebase_alias="gplr"
-git_push_alias="gps"
+# git_push_alias="gps"
 git_push_force_alias="gpsf"
 git_pull_then_push_alias="gpls"
 # git_status_original_alias="gst"
@@ -129,6 +128,6 @@ git_add_and_amend_commit_keys="\C-xz"     # CTRL+x, z
 # Expand numbered args for common shell commands
 shell_command_wrapping_enabled="true"
 # Here you can tweak the list of wrapped commands.
-scmb_wrapped_shell_commands=(vim emacs gedit cat rm cp mv ln cd ls less subl code ct)
+scmb_wrapped_shell_commands=(vim cat bat rm rmt cp mv ln cd ls less)
 # Add numbered shortcuts to output of ls -l, just like 'git status'
 shell_ls_aliases_enabled="true"
