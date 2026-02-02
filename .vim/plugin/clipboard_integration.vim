@@ -18,7 +18,9 @@ function! s:CopyToClipboard()
 endfunction
 
 function! s:CopyCommand()
-   if has('mac')
+   if !empty($WAYLAND_DISPLAY)
+     return 'wl-copy'
+   elseif has('mac')
      return 'pbcopy'
    else
      return 'xclip -i -selection clipboard'
@@ -26,7 +28,9 @@ function! s:CopyCommand()
 endfunction
 
 function! s:PasteCommand()
-   if has('mac')
+   if !empty($WAYLAND_DISPLAY)
+     return 'wl-paste --no-newline'
+   elseif has('mac')
      return 'pbpaste'
    else
      return 'xclip -o -selection clipboard'
