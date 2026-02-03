@@ -12,7 +12,12 @@ else
 fi
 
 DURATION=$((MINUTES * 60))
-TIME=$(date -d "+${MINUTES} minutes" "+%H:%M")
+
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  TIME=$(date -v+${MINUTES}M "+%H:%M")
+else
+  TIME=$(date -d "+${MINUTES} minutes" "+%H:%M")
+fi
 
 for ((i=DURATION; i>=0; i--)); do
   MINS=$((i / 60))
@@ -31,10 +36,7 @@ else
   notify-send "Pomodoro" "Completed: $TASK" 2>/dev/null
 fi
 
-COMPLETED_DIR="$HOME/.completed_tasks"
-mkdir -p "$COMPLETED_DIR"
-
 DATE_FILE=$(date "+%Y%m%d")
 COMPLETION_TIME=$(date "+%H:%M:%S")
 
-echo "$COMPLETION_TIME | $TASK" >> "$COMPLETED_DIR/$DATE_FILE"
+echo "$COMPLETION_TIME | $TASK" >> "$HOME/.completed_tasks/$DATE_FILE"
