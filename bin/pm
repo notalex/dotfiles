@@ -24,6 +24,7 @@ for ((i=DURATION; i>=0; i--)); do
   SECS=$((i % 60))
 
   printf "\r${B}%s${RT} | ${G}%02d:%02d${RT} | ${M}%s${RT}" "$TIME" "$MINS" "$SECS" "$TASK"
+  (( i % 5 == 0 )) && printf "%s | %02d:%02d" "$TASK" "$MINS" "$SECS" > /tmp/pomo-status
 
   sleep 1
 done
@@ -40,3 +41,4 @@ DATE_FILE=$(date "+%Y%m%d")
 COMPLETION_TIME=$(date "+%H:%M:%S")
 
 echo "$COMPLETION_TIME | $TASK" >> "$HOME/.completed_tasks/$DATE_FILE"
+echo "Task complete => $TASK" > /tmp/pomo-status
