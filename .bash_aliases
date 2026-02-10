@@ -73,6 +73,7 @@ alias ct='batcat'
 # alias comic-dl='~/projects/comic-dl/comic_dl/__main__.py'
 alias fd='/usr/bin/fdfind -I'
 alias bri='brew install'
+alias batt='upower -i $(upower -e | head -1)'
 alias llm-upgrade='brew update && brew upgrade crush qwen-code' # Gemini is auto-updated with npm.
 alias orouter-credits='curl -H "Authorization: Bearer $OPENROUTER_API_KEY" https://openrouter.ai/api/v1/credits'
 
