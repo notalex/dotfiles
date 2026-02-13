@@ -19,9 +19,9 @@ add_to_path /opt/vagrant/bin
 add_to_path ./node_modules/.bin
 add_to_path $HOME/bin
 add_to_path $HOME/.local/bin
-add_to_path $HOME/.asdf/shims
 add_to_path $HOME/.amp/bin
 add_to_path $PWD/bin
+export PATH="$HOME/.asdf/shims:$PATH"
 
 if on-mac; then
   export BROWSER=/Applications/qutebrowser.app/Contents/MacOS/qutebrowser
