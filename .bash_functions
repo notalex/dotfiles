@@ -144,6 +144,7 @@ k-context() {
   stg_name=$(cat ~/.config/private/oh-stg-context)
   stg_sc_name=$(cat ~/.config/private/sc-stg-context)
   prd_sc_name=$(cat ~/.config/private/sc-prd-context)
+  op_stg_name=$(cat ~/.config/private/onprem-stg-context)
   if [ $1 == 'p' ]; then
     prd_name=$(echo $stg_name | sed 's/stg/prd/g')
     kubectl config use-context $prd_name
@@ -151,6 +152,8 @@ k-context() {
     kubectl config use-context $stg_sc_name
   elif [ $1 == 'scp' ]; then
     kubectl config use-context $prd_sc_name
+  elif [ $1 == 'os' ]; then
+    kubectl config use-context $op_stg_name
   else
     kubectl config use-context $stg_name
   fi
