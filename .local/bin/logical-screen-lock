@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+SSID="$(iw dev wlan0 link 2>/dev/null | sed -n 's/^.*SSID: //p')"
+
+if grep -Fxq "$SSID" "$HOME/.local/share/safe_ssids"; then
+  echo "On a safe network ($SSID). No need to lock."
+  exit 0
+fi
+
+loginctl lock-session
