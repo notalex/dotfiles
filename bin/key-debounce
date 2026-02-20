@@ -1,0 +1,3 @@
+#! /usr/bin/env bash
+
+sudo python /home/lx/bin/key-debounce.py

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Wrapper to auto-restart keyboard debouncer on disconnect
-SCRIPT_PATH="$(dirname "$(realpath "$0")")/keyboard-debounce.py"
+SCRIPT_PATH="$(dirname "$(realpath "$0")")/key-debounce.py"
 
 echo "Starting keyboard debouncer with auto-restart..."
 echo "Press Ctrl+C to stop"

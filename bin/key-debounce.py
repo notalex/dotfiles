@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-# Usage: sudo python ...
+# Usage: key-debounce
 
 import asyncio
 import os
@@ -15,7 +14,6 @@ DEBOUNCE_KEYS = {
 
 # 50ms is safe -- a human key press-release cycle is always >60ms.
 DEBOUNCE_MS = 50
-
 
 def find_keyboard():
     devices = [evdev.InputDevice(p) for p in evdev.list_devices()]
@@ -40,7 +38,6 @@ def find_keyboard():
     print("Edit KEYBOARD_MATCH or pass device path as argument.")
     sys.exit(1)
 
-
 def key_name(code):
     name = ecodes.KEY.get(code)
     if name is None:
@@ -48,7 +45,6 @@ def key_name(code):
     if isinstance(name, list):
         return str(name[0])
     return str(name)
-
 
 async def run(device):
     loop = asyncio.get_event_loop()
@@ -122,13 +118,7 @@ async def run(device):
             pass
         ui.close()
 
-
 def main():
-    if os.geteuid() != 0:
-        print("Error: must run as root (need /dev/input + /dev/uinput)")
-        print(f"Usage: sudo {sys.argv[0]}")
-        sys.exit(1)
-
     if len(sys.argv) > 1:
         device = evdev.InputDevice(sys.argv[1])
     else:
@@ -138,7 +128,6 @@ def main():
         asyncio.run(run(device))
     except KeyboardInterrupt:
         pass
-
 
 if __name__ == "__main__":
     main()
