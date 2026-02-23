@@ -1,5 +1,5 @@
 function! s:PasteFromClipboard()
-  call setreg('s', system(s:PasteCommand()))
+  call setreg('s', system('~/bin/OS_paste'))
   normal! "sp
 endfunction
 
@@ -12,31 +12,11 @@ function! s:CopyToClipboard()
   let s:previous_yank = @"
 
   normal! `<v`>y
-  call system(s:CopyCommand(), getreg('"'))
+  call system('~/bin/OS_copy', getreg('"'))
 
   call setreg('"', s:previous_yank)
 endfunction
 
-function! s:CopyCommand()
-   if !empty($WAYLAND_DISPLAY)
-     return 'wl-copy'
-   elseif has('mac')
-     return 'pbcopy'
-   else
-     return 'xclip -i -selection clipboard'
-   endif
-endfunction
-
-function! s:PasteCommand()
-   if !empty($WAYLAND_DISPLAY)
-     return 'wl-paste --no-newline'
-   elseif has('mac')
-     return 'pbpaste'
-   else
-     return 'xclip -o -selection clipboard'
-   endif
-endfunction
-
-nmap <F6>vv :call <SID>PasteFromTmuxClipboard()<CR>
-nmap <F6>vc :call <SID>PasteFromClipboard()<CR>
+nmap <F6>vt :call <SID>PasteFromTmuxClipboard()<CR>
+nmap <F6>vv :call <SID>PasteFromClipboard()<CR>
 vmap <C-c> :<C-u>call <SID>CopyToClipboard()<CR>

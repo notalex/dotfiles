@@ -4,4 +4,4 @@ endfunction
 
 " Display syntax highlighting group name of pattern under cursor
 nmap <F6>cn :echo synIDattr(<SID>SyntaxId(), 'name')<CR>
-nmap <F6>cf :echo synIDattr(<SID>SyntaxId(), 'fg')<CR>
+nmap <F6>cg :echo synIDattr(<SID>SyntaxId(), 'fg')<CR>
