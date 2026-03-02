@@ -1,0 +1,76 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "default_run_agent": "hephaestus",
+  "sisyphus_agent": {
+    "default_builder_enabled": true,
+    "replace_plan": false
+  },
+  "agents": {
+    "sisyphus": {
+      "model": "google/antigravity-claude-sonnet-4-6",
+      "variant": "high"
+    },
+    "hephaestus": {
+      "model": "openai/gpt-5.3-codex",
+      "variant": "medium"
+    },
+    "oracle": {
+      "model": "openai/gpt-5.3-codex",
+      "variant": "high"
+    },
+    "librarian": {
+      "model": "openai/gpt-5.1-codex-mini"
+    },
+    "explore": {
+      "model": "openai/gpt-5.1-codex-mini"
+    },
+    "multimodal-looker": {
+      "model": "google/antigravity-gemini-3.1-pro"
+    },
+    "prometheus": {
+      "model": "openai/gpt-5.3-codex"
+    },
+    "metis": {
+      "model": "openai/gpt-5.3-codex",
+      "variant": "high"
+    },
+    "momus": {
+      "model": "openai/gpt-5.3-codex",
+      "variant": "medium"
+    },
+    "atlas": {
+      "model": "google/antigravity-gemini-3.1-pro"
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "google/antigravity-gemini-3.1-pro",
+      "variant": "high"
+    },
+    "ultrabrain": {
+      "model": "openai/gpt-5.3-codex",
+      "variant": "xhigh"
+    },
+    "deep": {
+      "model": "openai/gpt-5.3-codex",
+      "variant": "medium"
+    },
+    "artistry": {
+      "model": "google/antigravity-gemini-3.1-pro",
+      "variant": "high"
+    },
+    "quick": {
+      "model": "google/antigravity-gemini-3-flash"
+    },
+    "unspecified-low": {
+      "model": "google/antigravity-gemini-3.1-pro"
+    },
+    "unspecified-high": {
+      "model": "google/antigravity-gemini-3.1-pro",
+      "variant": "high"
+    },
+    "writing": {
+      "model": "google/antigravity-gemini-3-flash"
+    }
+  }
+}
