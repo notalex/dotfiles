@@ -1,7 +1,8 @@
 {
   "reload_style_on_change": true,
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
+  "output": ["eDP-2", "HDMI-A-1"],
   "spacing": 0,
   "height": 26,
   "modules-left": ["custom/omarchy", "hyprland/workspaces"],
