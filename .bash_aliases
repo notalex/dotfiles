@@ -17,6 +17,7 @@ alias gpo='git pull origin'
 alias gst='git stash'
 alias gsta='git stash apply'
 alias gstp='git stash pop'
+alias gst-d0='git stash drop stash@{0}'
 alias gdel='ge git del'
 alias gre='git reset --soft HEAD~1; git reset'
 
@@ -90,6 +91,7 @@ alias vd='deactivate'
 alias mnt='ruby -Itest test/'
 alias bi='bundle install'
 alias gi='gem install'
+alias rdb='rdbg --attach'
 
 # rails
 alias rdm='bundle exec rake db:migrate'
@@ -122,6 +124,7 @@ alias screensaver-off='xset s off -dpms'
 alias ra='ranger'
 alias c-opyq-disable='copyq enable; sleep 2; copyq disable'
 alias c-undo='rm -rf ~/.undodir/*'
+alias yaya='yay --answerdiff none --answerclean none'
 
 if on-mac; then
   alias nvim='/opt/homebrew/bin/nvim -u ~/.vimrc $@'

@@ -1,3 +1,5 @@
+# Used for linux
+
 config.unbind('<Ctrl-v>') # passthrough mode
 config.unbind('<Ctrl-h>') # go to home
 config.unbind('<Ctrl-w>') # accidental tab close while working with vim in split.
@@ -89,6 +91,7 @@ c.url.searchengines = {
     'st': search_engine_path + 'stackexchange {}',
     'kt': search_engine_path + 'site:reddit.com/r/keto {}',
     'g': search_engine_path + '{}',
+    'om': search_engine_path + 'oh-my-opencode {}',
     'gi': 'http://images.google.com/images?q={}',
     'gl': 'https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q={}',
     'maps': 'https://maps.google.co.in/maps?q={}',
@@ -111,4 +114,5 @@ c.url.searchengines = {
     'bb': 'https://www.bigbasket.com/ps/?nc=as&q={}',
     'nu': 'https://nutritiondata.self.com/foods-{}000000000000000000000.html',
     'dk': 'https://www.dekudeals.com/search?q={}',
+    'pp': 'https://www.perplexity.ai/search/{}',
 }
