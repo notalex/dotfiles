@@ -1,30 +1,9 @@
 {
   "plugin": [
-    "opencode-antigravity-auth@latest",
     "oh-my-opencode"
   ],
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "hephaestus",
-  "keybinds": {
-    "leader": "ctrl+o",
-    "command_list": "<leader>p",
-    "editor_open": "ctrl+x",
-    "input_move_up": "none",
-    "input_move_down": "none",
-    "messages_page_up": "up",
-    "messages_page_down": "down",
-    "messages_first": "ctrl+g,home",
-    "messages_last": "shift+g,end",
-    "messages_next": "<leader>j",
-    "messages_previous": "<leader>k",
-    "messages_toggle_conceal": "none",
-    "sidebar_toggle": "<leader>d",
-    "session_parent": "<leader>h",
-    "session_child_cycle": "<leader>o",
-    "session_child_cycle_reverse": "<leader>i",
-    "history_previous": "<leader>e",
-    "variant_cycle": "ctrl+t"
-  },
   "mcp": {
     "github": {
       "enabled": true,
@@ -68,47 +47,6 @@
       "command": ["uvx", "--from", "git+https://github.com/oraios/serena",
         "serena", "start-mcp-server",
         "--enable-web-dashboard", "False"]
-    }
-  },
-  "provider": {
-    "google": {
-      "name": "Google",
-      "models": {
-        "antigravity-gemini-3.1-pro": {
-          "name": "Gemini 3.1 Pro (Antigravity)",
-          "limit": { "context": 1048576, "output": 65535 },
-          "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] },
-          "variants": {
-            "low": { "thinkingLevel": "low" },
-            "high": { "thinkingLevel": "high" }
-          }
-        },
-        "antigravity-gemini-3-flash": {
-          "name": "Gemini 3 Flash (Antigravity)",
-          "limit": { "context": 1048576, "output": 65536 },
-          "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] },
-          "variants": {
-            "minimal": { "thinkingLevel": "minimal" },
-            "low": { "thinkingLevel": "low" },
-            "medium": { "thinkingLevel": "medium" },
-            "high": { "thinkingLevel": "high" }
-          }
-        },
-        "antigravity-claude-sonnet-4-6": {
-          "name": "Claude Sonnet 4.6 (Antigravity)",
-          "limit": { "context": 200000, "output": 64000 },
-          "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] }
-        },
-        "antigravity-claude-opus-4-6-thinking": {
-          "name": "Claude Opus 4.6 Thinking (Antigravity)",
-          "limit": { "context": 200000, "output": 64000 },
-          "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] },
-          "variants": {
-            "low": { "thinkingConfig": { "thinkingBudget": 8192 } },
-            "max": { "thinkingConfig": { "thinkingBudget": 32768 } }
-          }
-        }
-      }
     }
   }
 }
