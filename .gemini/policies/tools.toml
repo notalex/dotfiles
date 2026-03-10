@@ -1,0 +1,20 @@
+[[rule]]
+toolName = [
+  "run_shell_command",
+  "initial_instructions",
+  "activate_project",
+  "check_onboarding_performed",
+  "search_for_pattern",
+  "list_dir",
+  "list_memories",
+  "read_memory",
+  "read_file",
+  "find_file",
+  "find_symbol",
+  "find_referencing_symbols",
+  "get_symbols_overview",
+  "think_about_task_adherence",
+  "think_about_whether_you_are_done"
+]
+decision = "allow"
+priority = 10
