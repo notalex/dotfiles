@@ -1,0 +1,10 @@
+[mode_floating]
+source=stdin
+label_color=#fffd
+label_select_color=#fd0d
+unselectable_bg_color=#2226
+selectable_bg_color=#1718
+selectable_border_color=#040c
+label_font_family=sans-serif
+label_font_size=20 50% 100
+label_symbols=abcdefghijklmnopqrstuvwxyz
