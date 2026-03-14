@@ -70,6 +70,7 @@ alias ni='npm install'
 alias niv='npm install --loglevel verbose'
 alias ya='yarn add'
 alias ct='batcat'
+alias vi='vim'
 # alias vchat='PATH="/usr/bin:$PATH" weechat' # brew python had missing functions in _ssl.so.
 # alias comic-dl='~/projects/comic-dl/comic_dl/__main__.py'
 alias fd='/usr/bin/fdfind -I'
