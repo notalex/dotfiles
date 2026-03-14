@@ -8,8 +8,11 @@ from evdev import ecodes, UInput
 
 KEYBOARD_MATCH = "Keychron"
 DEBOUNCE_KEYS = {
-    ecodes.KEY_T,
     ecodes.KEY_E,
+    ecodes.KEY_L,
+    ecodes.KEY_P,
+    ecodes.KEY_T,
+    ecodes.KEY_Y,
 }
 
 # 50ms is safe -- a human key press-release cycle is always >60ms.
