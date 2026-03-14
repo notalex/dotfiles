@@ -5,9 +5,9 @@ hooks:
   post: <%= select_window 2 %>
 windows:
   - panes:
-  - panes: nvim
+  - panes: v
     index: 2
   - root: ~/gitbasket
     index: 4
-    panes: nvim WorkFlow.notes
+    panes: v WorkFlow.notes
   - index: 7

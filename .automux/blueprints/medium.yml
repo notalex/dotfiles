@@ -10,9 +10,9 @@ windows:
       -
       -
     opt: '-s'
-  - panes: nvim
+  - panes: v
     index: 2
-  - panes: nvim
+  - panes: v
     index: 3
   - index: 7
   - index: 8

@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+if [ "$#" -eq 0 ]; then
+  nvim -u ~/.vimrc .
+else
+  nvim -u ~/.vimrc "$@"
+fi

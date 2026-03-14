@@ -124,10 +124,11 @@ alias screensaver-off='xset s off -dpms'
 alias ra='ranger'
 alias c-opyq-disable='copyq enable; sleep 2; copyq disable'
 alias c-undo='rm -rf ~/.undodir/*'
-alias yaya='yay --answerdiff none --answerclean none'
+alias yaya='yay --answerdiff none --answerclean none --removemake --noconfirm'
 
 if on-mac; then
   alias nvim='/opt/homebrew/bin/nvim -u ~/.vimrc $@'
+  alias v='/opt/homebrew/bin/nvim -u ~/.vimrc $@'
   alias tfix='sudo sntp -sS time.apple.com'
   alias quarantine='xattr -d com.apple.quarantine'
   alias brstart-services='brew services start postgresql@14'
