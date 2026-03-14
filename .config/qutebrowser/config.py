@@ -1,5 +1,4 @@
 # Used for linux
-
 config.unbind('<Ctrl-v>') # passthrough mode
 config.unbind('<Ctrl-h>') # go to home
 config.unbind('<Ctrl-w>') # accidental tab close while working with vim in split.
@@ -65,6 +64,9 @@ c.tabs.background = True
 c.tabs.select_on_remove = 'prev'
 c.tabs.new_position.related = 'last'
 c.content.notifications.enabled = False
+c.downloads.location.prompt = False
+c.downloads.remove_finished = 500
+c.downloads.location.directory = "~/Downloads"
 c.completion.web_history.exclude = [
   'https://*/login*',
   'https://*/servicedesk/customer/portal/6/user/login*',

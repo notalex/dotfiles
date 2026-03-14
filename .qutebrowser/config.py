@@ -70,6 +70,9 @@ c.tabs.select_on_remove = 'prev'
 c.tabs.new_position.related = 'last'
 c.content.notifications.enabled = False
 c.window.hide_decoration = True
+c.downloads.location.prompt = False
+c.downloads.remove_finished = 500
+c.downloads.location.directory = "~/Downloads"
 c.completion.web_history.exclude = [
   'https://*/login*',
   'https://*/servicedesk/customer/portal/6/user/login*',
