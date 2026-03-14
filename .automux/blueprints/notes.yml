@@ -10,5 +10,5 @@ windows:
     hooks:
       pre: cd ~/gitbasket
   - index: 3
-    panes: vim ~/gitbasket/history.txt
+    panes: v ~/gitbasket/history.txt -c ':hi ActiveWindow guibg=NONE' -c 'normal! G'
   - index: 7
