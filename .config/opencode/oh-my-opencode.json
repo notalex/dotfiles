@@ -7,7 +7,7 @@
   },
   "agents": {
     "sisyphus": {
-      "model": "google/antigravity-claude-sonnet-4-6",
+      "model": "openai/gpt-5.3-codex",
       "variant": "high"
     },
     "hephaestus": {
@@ -25,7 +25,7 @@
       "model": "openai/gpt-5.1-codex-mini"
     },
     "multimodal-looker": {
-      "model": "google/antigravity-gemini-3.1-pro"
+      "model": "openai/gpt-5.3-codex"
     },
     "prometheus": {
       "model": "openai/gpt-5.3-codex"
@@ -39,12 +39,12 @@
       "variant": "medium"
     },
     "atlas": {
-      "model": "google/antigravity-gemini-3.1-pro"
+      "model": "openai/gpt-5.3-codex"
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "google/antigravity-gemini-3.1-pro",
+      "model": "openai/gpt-5.3-codex",
       "variant": "high"
     },
     "ultrabrain": {
@@ -56,21 +56,21 @@
       "variant": "medium"
     },
     "artistry": {
-      "model": "google/antigravity-gemini-3.1-pro",
+      "model": "openai/gpt-5.3-codex",
       "variant": "high"
     },
     "quick": {
-      "model": "google/antigravity-gemini-3-flash"
+      "model": "openai/gpt-5.1-codex-mini"
     },
     "unspecified-low": {
-      "model": "google/antigravity-gemini-3.1-pro"
+      "model": "openai/gpt-5.3-codex"
     },
     "unspecified-high": {
-      "model": "google/antigravity-gemini-3.1-pro",
+      "model": "openai/gpt-5.3-codex",
       "variant": "high"
     },
     "writing": {
-      "model": "google/antigravity-gemini-3-flash"
+      "model": "openai/gpt-5.1-codex-mini"
     }
   }
 }
