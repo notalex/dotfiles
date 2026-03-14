@@ -99,11 +99,9 @@ cabbrev tt tabmove
 cabbrev cpcc CtrlPClearCache
 cabbrev cs source ~/.vimrc
 
-" #----------- nvim terminal mappings --------------------
-if has('nvim')
-  tnoremap <F6>n <C-\><C-n>
-  tnoremap <F6>w <C-\><C-n><C-w>w
-endif
+" #----------- terminal mappings --------------------
+tnoremap <F6>n <C-\><C-n>
+tnoremap <F6>w <C-\><C-n><C-w>w
 
 " ------------------set------------------------------
 
