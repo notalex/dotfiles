@@ -1,0 +1,24 @@
+#! /usr/bin/env bash
+
+list_audio_devices() {
+  gpu-screen-recorder --list-audio-devices | grep -E $1 | tail -1 | cut -d'|' -f1
+}
+
+get_mic_device() {
+  local device=$(list_audio_devices '_input.*Sennheiser')
+  [[ -z "$device" ]] && device=$(list_audio_devices '_input')
+  echo "$device"
+}
+
+get_output_device() {
+  local device=$(list_audio_devices '_output.*Sennheiser')
+  [[ -z "$device" ]] && device=$(list_audio_devices '_output.*pci.*analog')
+  echo "$device"
+}
+
+if pgrep -f "^gpu-screen-recorder" >/dev/null; then
+  pkill -SIGINT -f "^gpu-screen-recorder"
+else
+  prime-run gpu-screen-recorder -w HDMI-A-1 -k auto -s 0x0 -f 60 -a "$(get_output_device)|$(get_mic_device)" -ac aac -o ~/out.mp4 &
+fi
+sleep 0.5 && pkill -RTMIN+8 waybar
