@@ -138,7 +138,7 @@ set complete=.,w,b
 " exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
 " set list
 
-if getcwd() =~ $HOME . '/projects'
+if getcwd() =~ $HOME . '/projects' && has('nvim')
   set number
 endif
 
