@@ -63,6 +63,7 @@ c.tabs.indicator.width = 0
 c.tabs.background = True
 c.tabs.select_on_remove = 'prev'
 c.tabs.new_position.related = 'last'
+c.messages.timeout = 1000
 c.content.notifications.enabled = False
 c.downloads.location.prompt = False
 c.downloads.remove_finished = 500
