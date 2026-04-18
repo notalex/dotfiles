@@ -9,7 +9,6 @@ toolName = [
   "list_memories",
   "read_memory",
   "read_file",
-  "find_file",
   "find_symbol",
   "find_referencing_symbols",
   "get_symbols_overview",
