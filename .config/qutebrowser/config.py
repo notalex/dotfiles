@@ -52,6 +52,7 @@ config.load_autoconfig(False)
 
 c.statusbar.padding = { "bottom": 0, "left": 0, "right": 0, "top": 0 }
 c.statusbar.widgets = ["url", "scroll", "tabs", "progress"]
+c.qt.args = ['disable-gpu']
 c.scrolling.bar = 'never'
 c.auto_save.session = True
 c.session.lazy_restore = True
@@ -63,6 +64,7 @@ c.tabs.indicator.width = 0
 c.tabs.background = True
 c.tabs.select_on_remove = 'prev'
 c.tabs.new_position.related = 'last'
+c.zoom.default = '100%'
 c.messages.timeout = 1000
 c.content.notifications.enabled = False
 c.downloads.location.prompt = False
