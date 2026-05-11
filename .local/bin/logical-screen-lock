@@ -7,4 +7,4 @@ if grep -Fxq "$SSID" "$HOME/.local/share/safe_ssids"; then
   exit 0
 fi
 
-loginctl lock-session
+omarchy-system-lock
