@@ -25,3 +25,7 @@ bin
 .serena
 asterisk-logs
 .DS_Store
+.sisyphus
+.gemini
+.codex
+openspec/*
