@@ -6,6 +6,7 @@
     "editor_open": "ctrl+g",
     "input_move_up": "none",
     "input_move_down": "none",
+    "history_next": "none",
     "messages_page_up": "up",
     "messages_page_down": "down",
     "messages_first": "ctrl+x,home",
