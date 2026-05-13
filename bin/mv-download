@@ -1,0 +1,60 @@
+#!/bin/bash
+
+# Usage: ./mv-download <video_url> [quality]
+# Quality options: 360, 480, 720, 1080 (default: 1080)
+
+URL="$1"
+QUALITY="${2:-1080}"
+
+if [ -z "$URL" ]; then
+    echo "Usage: $0 <video_url> [quality]"
+    exit 1
+fi
+
+# Validate quality
+if [[ ! "$QUALITY" =~ ^(360|480|720|1080)$ ]]; then
+    echo "Error: Quality must be one of: 360, 480, 720, 1080" >&2
+    exit 1
+fi
+
+# Fetch the webpage
+HTML=$(curl -s -L "$URL" \
+    -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+    -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8")
+
+# Try to get the specific quality m3u8 URL
+M3U8_URL=$(echo "$HTML" | grep -oP 'https://video\.mvhaven\.com/[^"]+?'"${QUALITY}"'p\.m3u8' | head -1)
+
+# If specific quality not found and requested 1080p, try 720p
+if [ -z "$M3U8_URL" ] && [ "$QUALITY" = "1080" ]; then
+    echo "1080p not found, trying 720p..." >&2
+    M3U8_URL=$(echo "$HTML" | grep -oP 'https://video\.mvhaven\.com/[^"]+?720p\.m3u8' | head -1)
+fi
+
+# If still not found, fall back to master.m3u8
+if [ -z "$M3U8_URL" ]; then
+    M3U8_URL=$(echo "$HTML" | grep -oP 'https://video\.mvhaven\.com/[^"]+?/master\.m3u8' | head -1)
+fi
+
+# Get the title
+TITLE=$(echo "$HTML" | grep -oP '(?<=<title>).*?(?=</title>)' | head -1)
+TITLE=$(echo "$TITLE" | sed 's/ - MVHaven//I' | tr '/' '-' | xargs)
+
+if [ -z "$TITLE" ]; then
+    TITLE="downloaded_video"
+fi
+
+# Check if file already exists
+if [ -f "$TITLE.mp4" ]; then
+    echo "Skipping: $TITLE.mp4 already exists."
+    exit 0
+fi
+
+if [ -n "$M3U8_URL" ]; then
+    echo "Downloading: $TITLE"
+    yt-dlp -o "$TITLE.%(ext)s" "$M3U8_URL"
+else
+    echo "Error: Could not find m3u8 URL in page: $URL" >&2
+    echo "$URL" >> ~/Downloads/failed-bookmarks.txt
+    exit 1
+fi
