@@ -65,6 +65,7 @@ c.tabs.background = True
 c.tabs.select_on_remove = 'prev'
 c.tabs.new_position.related = 'last'
 c.zoom.default = '100%'
+c.fonts.default_size = '10pt'
 c.messages.timeout = 1000
 c.content.notifications.enabled = False
 c.downloads.location.prompt = False
