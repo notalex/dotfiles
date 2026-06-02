@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Prevents waybar 0.15.0 from spawning duplicate instances.
+LOCKFILE="/tmp/omarchy-voxtype-status.lock"
+
+exec 9>"$LOCKFILE"
+if ! flock -n 9; then
+  exit 0
+fi
+
+exec omarchy-voxtype-status
