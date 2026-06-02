@@ -16,8 +16,8 @@
     "messages_toggle_conceal": "none",
     "sidebar_toggle": "<leader>d",
     "session_parent": "<leader>h",
+    "session_child_first": "<leader>i",
     "session_child_cycle": "<leader>o",
-    "session_child_cycle_reverse": "<leader>i",
     "history_previous": "<leader>e",
     "variant_cycle": "ctrl+t"
   }
