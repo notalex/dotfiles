@@ -1,0 +1,6 @@
+default partial alphanumeric_keys
+xkb_symbols "caps_to_f6" {
+    include "us"
+    name[Group1]= "US (with CapsLock mapped to F6)";
+    key <CAPS> { [ F6 ] };
+};
