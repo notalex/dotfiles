@@ -5,6 +5,35 @@ snippet c
 		${2}
 	}
 snippet f
-	${1}() {
-		return ${2};
+	${1}(${2}) ${3}{
+		return ${4};
+	}
+snippet fo
+	for (const ${1} of ${2}) {
+		${3};
+	}
+snippet for
+	for (let i = 0; i < ${1}.length; i++) {
+		${2};
+	}
+snippet con
+	constructor(
+		readonly ${1}: ${2},
+	) {}
+snippet if
+	if(${1})
+		${2};
+snippet iff
+	if(${1}) {
+		${2};
+	}
+snippet wh
+	while(${1}) {
+		${2};
+	}
+snippet ife
+	if(${1}) {
+		${2};
+	} else {
+		${3};
 	}
