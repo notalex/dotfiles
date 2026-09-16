@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Usage: ./mv-download <video_url> [quality]
+# for i in $(cat ~/Downloads/bookmarks.txt); do ~/bin/mv-download $i ; done
 # Quality options: 360, 480, 720, 1080 (default: 1080)
 
 URL="$1"
