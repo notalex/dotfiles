@@ -79,7 +79,7 @@ alias gmr='gemini --list-sessions'
 # alias ko='~/projects/code-keen99/codex-rs/target/dev-fast/code'
 # alias kol='~/projects/code-keen99/codex-rs/target/dev-fast/code resume --last'
 alias orouter-credits='curl -H "Authorization: Bearer $OPENROUTER_API_KEY" https://openrouter.ai/api/v1/credits'
-alias llm-upgrade='npm install -g @google/gemini-cli@latest'
+alias llm-upgrade='yaya crush; yaya opencode-bin'
 
 # python
 alias py='python3'
@@ -114,9 +114,12 @@ alias se='source .env'
 alias tmx-attach-session='tmux -u2 attach-session -t'
 alias tmx-detach-session='tmux detach-client -s'
 alias pomo='tmux -u2 new -s pomo \; new-window'
+alias ms='automux small'
+alias mn='automux notes'
 
 # docker
 alias d='docker'
+alias dl='docker logs -f'
 alias dim='docker images'
 alias dps='docker ps -a'
 alias dc='docker-compose'
