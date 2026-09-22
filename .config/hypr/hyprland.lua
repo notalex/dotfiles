@@ -20,6 +20,7 @@ require("hypr.monitors")
 require("hypr.input")
 require("hypr.bindings")
 require("hypr.wlkbptr-bindings")
+require("hypr.r-alt-macros")
 require("hypr.looknfeel")
 require("hypr.autostart")
 

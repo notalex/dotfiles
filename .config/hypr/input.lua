@@ -4,7 +4,7 @@ hl.config({
   input = {
     kb_layout = "custom",
     kb_variant = "caps_to_f6",
-    kb_options = "compose:menu,altwin:swap_alt_win,grp:sclk_toggle",
+    kb_options = "compose:menu,altwin:swap_lalt_lwin,lv3:ralt_switch,grp:sclk_toggle",
 
     -- Change speed of keyboard repeat.
     repeat_rate = 40,

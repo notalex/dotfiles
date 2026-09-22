@@ -64,7 +64,8 @@ o.bind("SUPER + CTRL + P", "Clipboard manager", "omarchy-shell shell toggle omar
 o.bind("SUPER + R", "Toggle dictation", "voxtype record toggle")
 hl.unbind("SUPER + CTRL + R") -- was: Set reminder
 o.bind("SUPER + CTRL + R", "Record screen", "omarchy-capture-screenrecording --stop-recording || omarchy-menu toggle trigger.capture.screenrecord")
-o.bind("SUPER + SHIFT + 4", "Screenshot smart save", "omarchy capture screenshot smart save")
+hl.unbind("SUPER + CTRL + S") -- was: Share
+o.bind("SUPER + CTRL + S", "Screenshot smart save", "omarchy capture screenshot smart save")
 
 -- By default, the on:Lid switch locks screen & then calls omarchy-hyprland-monitor-clamshell
 hl.unbind("switch:on:Lid Switch")
