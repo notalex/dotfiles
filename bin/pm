@@ -41,4 +41,4 @@ DATE_FILE=$(date "+%Y%m%d")
 COMPLETION_TIME=$(date "+%H:%M:%S")
 
 echo "$COMPLETION_TIME | $TASK" >> "$HOME/.completed_tasks/$DATE_FILE"
-echo "Task complete => $TASK" > /tmp/pomo-status
+echo "Fin => $TASK" > /tmp/pomo-status

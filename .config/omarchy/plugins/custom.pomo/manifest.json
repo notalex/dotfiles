@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "custom.pomo",
+  "name": "Pomodoro",
+  "version": "1.0.0",
+  "author": "lx",
+  "description": "Displays Pomodoro status from /tmp/pomo-status",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Pomodoro",
+    "description": "Displays Pomodoro status and timer",
+    "category": "Status",
+    "defaultSection": "center",
+    "allowMultiple": false
+  }
+}

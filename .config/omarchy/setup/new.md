@@ -49,9 +49,6 @@ Configure `shell.json`:
 omarchy powerprofiles set ac power-saver
 omarchy powerprofiles set battery power-saver
 
-omarchy bar position bottom
-omarchy bar transparent true
-
 omarchy toggle screensaver # turn it off
 ```
 
