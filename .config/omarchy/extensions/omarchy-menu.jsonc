@@ -1,0 +1,8 @@
+{
+  "vivaldi": {
+    "icon": "",
+    "label": "Vivaldi",
+    "aliases": ["browser", "web"],
+    "action": "uwsm-app -- gtk-launch vivaldi-stable.desktop"
+  }
+}
