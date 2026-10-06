@@ -12,11 +12,11 @@ local function send_macro_key(key, mods, timeout)
   end
 end
 
-o.bind("MOD5 + V", "Universal Paste", send_macro_key("V", "CTRL + SHIFT", 50))
-
 -- Navigation & editing macros (repeat on hold enabled)
 o.bind("MOD5 + N", "Arrow Down", send_macro_key("Down", "", 15), { repeating = true })
 o.bind("MOD5 + P", "Arrow Up", send_macro_key("Up", "", 15), { repeating = true })
+o.bind("MOD5 + J", "Arrow Left", send_macro_key("Left", "", 15), { repeating = true })
+o.bind("MOD5 + K", "Arrow Right", send_macro_key("Right", "", 15), { repeating = true })
 o.bind("MOD5 + I", "Tab", send_macro_key("Tab", "", 15), { repeating = true })
 o.bind("MOD5 + O", "Back Tab (Shift+Tab)", send_macro_key("Tab", "SHIFT", 15), { repeating = true })
 o.bind("MOD5 + M", "Enter", send_macro_key("Return", "", 20), { repeating = true })

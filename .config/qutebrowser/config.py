@@ -97,7 +97,7 @@ c.url.searchengines = {
     'st': search_engine_path + 'stackexchange {}',
     'kt': search_engine_path + 'site:reddit.com/r/keto {}',
     'g': search_engine_path + '{}',
-    'om': search_engine_path + 'oh-my-opencode {}',
+    'om': search_engine_path + 'omarchy {}',
     'gi': 'http://images.google.com/images?q={}',
     'gl': 'https://www.google.com/search?btnI=I%27m+Feeling+Lucky&q={}',
     'maps': 'https://maps.google.co.in/maps?q={}',

@@ -1,4 +1,4 @@
-{
+{ "workbench.colorTheme": "Omarchy",
   "files.exclude": {
     ".tool-versions": true,
     ".gitignore": true,

@@ -171,5 +171,6 @@ ntfs() { $@; mplayer ~/tones/notify-tone.mp3 1> /dev/null; notify-send -t 3000 "
 d-rmc() { c_ids="$(docker ps -a | awk '{print $1}' | tail -n+2)"; docker stop $c_ids && docker rm $c_ids; }
 d-rmc-l() { c_id="$(docker ps -a | awk '{print $1}' | head -2 | tail -1)"; docker stop $c_id && docker rm $c_id; }
 d-st-l() { c_id="$(docker ps -a | awk '{print $1}' | head -2 | tail -1)"; docker start $c_id; }
-d-exec-l() { c_id="$(docker ps -a | awk '{print $1}' | head -2 | tail -1)"; docker exec -it $c_id /bin/bash ; }
+dex() { docker exec -it $1 bash ; }
+d-exec-l() { c_id="$(docker ps -a | awk '{print $1}' | head -2 | tail -1)"; docker exec -it $c_id /bin/sh ; }
 d-exec-lc() { c_id="$(docker ps -a | awk '{print $1}' | head -2 | tail -1)"; docker exec -it $c_id "$*" ; }

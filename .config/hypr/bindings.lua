@@ -52,8 +52,7 @@ o.bind("SUPER + M", "Cycle next window", function()
 end)
 
 -- Group navigation
-hl.unbind("SUPER + TAB") -- was: Next workspace
-o.bind("SUPER + TAB", "Next window in group", hl.dsp.group.next())
+o.bind("SUPER + I", "Next window in group", hl.dsp.group.next())
 
 -- Clipboard manager
 hl.unbind("SUPER + CTRL + V") -- was: Clipboard manager (omarchy shell panel)

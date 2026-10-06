@@ -10,9 +10,11 @@ omarchy plugin clone omarchy.menu
 omarchy plugin clone omarchy.clipboard
 mv ~/.config/omarchy/plugins/*\.menu ~/.config/omarchy/plugins/custom.menu
 mv ~/.config/omarchy/plugins/*\.clipboard ~/.config/omarchy/plugins/custom.clipboard
+# Cloned plugins cannot access shell.appLibrary directly; copy dependencies locally:
+cp /usr/share/omarchy/shell/services/AppLibrary.qml /usr/share/omarchy/shell/services/AppSearch.js ~/.config/omarchy/plugins/custom.menu/
 ```
 
-## 2. Update Manifests
+## 2. Update Manifests & Menu Fallback
 In `manifest.json` for each plugin:
 - `~/.config/omarchy/plugins/custom.menu/manifest.json`:
   Set `"id": "custom.menu"` and ensure `"omarchy": { "clonedFrom": "omarchy.menu" }`.
@@ -20,6 +22,12 @@ In `manifest.json` for each plugin:
   Set `"id": "custom.clipboard"` and ensure `"omarchy": { "clonedFrom": "omarchy.clipboard" }`.
 
 *(The `clonedFrom` field ensures IPC commands like `omarchy-menu toggle` route to the custom clone).*
+
+In `~/.config/omarchy/plugins/custom.menu/Menu.qml`, add local `AppLibrary` fallback so the **Apps** submenu works:
+```qml
+AppLibrary { id: fallbackAppLibrary }
+readonly property var appLibrary: (root.shell && root.shell.appLibrary) ? root.shell.appLibrary : fallbackAppLibrary
+```
 
 ## 3. Add Readline / Vim Navigation Chords
 In both `custom.menu/Menu.qml` and `custom.clipboard/Clipboard.qml`, update `keyCatcher` -> `Keys.onPressed` to support:

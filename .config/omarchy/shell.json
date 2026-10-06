@@ -4,9 +4,6 @@
     "layout": {
       "center": [
         {
-          "id": "custom.pomo"
-        },
-        {
           "id": "omarchy.indicators"
         },
         {
@@ -20,6 +17,9 @@
         },
         {
           "id": "omarchy.system-update"
+        },
+        {
+          "id": "custom.pomo"
         }
       ],
       "left": [
